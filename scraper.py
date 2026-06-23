@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 LCSC passive component price scraper.
-Uses cloudscraper to bypass Cloudflare protection on GitHub Actions.
+Output format: { specKey: { "YYYY-MM-DD": { products, avg_price, product_count } } }
 """
 import json, re, time
 from datetime import datetime, timezone, timedelta
@@ -44,8 +44,7 @@ def parse_products(text):
         lines = block.strip().split('\n')
         if not lines:
             continue
-        first = lines[0].strip()
-        m = MODEL_RE.match(first)
+        m = MODEL_RE.match(lines[0].strip())
         if not m:
             continue
         model = m.group(1)
@@ -57,35 +56,35 @@ def parse_products(text):
             continue
         prices = {}
         for pm in PRICE_RE.finditer(block):
-            qty = int(pm.group(1).replace(',', ''))
+            qty = str(int(pm.group(1).replace(',', '')))
             price = float(pm.group(2))
             prices[qty] = price
         if not prices:
             continue
-        sp = sorted(prices.items())
+        sp = sorted(prices.items(), key=lambda x: int(x[0]))
         brand_m = re.search(r'\n([A-Z][a-zA-Z ]{2,20})\n', block)
         brand = brand_m.group(1).strip() if brand_m else ""
         pkg_m = re.search(r'\b(0201|0402|0603|0805|1206|1210|SMD[^,\n]*)\b', block)
         pkg = pkg_m.group(1) if pkg_m else ""
         products.append({
             "model": model, "brand": brand, "package": pkg,
-            "stock": stock, "min_price": sp[0][1], "min_qty": sp[0][0],
-            "prices": {str(k): v for k, v in prices.items()}
+            "stock": stock,
+            "min_price": sp[0][1], "min_qty": int(sp[0][0]),
+            "prices": prices
         })
     return products
 
 def fetch_spec(spec):
-    print(f"  Fetching {spec['key']} ...")
+    print("  Fetching " + spec['key'] + " ...")
     try:
         resp = session.get(spec["url"], timeout=30)
         resp.raise_for_status()
-        text = resp.text
+        products = parse_products(resp.text)
+        print("    -> " + str(len(products)) + " in-stock products")
+        return products
     except Exception as e:
-        print(f"    ERROR: {e}")
+        print("    ERROR: " + str(e))
         return []
-    products = parse_products(text)
-    print(f"    -> {len(products)} in-stock products")
-    return products
 
 # Load existing data
 JSON_PATH = "passive_components_prices.json"
@@ -98,39 +97,27 @@ except:
 for spec in SPECS:
     key = spec["key"]
     products = fetch_spec(spec)
-    time.sleep(2)  # polite delay
+    time.sleep(2)
 
-    if products:
-        prices_list = [p["min_price"] for p in products]
-        avg = sum(prices_list) / len(prices_list)
-    else:
-        avg = None
+    in_stock = [p for p in products if p["stock"] > 0]
+    avg = sum(p["min_price"] for p in in_stock) / len(in_stock) if in_stock else None
 
-    history = data.get(key, {}).get("history", [])
-    entry = {"date": TODAY, "avg_price": round(avg, 4) if avg else None, "product_count": len(products)}
-    if not history or history[-1]["date"] != TODAY:
-        history.append(entry)
-    else:
-        history[-1] = entry
+    if key not in data:
+        data[key] = {}
 
-    data[key] = {
-        "key": key,
-        "url": spec["url"],
+    data[key][TODAY] = {
         "fetched_at": NOW.isoformat(),
-        "avg_price": round(avg, 4) if avg else None,
-        "product_count": len(products),
-        "products": products[:15],
-        "history": history
+        "avg_price": round(avg, 4) if avg is not None else None,
+        "product_count": len(in_stock),
+        "products": in_stock[:15]
     }
 
 with open(JSON_PATH, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 print("Saved " + JSON_PATH)
 
-# Generate index.html
 with open("passive_components_template.html", encoding="utf-8") as f:
     tmpl = f.read()
-
 html = tmpl.replace("__HISTORY_JSON__", json.dumps(data, ensure_ascii=False))
 with open("index.html", "w", encoding="utf-8") as f:
     f.write(html)
