@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>被動元件價格追蹤</title>
+<style>
+:root { color-scheme: light; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+  background: #f1f5f9; color: #1e293b; font-size: 13px; min-height: 100vh; }
+.header { background: #fff; border-bottom: 1px solid #e2e8f0;
+  padding: 12px 16px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.header-left { flex: 1; min-width: 0; }
+.header-title { font-size: 15px; font-weight: 600; color: #0f172a; }
+.header-sub { font-size: 11px; color: #64748b; margin-top: 2px; }
+.ref-links { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+.ref-link { font-size: 10px; color: #3b82f6; background: #eff6ff; border: 1px solid #bfdbfe;
+  padding: 2px 7px; border-radius: 4px; text-decoration: none; white-space: nowrap; }
+.ref-link:hover { background: #dbeafe; }
+.header-btns { display: flex; gap: 8px; flex-shrink: 0; }
+.btn { background: #3b82f6; color: #fff; border: none; padding: 6px 14px; border-radius: 6px;
+  cursor: pointer; font-size: 13px; font-weight: 500; white-space: nowrap; transition: background 0.15s; }
+.btn:hover { background: #2563eb; }
+.btn:disabled { background: #94a3b8; cursor: default; }
+.btn-ghost { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
+.btn-ghost:hover { background: #e2e8f0; }
+.status-bar { font-size: 11px; color: #64748b; background: #f8fafc;
+  padding: 5px 16px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+.spec-tabs { display: flex; background: #fff; border-bottom: 2px solid #e2e8f0;
+  padding: 0 12px; gap: 2px; overflow-x: auto; flex-wrap: nowrap; align-items: stretch; }
+.tab-cat { font-size: 10px; color: #94a3b8; padding: 0 8px 0 4px; align-self: center;
+  font-weight: 600; letter-spacing: 0.3px; white-space: nowrap; flex-shrink: 0; }
+.tab-sep { width: 1px; background: #e2e8f0; align-self: stretch; margin: 8px 4px; flex-shrink: 0; }
+.spec-tab { padding: 10px 14px; font-size: 12px; font-weight: 500; color: #64748b;
+  cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
+  transition: all 0.15s; user-select: none; border-radius: 4px 4px 0 0; white-space: nowrap; flex-shrink: 0; }
+.spec-tab:hover { color: #334155; background: #f8fafc; }
+.spec-tab.active { color: #2563eb; border-bottom-color: #2563eb; background: #eff6ff; font-weight: 600; }
+.main { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+.card-header { padding: 10px 14px; font-size: 12px; font-weight: 600; color: #475569;
+  text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #f1f5f9;
+  background: #f8fafc; display: flex; align-items: center; justify-content: space-between; }
+.chart-wrap { padding: 10px 14px 14px; }
+.chart-container { position: relative; height: 210px; }
+table { width: 100%; border-collapse: collapse; }
+th { background: #f8fafc; padding: 8px 10px; text-align: left; font-size: 11px; font-weight: 600;
+  color: #64748b; text-transform: uppercase; letter-spacing: 0.4px;
+  border-bottom: 1px solid #e2e8f0; white-space: nowrap; }
+td { padding: 7px 10px; border-bottom: 1px solid #f1f5f9; color: #334155; font-size: 12px; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f8fafc; }
+.price-main { font-weight: 600; color: #0f172a; }
+.price-bulk { color: #64748b; font-size: 11px; }
+.stock-badge { display: inline-block; padding: 2px 7px; border-radius: 99px; font-size: 11px; font-weight: 500; }
+.stock-hi  { background: #dcfce7; color: #15803d; }
+.stock-mid { background: #fef9c3; color: #854d0e; }
+.stock-lo  { background: #fee2e2; color: #b91c1c; }
+.stock-zero{ background: #f1f5f9; color: #94a3b8; }
+.brand-tag { display: inline-block; padding: 1px 6px; border-radius: 4px; font-size: 10px; background: #eff6ff; color: #3b82f6; font-weight: 500; }
+.empty-state { text-align: center; padding: 40px; color: #94a3b8; line-height: 1.8; }
+.no-trend { padding: 24px; text-align: center; color: #94a3b8; font-size: 12px; line-height: 1.7; }
+.avg-strip { display: flex; gap: 16px; padding: 10px 14px; background: #f8fafc; border-bottom: 1px solid #f1f5f9; flex-wrap: wrap; }
+.avg-item { display: flex; flex-direction: column; gap: 2px; }
+.avg-label { font-size: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.4px; }
+.avg-value { font-size: 16px; font-weight: 700; color: #0f172a; }
+.avg-sub { font-size: 10px; color: #64748b; }
+.filter-row { display: flex; gap: 8px; align-items: center; }
+.filter-row label { font-size: 11px; color: #94a3b8; }
+.filter-row select { font-size: 11px; border: 1px solid #e2e8f0; border-radius: 4px; padding: 2px 6px; color: #334155; background: #fff; }
+.modal-bg { position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center; z-index: 999; padding: 20px; }
+.modal-box { background: #fff; border-radius: 12px; padding: 24px; max-width: 380px; width: 100%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+.modal-title { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
+.modal-body { font-size: 12px; color: #475569; line-height: 1.8; margin-bottom: 16px; }
+.modal-note { font-size: 11px; color: #94a3b8; margin-bottom: 16px; }
+.modal-btn { width: 100%; background: #3b82f6; color: #fff; border: none; padding: 9px;
+  border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; }
+.modal-btn:hover { background: #2563eb; }
+.tag { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; padding: 1px 6px; font-size: 11px; font-family: monospace; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-left">
+    <div class="header-title">被動元件價格追蹤</div>
+    <div class="header-sub">立創商城 · 自動每日更新</div>
+    <div class="ref-links">
+      <span style="font-size:10px;color:#94a3b8;">對照：</span>
+      <a class="ref-link" id="mouser-link" href="#" target="_blank">Mouser TW</a>
+      <a class="ref-link" id="digikey-link" href="#" target="_blank">DigiKey TW</a>
+    </div>
+  </div>
+  <div class="header-btns">
+    <button class="btn btn-ghost" id="help-btn">如何更新？</button>
+  </div>
+</div>
+
+<div class="status-bar">
+  <div class="dot"></div>
+  <span id="status-text">就緒</span>
+</div>
+
+<div class="spec-tabs" id="spec-tabs"></div>
+
+<div class="main">
+  <div class="card">
+    <div class="avg-strip">
+      <div class="avg-item">
+        <div class="avg-label">現貨平均最低單價</div>
+        <div class="avg-value" id="avg-price-val">—</div>
+        <div class="avg-sub" id="avg-price-sub">尚無資料</div>
+      </div>
+      <div class="avg-item">
+        <div class="avg-label">現貨品項數</div>
+        <div class="avg-value" id="instock-count">—</div>
+        <div class="avg-sub">有庫存型號</div>
+      </div>
+      <div class="avg-item">
+        <div class="avg-label">最低價型號</div>
+        <div class="avg-value" id="cheapest-model" style="font-size:12px">—</div>
+        <div class="avg-sub" id="cheapest-sub">—</div>
+      </div>
+    </div>
+    <div class="card-header">
+      <span>今日現貨價格比較</span>
+      <span id="product-count" style="font-size:11px;font-weight:400;color:#94a3b8"></span>
+    </div>
+    <div class="chart-wrap">
+      <div id="bar-wrap"><div class="chart-container"><canvas id="bar-chart"></canvas></div></div>
+      <div id="bar-empty" class="empty-state" style="display:none">
+        尚無資料<br><small>請從側邊欄執行排程任務 component-price-scraper</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span>平均最低單價趨勢</span>
+      <span style="font-size:11px;font-weight:400;color:#64748b">現貨品項平均</span>
+    </div>
+    <div class="chart-wrap">
+      <div id="trend-placeholder" class="no-trend">累積 2 天以上資料後即可查看趨勢</div>
+      <div class="chart-container" id="trend-container" style="display:none">
+        <canvas id="trend-chart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span>零件明細</span>
+      <div class="filter-row">
+        <label>封裝</label>
+        <select id="pkg-filter">
+          <option value="">全部</option>
+          <option value="0603">0603</option>
+          <option value="0805">0805</option>
+          <option value="1206">1206</option>
+        </select>
+        <label>庫存</label>
+        <select id="stock-filter">
+          <option value="">全部</option>
+          <option value="instock">現貨</option>
+        </select>
+      </div>
+    </div>
+    <div id="table-wrap"><div class="empty-state">尚無資料</div></div>
+  </div>
+</div>
+
+<div class="modal-bg" id="help-modal" style="display:none">
+  <div class="modal-box">
+    <div class="modal-title">如何更新資料</div>
+    <div class="modal-body">
+      在 Cowork 左側邊欄找到排程任務<br>
+      <strong>component-price-scraper</strong><br>
+      點擊 <span class="tag">&#9654; Run now</span> 即可立即抓取最新價格。<br><br>
+      任務完成後，請<strong>關閉並重新開啟</strong>此面板，圖表即會更新。<br><br>
+      同時會產生可分享的 HTML 檔案：<br>
+      <span class="tag">D:\Claude\component_share.html</span>
+    </div>
+    <div class="modal-note">排程每晚 20:00 自動執行，無需手動操作</div>
+    <button class="modal-btn" id="modal-close-btn">知道了</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script>
+const HISTORY_DATA = {};
+
+// ── 規格定義（依類別分組）──────────────────────────────────────────────────
+// 新增規格時在此加入即可，key 同時作為 JSON 資料的索引鍵
+const SPECS = [
+  // ── 積層陶瓷電容 MLCC ──
+  { cat:"MLCC", key:"47uF_4V_X6S", label:"47µF 4V X6S",
+    mouser:"https://www.mouser.tw/c/?q=47uf+4v+x6s",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgTCBcDaICwHYCuAzABHAbmgHgNgGcQBdAXyA" },
+  { cat:"MLCC", key:"22uF_4V_X6S", label:"22µF 4V X6S",
+    mouser:"https://www.mouser.tw/c/?q=22uf+4v+x6s",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKYA2wAuoA" },
+  { cat:"MLCC", key:"10uF_16V_X7R", label:"10µF 16V X7R",
+    mouser:"https://www.mouser.tw/c/?q=10uf+16v+x7r",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKZUDMA3AJxAF0BfIA" },
+  // ── 鋁電容 ──
+  { cat:"鋁電容", key:"AlCap_PDB_100U_63V_M10x10", label:"PDB Hybrid 100µF 63V M10×10",
+    mouser:"https://www.mouser.tw/c/?q=100uf+63v+hybrid+aluminum",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKYDsBmADgBZqQBdAXyA" },
+];
+
+let currentSpec = SPECS[0].key;
+let barChartInst = null;
+let trendChartInst = null;
+
+const specDef  = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
+const specData = () => HISTORY_DATA[currentSpec] || {};
+const latestDate = () => { const d = Object.keys(specData()).sort(); return d.length ? d[d.length-1] : null; };
+const latestProducts = () => { const d = latestDate(); return d ? (specData()[d].products || []) : []; };
+const calcAvg = (products) => {
+  const s = products.filter(p => p.stock > 0 && p.min_price > 0);
+  return s.length ? s.reduce((a,p) => a + p.min_price, 0) / s.length : null;
+};
+
+// ── 分組 Tab 列 ──────────────────────────────────────────────────────────────
+function buildTabs() {
+  const el = document.getElementById('spec-tabs');
+  // 依 cat 分組，插入類別標籤與分隔線
+  const cats = [...new Set(SPECS.map(s => s.cat))];
+  let html = '';
+  cats.forEach((cat, ci) => {
+    if (ci > 0) html += '<div class="tab-sep"></div>';
+    html += '<div class="tab-cat">' + cat + '</div>';
+    SPECS.filter(s => s.cat === cat).forEach(s => {
+      html += '<div class="spec-tab ' + (s.key === currentSpec ? 'active' : '') + '" data-key="' + s.key + '">' + s.label + '</div>';
+    });
+  });
+  el.innerHTML = html;
+  const def = specDef();
+  const ml = document.getElementById('mouser-link');
+  const dl = document.getElementById('digikey-link');
+  if (ml) ml.href = def.mouser;
+  if (dl) dl.href = def.digikey;
+}
+
+function renderSummary() {
+  const products = latestProducts();
+  const inStock = products.filter(p => p.stock > 0);
+  const avg = calcAvg(products);
+  const cheapest = [...inStock].sort((a,b) => a.min_price - b.min_price)[0];
+  document.getElementById('instock-count').textContent = inStock.length || '—';
+  document.getElementById('avg-price-val').textContent = avg != null ? '¥' + avg.toFixed(4) : '—';
+  document.getElementById('avg-price-sub').textContent = avg != null
+    ? specDef().label + ' · ' + latestDate() : '尚無資料';
+  document.getElementById('cheapest-model').textContent = cheapest ? cheapest.model : '—';
+  document.getElementById('cheapest-sub').textContent = cheapest
+    ? '¥' + cheapest.min_price.toFixed(4) + ' (' + cheapest.min_qty + '+起) · ' + cheapest.brand : '—';
+}
+
+const BRAND_COLORS = {'muRata':'#3b82f6','村田':'#3b82f6','SAMSUNG':'#22c55e','三星':'#22c55e',
+  'TAIYO':'#f59e0b','TDK':'#8b5cf6','Rubycon':'#ec4899','Nichicon':'#f97316','Panasonic':'#06b6d4'};
+const brandColor = brand => { for (const [k,v] of Object.entries(BRAND_COLORS)) if (brand.includes(k)) return v; return '#94a3b8'; };
+
+function renderBarChart() {
+  const products = latestProducts().filter(p => p.stock > 0).sort((a,b) => a.min_price - b.min_price).slice(0,14);
+  const el = document.getElementById('product-count');
+  if (el) el.textContent = products.length ? '前 ' + products.length + ' 種（有庫存）' : '';
+  const barWrap = document.getElementById('bar-wrap');
+  const barEmpty = document.getElementById('bar-empty');
+  if (!products.length) { if(barWrap) barWrap.style.display='none'; if(barEmpty) barEmpty.style.display=''; return; }
+  if (barWrap) barWrap.style.display=''; if (barEmpty) barEmpty.style.display='none';
+  if (barChartInst) barChartInst.destroy();
+  const ctx = document.getElementById('bar-chart');
+  if (!ctx) return;
+  barChartInst = new Chart(ctx.getContext('2d'), {
+    type:'bar',
+    data:{
+      labels:products.map(p => p.model.length>18 ? p.model.slice(0,16)+'…' : p.model),
+      datasets:[{label:'最低單價',data:products.map(p=>p.min_price),
+        backgroundColor:products.map(p=>brandColor(p.brand)),borderRadius:4,borderSkipped:false}]
+    },
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{
+        const p=products[ctx.dataIndex];
+        return ['¥'+p.min_price.toFixed(4)+' ('+p.min_qty+'+起)','庫存:'+p.stock.toLocaleString(),'品牌:'+p.brand,'封裝:'+p.package];
+      }}}},
+      scales:{x:{ticks:{font:{size:9},maxRotation:50},grid:{display:false}},
+              y:{ticks:{font:{size:11},callback:v=>'¥'+v.toFixed(2)},grid:{color:'#f1f5f9'}}}}
+  });
+}
+
+function renderTrendChart() {
+  const data = specData();
+  const dates = Object.keys(data).sort();
+  const ph = document.getElementById('trend-placeholder');
+  const ct = document.getElementById('trend-container');
+  if (!ph || !ct) return;
+  if (dates.length < 2) { ph.style.display=''; ct.style.display='none'; return; }
+  ph.style.display='none'; ct.style.display='';
+  const avgPrices = dates.map(d => data[d].avg_price != null ? data[d].avg_price : calcAvg(data[d].products || []));
+  if (trendChartInst) trendChartInst.destroy();
+  const ctx = document.getElementById('trend-chart');
+  if (!ctx) return;
+  trendChartInst = new Chart(ctx.getContext('2d'), {
+    type:'line',
+    data:{labels:dates,datasets:[{label:specDef().label+' 平均最低單價',data:avgPrices,
+      borderColor:'#3b82f6',backgroundColor:'#3b82f620',tension:0.3,pointRadius:5,pointHoverRadius:7,fill:true,spanGaps:true}]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.y!=null?'¥'+ctx.parsed.y.toFixed(4):'—'}}},
+      scales:{x:{ticks:{font:{size:10}},grid:{color:'#f1f5f9'}},
+              y:{ticks:{font:{size:11},callback:v=>'¥'+v.toFixed(3)},grid:{color:'#f1f5f9'}}}}
+  });
+}
+
+function renderTable() {
+  const pkgF = (document.getElementById('pkg-filter')||{}).value||'';
+  const stkF = (document.getElementById('stock-filter')||{}).value||'';
+  let products = latestProducts();
+  if (pkgF) products = products.filter(p => p.package === pkgF);
+  if (stkF === 'instock') products = products.filter(p => p.stock > 0);
+  products = products.sort((a,b) => (b.stock-a.stock)||(a.min_price-b.min_price));
+  const wrap = document.getElementById('table-wrap');
+  if (!wrap) return;
+  if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
+  const rows = products.map(p => {
+    const sc = p.stock>5000?'stock-hi':p.stock>1000?'stock-mid':p.stock>0?'stock-lo':'stock-zero';
+    const sl = p.stock>0 ? p.stock.toLocaleString() : '需訂貨';
+    return '<tr><td><a href="https://item.szlcsc.com/'+p.lcsc_id+'.html" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
+      +'<td><span class="brand-tag">'+p.brand+'</span></td>'
+      +'<td style="text-align:center">'+(p.package||'-')+'</td>'
+      +'<td><span class="price-main">¥'+p.min_price.toFixed(4)+'</span><br><span class="price-bulk">'+p.min_qty+'+起</span></td>'
+      +'<td class="price-bulk">'+(p.prices[50]?'¥'+p.prices[50].toFixed(4):'-')+'</td>'
+      +'<td class="price-bulk">'+(p.prices[500]?'¥'+p.prices[500].toFixed(4):'-')+'</td>'
+      +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
+  }).join('');
+  wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
+}
+
+function renderAll() { renderSummary(); renderBarChart(); renderTrendChart(); renderTable(); }
+
+document.addEventListener('DOMContentLoaded', function() {
+  var helpBtn   = document.getElementById('help-btn');
+  var helpModal = document.getElementById('help-modal');
+  var closeBtn  = document.getElementById('modal-close-btn');
+  if (helpBtn && helpModal) helpBtn.addEventListener('click', function(){ helpModal.style.display='flex'; });
+  if (closeBtn && helpModal) closeBtn.addEventListener('click', function(){ helpModal.style.display='none'; });
+  if (helpModal) helpModal.addEventListener('click', function(e){ if(e.target===helpModal) helpModal.style.display='none'; });
+
+  var tabsEl = document.getElementById('spec-tabs');
+  if (tabsEl) tabsEl.addEventListener('click', function(e){
+    var tab = e.target.closest('[data-key]');
+    if (tab) { currentSpec = tab.dataset.key; buildTabs(); renderAll(); }
+  });
+
+  var pkgF = document.getElementById('pkg-filter');
+  var stkF = document.getElementById('stock-filter');
+  if (pkgF) pkgF.addEventListener('change', renderTable);
+  if (stkF) stkF.addEventListener('change', renderTable);
+
+  buildTabs();
+  var latest = latestDate();
+  var statusEl = document.getElementById('status-text');
+  if (latest) {
+    if (statusEl) statusEl.textContent = '資料日期：' + latest + ' · ' + specDef().label + ' 共 ' + latestProducts().length + ' 個型號';
+    renderAll();
+  } else {
+    if (statusEl) statusEl.textContent = '尚無資料 · 請從側邊欄執行排程任務 component-price-scraper';
+    renderBarChart();
+  }
+});
+</script>
+</body>
+</html>
