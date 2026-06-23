@@ -1,8 +1,28 @@
 #!/usr/bin/env python3
-"""被動元件價格爬蟲 - GitHub Actions 版本"""
-import re, json, os, time
+"""
+LCSC passive component price scraper.
+Uses cloudscraper to bypass Cloudflare protection on GitHub Actions.
+"""
+import json, re, time
 from datetime import datetime, timezone, timedelta
-import requests
+
+try:
+    import cloudscraper
+    session = cloudscraper.create_scraper(
+        browser={"browser": "chrome", "platform": "windows", "mobile": False}
+    )
+    print("Using cloudscraper")
+except ImportError:
+    import requests
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    })
+    print("Using requests (cloudscraper not available)")
+
+TW = timezone(timedelta(hours=8))
+NOW = datetime.now(TW)
+TODAY = NOW.strftime("%Y-%m-%d")
 
 SPECS = [
     {"key": "47uF_4V_X6S",               "url": "https://so.szlcsc.com/global.html?k=47uf+4v+x6s"},
@@ -13,91 +33,105 @@ SPECS = [
     {"key": "AlCap_PDB_100U_63V_M10x10", "url": "https://so.szlcsc.com/global.html?k=100uf+63v+hybrid+aluminum+10x10"},
 ]
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Referer": "https://www.szlcsc.com/",
-}
+MODEL_RE = re.compile(r'\b([A-Z][A-Z0-9\-]{5,})\b')
+PRICE_RE = re.compile(r'(\d[\d,]+)\+\s*\n+[￥¥CNY]([0-9.]+)', re.MULTILINE)
+STOCK_RE = re.compile(r'现货\s*(\d+)')
 
-PRICES_FILE   = "passive_components_prices.json"
-TEMPLATE_FILE = "passive_components_template.html"
-OUTPUT_FILE   = "index.html"
-
-
-def fetch_page(url):
-    resp = requests.get(url, headers=HEADERS, timeout=30)
-    resp.raise_for_status()
-    return resp.text
-
-
-def parse_products(html):
+def parse_products(text):
     products = []
-    model_re = re.compile(r'\[([A-Z][A-Z0-9\-]{5,})\]\(https://item\.szlcsc\.com/(\d+)', re.M)
-    matches = list(model_re.finditer(html))
-    for i, m in enumerate(matches):
-        start = m.start()
-        end = matches[i+1].start() if i+1 < len(matches) else len(html)
-        block = html[start:end]
-        product = {"model": m.group(1), "lcsc_id": m.group(2),
-                   "brand": "", "package": "", "prices": {}, "stock": 0}
-        bm = re.search(r'品牌\[([^\]]+)\]', block)
-        if bm: product["brand"] = bm.group(1)
-        pm = re.search(r'封装(\S+)', block)
-        if pm: product["package"] = pm.group(1)
-        for qty, price in re.findall(r'[-*]?\s*(\d+)\+\s*\n+[￥¥]([0-9.]+)', block):
-            product["prices"][int(qty)] = float(price)
-        sm = re.search(r'现货(\d{2,})', block)
-        if sm: product["stock"] = int(sm.group(1))
-        if product["prices"]:
-            sp = sorted(product["prices"].items())
-            product["min_price"] = sp[0][1]
-            product["min_qty"]   = sp[0][0]
-            products.append(product)
+    blocks = re.split(r'\n(?=[A-Z][A-Z0-9\-]{5,})', text)
+    for block in blocks:
+        lines = block.strip().split('\n')
+        if not lines:
+            continue
+        first = lines[0].strip()
+        m = MODEL_RE.match(first)
+        if not m:
+            continue
+        model = m.group(1)
+        stock_m = STOCK_RE.search(block)
+        if not stock_m:
+            continue
+        stock = int(stock_m.group(1))
+        if stock <= 0:
+            continue
+        prices = {}
+        for pm in PRICE_RE.finditer(block):
+            qty = int(pm.group(1).replace(',', ''))
+            price = float(pm.group(2))
+            prices[qty] = price
+        if not prices:
+            continue
+        sp = sorted(prices.items())
+        brand_m = re.search(r'\n([A-Z][a-zA-Z ]{2,20})\n', block)
+        brand = brand_m.group(1).strip() if brand_m else ""
+        pkg_m = re.search(r'\b(0201|0402|0603|0805|1206|1210|SMD[^,\n]*)\b', block)
+        pkg = pkg_m.group(1) if pkg_m else ""
+        products.append({
+            "model": model, "brand": brand, "package": pkg,
+            "stock": stock, "min_price": sp[0][1], "min_qty": sp[0][0],
+            "prices": {str(k): v for k, v in prices.items()}
+        })
     return products
 
+def fetch_spec(spec):
+    print(f"  Fetching {spec['key']} ...")
+    try:
+        resp = session.get(spec["url"], timeout=30)
+        resp.raise_for_status()
+        text = resp.text
+    except Exception as e:
+        print(f"    ERROR: {e}")
+        return []
+    products = parse_products(text)
+    print(f"    -> {len(products)} in-stock products")
+    return products
 
-def main():
-    tw = timezone(timedelta(hours=8))
-    now = datetime.now(tw)
-    today = now.strftime("%Y-%m-%d")
-    print(f"[{now.strftime('%H:%M')} CST] 抓取被動元件價格 {today}")
+# Load existing data
+JSON_PATH = "passive_components_prices.json"
+try:
+    with open(JSON_PATH) as f:
+        data = json.load(f)
+except:
+    data = {}
 
-    history = json.load(open(PRICES_FILE, encoding="utf-8")) if os.path.exists(PRICES_FILE) else {}
+for spec in SPECS:
+    key = spec["key"]
+    products = fetch_spec(spec)
+    time.sleep(2)  # polite delay
 
-    for spec in SPECS:
-        key, url = spec["key"], spec["url"]
-        print(f"  {key} ...", end=" ", flush=True)
-        try:
-            products = parse_products(fetch_page(url))
-            in_stock = [p for p in products if p.get("stock",0)>0 and p.get("min_price",0)>0]
-            avg = sum(p["min_price"] for p in in_stock)/len(in_stock) if in_stock else None
-            history.setdefault(key, {})[today] = {
-                "fetched_at": now.isoformat(), "avg_price": avg, "products": products}
-            print(f"OK {len(products)} 種, 現貨 {len(in_stock)}, avg=¥{avg:.4f}" if avg else f"OK {len(products)} 種, 無現貨")
-        except Exception as e:
-            print(f"FAIL {e}")
-        time.sleep(1.5)
+    if products:
+        prices_list = [p["min_price"] for p in products]
+        avg = sum(prices_list) / len(prices_list)
+    else:
+        avg = None
 
-    with open(PRICES_FILE, "w", encoding="utf-8") as f:
-        json.dump(history, f, ensure_ascii=False, indent=2)
+    history = data.get(key, {}).get("history", [])
+    entry = {"date": TODAY, "avg_price": round(avg, 4) if avg else None, "product_count": len(products)}
+    if not history or history[-1]["date"] != TODAY:
+        history.append(entry)
+    else:
+        history[-1] = entry
 
-    if os.path.exists(TEMPLATE_FILE):
-        tmpl = open(TEMPLATE_FILE, encoding="utf-8").read()
-        html = tmpl.replace("__HISTORY_JSON__", json.dumps(history, ensure_ascii=False))
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            f.write(html)
-        print(f"產生 {OUTPUT_FILE} ({len(html):,} bytes)")
+    data[key] = {
+        "key": key,
+        "url": spec["url"],
+        "fetched_at": NOW.isoformat(),
+        "avg_price": round(avg, 4) if avg else None,
+        "product_count": len(products),
+        "products": products[:15],
+        "history": history
+    }
 
-    print("✅ 完成")
-    # Summary
-    for spec in SPECS:
-        k = spec["key"]
-        d = history.get(k, {}).get(today, {})
-        avg = d.get("avg_price")
-        cnt = len([p for p in d.get("products",[]) if p.get("stock",0)>0])
-        print(f"  {k}: ¥{avg:.4f} ({cnt} 現貨)" if avg else f"  {k}: 無資料")
+with open(JSON_PATH, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print("Saved " + JSON_PATH)
 
+# Generate index.html
+with open("passive_components_template.html", encoding="utf-8") as f:
+    tmpl = f.read()
 
-if __name__ == "__main__":
-    main()
+html = tmpl.replace("__HISTORY_JSON__", json.dumps(data, ensure_ascii=False))
+with open("index.html", "w", encoding="utf-8") as f:
+    f.write(html)
+print("Generated index.html")

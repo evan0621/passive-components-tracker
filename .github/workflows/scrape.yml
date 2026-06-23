@@ -1,27 +1,24 @@
-name: Scrape Passive Components Prices
+name: Scrape LCSC Prices
 
 on:
   schedule:
-    - cron: '0 12 * * *'   # 20:00 Taiwan time (UTC+8)
-  workflow_dispatch:         # allow manual trigger from GitHub UI
+    - cron: '0 19 * * *'   # 03:00 台灣時間 (UTC+8)
+  workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests cloudscraper
 
       - name: Run scraper
         run: python scraper.py
