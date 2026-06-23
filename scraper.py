@@ -35,7 +35,7 @@ SPECS = [
     {"key": "Polymer_100uF_63V_M10x10",   "url": "https://so.szlcsc.com/global.html?k=polymer+hybrid+63v+100uf+10x10"},
     {"key": "SnapIn_450V_1000uF",         "url": "https://so.szlcsc.com/global.html?k=450v+1000uf+snap-in+aluminum"},
     {"key": "SnapIn_450V_680uF",         "url": "https://so.szlcsc.com/global.html?k=450v+680uf+snap-in+aluminum"},
-    {"key": "SnapIn_500V_680uF",         "url": "https://so.szlcsc.com/global.html?k=500v+680uf+snap-in+aluminum"},
+    {"key": "SnapIn_450V_820uF",         "url": "https://so.szlcsc.com/global.html?k=450v+820uf+snap-in+aluminum"},
     {"key": "DIP_16V_1000uF",            "url": "https://so.szlcsc.com/global.html?k=16v+1000uf+aluminum+electrolytic+dip"},
     {"key": "Polymer_16V_270uF_SMD",     "url": "https://so.szlcsc.com/global.html?k=16v+270uf+polymer+smd"},
 ]
