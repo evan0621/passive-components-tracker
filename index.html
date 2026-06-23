@@ -29,10 +29,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
   padding: 5px 16px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
 .spec-tabs { display: flex; background: #fff; border-bottom: 2px solid #e2e8f0;
-  padding: 0 12px; gap: 2px; overflow-x: auto; flex-wrap: nowrap; align-items: stretch; }
-.tab-cat { font-size: 10px; color: #94a3b8; padding: 0 8px 0 4px; align-self: center;
-  font-weight: 600; letter-spacing: 0.3px; white-space: nowrap; flex-shrink: 0; }
-.tab-sep { width: 1px; background: #e2e8f0; align-self: stretch; margin: 8px 4px; flex-shrink: 0; }
+  padding: 4px 12px 0; gap: 2px; flex-wrap: wrap; align-items: center; }
+.tab-cat { font-size: 10px; color: #64748b; padding: 2px 8px 2px 6px; margin: 3px 0 3px 6px;
+  font-weight: 700; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0;
+  border-left: 2px solid #e2e8f0; }
+.tab-sep { display: none; }
 .spec-tab { padding: 9px 12px; font-size: 12px; font-weight: 500; color: #64748b;
   cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
   transition: all 0.15s; user-select: none; border-radius: 4px 4px 0 0; white-space: nowrap;
@@ -124,7 +125,7 @@ tr:hover td { background: #f8fafc; }
         <div class="avg-sub" id="avg-price-sub">尚無資料</div>
       </div>
       <div class="avg-item">
-        <div class="avg-label">現貨品項數</div>
+        <div class="avg-label">現貨 / 總料號數</div>
         <div class="avg-value" id="instock-count">—</div>
         <div class="avg-sub">有庫存型號</div>
       </div>
@@ -2538,7 +2539,7 @@ const specData = () => HISTORY_DATA[currentSpec] || {};
 const latestDate = () => { const d = Object.keys(specData()).sort(); return d.length ? d[d.length-1] : null; };
 const latestProducts = () => { const d = latestDate(); return d ? (specData()[d].products || []) : []; };
 const calcAvg = (products) => {
-  const s = products.filter(p => p.stock > 0 && p.min_price > 0);
+  const s = products.filter(p => p.min_price != null && p.min_price > 0);
   return s.length ? s.reduce((a,p) => a + p.min_price, 0) / s.length : null;
 };
 
@@ -2574,7 +2575,7 @@ function renderSummary() {
   const inStock = products.filter(p => p.stock > 0);
   const avg = calcAvg(products);
   const cheapest = [...inStock].sort((a,b) => a.min_price - b.min_price)[0];
-  document.getElementById('instock-count').textContent = inStock.length || '—';
+  document.getElementById('instock-count').textContent = (inStock.length + '/' + products.length) || '—';
   document.getElementById('avg-price-val').textContent = avg != null ? '¥' + avg.toFixed(4) : '—';
   document.getElementById('avg-price-sub').textContent = avg != null
     ? specDef().label + ' · ' + latestDate() : '尚無資料';
@@ -2589,9 +2590,10 @@ const BRAND_COLORS = {'muRata':'#3b82f6','村田':'#3b82f6','SAMSUNG':'#22c55e',
 const brandColor = brand => { for (const [k,v] of Object.entries(BRAND_COLORS)) if (brand.includes(k)) return v; return '#94a3b8'; };
 
 function renderBarChart() {
-  const products = latestProducts().filter(p => p.stock > 0).sort((a,b) => a.min_price - b.min_price).slice(0,14);
+  const products = latestProducts().filter(p => p.min_price != null && p.min_price > 0)
+    .sort((a,b) => a.min_price - b.min_price).slice(0,16);
   const el = document.getElementById('product-count');
-  if (el) el.textContent = products.length ? '前 ' + products.length + ' 種（有庫存）' : '';
+  if (el) el.textContent = products.length ? '前 ' + products.length + ' 種（含缺貨）' : '';
   const barWrap = document.getElementById('bar-wrap');
   const barEmpty = document.getElementById('bar-empty');
   if (!products.length) { if(barWrap) barWrap.style.display='none'; if(barEmpty) barEmpty.style.display=''; return; }
@@ -2604,12 +2606,12 @@ function renderBarChart() {
     data:{
       labels:products.map(p => p.model.length>18 ? p.model.slice(0,16)+'…' : p.model),
       datasets:[{label:'最低單價',data:products.map(p=>p.min_price),
-        backgroundColor:products.map(p=>brandColor(p.brand)),borderRadius:4,borderSkipped:false}]
+        backgroundColor:products.map(p=>p.stock>0?brandColor(p.brand):'#cbd5e1'),borderRadius:4,borderSkipped:false}]
     },
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{
         const p=products[ctx.dataIndex];
-        return ['¥'+p.min_price.toFixed(4)+' ('+p.min_qty+'+起)','庫存:'+p.stock.toLocaleString(),'品牌:'+p.brand,'封裝:'+p.package];
+        return ['¥'+p.min_price.toFixed(4)+' ('+p.min_qty+'+起)',p.stock>0?'庫存:'+p.stock.toLocaleString():'⚠ 無現貨（需訂貨）','品牌:'+p.brand,'封裝:'+p.package];
       }}}},
       scales:{x:{ticks:{font:{size:9},maxRotation:50},grid:{display:false}},
               y:{ticks:{font:{size:11},callback:v=>'¥'+v.toFixed(2)},grid:{color:'#f1f5f9'}}}}
@@ -2645,19 +2647,25 @@ function renderTable() {
   let products = latestProducts();
   if (pkgF) products = products.filter(p => p.package === pkgF);
   if (stkF === 'instock') products = products.filter(p => p.stock > 0);
-  products = products.sort((a,b) => (b.stock-a.stock)||(a.min_price-b.min_price));
+  products = products.sort((a,b) => {
+    if ((a.stock>0) !== (b.stock>0)) return a.stock>0 ? -1 : 1;
+    if (a.min_price==null && b.min_price==null) return 0;
+    if (a.min_price==null) return 1; if (b.min_price==null) return -1;
+    return a.min_price - b.min_price;
+  });
   const wrap = document.getElementById('table-wrap');
   if (!wrap) return;
   if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
   const rows = products.map(p => {
     const sc = p.stock>5000?'stock-hi':p.stock>1000?'stock-mid':p.stock>0?'stock-lo':'stock-zero';
     const sl = p.stock>0 ? p.stock.toLocaleString() : '需訂貨';
-    return '<tr><td><a href="https://item.szlcsc.com/'+p.lcsc_id+'.html" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
+    const priceMain = p.min_price!=null ? '<span class="price-main">¥'+p.min_price.toFixed(4)+'</span><br><span class="price-bulk">'+(p.min_qty||'—')+'+起</span>' : '<span class="price-bulk" style="color:#94a3b8">詢價</span>';
+    return '<tr style="'+(p.stock===0?'opacity:0.7':'')+'"><td><a href="https://so.szlcsc.com/global.html?k='+encodeURIComponent(p.model)+'" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
       +'<td><span class="brand-tag">'+p.brand+'</span></td>'
       +'<td style="text-align:center">'+(p.package||'-')+'</td>'
-      +'<td><span class="price-main">¥'+p.min_price.toFixed(4)+'</span><br><span class="price-bulk">'+p.min_qty+'+起</span></td>'
-      +'<td class="price-bulk">'+(p.prices[50]?'¥'+p.prices[50].toFixed(4):'-')+'</td>'
-      +'<td class="price-bulk">'+(p.prices[500]?'¥'+p.prices[500].toFixed(4):'-')+'</td>'
+      +'<td>'+priceMain+'</td>'
+      +'<td class="price-bulk">'+(p.prices&&p.prices[50]?'¥'+p.prices[50].toFixed(4):'-')+'</td>'
+      +'<td class="price-bulk">'+(p.prices&&p.prices[500]?'¥'+p.prices[500].toFixed(4):'-')+'</td>'
       +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
   }).join('');
   wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
