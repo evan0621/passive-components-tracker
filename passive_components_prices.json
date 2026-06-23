@@ -1837,5 +1837,431 @@
         }
       ]
     }
+  },
+  "DIP_16V_1000uF": {
+    "2026-06-23": {
+      "fetched_at": "2026-06-23T21:00:00+08:00",
+      "avg_price": 1.2703,
+      "product_count": 8,
+      "products": [
+        {
+          "model": "LKME1251C102MF",
+          "brand": "Ymin(永铭)",
+          "package": "DIP D10×12.5mm",
+          "stock": 530,
+          "min_price": 0.521,
+          "min_qty": 500,
+          "prices": {
+            "5": 0.8521,
+            "50": 0.6755,
+            "150": 0.5872,
+            "500": 0.521
+          }
+        },
+        {
+          "model": "UHE1C102MHD6",
+          "brand": "Nichicon",
+          "package": "DIP D12.5×15mm",
+          "stock": 808,
+          "min_price": 1.36,
+          "min_qty": 500,
+          "prices": {
+            "1": 2.58,
+            "10": 2.03,
+            "30": 1.79,
+            "100": 1.5,
+            "500": 1.36
+          }
+        },
+        {
+          "model": "RNG102M1CBK-1325",
+          "brand": "Lelon(立隆)",
+          "package": "DIP D12.5×25mm",
+          "stock": 196,
+          "min_price": 1.93,
+          "min_qty": 30,
+          "prices": {
+            "1": 2.76,
+            "10": 2.18,
+            "30": 1.93
+          }
+        },
+        {
+          "model": "GR1C102MG125A00CV016",
+          "brand": "HUAWEI(华威)",
+          "package": "DIP D10×12.5mm",
+          "stock": 0,
+          "min_price": 0.2993,
+          "min_qty": 2400,
+          "prices": {
+            "5": 0.5499,
+            "50": 0.4347,
+            "200": 0.3771,
+            "400": 0.3339,
+            "2400": 0.2993
+          }
+        },
+        {
+          "model": "UVK1C102MPD1TD",
+          "brand": "Nichicon",
+          "package": "DIP",
+          "stock": 0,
+          "min_price": 0.4061,
+          "min_qty": 1000,
+          "prices": {
+            "1": 1.1073,
+            "200": 0.4286,
+            "500": 0.4135,
+            "1000": 0.4061
+          }
+        },
+        {
+          "model": "UVR1C102MPD",
+          "brand": "Nichicon",
+          "package": "DIP",
+          "stock": 0,
+          "min_price": 0.4332,
+          "min_qty": 1000,
+          "prices": {
+            "1": 1.1815,
+            "200": 0.4572,
+            "500": 0.4412,
+            "1000": 0.4332
+          }
+        },
+        {
+          "model": "ECE-A1CN102U",
+          "brand": "PANASONIC",
+          "package": "DIP D12.5×25mm",
+          "stock": 0,
+          "min_price": 1.45,
+          "min_qty": 1000,
+          "prices": {
+            "1": 3.94,
+            "200": 1.53,
+            "500": 1.47,
+            "1000": 1.45
+          }
+        },
+        {
+          "model": "URZ1C102MHD",
+          "brand": "Nichicon",
+          "package": "DIP D12.5×12.5mm",
+          "stock": 0,
+          "min_price": 1.68,
+          "min_qty": 1000,
+          "prices": {
+            "1": 3.26,
+            "10": 2.62,
+            "30": 2.34,
+            "100": 1.92,
+            "500": 1.77,
+            "1000": 1.68
+          }
+        }
+      ]
+    }
+  },
+  "Polymer_16V_270uF_SMD": {
+    "2026-06-23": {
+      "fetched_at": "2026-06-23T21:00:00+08:00",
+      "avg_price": 1.058,
+      "product_count": 20,
+      "products": [
+        {
+          "model": "GVZ1C271M0607",
+          "brand": "HONOR",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 1940,
+          "min_price": 0.1805,
+          "min_qty": 1000,
+          "prices": {
+            "10": 0.19,
+            "100": 0.1859,
+            "300": 0.1832,
+            "1000": 0.1805
+          }
+        },
+        {
+          "model": "EFVM016ADA271M0677",
+          "brand": "FOLLON(富隆)",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 820,
+          "min_price": 0.3924,
+          "min_qty": 5000,
+          "prices": {
+            "5": 0.7941,
+            "50": 0.6213,
+            "150": 0.5349,
+            "1000": 0.4701,
+            "2000": 0.4183,
+            "5000": 0.3924
+          }
+        },
+        {
+          "model": "SM277M016E0700",
+          "brand": "SHENGYANG",
+          "package": "SMD D6.3×7mm",
+          "stock": 1535,
+          "min_price": 0.3254,
+          "min_qty": 5000,
+          "prices": {
+            "5": 0.6223,
+            "50": 0.4946,
+            "150": 0.4307,
+            "1000": 0.3829,
+            "2000": 0.3445,
+            "5000": 0.3254
+          }
+        },
+        {
+          "model": "SS271M160E7R7R1Z00ZZ",
+          "brand": "CH(创慧)",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 645,
+          "min_price": 0.459,
+          "min_qty": 150,
+          "prices": {
+            "5": 0.6513,
+            "50": 0.5231,
+            "150": 0.459
+          }
+        },
+        {
+          "model": "HV1C277M0607PZ",
+          "brand": "HONOR",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 1855,
+          "min_price": 0.4776,
+          "min_qty": 5000,
+          "prices": {
+            "5": 1.0166,
+            "50": 0.7978,
+            "150": 0.704,
+            "1000": 0.561,
+            "2000": 0.5089,
+            "5000": 0.4776
+          }
+        },
+        {
+          "model": "RYHV16V270UF6*7",
+          "brand": "HONOR",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 1000,
+          "min_price": 0.5905,
+          "min_qty": 1000,
+          "prices": {
+            "5": 1.0427,
+            "50": 0.8124,
+            "150": 0.7137,
+            "1000": 0.5905
+          }
+        },
+        {
+          "model": "EFPA016ADA271M0687",
+          "brand": "FOLLON(富隆)",
+          "package": "SMD D6.3×8.7mm",
+          "stock": 445,
+          "min_price": 0.7409,
+          "min_qty": 5000,
+          "prices": {
+            "5": 1.4026,
+            "50": 1.1203,
+            "150": 0.9994,
+            "1000": 0.8484,
+            "2000": 0.7812,
+            "5000": 0.7409
+          }
+        },
+        {
+          "model": "JBLM2271M016C077RTM",
+          "brand": "DMBJ(振宝佳)",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 810,
+          "min_price": 0.7808,
+          "min_qty": 150,
+          "prices": {
+            "5": 1.1264,
+            "50": 0.8845,
+            "150": 0.7808
+          }
+        },
+        {
+          "model": "EEEFKC271XSP",
+          "brand": "PANASONIC",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 2625,
+          "min_price": 0.9199,
+          "min_qty": 900,
+          "prices": {
+            "5": 1.5963,
+            "50": 1.2683,
+            "150": 1.1278,
+            "900": 0.9199
+          }
+        },
+        {
+          "model": "OVZ271M1CTR-0610",
+          "brand": "Lelon(立隆)",
+          "package": "SMD 6.3×10mm",
+          "stock": 685,
+          "min_price": 0.9629,
+          "min_qty": 500,
+          "prices": {
+            "5": 1.6358,
+            "50": 1.2931,
+            "150": 1.1462,
+            "500": 0.9629
+          }
+        },
+        {
+          "model": "APXJ160ARA271MF80G",
+          "brand": "NCC",
+          "package": "SMD D6.3×8mm",
+          "stock": 1595,
+          "min_price": 1.0838,
+          "min_qty": 900,
+          "prices": {
+            "5": 1.7764,
+            "50": 1.4236,
+            "150": 1.2724,
+            "900": 1.0838
+          }
+        },
+        {
+          "model": "APXJ160ARA271MF80J",
+          "brand": "NCC",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 10000,
+          "min_price": 1.2691,
+          "min_qty": 5400,
+          "prices": {
+            "5": 2.2789,
+            "50": 1.8482,
+            "150": 1.6635,
+            "900": 1.4332,
+            "2700": 1.3306,
+            "5400": 1.2691
+          }
+        },
+        {
+          "model": "APXG160ARA271MH70G",
+          "brand": "NCC",
+          "package": "SMD D8×6.7mm",
+          "stock": 2547,
+          "min_price": 1.34,
+          "min_qty": 1000,
+          "prices": {
+            "1": 2.75,
+            "10": 2.22,
+            "30": 2.0,
+            "100": 1.72,
+            "500": 1.59,
+            "1000": 1.34
+          }
+        },
+        {
+          "model": "OVJ271M1CTR-0608",
+          "brand": "Lelon(立隆)",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 585,
+          "min_price": 1.3744,
+          "min_qty": 150,
+          "prices": {
+            "5": 2.0025,
+            "50": 1.5629,
+            "150": 1.3744
+          }
+        },
+        {
+          "model": "HBW271M1CTR-0810",
+          "brand": "Lelon(立隆)",
+          "package": "SMD D8×10mm",
+          "stock": 225,
+          "min_price": 1.43,
+          "min_qty": 100,
+          "prices": {
+            "1": 2.56,
+            "10": 1.98,
+            "30": 1.74,
+            "100": 1.43
+          }
+        },
+        {
+          "model": "OVZ271M1CTR-0807",
+          "brand": "Lelon(立隆)",
+          "package": "SMD D8×6.7mm",
+          "stock": 995,
+          "min_price": 1.4901,
+          "min_qty": 150,
+          "prices": {
+            "5": 2.0445,
+            "50": 1.6564,
+            "150": 1.4901
+          }
+        },
+        {
+          "model": "FP-016ME271M-SAR",
+          "brand": "Nichicon",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 560,
+          "min_price": 1.687,
+          "min_qty": 150,
+          "prices": {
+            "5": 2.3338,
+            "50": 1.881,
+            "150": 1.687
+          }
+        },
+        {
+          "model": "16SVPF270M",
+          "brand": "PANASONIC",
+          "package": "SMD D8×6.9mm",
+          "stock": 1040,
+          "min_price": 3.54,
+          "min_qty": 1000,
+          "prices": {
+            "1": 7.27,
+            "10": 5.74,
+            "30": 4.98,
+            "100": 4.22,
+            "500": 3.77,
+            "1000": 3.54
+          }
+        },
+        {
+          "model": "160AVEA271M0610",
+          "brand": "APAQ(钰邦)",
+          "package": "SMD D6.3×9.7mm",
+          "stock": 0,
+          "min_price": 0.92,
+          "min_qty": 750,
+          "prices": {
+            "1": 1.9133,
+            "10": 1.5101,
+            "30": 1.3373,
+            "100": 1.1217,
+            "750": 0.9777,
+            "1500": 0.92
+          }
+        },
+        {
+          "model": "EEEFNC271XUP",
+          "brand": "PANASONIC",
+          "package": "SMD D6.3×7.7mm",
+          "stock": 0,
+          "min_price": 1.029,
+          "min_qty": 5400,
+          "prices": {
+            "5": 1.8309,
+            "50": 1.4888,
+            "150": 1.3422,
+            "900": 1.1593,
+            "2700": 1.0779,
+            "5400": 1.029
+          }
+        }
+      ]
+    }
   }
 }
