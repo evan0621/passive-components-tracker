@@ -168,14 +168,7 @@ tr:hover td { background: #f8fafc; }
       <span>零件明細</span>
       <div class="filter-row">
         <label>封裝</label>
-        <select id="pkg-filter">
-          <option value="">全部</option>
-          <option value="0201">0201</option>
-          <option value="0402">0402</option>
-          <option value="0603">0603</option>
-          <option value="0805">0805</option>
-          <option value="1206">1206</option>
-        </select>
+        <select id="pkg-filter"><option value="">全部</option></select>
         <label>庫存</label>
         <select id="stock-filter">
           <option value="">全部</option>
@@ -425,7 +418,18 @@ function renderTable() {
   wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
 
-function renderAll() { renderUseInfo(); renderSummary(); renderBarChart(); renderTrendChart(); renderTable(); }
+function buildPkgFilter() {
+  var sel = document.getElementById('pkg-filter');
+  if (!sel) return;
+  var products = latestProducts();
+  var pkgs = Array.from(new Set(products.map(p => p.package).filter(Boolean))).sort();
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">全部</option>' + pkgs.map(p => '<option value="'+p+'">'+p+'</option>').join('');
+  // restore selection if still valid
+  if (cur && pkgs.includes(cur)) sel.value = cur; else sel.value = '';
+}
+
+function renderAll() { buildPkgFilter(); renderUseInfo(); renderSummary(); renderBarChart(); renderTrendChart(); renderTable(); }
 
 document.addEventListener('DOMContentLoaded', function() {
   var helpBtn   = document.getElementById('help-btn');
