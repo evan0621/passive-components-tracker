@@ -1,0 +1,37 @@
+name: Scrape Passive Components Prices
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # 20:00 Taiwan time (UTC+8)
+  workflow_dispatch:         # allow manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add passive_components_prices.json index.html
+          git diff --staged --quiet && echo "no changes" || (
+            git commit -m "auto: update prices $(TZ=Asia/Taipei date +%Y-%m-%d)"
+            git push
+          )

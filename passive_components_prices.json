@@ -1,0 +1,1349 @@
+{
+  "47uF_4V_X6S": {
+    "2026-06-23": {
+      "fetched_at": "2026-06-23T20:00:00+08:00",
+      "avg_price": 1.493336,
+      "products": [
+        {
+          "model": "GRM21BC80G476ME15L",
+          "lcsc_id": "C162410",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "5": 1.1789,
+            "50": 1.022,
+            "150": 0.9435,
+            "500": 0.8846,
+            "3000": 0.8376,
+            "6000": 0.814
+          },
+          "stock": 9725,
+          "min_price": 1.1789,
+          "min_qty": 5
+        },
+        {
+          "model": "CGA0805X6S476M4R0MT",
+          "lcsc_id": "C6119921",
+          "brand": "HRE",
+          "package": "0805",
+          "prices": {
+            "5": 1.1548,
+            "50": 0.9493,
+            "150": 0.8612,
+            "500": 0.7513,
+            "3000": 0.6615,
+            "6000": 0.6322
+          },
+          "stock": 3275,
+          "min_price": 1.1548,
+          "min_qty": 5
+        },
+        {
+          "model": "GRM21BC80G476ME15K",
+          "lcsc_id": "C2929205",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "5": 0.887453,
+            "50": 0.658242,
+            "150": 0.521675,
+            "500": 0.476014,
+            "2500": 0.424501,
+            "5000": 0.406175
+          },
+          "stock": 1345,
+          "min_price": 0.887453,
+          "min_qty": 5
+        },
+        {
+          "model": "C2012X6S0G476MT000E",
+          "lcsc_id": "C445701",
+          "brand": "TDK",
+          "package": "0805",
+          "prices": {
+            "5": 1.0968,
+            "50": 0.8798,
+            "150": 0.7868,
+            "500": 0.6708
+          },
+          "stock": 1290,
+          "min_price": 1.0968,
+          "min_qty": 5
+        },
+        {
+          "model": "CL10X476MR8NRWC",
+          "lcsc_id": "C7107634",
+          "brand": "SAMSUNG",
+          "package": "0603",
+          "prices": {
+            "5": 1.6094,
+            "50": 1.2792,
+            "150": 1.1377
+          },
+          "stock": 205,
+          "min_price": 1.6094,
+          "min_qty": 5
+        },
+        {
+          "model": "AMK212BC6476MG-T",
+          "lcsc_id": "C697609",
+          "brand": "TAIYO YUDEN",
+          "package": "0805",
+          "prices": {
+            "10": 0.276,
+            "100": 0.2208,
+            "300": 0.1932
+          },
+          "stock": 80,
+          "min_price": 0.276,
+          "min_qty": 10
+        },
+        {
+          "model": "AMK107BC6476MA-RE",
+          "lcsc_id": "C1518285",
+          "brand": "TAIYO YUDEN",
+          "package": "0603",
+          "prices": {
+            "1": 4.25,
+            "10": 4.14,
+            "30": 4.07
+          },
+          "stock": 50,
+          "min_price": 4.25,
+          "min_qty": 1
+        },
+        {
+          "model": "GRT21BC80G476ME13L",
+          "lcsc_id": "C711101",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "5": 1.6378,
+            "50": 1.3052,
+            "150": 1.1626,
+            "500": 0.9848,
+            "3000": 0.9056,
+            "6000": 0.858
+          },
+          "stock": 0,
+          "min_price": 1.6378,
+          "min_qty": 5
+        },
+        {
+          "model": "CL21X476MRYNNNE",
+          "lcsc_id": "C318686",
+          "brand": "SAMSUNG",
+          "package": "0805",
+          "prices": {
+            "10": 0.4346,
+            "100": 0.349,
+            "300": 0.3062,
+            "2000": 0.2615,
+            "4000": 0.2359,
+            "10000": 0.223
+          },
+          "stock": 0,
+          "min_price": 0.4346,
+          "min_qty": 10
+        },
+        {
+          "model": "MSASA21GBC6476MTNA01",
+          "lcsc_id": "C6105104",
+          "brand": "TAIYO YUDEN",
+          "package": "0805",
+          "prices": {
+            "10": 0.3935,
+            "100": 0.3174,
+            "300": 0.2793,
+            "3000": 0.2508,
+            "6000": 0.228,
+            "9000": 0.2166
+          },
+          "stock": 0,
+          "min_price": 0.3935,
+          "min_qty": 10
+        },
+        {
+          "model": "GRM188C80G476ME01D",
+          "lcsc_id": "C21393748",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "5": 0.9435,
+            "50": 0.7406,
+            "150": 0.6537,
+            "500": 0.5452,
+            "2500": 0.4969,
+            "4000": 0.4679
+          },
+          "stock": 0,
+          "min_price": 0.9435,
+          "min_qty": 5
+        },
+        {
+          "model": "AMK316AC6476ML-T",
+          "lcsc_id": "C2176013",
+          "brand": "TAIYO YUDEN",
+          "package": "1206",
+          "prices": {
+            "5": 0.6206,
+            "50": 0.5006,
+            "150": 0.4406,
+            "500": 0.3956,
+            "2000": 0.3596,
+            "4000": 0.3416
+          },
+          "stock": 0,
+          "min_price": 0.6206,
+          "min_qty": 5
+        },
+        {
+          "model": "GRM188C80G476ME01J",
+          "lcsc_id": "C22333629",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "1": 0.5891,
+            "200": 0.2351,
+            "500": 0.2272,
+            "1000": 0.2233
+          },
+          "stock": 0,
+          "min_price": 0.5891,
+          "min_qty": 1
+        },
+        {
+          "model": "CL21X476MRYNNWE",
+          "lcsc_id": "C5969255",
+          "brand": "SAMSUNG",
+          "package": "0805",
+          "prices": {
+            "1": 0.686,
+            "200": 0.2737,
+            "500": 0.2646,
+            "1000": 0.2601
+          },
+          "stock": 0,
+          "min_price": 0.686,
+          "min_qty": 1
+        },
+        {
+          "model": "GRT31CC80G476ME01L",
+          "lcsc_id": "C6265823",
+          "brand": "muRata",
+          "package": "1206",
+          "prices": {
+            "1": 12.03,
+            "200": 4.8,
+            "500": 4.64,
+            "1000": 4.56
+          },
+          "stock": 0,
+          "min_price": 12.03,
+          "min_qty": 1
+        },
+        {
+          "model": "C2012X6S0G476M125AC",
+          "lcsc_id": "C2167659",
+          "brand": "TDK",
+          "package": "0805",
+          "prices": {
+            "1": 0.6227,
+            "200": 0.241,
+            "500": 0.2325,
+            "1000": 0.2283
+          },
+          "stock": 0,
+          "min_price": 0.6227,
+          "min_qty": 1
+        },
+        {
+          "model": "CC0805MKX6S4BB476",
+          "lcsc_id": "C3908973",
+          "brand": "YAGEO",
+          "package": "0805",
+          "prices": {
+            "1": 0.4897,
+            "200": 0.1895,
+            "500": 0.1829,
+            "1000": 0.1796
+          },
+          "stock": 0,
+          "min_price": 0.4897,
+          "min_qty": 1
+        },
+        {
+          "model": "MLASA168BC6476MRCA01",
+          "lcsc_id": "C5670661",
+          "brand": "TAIYO YUDEN",
+          "package": "0603",
+          "prices": {
+            "1": 6.32,
+            "200": 2.53,
+            "500": 2.44,
+            "1000": 2.4
+          },
+          "stock": 0,
+          "min_price": 6.32,
+          "min_qty": 1
+        },
+        {
+          "model": "MLASA21GBC6476MTNA01",
+          "lcsc_id": "C5799166",
+          "brand": "TAIYO YUDEN",
+          "package": "0805",
+          "prices": {
+            "1": 2.0736,
+            "200": 0.8274,
+            "500": 0.7998,
+            "1000": 0.7861
+          },
+          "stock": 0,
+          "min_price": 2.0736,
+          "min_qty": 1
+        },
+        {
+          "model": "MLASA31LAC6476MTNA01",
+          "lcsc_id": "C5799170",
+          "brand": "TAIYO YUDEN",
+          "package": "1206",
+          "prices": {
+            "1": 3.44,
+            "200": 1.37,
+            "500": 1.33,
+            "1000": 1.31
+          },
+          "stock": 0,
+          "min_price": 3.44,
+          "min_qty": 1
+        },
+        {
+          "model": "MSASA31LAC6476MTNA01",
+          "lcsc_id": "C6105106",
+          "brand": "TAIYO YUDEN",
+          "package": "1206",
+          "prices": {
+            "1": 1.303,
+            "200": 0.5199,
+            "500": 0.5026,
+            "1000": 0.494
+          },
+          "stock": 0,
+          "min_price": 1.303,
+          "min_qty": 1
+        },
+        {
+          "model": "MSASA168BC6476MRCA01",
+          "lcsc_id": "C7235118",
+          "brand": "TAIYO YUDEN",
+          "package": "0603",
+          "prices": {
+            "1": 2.6898,
+            "200": 1.0733,
+            "500": 1.0374,
+            "1000": 1.0197
+          },
+          "stock": 0,
+          "min_price": 2.6898,
+          "min_qty": 1
+        },
+        {
+          "model": "C0805S476M004T",
+          "lcsc_id": "C5585034",
+          "brand": "IHHEC",
+          "package": "0805",
+          "prices": {
+            "1": 3.97,
+            "200": 1.59,
+            "500": 1.54,
+            "1000": 1.51
+          },
+          "stock": 0,
+          "min_price": 3.97,
+          "min_qty": 1
+        },
+        {
+          "model": "C0805X6S4R0-476MNE",
+          "lcsc_id": "C3862527",
+          "brand": "Venkel",
+          "package": "0805",
+          "prices": {
+            "1": 0.8721,
+            "200": 0.3375,
+            "500": 0.3256,
+            "1000": 0.3198
+          },
+          "stock": 0,
+          "min_price": 0.8721,
+          "min_qty": 1
+        },
+        {
+          "model": "MA0805XM476M4R0",
+          "lcsc_id": "C20100642",
+          "brand": "Meritek",
+          "package": "0805",
+          "prices": {
+            "1": 0.7006,
+            "200": 0.2796,
+            "500": 0.2702,
+            "1000": 0.2656
+          },
+          "stock": 0,
+          "min_price": 0.7006,
+          "min_qty": 1
+        }
+      ]
+    }
+  },
+  "22uF_4V_X6S": {
+    "2026-06-23": {
+      "fetched_at": "2026-06-23T20:00:00+08:00",
+      "avg_price": 0.521864,
+      "products": [
+        {
+          "model": "CGA0603X6S226M4R0JT",
+          "lcsc_id": "C6119832",
+          "brand": "HRE",
+          "package": "0603",
+          "prices": {
+            "10": 0.3434,
+            "100": 0.3093,
+            "300": 0.2923,
+            "1000": 0.2795,
+            "4000": 0.2608,
+            "8000": 0.2557
+          },
+          "stock": 6450,
+          "min_price": 0.3434,
+          "min_qty": 10
+        },
+        {
+          "model": "0603X6S226M4R0NT",
+          "lcsc_id": "C49326593",
+          "brand": "AIDE",
+          "package": "0603",
+          "prices": {
+            "20": 0.1809,
+            "200": 0.1431,
+            "600": 0.1221
+          },
+          "stock": 2960,
+          "min_price": 0.1809,
+          "min_qty": 20
+        },
+        {
+          "model": "GRM188C80G226MEA0D",
+          "lcsc_id": "C162269",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "10": 0.2833,
+            "100": 0.233,
+            "300": 0.2079
+          },
+          "stock": 340,
+          "min_price": 0.2833,
+          "min_qty": 10
+        },
+        {
+          "model": "CL05X226MR6NUW8",
+          "lcsc_id": "C6150048",
+          "brand": "SAMSUNG",
+          "package": "0402",
+          "prices": {
+            "1": 0.7558,
+            "10": 0.5985,
+            "30": 0.5198,
+            "100": 0.4608
+          },
+          "stock": 369,
+          "min_price": 0.7558,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM158C80G226ME01D",
+          "lcsc_id": "C3854737",
+          "brand": "muRata",
+          "package": "0402",
+          "prices": {
+            "5": 0.8678,
+            "50": 0.7666,
+            "150": 0.716
+          },
+          "stock": 205,
+          "min_price": 0.8678,
+          "min_qty": 5
+        },
+        {
+          "model": "0603DS226M4R0NT",
+          "lcsc_id": "C5445363",
+          "brand": "FH",
+          "package": "0603",
+          "prices": {
+            "10": 0.2818,
+            "100": 0.2228,
+            "300": 0.1933
+          },
+          "stock": 960,
+          "min_price": 0.2818,
+          "min_qty": 10
+        },
+        {
+          "model": "CL10X226MR8NUNE",
+          "lcsc_id": "C3039689",
+          "brand": "SAMSUNG",
+          "package": "0603",
+          "prices": {
+            "20": 0.1686,
+            "200": 0.1335,
+            "600": 0.114
+          },
+          "stock": 100,
+          "min_price": 0.1686,
+          "min_qty": 20
+        },
+        {
+          "model": "GRM188C80G226ME15D",
+          "lcsc_id": "C6204325",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "10": 0.2636,
+            "100": 0.2127,
+            "300": 0.1872
+          },
+          "stock": 40,
+          "min_price": 0.2636,
+          "min_qty": 10
+        },
+        {
+          "model": "CC0603MRX6S4BB226",
+          "lcsc_id": "C3890408",
+          "brand": "YAGEO",
+          "package": "0603",
+          "prices": {
+            "10": 0.4347,
+            "100": 0.3651,
+            "300": 0.3303
+          },
+          "stock": 20,
+          "min_price": 0.4347,
+          "min_qty": 10
+        },
+        {
+          "model": "CM05X6S226M04AH080",
+          "lcsc_id": "C1881365",
+          "brand": "Kyocera AVX",
+          "package": "0402",
+          "prices": {
+            "1": 2.04,
+            "10": 1.99,
+            "30": 1.96,
+            "100": 1.94
+          },
+          "stock": 100,
+          "min_price": 2.04,
+          "min_qty": 1
+        },
+        {
+          "model": "CL21X226MRQNNNE",
+          "lcsc_id": "C307563",
+          "brand": "SAMSUNG",
+          "package": "0805",
+          "prices": {
+            "1": 0.1206,
+            "10": 0.0936,
+            "30": 0.0786
+          },
+          "stock": 36,
+          "min_price": 0.1206,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM21BC80G226ME39L",
+          "lcsc_id": "C393035",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "5": 0.5229,
+            "50": 0.4219,
+            "150": 0.3714,
+            "500": 0.3335,
+            "3000": 0.3032,
+            "6000": 0.288
+          },
+          "stock": 0,
+          "min_price": 0.5229,
+          "min_qty": 5
+        },
+        {
+          "model": "GRT188C80G226ME13J",
+          "lcsc_id": "C5648030",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "1": 0.7483,
+            "200": 0.2986,
+            "500": 0.2886,
+            "1000": 0.2837
+          },
+          "stock": 0,
+          "min_price": 0.7483,
+          "min_qty": 1
+        },
+        {
+          "model": "AMK107BC6226MA-T",
+          "lcsc_id": "C412620",
+          "brand": "TAIYO YUDEN",
+          "package": "0603",
+          "prices": {
+            "20": 0.2546,
+            "200": 0.206,
+            "600": 0.179,
+            "4000": 0.1628,
+            "8000": 0.1487,
+            "20000": 0.1411
+          },
+          "stock": 0,
+          "min_price": 0.2546,
+          "min_qty": 20
+        },
+        {
+          "model": "GRM188C80G226ME15J",
+          "lcsc_id": "C6867728",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "1": 0.5695,
+            "200": 0.2273,
+            "500": 0.2197,
+            "1000": 0.2159
+          },
+          "stock": 0,
+          "min_price": 0.5695,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM188C80G226MEA0J",
+          "lcsc_id": "C1626337",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "1": 0.471,
+            "200": 0.1823,
+            "500": 0.1759,
+            "1000": 0.1727
+          },
+          "stock": 0,
+          "min_price": 0.471,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM31CC80G226KE19L",
+          "lcsc_id": "C19434114",
+          "brand": "muRata",
+          "package": "",
+          "prices": {
+            "1": 2.185,
+            "200": 0.8719,
+            "500": 0.8427,
+            "1000": 0.8283
+          },
+          "stock": 0,
+          "min_price": 2.185,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM31CC80G226KE19K",
+          "lcsc_id": "C19552532",
+          "brand": "muRata",
+          "package": "",
+          "prices": {
+            "1": 2.0488,
+            "200": 0.8175,
+            "500": 0.7902,
+            "1000": 0.7767
+          },
+          "stock": 0,
+          "min_price": 2.0488,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM158C80G226ME01J",
+          "lcsc_id": "C3880263",
+          "brand": "muRata",
+          "package": "0402",
+          "prices": {
+            "1": 0.6669,
+            "200": 0.2581,
+            "500": 0.249,
+            "1000": 0.2446
+          },
+          "stock": 0,
+          "min_price": 0.6669,
+          "min_qty": 1
+        },
+        {
+          "model": "GRT188C80G226ME13D",
+          "lcsc_id": "C5648028",
+          "brand": "muRata",
+          "package": "0603",
+          "prices": {
+            "1": 0.3695,
+            "200": 0.1475,
+            "500": 0.1425,
+            "1000": 0.1401
+          },
+          "stock": 0,
+          "min_price": 0.3695,
+          "min_qty": 1
+        },
+        {
+          "model": "GRM21BC80G226ME39K",
+          "lcsc_id": "C5755333",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "1": 0.6145,
+            "200": 0.2452,
+            "500": 0.237,
+            "1000": 0.233
+          },
+          "stock": 0,
+          "min_price": 0.6145,
+          "min_qty": 1
+        },
+        {
+          "model": "CL10X226MR8NUWE",
+          "lcsc_id": "C5969217",
+          "brand": "SAMSUNG",
+          "package": "0603",
+          "prices": {
+            "1": 1.8523,
+            "200": 0.7391,
+            "500": 0.7144,
+            "1000": 0.7022
+          },
+          "stock": 0,
+          "min_price": 1.8523,
+          "min_qty": 1
+        },
+        {
+          "model": "CL21X226MRYNNWE",
+          "lcsc_id": "C6484317",
+          "brand": "SAMSUNG",
+          "package": "0805",
+          "prices": {
+            "1": 0.2094,
+            "200": 0.0836,
+            "500": 0.0808,
+            "1000": 0.0794
+          },
+          "stock": 0,
+          "min_price": 0.2094,
+          "min_qty": 1
+        },
+        {
+          "model": "GRT31CC80G226KE01L",
+          "lcsc_id": "C6627668",
+          "brand": "muRata",
+          "package": "1206",
+          "prices": {
+            "1": 7.88,
+            "200": 3.15,
+            "500": 3.04,
+            "1000": 2.99
+          },
+          "stock": 0,
+          "min_price": 7.88,
+          "min_qty": 1
+        },
+        {
+          "model": "CL10X226MR8QRWC",
+          "lcsc_id": "C6882710",
+          "brand": "SAMSUNG",
+          "package": "0603",
+          "prices": {
+            "1": 2.3287,
+            "200": 0.9292,
+            "500": 0.8981,
+            "1000": 0.8828
+          },
+          "stock": 0,
+          "min_price": 2.3287,
+          "min_qty": 1
+        },
+        {
+          "model": "CL21X226MRQNNWC",
+          "lcsc_id": "C6882747",
+          "brand": "SAMSUNG",
+          "package": "0805",
+          "prices": {
+            "1": 0.354,
+            "200": 0.1413,
+            "500": 0.1365,
+            "1000": 0.1342
+          },
+          "stock": 0,
+          "min_price": 0.354,
+          "min_qty": 1
+        },
+        {
+          "model": "GRT31CC80G226ME01L",
+          "lcsc_id": "C7282698",
+          "brand": "muRata",
+          "package": "1206",
+          "prices": {
+            "1": 5.57,
+            "200": 2.23,
+            "500": 2.15,
+            "1000": 2.12
+          },
+          "stock": 0,
+          "min_price": 5.57,
+          "min_qty": 1
+        },
+        {
+          "model": "C1608X6S0G226M080AC",
+          "lcsc_id": "C1517768",
+          "brand": "TDK",
+          "package": "0603",
+          "prices": {
+            "1": 0.3719,
+            "200": 0.144,
+            "500": 0.1389,
+            "1000": 0.1364
+          },
+          "stock": 0,
+          "min_price": 0.3719,
+          "min_qty": 1
+        },
+        {
+          "model": "KGM05DS60G226MH",
+          "lcsc_id": "C20218034",
+          "brand": "Kyocera AVX",
+          "package": "",
+          "prices": {
+            "1": 0.4108,
+            "200": 0.1718,
+            "500": 0.1665,
+            "1000": 0.1638
+          },
+          "stock": 0,
+          "min_price": 0.4108,
+          "min_qty": 1
+        },
+        {
+          "model": "CC0805MKX6S4BB226",
+          "lcsc_id": "C3875248",
+          "brand": "YAGEO",
+          "package": "0805",
+          "prices": {
+            "1": 0.1309,
+            "200": 0.0507,
+            "500": 0.0489,
+            "1000": 0.048
+          },
+          "stock": 0,
+          "min_price": 0.1309,
+          "min_qty": 1
+        }
+      ]
+    }
+  },
+  "10uF_16V_X7R": {
+    "2026-06-23": {
+      "fetched_at": "2026-06-23T20:00:00+08:00",
+      "avg_price": 0.842845,
+      "products": [
+        {
+          "model": "CL21B106KOQNNNE",
+          "lcsc_id": "C95841",
+          "brand": "SAMSUNG",
+          "package": "0805",
+          "prices": {
+            "10": 0.7217,
+            "100": 0.6609,
+            "300": 0.6296,
+            "2000": 0.5843,
+            "4000": 0.5753,
+            "10000": 0.5692
+          },
+          "stock": 24000,
+          "min_price": 0.7217,
+          "min_qty": 10
+        },
+        {
+          "model": "CC0805KKX7R7BB106",
+          "lcsc_id": "C326595",
+          "brand": "YAGEO",
+          "package": "0805",
+          "prices": {
+            "10": 1.0309,
+            "100": 0.9551,
+            "300": 0.916,
+            "3000": 0.8704,
+            "6000": 0.8591,
+            "9000": 0.8515
+          },
+          "stock": 40000,
+          "min_price": 1.0309,
+          "min_qty": 10
+        },
+        {
+          "model": "CL31B106KOHNNNE",
+          "lcsc_id": "C47971",
+          "brand": "SAMSUNG",
+          "package": "1206",
+          "prices": {
+            "10": 0.8391,
+            "100": 0.7631,
+            "300": 0.7241,
+            "2000": 0.6398,
+            "4000": 0.6285
+          },
+          "stock": 3320,
+          "min_price": 0.8391,
+          "min_qty": 10
+        },
+        {
+          "model": "GRM31CR71C106KA12L",
+          "lcsc_id": "C97954",
+          "brand": "muRata",
+          "package": "1206",
+          "prices": {
+            "10": 0.5847,
+            "100": 0.5165,
+            "300": 0.4824,
+            "2000": 0.4569,
+            "4000": 0.4364
+          },
+          "stock": 310,
+          "min_price": 0.5847,
+          "min_qty": 10
+        },
+        {
+          "model": "GRM21BR71C106KE51L",
+          "lcsc_id": "C408142",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "5": 1.3316,
+            "50": 1.1765,
+            "150": 1.099,
+            "500": 1.0408,
+            "3000": 0.9943,
+            "6000": 0.9711
+          },
+          "stock": 80000,
+          "min_price": 1.3316,
+          "min_qty": 5
+        },
+        {
+          "model": "1206B106K160NT",
+          "lcsc_id": "C39127",
+          "brand": "FH",
+          "package": "1206",
+          "prices": {
+            "10": 0.9346,
+            "100": 0.8386,
+            "300": 0.7906,
+            "2000": 0.7253
+          },
+          "stock": 200,
+          "min_price": 0.9346,
+          "min_qty": 10
+        },
+        {
+          "model": "TCC0805X7R106K160FT",
+          "lcsc_id": "C380347",
+          "brand": "CCTC",
+          "package": "0805",
+          "prices": {
+            "10": 0.4413,
+            "100": 0.3919,
+            "300": 0.3672,
+            "3000": 0.3487,
+            "6000": 0.3339,
+            "9000": 0.3265
+          },
+          "stock": 6490,
+          "min_price": 0.4413,
+          "min_qty": 10
+        },
+        {
+          "model": "GRM21BZ71C106KE15L",
+          "lcsc_id": "C162430",
+          "brand": "muRata",
+          "package": "0805",
+          "prices": {
+            "5": 0.7158,
+            "50": 0.5893,
+            "150": 0.5261,
+            "500": 0.4786,
+            "3000": 0.4407,
+            "6000": 0.4217
+          },
+          "stock": 112000,
+          "min_price": 0.7158,
+          "min_qty": 5
+        },
+        {
+          "model": "CL32B106KOJNNNE",
+          "lcsc_id": "C318782",
+          "brand": "SAMSUNG",
+          "package": "1210",
+          "prices": {
+            "5": 0.975249,
+            "50": 0.799623,
+            "150": 0.711909,
+            "1000": 0.646074,
+            "2000": 0.593406,
+            "5000": 0.566973
+          },
+          "stock": 7885,
+          "min_price": 0.975249,
+          "min_qty": 5
+        },
+        {
+          "model": "AC1206KKX7R7BB106",
+          "lcsc_id": "C42097139",
+          "brand": "YAGEO",
+          "package": "1206",
+          "prices": {
+            "5": 1.3219,
+            "50": 1.1329,
+            "150": 1.0384,
+            "500": 0.9675,
+            "2500": 0.9108
+          },
+          "stock": 3675,
+          "min_price": 1.3219,
+          "min_qty": 5
+        },
+        {
+          "model": "HGC0805R7106K160NSLJ",
+          "lcsc_id": "C7432778",
+          "brand": "Chinocera",
+          "package": "0805",
+          "prices": {
+            "10": 0.5182,
+            "100": 0.4259,
+            "300": 0.3797,
+            "3000": 0.3451,
+            "6000": 0.3174,
+            "9000": 0.3036
+          },
+          "stock": 200,
+          "min_price": 0.5182,
+          "min_qty": 10
+        },
+        {
+          "model": "1206YC106KAT2A",
+          "lcsc_id": "C2167802",
+          "brand": "Kyocera AVX",
+          "package": "1206",
+          "prices": {
+            "5": 0.8401,
+            "50": 0.697,
+            "150": 0.6255,
+            "500": 0.5396,
+            "2500": 0.4967,
+            "5000": 0.4753
+          },
+          "stock": 5515,
+          "min_price": 0.8401,
+          "min_qty": 5
+        },
+        {
+          "model": "GCM31CR71C106KA64K",
+          "lcsc_id": "C2167919",
+          "brand": "muRata",
+          "package": "1206",
+          "prices": {
+            "5": 1.1302,
+            "50": 0.9254,
+            "150": 0.8376,
+            "500": 0.7281,
+            "2500": 0.6794
+          },
+          "stock": 5310,
+          "min_price": 1.1302,
+          "min_qty": 5
+        },
+        {
+          "model": "CC1206KKX7R7BB106",
+          "lcsc_id": "C109464",
+          "brand": "YAGEO",
+          "package": "1206",
+          "prices": {
+            "10": 0.6343,
+            "100": 0.5619,
+            "300": 0.5258
+          },
+          "stock": 10,
+          "min_price": 0.6343,
+          "min_qty": 10
+        },
+        {
+          "model": "C3216X7R1C106KT000N",
+          "lcsc_id": "C342827",
+          "brand": "TDK",
+          "package": "1206",
+          "prices": {
+            "2": 0.60885,
+            "20": 0.495,
+            "60": 0.438075,
+            "200": 0.395307,
+            "1000": 0.361152,
+            "2000": 0.344124
+          },
+          "stock": 120,
+          "min_price": 0.60885,
+          "min_qty": 2
+        },
+        {
+          "model": "EMK212BB7106MG-T",
+          "lcsc_id": "C141287",
+          "brand": "TAIYO YUDEN",
+          "package": "0805",
+          "prices": {
+            "10": 0.5137,
+            "100": 0.4201,
+            "300": 0.3733
+          },
+          "stock": 64,
+          "min_price": 0.5137,
+          "min_qty": 10
+        },
+        {
+          "model": "CGA1206X7R106K160NT",
+          "lcsc_id": "C23692985",
+          "brand": "HRE",
+          "package": "1206",
+          "prices": {
+            "5": 0.5909,
+            "50": 0.5051,
+            "150": 0.4621,
+            "500": 0.4299,
+            "2000": 0.3483,
+            "4000": 0.3354
+          },
+          "stock": 150,
+          "min_price": 0.5909,
+          "min_qty": 5
+        },
+        {
+          "model": "CL31B106KOHVPNE",
+          "lcsc_id": "C472847",
+          "brand": "SAMSUNG",
+          "package": "1206",
+          "prices": {
+            "5": 0.6906,
+            "50": 0.5851,
+            "150": 0.5323,
+            "500": 0.4928,
+            "2000": 0.4224
+          },
+          "stock": 190,
+          "min_price": 0.6906,
+          "min_qty": 5
+        },
+        {
+          "model": "GCM31CR71C106KA64L",
+          "lcsc_id": "C126600",
+          "brand": "muRata",
+          "package": "1206",
+          "prices": {
+            "5": 0.9862,
+            "50": 0.7899,
+            "150": 0.6917,
+            "500": 0.6181,
+            "2000": 0.5592,
+            "4000": 0.5298
+          },
+          "stock": 0,
+          "min_price": 0.9862,
+          "min_qty": 5
+        },
+        {
+          "model": "CGA0805X7R106K160MT",
+          "lcsc_id": "C6119931",
+          "brand": "HRE",
+          "package": "0805",
+          "prices": {
+            "5": 0.3844,
+            "50": 0.3139,
+            "150": 0.2786,
+            "500": 0.2522,
+            "2000": 0.231,
+            "4000": 0.2204
+          },
+          "stock": 10,
+          "min_price": 0.3844,
+          "min_qty": 5
+        },
+        {
+          "model": "C1210C106K4RAC7800",
+          "lcsc_id": "C600111",
+          "brand": "KEMET",
+          "package": "1210",
+          "prices": {
+            "5": 2.0861,
+            "50": 1.6475,
+            "150": 1.4596,
+            "500": 1.2251
+          },
+          "stock": 1650,
+          "min_price": 2.0861,
+          "min_qty": 5
+        },
+        {
+          "model": "CL31B106MOHNNNE",
+          "lcsc_id": "C730480",
+          "brand": "SAMSUNG",
+          "package": "1206",
+          "prices": {
+            "10": 0.5093,
+            "100": 0.4288,
+            "300": 0.3886,
+            "2000": 0.3465,
+            "4000": 0.3224,
+            "10000": 0.3103
+          },
+          "stock": 0,
+          "min_price": 0.5093,
+          "min_qty": 10
+        },
+        {
+          "model": "CGA5L1X7R1C106KT0Y0N",
+          "lcsc_id": "C338070",
+          "brand": "TDK",
+          "package": "1206",
+          "prices": {
+            "10": 0.6165,
+            "100": 0.5229,
+            "300": 0.4761
+          },
+          "stock": 110,
+          "min_price": 0.6165,
+          "min_qty": 10
+        },
+        {
+          "model": "FCC0805B106K160FT",
+          "lcsc_id": "C54619708",
+          "brand": "FOJAN",
+          "package": "0805",
+          "prices": {
+            "5": 0.52022,
+            "50": 0.42826,
+            "150": 0.38228,
+            "500": 0.34789,
+            "3000": 0.320245,
+            "6000": 0.30647
+          },
+          "stock": 5,
+          "min_price": 0.52022,
+          "min_qty": 5
+        },
+        {
+          "model": "CC0805MKX7R7BB106",
+          "lcsc_id": "C1952587",
+          "brand": "YAGEO",
+          "package": "0805",
+          "prices": {
+            "10": 0.7442,
+            "100": 0.6574,
+            "300": 0.6139,
+            "3000": 0.5813,
+            "6000": 0.5553,
+            "9000": 0.5422
+          },
+          "stock": 0,
+          "min_price": 0.7442,
+          "min_qty": 10
+        },
+        {
+          "model": "EMJ316BB7106KLHT",
+          "lcsc_id": "C2170791",
+          "brand": "TAIYO YUDEN",
+          "package": "1206",
+          "prices": {
+            "5": 1.062,
+            "50": 0.872,
+            "150": 0.777,
+            "500": 0.7057
+          },
+          "stock": 1540,
+          "min_price": 1.062,
+          "min_qty": 5
+        },
+        {
+          "model": "C1206C106K4RACTU",
+          "lcsc_id": "C2174822",
+          "brand": "KEMET",
+          "package": "1206",
+          "prices": {
+            "5": 1.5292,
+            "50": 1.257,
+            "150": 1.1404
+          },
+          "stock": 40,
+          "min_price": 1.5292,
+          "min_qty": 5
+        },
+        {
+          "model": "CGA0805X7R106M160MT",
+          "lcsc_id": "C42371699",
+          "brand": "HRE",
+          "package": "0805",
+          "prices": {
+            "10": 0.449,
+            "100": 0.3674,
+            "300": 0.3266,
+            "3000": 0.296,
+            "6000": 0.2715,
+            "9000": 0.2593
+          },
+          "stock": 1400,
+          "min_price": 0.449,
+          "min_qty": 10
+        },
+        {
+          "model": "0805B106K160NT",
+          "lcsc_id": "C92341",
+          "brand": "FH",
+          "package": "0805",
+          "prices": {
+            "10": 0.3435,
+            "100": 0.3038,
+            "300": 0.2862,
+            "2000": 0.2585,
+            "4000": 0.2532,
+            "10000": 0.2496
+          },
+          "stock": 0,
+          "min_price": 0.3435,
+          "min_qty": 10
+        },
+        {
+          "model": "EMK212BB7106KG-T",
+          "lcsc_id": "C2182156",
+          "brand": "TAIYO YUDEN",
+          "package": "0805",
+          "prices": {
+            "10": 0.3797,
+            "100": 0.3192,
+            "300": 0.289,
+            "3000": 0.2653,
+            "6000": 0.2472,
+            "9000": 0.2381
+          },
+          "stock": 0,
+          "min_price": 0.3797,
+          "min_qty": 10
+        }
+      ]
+    }
+  }
+}
