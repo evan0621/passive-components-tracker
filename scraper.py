@@ -31,6 +31,9 @@ SPECS = [
     {"key": "0402_100nF_16V_X7R",        "url": "https://so.szlcsc.com/global.html?k=0402+0.1uf+16v+x7r"},
     {"key": "0201_100nF_6V3_X5R",        "url": "https://so.szlcsc.com/global.html?k=0201+0.1uf+6.3v+x5r"},
     {"key": "AlCap_PDB_100U_63V_M10x10", "url": "https://so.szlcsc.com/global.html?k=100uf+63v+hybrid+aluminum+10x10"},
+    {"key": "Hybrid_560uF_16V_M8x10",     "url": "https://so.szlcsc.com/global.html?k=560uf+16v+hybrid+smd+8x10"},
+    {"key": "Polymer_100uF_63V_M10x10",   "url": "https://so.szlcsc.com/global.html?k=polymer+hybrid+63v+100uf+10x10"},
+    {"key": "SnapIn_450V_1000uF",         "url": "https://so.szlcsc.com/global.html?k=450v+1000uf+snap-in+aluminum"},
 ]
 
 MODEL_RE = re.compile(r'\b([A-Z][A-Z0-9\-]{5,})\b')
@@ -52,8 +55,7 @@ def parse_products(text):
         if not stock_m:
             continue
         stock = int(stock_m.group(1))
-        if stock <= 0:
-            continue
+        # include all products (even no-stock) to track price changes
         prices = {}
         for pm in PRICE_RE.finditer(block):
             qty = str(int(pm.group(1).replace(',', '')))

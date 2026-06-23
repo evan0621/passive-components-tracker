@@ -194,7 +194,7 @@ tr:hover td { background: #f8fafc; }
       同時會推送到：<br>
       <span class="tag">https://evan0621.github.io/passive-components-tracker/</span>
     </div>
-    <div class="modal-note">排程每晚 20:00 自動執行，無需手動操作</div>
+    <div class="modal-note">排程每晚 21:00 自動執行，無需手動操作</div>
     <button class="modal-btn" id="modal-close-btn">知道了</button>
   </div>
 </div>
@@ -234,6 +234,18 @@ const SPECS = [
     key:"AlCap_PDB_100U_63V_M10x10", label:"PDB Hybrid 100µF 63V M10×10",
     mouser:"https://www.mouser.tw/c/?q=100uf+63v+hybrid+aluminum",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKYDsBmADgBZqQBdAXyA" },
+  { cat:"鋁電容", use:"AI", useDesc:"AI 伺服器 VRM / GPU 電源濾波，高頻低 ESR 要求",
+    key:"Hybrid_560uF_16V_M8x10", label:"Hybrid 560µF 16V M8×10.5",
+    mouser:"https://www.mouser.tw/c/?q=560uf+16v+polymer+hybrid+smd",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  { cat:"鋁電容", use:"AI", useDesc:"AI 伺服器電源模組 LPX Polymer，高壓大容量 SMD",
+    key:"Polymer_100uF_63V_M10x10", label:"LPX Polymer 100µF 63V M10×10",
+    mouser:"https://www.mouser.tw/c/?q=63v+100uf+polymer+smd",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  { cat:"牛角電容", use:"AI", useDesc:"AI 25KW PSU PFC 級主電容，景氣溫度計",
+    key:"SnapIn_450V_1000uF", label:"牛角 450V 1000µF D35",
+    mouser:"https://www.mouser.tw/c/?q=450v+1000uf+snap-in+aluminum",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
 ];
 
 // badge HTML helper
