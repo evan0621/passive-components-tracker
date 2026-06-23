@@ -29,10 +29,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
   padding: 5px 16px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
 .spec-tabs { display: flex; background: #fff; border-bottom: 2px solid #e2e8f0;
-  padding: 4px 12px 0; gap: 2px; flex-wrap: wrap; align-items: center; }
-.tab-cat { font-size: 10px; color: #64748b; padding: 2px 8px 2px 6px; margin: 3px 0 3px 6px;
+  padding: 4px 12px 0; gap: 2px; flex-wrap: wrap; align-items: flex-end; }
+.tab-group { display: inline-flex; align-items: center; flex-wrap: nowrap; flex-shrink: 0; gap: 2px; }
+.tab-group + .tab-group { margin-left: 6px; }
+.tab-cat { font-size: 10px; color: #64748b; padding: 2px 8px 2px 6px;
   font-weight: 700; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0;
-  border-left: 2px solid #e2e8f0; }
+  border-left: 2px solid #e2e8f0; margin-right: 2px; }
+.tab-group:first-child .tab-cat { border-left: none; }
 .tab-sep { display: none; }
 .spec-tab { padding: 9px 12px; font-size: 12px; font-weight: 500; color: #64748b;
   cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
@@ -2914,12 +2917,13 @@ function buildTabs() {
   const cats = [...new Set(SPECS.map(s => s.cat))];
   let html = '';
   cats.forEach((cat, ci) => {
-    if (ci > 0) html += '<div class="tab-sep"></div>';
+    html += '<div class="tab-group">';
     html += '<div class="tab-cat">' + cat + '</div>';
     SPECS.filter(s => s.cat === cat).forEach(s => {
       html += '<div class="spec-tab ' + (s.key === currentSpec ? 'active' : '') + '" data-key="' + s.key + '">'
         + s.label + useBadge(s.use) + '</div>';
     });
+    html += '</div>';
   });
   el.innerHTML = html;
   const def = specDef();
