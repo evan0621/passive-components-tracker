@@ -393,12 +393,6 @@
           "min_qty": 1
         }
       ]
-    },
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:24.470075"
     }
   },
   "22uF_4V_X6S": {
@@ -855,12 +849,6 @@
           "min_qty": 1
         }
       ]
-    },
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:28.755741"
     }
   },
   "10uF_16V_X7R": {
@@ -1356,126 +1344,18 @@
           "min_qty": 10
         }
       ]
-    },
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:33.858728"
     }
   },
-  "0402_100nF_16V_X7R": {
-    "2026-06-23": {
-      "avg_price": 0.0746,
-      "in_stock_count": 27,
-      "fetched_at": "2026-06-23T20:00:00+08:00",
-      "products": []
-    },
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:38.439740"
-    }
-  },
-  "0201_100nF_6V3_X5R": {
-    "2026-06-23": {
-      "avg_price": 0.0126,
-      "in_stock_count": 16,
-      "fetched_at": "2026-06-23T20:00:00+08:00",
-      "products": []
-    },
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:42.307549"
-    }
-  },
-  "AlCap_PDB_100U_63V_M10x10": {
-    "2026-06-23": {
-      "avg_price": 1.4966,
-      "in_stock_count": 16,
-      "fetched_at": "2026-06-23T20:00:00+08:00",
-      "products": []
-    },
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:50.915241"
-    }
-  },
-  "0402_10uF_10V_X5R": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:46.943144"
-    }
-  },
-  "Hybrid_560uF_16V_M8x10": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:55.656871"
-    }
-  },
-  "Polymer_100uF_63V_M10x10": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:41:59.395191"
-    }
-  },
-  "SnapIn_450V_1000uF": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:42:03.423330"
-    }
-  },
-  "SnapIn_450V_680uF": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:42:07.115425"
-    }
-  },
-  "SnapIn_450V_820uF": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:42:10.708940"
-    }
-  },
-  "DIP_16V_1000uF": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:42:14.764764"
-    }
-  },
-  "DIP_25V_470uF": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:42:18.865622"
-    }
-  },
-  "Polymer_16V_270uF_SMD": {
-    "2026-06-24": {
-      "products": [],
-      "avg_price": 0,
-      "product_count": 0,
-      "fetched_at": "2026-06-24T09:42:23.709364"
-    }
-  }
+  "0402_100nF_16V_X7R": {},
+  "0201_100nF_6V3_X5R": {},
+  "AlCap_PDB_100U_63V_M10x10": {},
+  "0402_10uF_10V_X5R": {},
+  "Hybrid_560uF_16V_M8x10": {},
+  "Polymer_100uF_63V_M10x10": {},
+  "SnapIn_450V_1000uF": {},
+  "SnapIn_450V_680uF": {},
+  "SnapIn_450V_820uF": {},
+  "DIP_16V_1000uF": {},
+  "DIP_25V_470uF": {},
+  "Polymer_16V_270uF_SMD": {}
 }
