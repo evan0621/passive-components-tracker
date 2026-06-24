@@ -32,9 +32,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
   padding: 4px 12px 0; gap: 2px; flex-wrap: wrap; align-items: flex-end; }
 .tab-group { display: inline-flex; align-items: center; flex-wrap: nowrap; flex-shrink: 0; gap: 2px; }
 .tab-group + .tab-group { margin-left: 6px; }
-.tab-cat { font-size: 10px; color: #64748b; padding: 2px 8px 2px 6px;
-  font-weight: 700; letter-spacing: 0.4px; white-space: nowrap; flex-shrink: 0;
-  border-left: 2px solid #e2e8f0; margin-right: 2px; }
+.tab-cat { font-size: 11px; color: #0f172a; padding: 2px 8px 2px 6px;
+  font-weight: 800; letter-spacing: 0.3px; white-space: nowrap; flex-shrink: 0;
+  border-left: 3px solid #94a3b8; margin-right: 2px; }
 .tab-group:first-child .tab-cat { border-left: none; }
 .tab-sep { display: none; }
 .spec-tab { padding: 7px 10px; font-size: 12px; font-weight: 500; color: #64748b;
@@ -192,7 +192,11 @@ tr:hover td { background: #f8fafc; }
         <canvas id="trend-chart"></canvas>
       </div>
     </div>
-    <div class="chart-wrap" style="margin-top:8px">
+    <div class="card-header" style="border-top:1px solid #f1f5f9">
+      <span>庫存趨勢</span>
+      <span style="font-size:11px;font-weight:400;color:#64748b">現貨數量 / 型號數</span>
+    </div>
+    <div class="chart-wrap">
       <div id="stock-placeholder" class="no-trend">累積 2 天以上資料後即可查看庫存趨勢</div>
       <div class="chart-container" id="stock-container" style="display:none">
         <canvas id="stock-chart"></canvas>
@@ -259,11 +263,26 @@ const SPECS = [
     key:"10uF_16V_X7R", label:"10µF 16V X7R",
     mouser:"https://www.mouser.tw/c/?q=10uf+16v+x7r",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI 12kW+ PSU LLC 諧振電路高壓關鍵電容，NP0/C0G 介電質溫度特性最穩，Holy Stone/PDC/Murata 等廠商景氣指標",
+    key:"1206_10nF_630V_C0G", label:"10nF 630V C0G 1206",
+    mouser:"https://www.mouser.tw/c/?q=10nf+630v+c0g+1206",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI PSU LLC 進階大容值高壓電容，33nF 為 630V 1210 封裝實際量產主力，Holy Stone/信昌電 PDC 核心料號",
+    key:"1210_33nF_630V_C0G", label:"33nF 630V C0G 1210",
+    mouser:"https://www.mouser.tw/c/?q=33nf+630v+c0g+1210",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"信昌電 Mega CAP 堆疊型 MLCC，1µF 250V 2220 超大尺寸，AI 伺服器 800V HVDC 穩壓專用，高毛利護城河產品",
+    key:"2220_1uF_250V_X7R", label:"1µF 250V X7R 2220 Mega CAP",
+    mouser:"https://www.mouser.tw/c/?q=1uf+250v+x7r+2220+mlcc",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   // ── MLCC 消費性──────────────────────────────────────────
   { cat:"MLCC", use:"消費性",
     useDesc:"全球出貨量最大的單一 MLCC 規格，消費電子/家電/IoT 萬用去耦，消費電子景氣最廣義溫度計",
     key:"0402_100nF_16V_X7R", label:"0.1µF 16V X7R 0402",
-    mouser:"https://www.mouser.tw/c/?q=0402+100nf+16v+x7r+x7r",
+    mouser:"https://www.mouser.tw/c/?q=0402+100nf+16v+x7r",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   { cat:"MLCC", use:"消費性",
     useDesc:"消費電子最大宗 Bulk MLCC，電視/平板/IoT/家電全用，全球出貨量前三名，景氣最廣義溫度計",
@@ -336,22 +355,6 @@ const SPECS = [
     key:"AlCap_SnapIn_470uF_450V_AEC", label:"牛角 450V 470µF AEC",
     mouser:"https://www.mouser.tw/c/?q=470uf+450v+snap-in+aluminum+aec-q200",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  // ── NP0/C0G MLCC（AI LLC 諧振）────────────────────────────
-  { cat:"MLCC", use:"AI",
-    useDesc:"AI 12kW+ PSU LLC 諧振電路高壓關鍵電容，NP0/C0G 介電質溫度特性最穩，Holy Stone/PDC/Murata 等廠商景氣指標",
-    key:"1206_10nF_630V_C0G", label:"10nF 630V C0G 1206",
-    mouser:"https://www.mouser.tw/c/?q=10nf+630v+c0g+1206",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
-  { cat:"MLCC", use:"AI",
-    useDesc:"AI PSU LLC 進階大容值高壓電容，33nF 為 630V 1210 封裝實際量產主力，Holy Stone/信昌電 PDC 核心料號",
-    key:"1210_33nF_630V_C0G", label:"33nF 630V C0G 1210",
-    mouser:"https://www.mouser.tw/c/?q=33nf+630v+c0g+1210",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
-  { cat:"MLCC", use:"AI",
-    useDesc:"信昌電 Mega CAP 堆疊型 MLCC，1µF 250V 2220 超大尺寸，AI 伺服器 800V HVDC 穩壓專用，高毛利護城河產品",
-    key:"2220_1uF_250V_X7R", label:"1µF 250V X7R 2220 Mega CAP",
-    mouser:"https://www.mouser.tw/c/?q=1uf+250v+x7r+2220+mlcc",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   // ── 電感 AI + 消費性────────────────────────────────────────
   { cat:"電感", use:"AI",
     useDesc:"AI 18kW PSU 巨型 TLVR 電感（≥90A），臺慶科/Vishay/Eaton 供應 Nvidia GPU VR 電路，庫存見底代表 AI PSU 瘋狂出貨",
