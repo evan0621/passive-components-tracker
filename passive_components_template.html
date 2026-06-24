@@ -22,12 +22,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
 .btn { background: #3b82f6; color: #fff; border: none; padding: 6px 14px; border-radius: 6px;
   cursor: pointer; font-size: 13px; font-weight: 500; white-space: nowrap; transition: background 0.15s; }
 .btn:hover { background: #2563eb; }
-.btn:disabled { background: #94a3b8; cursor: default; }
 .btn-ghost { background: #f1f5f9; color: #475569; border: 1px solid #e2e8f0; }
 .btn-ghost:hover { background: #e2e8f0; }
 .status-bar { font-size: 11px; color: #64748b; background: #f8fafc;
   padding: 5px 16px; border-bottom: 1px solid #e2e8f0; display: flex; align-items: center; gap: 8px; }
 .dot { width: 6px; height: 6px; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+/* Tab row: wraps by category group */
 .spec-tabs { display: flex; background: #fff; border-bottom: 2px solid #e2e8f0;
   padding: 4px 12px 0; gap: 2px; flex-wrap: wrap; align-items: flex-end; }
 .tab-group { display: inline-flex; align-items: center; flex-wrap: nowrap; flex-shrink: 0; gap: 2px; }
@@ -37,13 +37,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
   border-left: 2px solid #e2e8f0; margin-right: 2px; }
 .tab-group:first-child .tab-cat { border-left: none; }
 .tab-sep { display: none; }
-.spec-tab { padding: 9px 12px; font-size: 12px; font-weight: 500; color: #64748b;
+.spec-tab { padding: 7px 10px; font-size: 12px; font-weight: 500; color: #64748b;
   cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
   transition: all 0.15s; user-select: none; border-radius: 4px 4px 0 0; white-space: nowrap;
   flex-shrink: 0; display: flex; align-items: center; gap: 5px; }
 .spec-tab:hover { color: #334155; background: #f8fafc; }
 .spec-tab.active { color: #2563eb; border-bottom-color: #2563eb; background: #eff6ff; font-weight: 600; }
-/* 用途 badge */
 .use-tag { font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.2px; flex-shrink: 0; }
 .use-ai { background: #ede9fe; color: #6d28d9; }
 .use-consumer { background: #fff7ed; color: #c2410c; }
@@ -128,7 +127,7 @@ tr:hover td { background: #f8fafc; }
         <div class="avg-sub" id="avg-price-sub">尚無資料</div>
       </div>
       <div class="avg-item">
-        <div class="avg-label">現貨 / 總料號數</div>
+        <div class="avg-label">現貨品項數</div>
         <div class="avg-value" id="instock-count">—</div>
         <div class="avg-sub">有庫存型號</div>
       </div>
@@ -144,9 +143,7 @@ tr:hover td { background: #f8fafc; }
     </div>
     <div class="chart-wrap">
       <div id="bar-wrap"><div class="chart-container"><canvas id="bar-chart"></canvas></div></div>
-      <div id="bar-empty" class="empty-state" style="display:none">
-        尚無資料<br><small>請從側邊欄執行排程任務 passive-components-scraper</small>
-      </div>
+      <div id="bar-empty" class="empty-state" style="display:none">尚無資料</div>
     </div>
   </div>
 
@@ -184,92 +181,101 @@ tr:hover td { background: #f8fafc; }
   <div class="modal-box">
     <div class="modal-title">如何更新資料</div>
     <div class="modal-body">
-      在 Cowork 左側邊欄找到排程任務<br>
-      <strong>passive-components-scraper</strong><br>
-      點擊 <span class="tag">&#9654; Run now</span> 即可立即抓取最新價格。<br><br>
-      任務完成後，請<strong>關閉並重新開啟</strong>此面板，圖表即會更新。<br><br>
-      同時會推送到：<br>
-      <span class="tag">https://evan0621.github.io/passive-components-tracker/</span>
+      雙擊 <strong>update_prices.bat</strong> 即可立即抓取最新價格並推送到 GitHub Pages。<br><br>
+      排程每晚 20:00 自動執行，無需手動操作。<br><br>
+      網站：<span class="tag">evan0621.github.io/passive-components-tracker</span>
     </div>
-    <div class="modal-note">排程每晚 21:00 自動執行，無需手動操作</div>
+    <div class="modal-note">資料來源：立創商城 (LCSC)</div>
     <button class="modal-btn" id="modal-close-btn">知道了</button>
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" crossorigin="anonymous"></script>
 <script>
 const HISTORY_DATA = __HISTORY_JSON__;
 
-// ── 規格定義 ───────────────────────────────────────────────────────────────
-// cat: 類別（顯示於 Tab 分組）
-// use: 用途標籤 "AI" | "消費性"（顯示於 Tab badge 與說明列）
-// useDesc: 用途說明（顯示於儀表板頂部說明列）
 const SPECS = [
-  // ── 積層陶瓷電容 MLCC ──
-  { cat:"MLCC", use:"AI", useDesc:"AI 伺服器 / 電源模組用料，追蹤 AI 建設景氣",
+  // ── MLCC ──────────────────────────────────────────────────
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI 伺服器 / 電源模組用料，追蹤 AI 建設景氣",
     key:"47uF_4V_X6S", label:"47µF 4V X6S",
     mouser:"https://www.mouser.tw/c/?q=47uf+4v+x6s",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgTCBcDaICwHYCuAzABHAbmgHgNgGcQBdAXyA" },
-  { cat:"MLCC", use:"AI", useDesc:"AI 伺服器 / 電源模組用料，追蹤 AI 建設景氣",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgTCBcDaIBYBsAOBTAzABjQFgJwFcAbAQwHsBnEAXQF8g" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI 伺服器 / 電源模組用料，追蹤 AI 建設景氣",
     key:"22uF_4V_X6S", label:"22µF 4V X6S",
     mouser:"https://www.mouser.tw/c/?q=22uf+4v+x6s",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKYA2wAuoA" },
-  { cat:"MLCC", use:"AI", useDesc:"AI 伺服器 / 電源模組用料，追蹤 AI 建設景氣",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI 伺服器 / 電源模組用料，追蹤 AI 建設景氣",
     key:"10uF_16V_X7R", label:"10µF 16V X7R",
     mouser:"https://www.mouser.tw/c/?q=10uf+16v+x7r",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKZUDMA3AJxAF0BfIA" },
-  { cat:"MLCC", use:"消費性", useDesc:"消費電子去耦旁路標準品（Jellybean），全球用量最大，景氣溫度計",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"消費性",
+    useDesc:"消費電子去耦旁路標準品（Jellybean），全球用量最大，景氣溫度計",
     key:"0402_100nF_16V_X7R", label:"0.1µF 16V X7R 0402",
     mouser:"https://www.mouser.tw/c/?q=0402+0.1uf+16v+x7r",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKboBmABgHQBsAzOQEwCsAHOQIwCcAugL5A" },
-  { cat:"MLCC", use:"消費性", useDesc:"高階手機 / 穿戴裝置去耦標準品，追蹤手機市場景氣",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"消費性",
+    useDesc:"高階手機 / 穿戴裝置去耦標準品，追蹤手機市場景氣",
     key:"0201_100nF_6V3_X5R", label:"0.1µF 6.3V X5R 0201",
     mouser:"https://www.mouser.tw/c/?q=0201+0.1uf+6.3v+x5r",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKboBmABgDQCcBZAFgA4A2AOzYFYAbKQF0BfIA" },
-  { cat:"MLCC", use:"消費性", useDesc:"消費電子最大宗 Bulk MLCC，電視/平板/IoT/家電全用，全球出貨量前三名，景氣最廣義溫度計",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"消費性",
+    useDesc:"消費電子最大宗 Bulk MLCC，電視/平板/IoT/家電全用，全球出貨量前三名，景氣最廣義溫度計",
     key:"0402_10uF_10V_X5R", label:"10µF 10V X5R 0402",
     mouser:"https://www.mouser.tw/c/?q=10uf+10v+x5r+0402",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
-  // ── 鋁電容 ──
-  { cat:"鋁電解（貼片）", use:"AI", useDesc:"AI 伺服器 / 電源模組 SMD 主電容，混合固液 Hybrid，追蹤 AI 建設景氣",
-    key:"AlCap_PDB_100U_63V_M10x10", label:"Hybrid 100µF 63V M10×10",
+  // ── 鋁電解（貼片）────────────────────────────────────────
+  { cat:"鋁電解（貼片）", use:"AI",
+    useDesc:"AI 25KW PSU 輸出級用混合鋁電容，貼片大罐，追蹤 AI 電源建設景氣",
+    key:"AlCap_PDB_100U_63V_M10x10", label:"PDB Hybrid 100µF 63V M10×10",
     mouser:"https://www.mouser.tw/c/?q=100uf+63v+hybrid+aluminum",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58?s=N4IgjCBcoGwJxVAYygMwIYBsDOBTANCAPYCuALgKYDsBmADgBZqQBdAXyA" },
-  { cat:"鋁電解（貼片）", use:"AI", useDesc:"AI 伺服器 VRM / GPU 電源濾波，高頻低 ESR SMD Hybrid 主力規格",
-    key:"Hybrid_560uF_16V_M8x10", label:"Hybrid 560µF 16V M8×10.5",
-    mouser:"https://www.mouser.tw/c/?q=560uf+16v+polymer+hybrid+smd",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（貼片）", use:"AI", useDesc:"AI 伺服器電源模組 LPX / OS-CON Polymer，高壓 SMD，追蹤 AI 伺服器拉貨",
+  { cat:"鋁電解（貼片）", use:"AI",
+    useDesc:"AI 25KW PSU 輸出濾波混合鋁電容，高頻低 ESR，追蹤 AI 電源建設景氣",
+    key:"Hybrid_560uF_16V_M8x10", label:"Hybrid 560µF 16V M8×10",
+    mouser:"https://www.mouser.tw/c/?q=560uf+16v+hybrid+aluminum",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  { cat:"鋁電解（貼片）", use:"AI",
+    useDesc:"AI 25KW PSU 輸出級固態鋁電容，高頻穩壓，追蹤 AI 電源建設景氣",
     key:"Polymer_100uF_63V_M10x10", label:"Polymer 100µF 63V M10×10",
-    mouser:"https://www.mouser.tw/c/?q=63v+100uf+polymer+smd",
+    mouser:"https://www.mouser.tw/c/?q=polymer+100uf+63v",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（牛角）", use:"AI", useDesc:"AI 25KW PSU PFC 級主電容，直插大罐型，景氣溫度計",
-    key:"SnapIn_450V_1000uF", label:"牛角 450V 1000µF D35",
-    mouser:"https://www.mouser.tw/c/?q=450v+1000uf+snap-in+aluminum",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（牛角）", use:"AI", useDesc:"AI 25KW PSU PFC 主電容中容量規格（與 1000µF 並聯），400V HVDC 機架電源景氣指標",
-    key:"SnapIn_450V_680uF", label:"牛角 450V 680µF D35",
-    mouser:"https://www.mouser.tw/c/?q=450v+680uf+snap-in+aluminum",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（牛角）", use:"AI", useDesc:"AI 25KW PSU PFC 主電容大容量規格，800V HVDC 2S 疊放（2×450V）亦用此值，NCC/Rubycon/AISHI 大廠備貨指標",
-    key:"SnapIn_450V_820uF", label:"牛角 450V 820µF D35",
-    mouser:"https://www.mouser.tw/c/?q=450v+820uf+snap-in+aluminum",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（直插）", use:"消費性", useDesc:"萬用電源神油，充電器/路由器/機上盒低壓端大容量濾波，供應鏈紅海指標",
-    key:"DIP_16V_1000uF", label:"1000µF 16V DIP",
-    mouser:"https://www.mouser.tw/c/?q=16v+1000uf+aluminum+electrolytic+through-hole",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（直插）", use:"消費性", useDesc:"電視/螢幕/空調電源板標配，比 16V 系更能反映家電市場景氣，Panasonic/Nichicon/Lelon 指標",
-    key:"DIP_25V_470uF", label:"470µF 25V DIP",
-    mouser:"https://www.mouser.tw/c/?q=470uf+25v+aluminum+electrolytic+through-hole",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
-  { cat:"鋁電解（貼片）", use:"消費性", useDesc:"主板/顯卡/伺服器 VRM 固態聚合物電容，PC 裝機景氣指標，追蹤台廠立隆/鈺邦",
+  { cat:"鋁電解（貼片）", use:"消費性",
+    useDesc:"消費電子電源板貼片固態鋁電容標配，筆電 / 電視主機板廣泛使用",
     key:"Polymer_16V_270uF_SMD", label:"Polymer 270µF 16V SMD",
-    mouser:"https://www.mouser.tw/c/?q=16v+270uf+polymer+solid+smd",
+    mouser:"https://www.mouser.tw/c/?q=polymer+270uf+16v+smd",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── 鋁電解（牛角）────────────────────────────────────────
+  { cat:"鋁電解（牛角）", use:"AI",
+    useDesc:"AI 25KW PSU PFC 級主電容，直插大罐型，NCC/Nichicon/Rubycon/AISHI 大廠景氣指標",
+    key:"SnapIn_450V_1000uF", label:"牛角 450V 1000µF D35",
+    mouser:"https://www.mouser.tw/c/?q=450v+1000uf+snap-in",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  { cat:"鋁電解（牛角）", use:"AI",
+    useDesc:"AI 25KW PSU PFC 主電容中容量規格（與 1000µF 並聯），400V HVDC 機架電源景氣指標",
+    key:"SnapIn_450V_680uF", label:"牛角 450V 680µF D35",
+    mouser:"https://www.mouser.tw/c/?q=450v+680uf+snap-in",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  { cat:"鋁電解（牛角）", use:"AI",
+    useDesc:"AI 25KW PSU PFC 主電容大容量規格，800V HVDC 2S 疊放（2×450V）亦用此值，NCC/Rubycon/AISHI 大廠備貨指標",
+    key:"SnapIn_450V_820uF", label:"牛角 450V 820µF D35",
+    mouser:"https://www.mouser.tw/c/?q=450v+820uf+snap-in",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── 鋁電解（直插）────────────────────────────────────────
+  { cat:"鋁電解（直插）", use:"消費性",
+    useDesc:"萬用電源濾波標準品，家電 / 工業 / 消費電子最廣泛使用的直插鋁電容規格",
+    key:"DIP_16V_1000uF", label:"1000µF 16V DIP",
+    mouser:"https://www.mouser.tw/c/?q=1000uf+16v+dip+aluminum",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  { cat:"鋁電解（直插）", use:"消費性",
+    useDesc:"電視 / 螢幕 / 空調電源板標配，比 16V 系更能反映家電市場景氣，Panasonic/Nichicon/Lelon 指標",
+    key:"DIP_25V_470uF", label:"470µF 25V DIP",
+    mouser:"https://www.mouser.tw/c/?q=470uf+25v+dip+aluminum",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
 ];
 
-// badge HTML helper
 const useBadge = (use) => {
   if (use === 'AI') return '<span class="use-tag use-ai">AI</span>';
   if (use === '消費性') return '<span class="use-tag use-consumer">消費性</span>';
@@ -280,12 +286,12 @@ let currentSpec = SPECS[0].key;
 let barChartInst = null;
 let trendChartInst = null;
 
-const specDef  = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
-const specData = () => HISTORY_DATA[currentSpec] || {};
-const latestDate = () => { const d = Object.keys(specData()).sort(); return d.length ? d[d.length-1] : null; };
+const specDef      = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
+const specData     = () => HISTORY_DATA[currentSpec] || {};
+const latestDate   = () => { const d = Object.keys(specData()).sort(); return d.length ? d[d.length-1] : null; };
 const latestProducts = () => { const d = latestDate(); return d ? (specData()[d].products || []) : []; };
 const calcAvg = (products) => {
-  const s = products.filter(p => p.min_price != null && p.min_price > 0);
+  const s = products.filter(p => p.stock > 0 && p.min_price > 0);
   return s.length ? s.reduce((a,p) => a + p.min_price, 0) / s.length : null;
 };
 
@@ -293,7 +299,7 @@ function buildTabs() {
   const el = document.getElementById('spec-tabs');
   const cats = [...new Set(SPECS.map(s => s.cat))];
   let html = '';
-  cats.forEach((cat, ci) => {
+  cats.forEach((cat) => {
     html += '<div class="tab-group">';
     html += '<div class="tab-cat">' + cat + '</div>';
     SPECS.filter(s => s.cat === cat).forEach(s => {
@@ -310,6 +316,16 @@ function buildTabs() {
   if (dl) dl.href = def.digikey;
 }
 
+function buildPkgFilter() {
+  var sel = document.getElementById('pkg-filter');
+  if (!sel) return;
+  var products = latestProducts();
+  var pkgs = Array.from(new Set(products.map(p => p.package).filter(Boolean))).sort();
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">全部</option>' + pkgs.map(p => '<option value="'+p+'">'+p+'</option>').join('');
+  if (cur && pkgs.includes(cur)) sel.value = cur; else sel.value = '';
+}
+
 function renderUseInfo() {
   const def = specDef();
   const bar = document.getElementById('use-info-bar');
@@ -322,25 +338,25 @@ function renderSummary() {
   const inStock = products.filter(p => p.stock > 0);
   const avg = calcAvg(products);
   const cheapest = [...inStock].sort((a,b) => a.min_price - b.min_price)[0];
-  document.getElementById('instock-count').textContent = (inStock.length + '/' + products.length) || '—';
+  document.getElementById('instock-count').textContent = inStock.length || '—';
   document.getElementById('avg-price-val').textContent = avg != null ? '¥' + avg.toFixed(4) : '—';
   document.getElementById('avg-price-sub').textContent = avg != null
     ? specDef().label + ' · ' + latestDate() : '尚無資料';
   document.getElementById('cheapest-model').textContent = cheapest ? cheapest.model : '—';
+  const minQty = cheapest ? (cheapest.min_qty || (cheapest.prices ? Math.min(...Object.keys(cheapest.prices).map(Number)) : '?')) : '?';
   document.getElementById('cheapest-sub').textContent = cheapest
-    ? '¥' + cheapest.min_price.toFixed(4) + ' (' + cheapest.min_qty + '+起) · ' + cheapest.brand : '—';
+    ? '¥' + cheapest.min_price.toFixed(4) + ' (' + minQty + '+起) · ' + cheapest.brand : '—';
 }
 
 const BRAND_COLORS = {'muRata':'#3b82f6','村田':'#3b82f6','SAMSUNG':'#22c55e','三星':'#22c55e',
   'TAIYO':'#f59e0b','TDK':'#8b5cf6','Rubycon':'#ec4899','Nichicon':'#f97316','Panasonic':'#06b6d4',
-  '国巨':'#10b981','華新科':'#14b8a6','YAGEO':'#10b981','Walsin':'#06b6d4'};
+  'YAGEO':'#10b981','Walsin':'#06b6d4','NCC':'#8b5cf6','AISHI':'#f59e0b','Lelon':'#22c55e'};
 const brandColor = brand => { for (const [k,v] of Object.entries(BRAND_COLORS)) if (brand.includes(k)) return v; return '#94a3b8'; };
 
 function renderBarChart() {
-  const products = latestProducts().filter(p => p.min_price != null && p.min_price > 0)
-    .sort((a,b) => a.min_price - b.min_price).slice(0,16);
+  const products = latestProducts().filter(p => p.stock > 0).sort((a,b) => a.min_price - b.min_price).slice(0,14);
   const el = document.getElementById('product-count');
-  if (el) el.textContent = products.length ? '前 ' + products.length + ' 種（含缺貨）' : '';
+  if (el) el.textContent = products.length ? '前 ' + products.length + ' 種（有庫存）' : '';
   const barWrap = document.getElementById('bar-wrap');
   const barEmpty = document.getElementById('bar-empty');
   if (!products.length) { if(barWrap) barWrap.style.display='none'; if(barEmpty) barEmpty.style.display=''; return; }
@@ -353,12 +369,13 @@ function renderBarChart() {
     data:{
       labels:products.map(p => p.model.length>18 ? p.model.slice(0,16)+'…' : p.model),
       datasets:[{label:'最低單價',data:products.map(p=>p.min_price),
-        backgroundColor:products.map(p=>p.stock>0?brandColor(p.brand):'#cbd5e1'),borderRadius:4,borderSkipped:false}]
+        backgroundColor:products.map(p=>brandColor(p.brand)),borderRadius:4,borderSkipped:false}]
     },
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{
         const p=products[ctx.dataIndex];
-        return ['¥'+p.min_price.toFixed(4)+' ('+p.min_qty+'+起)',p.stock>0?'庫存:'+p.stock.toLocaleString():'⚠ 無現貨（需訂貨）','品牌:'+p.brand,'封裝:'+p.package];
+        const mq = p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '?');
+        return ['¥'+p.min_price.toFixed(4)+' ('+mq+'+起)','庫存:'+(p.stock||0).toLocaleString(),'品牌:'+p.brand,'封裝:'+p.package];
       }}}},
       scales:{x:{ticks:{font:{size:9},maxRotation:50},grid:{display:false}},
               y:{ticks:{font:{size:11},callback:v=>'¥'+v.toFixed(2)},grid:{color:'#f1f5f9'}}}}
@@ -394,39 +411,23 @@ function renderTable() {
   let products = latestProducts();
   if (pkgF) products = products.filter(p => p.package === pkgF);
   if (stkF === 'instock') products = products.filter(p => p.stock > 0);
-  products = products.sort((a,b) => {
-    if ((a.stock>0) !== (b.stock>0)) return a.stock>0 ? -1 : 1;
-    if (a.min_price==null && b.min_price==null) return 0;
-    if (a.min_price==null) return 1; if (b.min_price==null) return -1;
-    return a.min_price - b.min_price;
-  });
+  products = products.sort((a,b) => (b.stock-a.stock)||(a.min_price-b.min_price));
   const wrap = document.getElementById('table-wrap');
   if (!wrap) return;
   if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
   const rows = products.map(p => {
     const sc = p.stock>5000?'stock-hi':p.stock>1000?'stock-mid':p.stock>0?'stock-lo':'stock-zero';
     const sl = p.stock>0 ? p.stock.toLocaleString() : '需訂貨';
-    const priceMain = p.min_price!=null ? '<span class="price-main">¥'+p.min_price.toFixed(4)+'</span><br><span class="price-bulk">'+(p.min_qty||'—')+'+起</span>' : '<span class="price-bulk" style="color:#94a3b8">詢價</span>';
-    return '<tr style="'+(p.stock===0?'opacity:0.7':'')+'"><td><a href="https://so.szlcsc.com/global.html?k='+encodeURIComponent(p.model)+'" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
+    const mq = p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '-');
+    return '<tr><td><a href="https://item.szlcsc.com/'+p.lcsc_id+'.html" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
       +'<td><span class="brand-tag">'+p.brand+'</span></td>'
       +'<td style="text-align:center">'+(p.package||'-')+'</td>'
-      +'<td>'+priceMain+'</td>'
+      +'<td><span class="price-main">¥'+p.min_price.toFixed(4)+'</span><br><span class="price-bulk">'+mq+'+起</span></td>'
       +'<td class="price-bulk">'+(p.prices&&p.prices[50]?'¥'+p.prices[50].toFixed(4):'-')+'</td>'
       +'<td class="price-bulk">'+(p.prices&&p.prices[500]?'¥'+p.prices[500].toFixed(4):'-')+'</td>'
       +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
   }).join('');
   wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
-}
-
-function buildPkgFilter() {
-  var sel = document.getElementById('pkg-filter');
-  if (!sel) return;
-  var products = latestProducts();
-  var pkgs = Array.from(new Set(products.map(p => p.package).filter(Boolean))).sort();
-  var cur = sel.value;
-  sel.innerHTML = '<option value="">全部</option>' + pkgs.map(p => '<option value="'+p+'">'+p+'</option>').join('');
-  // restore selection if still valid
-  if (cur && pkgs.includes(cur)) sel.value = cur; else sel.value = '';
 }
 
 function renderAll() { buildPkgFilter(); renderUseInfo(); renderSummary(); renderBarChart(); renderTrendChart(); renderTable(); }
@@ -457,7 +458,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (statusEl) statusEl.textContent = '資料日期：' + latest + ' · ' + specDef().label + ' 共 ' + latestProducts().length + ' 個型號';
     renderAll();
   } else {
-    if (statusEl) statusEl.textContent = '尚無資料 · 請從側邊欄執行排程任務 passive-components-scraper';
+    if (statusEl) statusEl.textContent = '尚無資料';
     renderUseInfo();
     renderBarChart();
   }
