@@ -281,7 +281,7 @@ const useBadge = (use) => {
 
 let currentSpec = SPECS[0].key;
 let trendChartInst = null;
-let priceSort = 'asc';  // 'asc' | 'desc' | null (default: stock desc)
+let priceSort = null;  // null=庫存優先 | 'asc'=價格升序 | 'desc'=價格降序
 
 const BRAND_MAP = {
   // ── 日本品牌（英文即可）────────────────────────────
