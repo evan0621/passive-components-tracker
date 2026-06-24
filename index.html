@@ -283,6 +283,19 @@ let currentSpec = SPECS[0].key;
 let trendChartInst = null;
 let priceSort = 'asc';  // 'asc' | 'desc' | null (default: stock desc)
 
+const BRAND_MAP = {
+  'muRata(村田)':           'Murata',
+  'Murata Electronics':     'Murata',
+  'SAMSUNG(三星)':          'Samsung',
+  'Samsung Electro-Mechanics': 'Samsung',
+  'TAIYO YUDEN':            'Taiyo Yuden',
+  'TAIYO YUDEN(太诱)':      'Taiyo Yuden',
+  'YAGEO':                  'Yageo',
+  'YAGEO(国巨)':            'Yageo',
+  'KYOCERA AVX':            'Kyocera AVX',
+};
+const normBrand = b => BRAND_MAP[b] || b;
+
 const specDef      = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
 const specData     = () => HISTORY_DATA[currentSpec] || {};
 const latestDate   = () => { const d = Object.keys(specData()).sort(); return d.length ? d[d.length-1] : null; };
@@ -327,7 +340,7 @@ function buildBrandFilter() {
   var sel = document.getElementById('brand-filter');
   if (!sel) return;
   var products = latestProducts();
-  var brands = Array.from(new Set(products.map(p => p.brand).filter(Boolean))).sort();
+  var brands = Array.from(new Set(products.map(p => normBrand(p.brand)).filter(Boolean))).sort();
   var cur = sel.value;
   sel.innerHTML = '<option value="">全部</option>' + brands.map(b => '<option value="'+b+'">'+b+'</option>').join('');
   if (cur && brands.includes(cur)) sel.value = cur; else sel.value = '';
@@ -417,7 +430,7 @@ function renderTable() {
   if (pkgF)   products = products.filter(p => p.package === pkgF);
   if (stkF === 'instock') products = products.filter(p => p.stock > 0);
   if (srcF)   products = products.filter(p => (p.source||'LCSC') === srcF);
-  if (brandF) products = products.filter(p => p.brand === brandF);
+  if (brandF) products = products.filter(p => normBrand(p.brand) === brandF);
   if (priceSort === 'asc')  products = products.sort((a,b) => getPriceUsd(a) - getPriceUsd(b));
   else if (priceSort === 'desc') products = products.sort((a,b) => getPriceUsd(b) - getPriceUsd(a));
   else products = products.sort((a,b) => (b.stock - a.stock) || (getPriceUsd(a) - getPriceUsd(b)));
@@ -435,7 +448,7 @@ function renderTable() {
     const t500 = getTierUsd(p, 500);
     return '<tr>'
       +'<td>'+srcBadge(src)+'<br><a href="'+url+'" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
-      +'<td><span class="brand-tag">'+p.brand+'</span></td>'
+      +'<td><span class="brand-tag">'+normBrand(p.brand)+'</span></td>'
       +'<td style="text-align:center">'+(p.package||'-')+'</td>'
       +'<td><span class="price-main">$'+usd.toFixed(4)+'</span><br><span class="price-bulk">'+mq+'+起</span></td>'
       +'<td class="price-bulk">'+(t50!=null?'$'+t50.toFixed(4):'-')+'</td>'
