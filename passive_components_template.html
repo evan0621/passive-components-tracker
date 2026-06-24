@@ -192,6 +192,12 @@ tr:hover td { background: #f8fafc; }
         <canvas id="trend-chart"></canvas>
       </div>
     </div>
+    <div class="chart-wrap" style="margin-top:8px">
+      <div id="stock-placeholder" class="no-trend">累積 2 天以上資料後即可查看庫存趨勢</div>
+      <div class="chart-container" id="stock-container" style="display:none">
+        <canvas id="stock-chart"></canvas>
+      </div>
+    </div>
   </div>
 
   <div class="card">
@@ -257,22 +263,12 @@ const SPECS = [
   { cat:"MLCC", use:"消費性",
     useDesc:"全球出貨量最大的單一 MLCC 規格，消費電子/家電/IoT 萬用去耦，消費電子景氣最廣義溫度計",
     key:"0402_100nF_16V_X7R", label:"0.1µF 16V X7R 0402",
-    mouser:"https://www.mouser.tw/c/?q=0402+100nf+16v+x7r",
+    mouser:"https://www.mouser.tw/c/?q=0402+100nf+16v+x7r+x7r",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   { cat:"MLCC", use:"消費性",
     useDesc:"消費電子最大宗 Bulk MLCC，電視/平板/IoT/家電全用，全球出貨量前三名，景氣最廣義溫度計",
-    key:"0402_10uF_10V_X5R", label:"10µF 10V X5R 0402",
-    mouser:"https://www.mouser.tw/c/?q=10uf+10v+x5r+0402",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
-  { cat:"MLCC", use:"消費性",
-    useDesc:"智慧型手機萬用 bypass cap，0201 封裝為手機/穿戴獨有，追蹤手機出貨量景氣",
-    key:"0201_100nF_6V3_X5R", label:"0.1µF 6.3V X5R 0201",
-    mouser:"https://www.mouser.tw/c/?q=0201+100nf+6.3v+x5r",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
-  { cat:"MLCC", use:"消費性",
-    useDesc:"旗艦手機 PMIC/AP 電源去耦標配，三星/蘋果/聯發科平台廣用，追蹤旗艦手機景氣",
-    key:"0402_4u7uF_6V3_X5R", label:"4.7µF 6.3V X5R 0402",
-    mouser:"https://www.mouser.tw/c/?q=0402+4.7uf+6.3v+x5r",
+    key:"0402_10uF_10V_X5R_CONS", label:"10µF 10V X5R 0402",
+    mouser:"https://www.mouser.tw/c/?q=0402+10uf+10v+x5r+mlcc",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   // ── MLCC 車用（AEC-Q200）────────────────────────────────
   { cat:"MLCC", use:"車用",
@@ -281,9 +277,9 @@ const SPECS = [
     mouser:"https://www.mouser.tw/c/?q=100nf+50v+x7r+0402+aec-q200",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   { cat:"MLCC", use:"車用",
-    useDesc:"ADAS/域控制器/BMS 電源模組主濾波標配，AEC-Q200，汽車電源管理景氣指標",
-    key:"0805_10uF_50V_X7R_AEC", label:"10µF 50V X7R 0805 AEC",
-    mouser:"https://www.mouser.tw/c/?q=10uf+50v+x7r+0805+aec-q200",
+    useDesc:"車載 DC-DC 轉換器/BMS 電源模組主濾波標配，1206 封裝為 50V 10µF X7R 可量產主流，AEC-Q200",
+    key:"1206_10uF_50V_X7R_AEC", label:"10µF 50V X7R 1206 AEC",
+    mouser:"https://www.mouser.tw/c/?q=10uf+50v+x7r+1206+aec-q200",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   // ── 鋁電解（貼片）────────────────────────────────────────
   { cat:"鋁電解（貼片）", use:"AI",
@@ -330,16 +326,59 @@ const SPECS = [
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
   // ── 鋁電解（貼片）車用─────────────────────────────────────
   { cat:"鋁電解（貼片）", use:"車用",
-    useDesc:"汽車 ECU/ADAS 電源板 SMD 鋁電解最大宗，AEC-Q200，高溫 125°C，汽車電子需求景氣指標",
-    key:"AlCap_SMD_100uF_50V_AEC", label:"SMD 100µF 50V AEC",
-    mouser:"https://www.mouser.tw/c/?q=100uf+50v+smd+aluminum+aec-q200",
+    useDesc:"底盤電控/馬達系統高分子混合鋁電容，Hybrid 低 ESR 耐高溫，AEC-Q200，高階車規景氣指標",
+    key:"AlCap_SMD_Hybrid_100uF_50V_AEC", label:"SMD Hybrid 100µF 50V AEC",
+    mouser:"https://www.mouser.tw/c/?q=100uf+50v+hybrid+polymer+smd+aluminum+aec-q200",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
   // ── 鋁電解（牛角）車用─────────────────────────────────────
   { cat:"鋁電解（牛角）", use:"車用",
-    useDesc:"EV/HEV DC-DC 轉換器與 OBC 主濾波，AEC-Q200，汽車電驅系統景氣指標",
-    key:"AlCap_SnapIn_1000uF_50V_AEC", label:"牛角 50V 1000µF AEC",
-    mouser:"https://www.mouser.tw/c/?q=1000uf+50v+snap-in+aluminum+aec-q200",
+    useDesc:"純電動車 OBC 高壓輸入端濾波，450V 系為 BEV 充電器核心電容，AEC-Q200，純電車景氣最強指標",
+    key:"AlCap_SnapIn_470uF_450V_AEC", label:"牛角 450V 470µF AEC",
+    mouser:"https://www.mouser.tw/c/?q=470uf+450v+snap-in+aluminum+aec-q200",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── NP0/C0G MLCC（AI LLC 諧振）────────────────────────────
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI 12kW+ PSU LLC 諧振電路高壓關鍵電容，NP0/C0G 介電質溫度特性最穩，Holy Stone/PDC/Murata 等廠商景氣指標",
+    key:"1206_10nF_630V_C0G", label:"10nF 630V C0G 1206",
+    mouser:"https://www.mouser.tw/c/?q=10nf+630v+c0g+1206",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"AI PSU LLC 進階大容值高壓電容，33nF 為 630V 1210 封裝實際量產主力，Holy Stone/信昌電 PDC 核心料號",
+    key:"1210_33nF_630V_C0G", label:"33nF 630V C0G 1210",
+    mouser:"https://www.mouser.tw/c/?q=33nf+630v+c0g+1210",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"AI",
+    useDesc:"信昌電 Mega CAP 堆疊型 MLCC，1µF 250V 2220 超大尺寸，AI 伺服器 800V HVDC 穩壓專用，高毛利護城河產品",
+    key:"2220_1uF_250V_X7R", label:"1µF 250V X7R 2220 Mega CAP",
+    mouser:"https://www.mouser.tw/c/?q=1uf+250v+x7r+2220+mlcc",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  // ── 電感 AI + 消費性────────────────────────────────────────
+  { cat:"電感", use:"AI",
+    useDesc:"AI 18kW PSU 巨型 TLVR 電感（≥90A），臺慶科/Vishay/Eaton 供應 Nvidia GPU VR 電路，庫存見底代表 AI PSU 瘋狂出貨",
+    key:"TLVR_AI_Inductor", label:"TLVR Inductor ≥90A",
+    mouser:"https://www.mouser.tw/c/?q=tlvr+inductor+100a",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%9B%BB%E6%84%9F%E5%99%A8%E3%80%81%E6%89%BC%E6%B5%81%E5%9C%88%E8%88%87%E7%B7%9A%E5%9C%88/70" },
+  { cat:"電感", use:"消費性",
+    useDesc:"手機/IoT 出貨量最大的 SMD 功率電感，0402 封裝，觀察 AI 搶料是否排擠消費性電感產能",
+    key:"0402_4u7uH_2A_Inductor", label:"4.7µH 2A 0402 Power Inductor",
+    mouser:"https://www.mouser.tw/c/?q=4.7uh+2a+0402+power+inductor",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%9B%BB%E6%84%9F%E5%99%A8%E3%80%81%E6%89%BC%E6%B5%81%E5%9C%88%E8%88%87%E7%B7%9A%E5%9C%88/70" },
+  // ── 電阻 AI + 消費性────────────────────────────────────────
+  { cat:"電阻", use:"AI",
+    useDesc:"AI 伺服器大電流監測核心元件，2512 封裝 1mΩ 分流電阻，800V HVDC 架構必用，Yageo(國巨)/Walsin(華新科) 漲價主力",
+    key:"2512_1mOhm_CurrentSense", label:"2512 1mΩ Current Sense",
+    mouser:"https://www.mouser.tw/c/?q=2512+current+sense+1mohm",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E7%9B%AE%E5%89%8D%E6%84%9F%E6%B8%AC%E9%9B%BB%E9%98%BB%E5%99%A8/52" },
+  { cat:"電阻", use:"AI",
+    useDesc:"AI 高壓電源板抗突波/高功率電阻，400V 耐壓，1206 大封裝，國巨/華新科啟動漲價的主力規格",
+    key:"1206_AntiSurge_400V", label:"1206 400V Anti-Surge",
+    mouser:"https://www.mouser.tw/c/?q=1206+anti-surge+400v+resistor",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E8%A1%A8%E9%9D%A2%E8%B2%BC%E8%A3%9D%E9%9B%BB%E9%98%BB%E5%99%A8/53" },
+  { cat:"電阻", use:"消費性",
+    useDesc:"全球出貨量最大的單一 SMD 電阻規格，幾乎每塊 PCB 都有，觀察 AI 搶料是否排擠一般電阻產能",
+    key:"0402_10kOhm_1pct", label:"0402 10kΩ 1% Thick Film",
+    mouser:"https://www.mouser.tw/c/?q=0402+10kohm+1%25+thick+film",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E8%A1%A8%E9%9D%A2%E8%B2%BC%E8%A3%9D%E9%9B%BB%E9%98%BB%E5%99%A8/53" },
 ];
 
 const useBadge = (use) => {
@@ -352,6 +391,7 @@ const useBadge = (use) => {
 
 let currentSpec = SPECS[0].key;
 let trendChartInst = null;
+let stockChartInst = null;
 let priceSort = null;  // null=庫存優先 | 'asc'=價格升序 | 'desc'=價格降序
 
 const BRAND_MAP = {
@@ -572,6 +612,52 @@ function renderTrendChart() {
   });
 }
 
+function renderStockChart() {
+  const data = specData();
+  const dates = Object.keys(data).sort();
+  const ph = document.getElementById('stock-placeholder');
+  const ct = document.getElementById('stock-container');
+  if (!ph || !ct) return;
+  if (dates.length < 2) { ph.style.display=''; ct.style.display='none'; return; }
+  ph.style.display='none'; ct.style.display='';
+
+  const getTotalStock = d => {
+    if (d.total_stock != null) return d.total_stock;
+    return (d.products || []).reduce((s,p) => s + (p.stock||0), 0);
+  };
+  const getInStockCount = d => {
+    if (d.in_stock_count != null) return d.in_stock_count;
+    return (d.products || []).filter(p => (p.stock||0) > 0).length;
+  };
+
+  const totalStocks = dates.map(d => getTotalStock(data[d]));
+  const inStockCounts = dates.map(d => getInStockCount(data[d]));
+
+  if (stockChartInst) stockChartInst.destroy();
+  const ctx = document.getElementById('stock-chart');
+  if (!ctx) return;
+  stockChartInst = new Chart(ctx.getContext('2d'), {
+    type:'line',
+    data:{labels:dates, datasets:[
+      {label:'現貨庫存總量',data:totalStocks,
+       borderColor:'#10b981',backgroundColor:'#10b98120',tension:0.3,pointRadius:5,pointHoverRadius:7,fill:true,spanGaps:true,yAxisID:'y'},
+      {label:'有庫存型號數',data:inStockCounts,
+       borderColor:'#f59e0b',backgroundColor:'transparent',tension:0.3,pointRadius:4,pointHoverRadius:6,fill:false,spanGaps:true,yAxisID:'y1',borderDash:[4,3]}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{display:true,position:'top',labels:{font:{size:11},boxWidth:16}},
+        tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y!=null?c.parsed.y.toLocaleString():'—')}}
+      },
+      scales:{
+        x:{ticks:{font:{size:10}},grid:{color:'#f1f5f9'}},
+        y:{ticks:{font:{size:11},callback:v=>v>=10000?(v/10000).toFixed(1)+'萬':v.toLocaleString()},grid:{color:'#f1f5f9'},position:'left'},
+        y1:{ticks:{font:{size:11}},grid:{display:false},position:'right'}
+      }
+    }
+  });
+}
+
 // source badge
 const srcBadge = (src) => {
   if (src === 'Mouser') return '<span style="font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:#fef3c7;color:#b45309">Mouser</span>';
@@ -623,7 +709,7 @@ function renderTable() {
   });
 }
 
-function renderAll() { buildPkgFilter(); buildBrandFilter(); renderUseInfo(); renderSummary(); renderTrendChart(); renderTable(); }
+function renderAll() { buildPkgFilter(); buildBrandFilter(); renderUseInfo(); renderSummary(); renderTrendChart(); renderStockChart(); renderTable(); }
 
 document.addEventListener('DOMContentLoaded', function() {
   var helpBtn   = document.getElementById('help-btn');
