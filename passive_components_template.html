@@ -100,9 +100,8 @@ tr:hover td { background: #f8fafc; }
     <div class="header-title">被動元件價格追蹤</div>
     <div class="header-sub">LCSC + Mouser · 自動每日更新</div>
     <div class="ref-links">
-      <a class="ref-link" href="https://evan0621.github.io/passive-components-tracker/" target="_blank">🔗 追蹤網站</a>
-      <span style="font-size:10px;color:#cbd5e1;">|</span>
       <span style="font-size:10px;color:#94a3b8;">搜尋：</span>
+      <a class="ref-link" id="lcsc-link" href="#" target="_blank">LCSC</a>
       <a class="ref-link" id="mouser-link" href="#" target="_blank">Mouser TW</a>
     </div>
   </div>
@@ -128,9 +127,9 @@ tr:hover td { background: #f8fafc; }
         <div class="avg-sub" id="avg-price-sub">尚無資料</div>
       </div>
       <div class="avg-item">
-        <div class="avg-label">現貨品項數</div>
-        <div class="avg-value" id="instock-count">—</div>
-        <div class="avg-sub">有庫存型號</div>
+        <div class="avg-label">現貨 / 總型號數</div>
+        <div class="avg-value" id="instock-count" style="font-size:14px">—</div>
+        <div class="avg-sub">有庫存 / 全部型號</div>
       </div>
       <div class="avg-item">
         <div class="avg-label">最低價型號</div>
@@ -178,10 +177,10 @@ tr:hover td { background: #f8fafc; }
     <div class="modal-title">如何更新資料</div>
     <div class="modal-body">
       雙擊 <strong>update_prices.bat</strong> 即可立即抓取最新價格並推送到 GitHub Pages。<br><br>
-      排程每晚 20:00 自動執行，無需手動操作。<br><br>
+      排程每晚 21:00 自動執行，無需手動操作。<br><br>
       網站：<span class="tag">evan0621.github.io/passive-components-tracker</span>
     </div>
-    <div class="modal-note">資料來源：立創商城 (LCSC)</div>
+    <div class="modal-note">資料來源：立創商城 (LCSC) + Mouser</div>
     <button class="modal-btn" id="modal-close-btn">知道了</button>
   </div>
 </div>
@@ -305,7 +304,9 @@ function buildTabs() {
   });
   el.innerHTML = html;
   const def = specDef();
+  const ll = document.getElementById('lcsc-link');
   const ml = document.getElementById('mouser-link');
+  if (ll) ll.href = 'https://so.szlcsc.com/global.html?k=' + encodeURIComponent(def.label);
   if (ml) ml.href = def.mouser;
 }
 
@@ -354,7 +355,7 @@ function renderSummary() {
   const entry = today ? (specData()[today] || {}) : {};
   const avgUsd = getAvgUsd(entry);
   const cheapest = [...inStock].sort((a,b) => getPriceUsd(a) - getPriceUsd(b))[0];
-  document.getElementById('instock-count').textContent = inStock.length || '—';
+  document.getElementById('instock-count').textContent = (inStock.length || '0') + ' / ' + products.length;
   document.getElementById('avg-price-val').textContent = avgUsd != null ? '$' + avgUsd.toFixed(4) : '—';
   document.getElementById('avg-price-sub').textContent = avgUsd != null
     ? specDef().label + ' · ' + today + ' · USD' : '尚無資料';
