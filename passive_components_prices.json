@@ -53976,5 +53976,3639 @@
       "mouser_count": 26,
       "fetched_at": "2026-06-24T22:40:15.107589"
     }
+  },
+  "2016_1uH_Inductor": {
+    "2026-06-24": {
+      "products": [
+        {
+          "model": "MWTC2016065S1R0MTB01",
+          "lcsc_id": "57536105",
+          "brand": "Sunlord(顺络)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "10": 0.7565,
+            "100": 0.6005,
+            "300": 0.5225
+          },
+          "stock": 2880,
+          "min_qty": 10,
+          "min_price": 0.7565,
+          "min_price_usd": 0.111069,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.111069,
+            "100": 0.088165,
+            "300": 0.076713
+          }
+        },
+        {
+          "model": "XRTC201610S1R0MBCA",
+          "lcsc_id": "24189902",
+          "brand": "XR(祥如)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "10": 0.192675,
+            "100": 0.154875,
+            "300": 0.135975,
+            "3000": 0.1218,
+            "6000": 0.110475,
+            "9000": 0.104775
+          },
+          "stock": 2730,
+          "min_qty": 10,
+          "min_price": 0.192675,
+          "min_price_usd": 0.028289,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.028289,
+            "100": 0.022739,
+            "300": 0.019964,
+            "3000": 0.017883,
+            "6000": 0.01622,
+            "9000": 0.015383
+          }
+        },
+        {
+          "model": "XRIM201608S1R0MBCA",
+          "lcsc_id": "24189896",
+          "brand": "XR(祥如)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "10": 0.18045,
+            "100": 0.14265,
+            "300": 0.12375,
+            "3000": 0.109575,
+            "6000": 0.09825,
+            "9000": 0.09255
+          },
+          "stock": 1740,
+          "min_qty": 10,
+          "min_price": 0.18045,
+          "min_price_usd": 0.026494,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.026494,
+            "100": 0.020944,
+            "300": 0.018169,
+            "3000": 0.016088,
+            "6000": 0.014425,
+            "9000": 0.013588
+          }
+        },
+        {
+          "model": "SLW201610S1R0MST",
+          "lcsc_id": "216935",
+          "brand": "Sunltech(顺磁)",
+          "package": "SMD",
+          "prices": {
+            "10": 0.06256,
+            "100": 0.05152,
+            "300": 0.046,
+            "2000": 0.03838,
+            "4000": 0.03506,
+            "10000": 0.0334
+          },
+          "stock": 20,
+          "min_qty": 10,
+          "min_price": 0.06256,
+          "min_price_usd": 0.009185,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.009185,
+            "100": 0.007564,
+            "300": 0.006754,
+            "2000": 0.005635,
+            "4000": 0.005148,
+            "10000": 0.004904
+          }
+        },
+        {
+          "model": "LSENC2016KKT1R0M",
+          "lcsc_id": "6258169",
+          "brand": "TAIYO YUDEN(太诱)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "5": 0.6346,
+            "50": 0.5107,
+            "150": 0.4488,
+            "500": 0.4024
+          },
+          "stock": 705,
+          "min_qty": 5,
+          "min_price": 0.6346,
+          "min_price_usd": 0.093172,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.093172,
+            "50": 0.074981,
+            "150": 0.065893,
+            "500": 0.05908
+          }
+        },
+        {
+          "model": "FNRH201610S-1R0MT",
+          "lcsc_id": "902282",
+          "brand": "cjiang(长江微电)",
+          "package": "SMD,2x1.6x1mm",
+          "prices": {
+            "10": 0.2413,
+            "100": 0.19114,
+            "300": 0.16606,
+            "2000": 0.13756,
+            "4000": 0.12255,
+            "10000": 0.11495
+          },
+          "stock": 430,
+          "min_qty": 10,
+          "min_price": 0.2413,
+          "min_price_usd": 0.035428,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.035428,
+            "100": 0.028063,
+            "300": 0.024381,
+            "2000": 0.020197,
+            "4000": 0.017993,
+            "10000": 0.016877
+          }
+        },
+        {
+          "model": "AFE201610S1R0MBT",
+          "lcsc_id": "24135234",
+          "brand": "Magnetsyc(元磁)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "20": 0.21774,
+            "200": 0.17214,
+            "600": 0.14934,
+            "2000": 0.13224,
+            "10000": 0.11856,
+            "20000": 0.111625
+          },
+          "stock": 1460,
+          "min_qty": 20,
+          "min_price": 0.21774,
+          "min_price_usd": 0.031969,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "20": 0.031969,
+            "200": 0.025274,
+            "600": 0.021926,
+            "2000": 0.019415,
+            "10000": 0.017407,
+            "20000": 0.016389
+          }
+        },
+        {
+          "model": "SLO201608T1R0MTT",
+          "lcsc_id": "49347990",
+          "brand": "Sunltech(顺磁)",
+          "package": "0806",
+          "prices": {
+            "10": 0.3411,
+            "100": 0.273,
+            "300": 0.2389
+          },
+          "stock": 300,
+          "min_qty": 10,
+          "min_price": 0.3411,
+          "min_price_usd": 0.05008,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.05008,
+            "100": 0.040082,
+            "300": 0.035075
+          }
+        },
+        {
+          "model": "MNR201610T1R0MT",
+          "lcsc_id": "19405509",
+          "brand": "MetalLions(美铼)",
+          "package": "SMD,1.6x2mm",
+          "prices": {
+            "10": 0.239495,
+            "100": 0.189335,
+            "300": 0.164255,
+            "2000": 0.145445,
+            "4000": 0.13034,
+            "10000": 0.122835
+          },
+          "stock": 1870,
+          "min_qty": 10,
+          "min_price": 0.239495,
+          "min_price_usd": 0.035163,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.035163,
+            "100": 0.027798,
+            "300": 0.024116,
+            "2000": 0.021354,
+            "4000": 0.019137,
+            "10000": 0.018035
+          }
+        },
+        {
+          "model": "CMLO201610T1R0MTT",
+          "lcsc_id": "5713280",
+          "brand": "Cybermax(思博科技)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "10": 0.2443,
+            "100": 0.1939,
+            "300": 0.1687,
+            "3000": 0.1435,
+            "6000": 0.1284,
+            "9000": 0.1208
+          },
+          "stock": 20,
+          "min_qty": 10,
+          "min_price": 0.2443,
+          "min_price_usd": 0.035868,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.035868,
+            "100": 0.028468,
+            "300": 0.024769,
+            "3000": 0.021069,
+            "6000": 0.018852,
+            "9000": 0.017736
+          }
+        },
+        {
+          "model": "SFE201610-1R0N",
+          "lcsc_id": "5803078",
+          "brand": "DDY(德立)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "20": 0.2144,
+            "200": 0.1672,
+            "600": 0.1409
+          },
+          "stock": 620,
+          "min_qty": 20,
+          "min_price": 0.2144,
+          "min_price_usd": 0.031478,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "20": 0.031478,
+            "200": 0.024548,
+            "600": 0.020687
+          }
+        },
+        {
+          "model": "SFE201610-1R0N-HF",
+          "lcsc_id": "24156058",
+          "brand": "DDY(德立)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "20": 0.2138,
+            "200": 0.1666,
+            "600": 0.1403,
+            "2000": 0.1246,
+            "10000": 0.1109,
+            "20000": 0.1036
+          },
+          "stock": 0,
+          "min_qty": 20,
+          "min_price": 0.2138,
+          "min_price_usd": 0.03139,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "20": 0.03139,
+            "200": 0.02446,
+            "600": 0.020599,
+            "2000": 0.018294,
+            "10000": 0.016282,
+            "20000": 0.015211
+          }
+        },
+        {
+          "model": "SFEK201610A-1R0N-HF",
+          "lcsc_id": "24156152",
+          "brand": "DDY(德立)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "20": 0.2292,
+            "200": 0.1812,
+            "600": 0.1572,
+            "2000": 0.1392,
+            "10000": 0.1248,
+            "20000": 0.1175
+          },
+          "stock": 0,
+          "min_qty": 20,
+          "min_price": 0.2292,
+          "min_price_usd": 0.033651,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "20": 0.033651,
+            "200": 0.026604,
+            "600": 0.02308,
+            "2000": 0.020437,
+            "10000": 0.018323,
+            "20000": 0.017251
+          }
+        },
+        {
+          "model": "CMLW201610S1R0MST",
+          "lcsc_id": "402685",
+          "brand": "Cybermax(思博科技)",
+          "package": "SMD,2x1.6mm",
+          "prices": {
+            "10": 0.3298,
+            "100": 0.2602,
+            "300": 0.2254,
+            "2000": 0.1981,
+            "4000": 0.1772,
+            "10000": 0.1668
+          },
+          "stock": 0,
+          "min_qty": 10,
+          "min_price": 0.3298,
+          "min_price_usd": 0.048421,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.048421,
+            "100": 0.038203,
+            "300": 0.033093,
+            "2000": 0.029085,
+            "4000": 0.026017,
+            "10000": 0.02449
+          }
+        },
+        {
+          "model": "AHP201610HF-1R0M",
+          "lcsc_id": "145214",
+          "brand": "TAI-TECH(台庆)",
+          "package": "SMD",
+          "prices": {
+            "10": 0.1846,
+            "100": 0.1807,
+            "300": 0.1781,
+            "1000": 0.1755
+          },
+          "stock": 0,
+          "min_qty": 10,
+          "min_price": 0.1846,
+          "min_price_usd": 0.027103,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.027103,
+            "100": 0.02653,
+            "300": 0.026149,
+            "1000": 0.025767
+          }
+        },
+        {
+          "model": "MHCD201610A-1R0M-A8LW",
+          "lcsc_id": "309252",
+          "brand": "Chilisin(奇力新)",
+          "package": "SMD",
+          "prices": {
+            "10": 0.428,
+            "100": 0.3416,
+            "300": 0.2984,
+            "3000": 0.266,
+            "6000": 0.24,
+            "9000": 0.2271,
+            "21000": 0.2244,
+            "39000": 0.2226
+          },
+          "stock": 0,
+          "min_qty": 10,
+          "min_price": 0.428,
+          "min_price_usd": 0.062839,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.062839,
+            "100": 0.050154,
+            "300": 0.043811,
+            "3000": 0.039054,
+            "6000": 0.035237,
+            "9000": 0.033343,
+            "21000": 0.032946,
+            "39000": 0.032682
+          }
+        },
+        {
+          "model": "MHCD201612A-1R0M-A8S",
+          "lcsc_id": "6041592",
+          "brand": "Chilisin(奇力新)",
+          "package": "SMD",
+          "prices": {
+            "10": 0.1565,
+            "100": 0.153,
+            "300": 0.1507,
+            "1000": 0.1484
+          },
+          "stock": 0,
+          "min_qty": 10,
+          "min_price": 0.1565,
+          "min_price_usd": 0.022977,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.022977,
+            "100": 0.022463,
+            "300": 0.022126,
+            "1000": 0.021788
+          }
+        },
+        {
+          "model": "MHCH201610A-1R0M-Q8",
+          "lcsc_id": "3043039",
+          "brand": "Chilisin(奇力新)",
+          "package": "SMD,2x1.6x1mm",
+          "prices": {
+            "5": 0.5112,
+            "50": 0.408,
+            "150": 0.3564,
+            "500": 0.3177,
+            "3000": 0.2867,
+            "6000": 0.2712,
+            "9000": 0.268,
+            "21000": 0.2659
+          },
+          "stock": 0,
+          "min_qty": 5,
+          "min_price": 0.5112,
+          "min_price_usd": 0.075054,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.075054,
+            "50": 0.059903,
+            "150": 0.052327,
+            "500": 0.046645,
+            "3000": 0.042093,
+            "6000": 0.039818,
+            "9000": 0.039348,
+            "21000": 0.039039
+          }
+        },
+        {
+          "model": "MHCL201610A-1R0M-A8LEP",
+          "lcsc_id": "309271",
+          "brand": "Chilisin(奇力新)",
+          "package": "SMD",
+          "prices": {
+            "10": 0.428,
+            "100": 0.3416,
+            "300": 0.2984,
+            "3000": 0.266,
+            "6000": 0.24,
+            "9000": 0.2271,
+            "21000": 0.2244,
+            "39000": 0.2226
+          },
+          "stock": 0,
+          "min_qty": 10,
+          "min_price": 0.428,
+          "min_price_usd": 0.062839,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.062839,
+            "100": 0.050154,
+            "300": 0.043811,
+            "3000": 0.039054,
+            "6000": 0.035237,
+            "9000": 0.033343,
+            "21000": 0.032946,
+            "39000": 0.032682
+          }
+        },
+        {
+          "model": "DH0530H-1R0M",
+          "lcsc_id": "43206046",
+          "brand": "DH(德鸿感应)",
+          "package": "SMD,5.6x5.2mm",
+          "prices": {
+            "5": 0.5384,
+            "50": 0.4256,
+            "150": 0.3692,
+            "500": 0.3269,
+            "2500": 0.2931,
+            "5000": 0.2762
+          },
+          "stock": 10,
+          "min_qty": 5,
+          "min_price": 0.5384,
+          "min_price_usd": 0.079048,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.079048,
+            "50": 0.062487,
+            "150": 0.054206,
+            "500": 0.047995,
+            "2500": 0.043033,
+            "5000": 0.040552
+          }
+        },
+        {
+          "model": "DH0520H-1R0M",
+          "lcsc_id": "43206033",
+          "brand": "DH(德鸿感应)",
+          "package": "SMD,5.6x5.2mm",
+          "prices": {
+            "5": 0.3854,
+            "50": 0.3384,
+            "150": 0.3149,
+            "500": 0.2973,
+            "2500": 0.2832,
+            "5000": 0.2762
+          },
+          "stock": 11,
+          "min_qty": 5,
+          "min_price": 0.3854,
+          "min_price_usd": 0.056584,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.056584,
+            "50": 0.049684,
+            "150": 0.046234,
+            "500": 0.04365,
+            "2500": 0.041579,
+            "5000": 0.040552
+          }
+        },
+        {
+          "model": "FPA201612D-1R0MT0",
+          "lcsc_id": "31512493",
+          "brand": "cjiang(长江微电)",
+          "package": "0806",
+          "prices": {
+            "5": 0.8862,
+            "50": 0.7151,
+            "150": 0.6417,
+            "500": 0.5502,
+            "3000": 0.5095,
+            "6000": 0.485
+          },
+          "stock": 2350,
+          "min_qty": 5,
+          "min_price": 0.8862,
+          "min_price_usd": 0.130112,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.130112,
+            "50": 0.104991,
+            "150": 0.094214,
+            "500": 0.08078,
+            "3000": 0.074805,
+            "6000": 0.071208
+          }
+        },
+        {
+          "model": "DH0650H-1R0M",
+          "lcsc_id": "43206133",
+          "brand": "DH(德鸿感应)",
+          "package": "SMD,7.1x6.6mm",
+          "prices": {
+            "5": 0.7332,
+            "50": 0.5796,
+            "150": 0.5028,
+            "500": 0.4452,
+            "2500": 0.3991,
+            "5000": 0.376
+          },
+          "stock": 7935,
+          "min_qty": 5,
+          "min_price": 0.7332,
+          "min_price_usd": 0.107648,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.107648,
+            "50": 0.085097,
+            "150": 0.073821,
+            "500": 0.065364,
+            "2500": 0.058596,
+            "5000": 0.055204
+          }
+        },
+        {
+          "model": "FPB201612D-1R0MTW0",
+          "lcsc_id": "31512512",
+          "brand": "cjiang(长江微电)",
+          "package": "0806",
+          "prices": {
+            "5": 0.5789,
+            "50": 0.4697,
+            "150": 0.4151,
+            "500": 0.3742,
+            "3000": 0.3414,
+            "6000": 0.325
+          },
+          "stock": 2960,
+          "min_qty": 5,
+          "min_price": 0.5789,
+          "min_price_usd": 0.084994,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.084994,
+            "50": 0.068961,
+            "150": 0.060945,
+            "500": 0.05494,
+            "3000": 0.050124,
+            "6000": 0.047717
+          }
+        },
+        {
+          "model": "FWP201610P-1R0ML",
+          "lcsc_id": "5835634",
+          "brand": "cjiang(长江微电)",
+          "package": "0806",
+          "prices": {
+            "10": 0.248,
+            "100": 0.19808,
+            "300": 0.17312,
+            "3000": 0.14472,
+            "6000": 0.12976,
+            "9000": 0.12224
+          },
+          "stock": 2590,
+          "min_qty": 10,
+          "min_price": 0.248,
+          "min_price_usd": 0.036411,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.036411,
+            "100": 0.029082,
+            "300": 0.025417,
+            "3000": 0.021248,
+            "6000": 0.019051,
+            "9000": 0.017947
+          }
+        },
+        {
+          "model": "FPB201610D-1R0MTW0",
+          "lcsc_id": "31512509",
+          "brand": "cjiang(长江微电)",
+          "package": "0806",
+          "prices": {
+            "5": 0.6324,
+            "50": 0.5131,
+            "150": 0.4535,
+            "500": 0.4087,
+            "3000": 0.3729,
+            "6000": 0.355
+          },
+          "stock": 1215,
+          "min_qty": 5,
+          "min_price": 0.6324,
+          "min_price_usd": 0.092849,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "5": 0.092849,
+            "50": 0.075333,
+            "150": 0.066583,
+            "500": 0.060005,
+            "3000": 0.054749,
+            "6000": 0.052121
+          }
+        },
+        {
+          "model": "DH0630H-1R0M",
+          "lcsc_id": "43206099",
+          "brand": "DH(德鸿感应)",
+          "package": "SMD,7.1x6.6mm",
+          "prices": {
+            "10": 0.4583,
+            "100": 0.3623,
+            "300": 0.3143,
+            "1000": 0.2783,
+            "5000": 0.2495,
+            "10000": 0.235
+          },
+          "stock": 2840,
+          "min_qty": 10,
+          "min_price": 0.4583,
+          "min_price_usd": 0.067288,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.067288,
+            "100": 0.053193,
+            "300": 0.046146,
+            "1000": 0.04086,
+            "5000": 0.036632,
+            "10000": 0.034503
+          }
+        },
+        {
+          "model": "SMTC201610-1R0MT",
+          "lcsc_id": "24155001",
+          "brand": "SXN(顺翔诺)",
+          "package": "0806",
+          "prices": {
+            "10": 0.2505,
+            "100": 0.1977,
+            "300": 0.1713
+          },
+          "stock": 1680,
+          "min_qty": 10,
+          "min_price": 0.2505,
+          "min_price_usd": 0.036778,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.036778,
+            "100": 0.029026,
+            "300": 0.02515
+          }
+        },
+        {
+          "model": "SMTC201612-1R0MT",
+          "lcsc_id": "24155008",
+          "brand": "SXN(顺翔诺)",
+          "package": "0806",
+          "prices": {
+            "10": 0.2979,
+            "100": 0.2355,
+            "300": 0.2043
+          },
+          "stock": 700,
+          "min_qty": 10,
+          "min_price": 0.2979,
+          "min_price_usd": 0.043738,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.043738,
+            "100": 0.034576,
+            "300": 0.029995
+          }
+        },
+        {
+          "model": "CRH201610S-1R0MT",
+          "lcsc_id": "536884",
+          "brand": "ceaiya(柯爱亚)",
+          "package": "0806",
+          "prices": {
+            "20": 0.20403,
+            "200": 0.16083,
+            "600": 0.13923,
+            "2000": 0.12303,
+            "10000": 0.11007,
+            "20000": 0.1035
+          },
+          "stock": 2560,
+          "min_qty": 20,
+          "min_price": 0.20403,
+          "min_price_usd": 0.029956,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "20": 0.029956,
+            "200": 0.023613,
+            "600": 0.020442,
+            "2000": 0.018063,
+            "10000": 0.01616,
+            "20000": 0.015196
+          }
+        },
+        {
+          "model": "LSCNE2016FET1R0MCB",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 20% HI CURR",
+          "stock": 6603,
+          "min_price": 0.32,
+          "min_price_usd": 0.32,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.32,
+            "10": 0.26,
+            "25": 0.255,
+            "100": 0.214,
+            "250": 0.208,
+            "500": 0.182,
+            "1000": 0.162,
+            "4000": 0.154
+          },
+          "prices_usd": {
+            "1": 0.32,
+            "10": 0.26,
+            "25": 0.255,
+            "100": 0.214,
+            "250": 0.208,
+            "500": 0.182,
+            "1000": 0.162,
+            "4000": 0.154
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSCNE2016FET1R0MCB?qs=tlsG%2FOw5FFhBCzDPL%252BEqcw%3D%3D"
+        },
+        {
+          "model": "MEKK2016T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSAPB2520KKT1R5M",
+          "stock": 29744,
+          "min_price": 0.34,
+          "min_price_usd": 0.34,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.34,
+            "10": 0.282,
+            "100": 0.233,
+            "250": 0.232,
+            "500": 0.2,
+            "1000": 0.177,
+            "3000": 0.163,
+            "6000": 0.151
+          },
+          "prices_usd": {
+            "1": 0.34,
+            "10": 0.282,
+            "100": 0.233,
+            "250": 0.232,
+            "500": 0.2,
+            "1000": 0.177,
+            "3000": 0.163,
+            "6000": 0.151
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/MEKK2016T1R0M?qs=1fQ7IOp4WrjACMrU1zo0Ig%3D%3D"
+        },
+        {
+          "model": "MAKK2016T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSANB2016KKT4R7M",
+          "stock": 63465,
+          "min_price": 0.15,
+          "min_price_usd": 0.15,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.15,
+            "10": 0.121,
+            "100": 0.1,
+            "1000": 0.082,
+            "3000": 0.075,
+            "6000": 0.068,
+            "9000": 0.065
+          },
+          "prices_usd": {
+            "1": 0.15,
+            "10": 0.121,
+            "100": 0.1,
+            "1000": 0.082,
+            "3000": 0.075,
+            "6000": 0.068,
+            "9000": 0.065
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/MAKK2016T1R0M?qs=Z6svWd%2FY2UR4eUjZoLE5eg%3D%3D"
+        },
+        {
+          "model": "MCFE2016T1R0MJGB",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSCNE2016FETR47MCB",
+          "stock": 4053,
+          "min_price": 0.36,
+          "min_price_usd": 0.36,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.36,
+            "10": 0.304,
+            "25": 0.278,
+            "100": 0.241,
+            "4000": 0.158
+          },
+          "prices_usd": {
+            "1": 0.36,
+            "10": 0.304,
+            "25": 0.278,
+            "100": 0.241,
+            "4000": 0.158
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/MCFE2016T1R0MJGB?qs=DPoM0jnrROViZTA%2F8TZQMg%3D%3D"
+        },
+        {
+          "model": "SLPPI2016-12-1R0M",
+          "brand": "Bel Signal Transformer",
+          "package": "",
+          "description": "Power Inductors - SMD HI POWER IND 1.00uH 50.0 m OHM 2.9A SM",
+          "stock": 2900,
+          "min_price": 0.81,
+          "min_price_usd": 0.81,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.81,
+            "10": 0.697,
+            "25": 0.639,
+            "100": 0.517,
+            "250": 0.488,
+            "500": 0.419,
+            "1000": 0.405,
+            "3000": 0.344
+          },
+          "prices_usd": {
+            "1": 0.81,
+            "10": 0.697,
+            "25": 0.639,
+            "100": 0.517,
+            "250": 0.488,
+            "500": 0.419,
+            "1000": 0.405,
+            "3000": 0.344
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bel-Signal-Transformer/SLPPI2016-12-1R0M?qs=8Wlm6%252BaMh8S8fhb%252BtXbCtA%3D%3D"
+        },
+        {
+          "model": "VLS201612HBX-1R0M-1",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1.0uH 3.1A 71mOhms Power Circuits",
+          "stock": 877,
+          "min_price": 0.29,
+          "min_price_usd": 0.29,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.29,
+            "10": 0.239,
+            "100": 0.198,
+            "250": 0.188,
+            "1000": 0.146,
+            "2000": 0.117,
+            "4000": 0.113,
+            "10000": 0.108
+          },
+          "prices_usd": {
+            "1": 0.29,
+            "10": 0.239,
+            "100": 0.198,
+            "250": 0.188,
+            "1000": 0.146,
+            "2000": 0.117,
+            "4000": 0.113,
+            "10000": 0.108
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201612HBX-1R0M-1?qs=uwKJARvjadNWzlsrhQGcLg%3D%3D"
+        },
+        {
+          "model": "LLCNE2016FET1R0MCB",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD INDUCTOR,MCOIL HIGH CURRENT,1.0UH20% ,T&R",
+          "stock": 3324,
+          "min_price": 0.36,
+          "min_price_usd": 0.36,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.36,
+            "10": 0.304,
+            "25": 0.278,
+            "100": 0.225,
+            "250": 0.213,
+            "500": 0.182,
+            "1000": 0.162,
+            "4000": 0.151
+          },
+          "prices_usd": {
+            "1": 0.36,
+            "10": 0.304,
+            "25": 0.278,
+            "100": 0.225,
+            "250": 0.213,
+            "500": 0.182,
+            "1000": 0.162,
+            "4000": 0.151
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LLCNE2016FET1R0MCB?qs=tlsG%2FOw5FFici2daSx%2FKcA%3D%3D"
+        },
+        {
+          "model": "CVH201610A-1R0M",
+          "brand": "Bourns",
+          "package": "",
+          "description": "Power Inductors - SMD Ind,2x1.6x.9mm,1uH+/-20%,1.4A,Shd,SMD",
+          "stock": 5,
+          "min_price": 0.36,
+          "min_price_usd": 0.36,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.36,
+            "10": 0.251,
+            "100": 0.207,
+            "1000": 0.17,
+            "3000": 0.149,
+            "6000": 0.135,
+            "9000": 0.129
+          },
+          "prices_usd": {
+            "1": 0.36,
+            "10": 0.251,
+            "100": 0.207,
+            "1000": 0.17,
+            "3000": 0.149,
+            "6000": 0.135,
+            "9000": 0.129
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bourns/CVH201610A-1R0M?qs=T3oQrply3y%2F16Yl1GP%252BXHA%3D%3D"
+        },
+        {
+          "model": "DFE201612PD-1R0M=P2",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1    UH  20%",
+          "stock": 14322,
+          "min_price": 0.41,
+          "min_price_usd": 0.41,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.41,
+            "10": 0.339,
+            "100": 0.279,
+            "500": 0.262,
+            "1000": 0.224,
+            "3000": 0.191,
+            "6000": 0.184
+          },
+          "prices_usd": {
+            "1": 0.41,
+            "10": 0.339,
+            "100": 0.279,
+            "500": 0.262,
+            "1000": 0.224,
+            "3000": 0.191,
+            "6000": 0.184
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/DFE201612PD-1R0M%3dP2?qs=55YtniHzbhAvegAbSrvewg%3D%3D"
+        },
+        {
+          "model": "74479320165210",
+          "brand": "Wurth Elektronik",
+          "package": "",
+          "description": "Power Inductors - SMD WE-PMFI 1.0 uH 4.7 A 36 mOhms AEC-Q200",
+          "stock": 3530,
+          "min_price": 0.31,
+          "min_price_usd": 0.31,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.31,
+            "10": 0.305,
+            "50": 0.261,
+            "100": 0.229,
+            "500": 0.202,
+            "1000": 0.183,
+            "3000": 0.183
+          },
+          "prices_usd": {
+            "1": 0.31,
+            "10": 0.305,
+            "50": 0.261,
+            "100": 0.229,
+            "500": 0.202,
+            "1000": 0.183,
+            "3000": 0.183
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Wurth-Elektronik/74479320165210?qs=bN4HulGPsrG6i3IqR%2FkwJw%3D%3D"
+        },
+        {
+          "model": "DFE201612P-1R0M=P2",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1    UH  20%",
+          "stock": 98209,
+          "min_price": 0.22,
+          "min_price_usd": 0.22,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.22,
+            "10": 0.181,
+            "100": 0.149,
+            "1000": 0.122,
+            "3000": 0.106,
+            "6000": 0.104,
+            "9000": 0.101
+          },
+          "prices_usd": {
+            "1": 0.22,
+            "10": 0.181,
+            "100": 0.149,
+            "1000": 0.122,
+            "3000": 0.106,
+            "6000": 0.104,
+            "9000": 0.101
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/DFE201612P-1R0M%3dP2?qs=KuGPmAKtFKXw8fDTw3pMhA%3D%3D"
+        },
+        {
+          "model": "DFE201612E-1R0M=P2",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1    UH  20%",
+          "stock": 125844,
+          "min_price": 0.25,
+          "min_price_usd": 0.25,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.25,
+            "10": 0.208,
+            "100": 0.172,
+            "1000": 0.141,
+            "3000": 0.121,
+            "6000": 0.114,
+            "9000": 0.11
+          },
+          "prices_usd": {
+            "1": 0.25,
+            "10": 0.208,
+            "100": 0.172,
+            "1000": 0.141,
+            "3000": 0.121,
+            "6000": 0.114,
+            "9000": 0.11
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/DFE201612E-1R0M%3dP2?qs=AQlKX63v8Rt8E%2F11eJ9IIg%3D%3D"
+        },
+        {
+          "model": "DFE201610E-1R0M=P2",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1    UH  20%",
+          "stock": 24723,
+          "min_price": 0.25,
+          "min_price_usd": 0.25,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.25,
+            "10": 0.208,
+            "100": 0.172,
+            "1000": 0.141,
+            "3000": 0.126,
+            "6000": 0.115,
+            "9000": 0.11
+          },
+          "prices_usd": {
+            "1": 0.25,
+            "10": 0.208,
+            "100": 0.172,
+            "1000": 0.141,
+            "3000": 0.126,
+            "6000": 0.115,
+            "9000": 0.11
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/DFE201610E-1R0M%3dP2?qs=AQlKX63v8Rt1GlLg%252BymCUQ%3D%3D"
+        },
+        {
+          "model": "LCENA2016MKT1R0M0NK",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1.0 UH  20%",
+          "stock": 10549,
+          "min_price": 0.3,
+          "min_price_usd": 0.3,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.3,
+            "10": 0.246,
+            "25": 0.215,
+            "100": 0.202,
+            "250": 0.177,
+            "1000": 0.167,
+            "3000": 0.152,
+            "6000": 0.148,
+            "9000": 0.14
+          },
+          "prices_usd": {
+            "1": 0.3,
+            "10": 0.246,
+            "25": 0.215,
+            "100": 0.202,
+            "250": 0.177,
+            "1000": 0.167,
+            "3000": 0.152,
+            "6000": 0.148,
+            "9000": 0.14
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LCENA2016MKT1R0M0NK?qs=efUn273yAhfW77ibgW7ANg%3D%3D"
+        },
+        {
+          "model": "LPWI201610H1R0T",
+          "brand": "Littelfuse",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 20% 0806",
+          "stock": 32585,
+          "min_price": 0.52,
+          "min_price_usd": 0.52,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.52,
+            "10": 0.432,
+            "25": 0.414,
+            "100": 0.355,
+            "500": 0.354,
+            "1000": 0.292,
+            "3000": 0.276,
+            "6000": 0.263
+          },
+          "prices_usd": {
+            "1": 0.52,
+            "10": 0.432,
+            "25": 0.414,
+            "100": 0.355,
+            "500": 0.354,
+            "1000": 0.292,
+            "3000": 0.276,
+            "6000": 0.263
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Littelfuse/LPWI201610H1R0T?qs=EU6FO9ffTwc5lertk8BLnQ%3D%3D"
+        },
+        {
+          "model": "DFE2016CKA-1R0M=P2",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 0806 1uH 20% 1800mA",
+          "stock": 2614,
+          "min_price": 0.29,
+          "min_price_usd": 0.29,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.29,
+            "10": 0.236,
+            "100": 0.195,
+            "1000": 0.16,
+            "3000": 0.143,
+            "6000": 0.13,
+            "9000": 0.124
+          },
+          "prices_usd": {
+            "1": 0.29,
+            "10": 0.236,
+            "100": 0.195,
+            "1000": 0.16,
+            "3000": 0.143,
+            "6000": 0.13,
+            "9000": 0.124
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/DFE2016CKA-1R0M%3dP2?qs=rI7uf1IzohSVXKt9sKn2WQ%3D%3D"
+        },
+        {
+          "model": "MAKK2016H1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 963-LSAPB2016KKT1R0M RPLCMT PN 0806 1uH 70mOhmsur",
+          "stock": 54480,
+          "min_price": 0.18,
+          "min_price_usd": 0.18,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.18,
+            "10": 0.149,
+            "100": 0.123,
+            "1000": 0.101,
+            "3000": 0.09,
+            "6000": 0.083,
+            "9000": 0.081
+          },
+          "prices_usd": {
+            "1": 0.18,
+            "10": 0.149,
+            "100": 0.123,
+            "1000": 0.101,
+            "3000": 0.09,
+            "6000": 0.083,
+            "9000": 0.081
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/MAKK2016H1R0M?qs=5LuraimkrXnSzbPk1QvL%2FQ%3D%3D"
+        },
+        {
+          "model": "LSEUC2016HKT1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD Wire-wound Metal Power Inductors, 2016, 1.0 uH+/- 20 %, T&R",
+          "stock": 2116,
+          "min_price": 0.21,
+          "min_price_usd": 0.21,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.21,
+            "10": 0.176,
+            "100": 0.145,
+            "1000": 0.119,
+            "3000": 0.109,
+            "6000": 0.098,
+            "9000": 0.094
+          },
+          "prices_usd": {
+            "1": 0.21,
+            "10": 0.176,
+            "100": 0.145,
+            "1000": 0.119,
+            "3000": 0.109,
+            "6000": 0.098,
+            "9000": 0.094
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSEUC2016HKT1R0M?qs=efUn273yAhe8WxYr%2FfiDVw%3D%3D"
+        },
+        {
+          "model": "LSEUC2016KKT1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD Wire-wound Metal Power Inductors, 2016, 1.0 uH+/- 20 %, T&R",
+          "stock": 4216,
+          "min_price": 0.21,
+          "min_price_usd": 0.21,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.21,
+            "10": 0.175,
+            "100": 0.145,
+            "1000": 0.119,
+            "3000": 0.108,
+            "6000": 0.098,
+            "9000": 0.094
+          },
+          "prices_usd": {
+            "1": 0.21,
+            "10": 0.175,
+            "100": 0.145,
+            "1000": 0.119,
+            "3000": 0.108,
+            "6000": 0.098,
+            "9000": 0.094
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSEUC2016KKT1R0M?qs=efUn273yAhd7qOk98q81%252BA%3D%3D"
+        },
+        {
+          "model": "DFE201610P-1R0M=P2",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1    UH  20%",
+          "stock": 12475,
+          "min_price": 0.22,
+          "min_price_usd": 0.22,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.22,
+            "10": 0.184,
+            "100": 0.152,
+            "1000": 0.125,
+            "3000": 0.104,
+            "6000": 0.097,
+            "9000": 0.096
+          },
+          "prices_usd": {
+            "1": 0.22,
+            "10": 0.184,
+            "100": 0.152,
+            "1000": 0.125,
+            "3000": 0.104,
+            "6000": 0.097,
+            "9000": 0.096
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/DFE201610P-1R0M%3dP2?qs=KuGPmAKtFKXuKbjOYjhb2A%3D%3D"
+        },
+        {
+          "model": "LSQMB201616T1R0J",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 5% SIGNAL LINE",
+          "stock": 3950,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.107,
+            "100": 0.088,
+            "1000": 0.079,
+            "2000": 0.071,
+            "4000": 0.06,
+            "10000": 0.057
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.107,
+            "100": 0.088,
+            "1000": 0.079,
+            "2000": 0.071,
+            "4000": 0.06,
+            "10000": 0.057
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSQMB201616T1R0J?qs=tlsG%2FOw5FFhNfUN8Tci2xw%3D%3D"
+        },
+        {
+          "model": "AOTA-B201608S1R0MT",
+          "brand": "ABRACON",
+          "package": "",
+          "description": "Power Inductors - SMD IND 1uH 3.7A 52mOhms",
+          "stock": 2515,
+          "min_price": 0.24,
+          "min_price_usd": 0.24,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.24,
+            "10": 0.194,
+            "100": 0.191,
+            "250": 0.182,
+            "1000": 0.141,
+            "3000": 0.126,
+            "6000": 0.108,
+            "9000": 0.104
+          },
+          "prices_usd": {
+            "1": 0.24,
+            "10": 0.194,
+            "100": 0.191,
+            "250": 0.182,
+            "1000": 0.141,
+            "3000": 0.126,
+            "6000": 0.108,
+            "9000": 0.104
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/ABRACON/AOTA-B201608S1R0MT?qs=1Kr7Jg1SGW8ZriVhoMQy9Q%3D%3D"
+        },
+        {
+          "model": "AOTA-B201610S1R0MT",
+          "brand": "ABRACON",
+          "package": "",
+          "description": "Power Inductors - SMD IND 1uH 4.2A 37m?",
+          "stock": 7631,
+          "min_price": 0.23,
+          "min_price_usd": 0.23,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.23,
+            "10": 0.189,
+            "100": 0.156,
+            "1000": 0.128,
+            "3000": 0.117,
+            "6000": 0.105,
+            "9000": 0.101
+          },
+          "prices_usd": {
+            "1": 0.23,
+            "10": 0.189,
+            "100": 0.156,
+            "1000": 0.128,
+            "3000": 0.117,
+            "6000": 0.105,
+            "9000": 0.101
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/ABRACON/AOTA-B201610S1R0MT?qs=Imq1NPwxi75ztn1ipxdt%2Fw%3D%3D"
+        },
+        {
+          "model": "MEKK2016H1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSEPC2016KKT2R2M",
+          "stock": 30061,
+          "min_price": 0.25,
+          "min_price_usd": 0.25,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.25,
+            "10": 0.204,
+            "100": 0.168,
+            "1000": 0.138,
+            "3000": 0.123,
+            "6000": 0.118
+          },
+          "prices_usd": {
+            "1": 0.25,
+            "10": 0.204,
+            "100": 0.168,
+            "1000": 0.138,
+            "3000": 0.123,
+            "6000": 0.118
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/MEKK2016H1R0M?qs=EBDBlbfErPxIEht64hlXPA%3D%3D"
+        },
+        {
+          "model": "LSENC2016KKT1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD INDUCTOR,METAL WIRE-W CHIP,1.0UH20% ,T&R",
+          "stock": 432,
+          "min_price": 0.34,
+          "min_price_usd": 0.34,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.34,
+            "10": 0.282,
+            "100": 0.233,
+            "500": 0.206,
+            "1000": 0.183,
+            "3000": 0.167,
+            "6000": 0.157
+          },
+          "prices_usd": {
+            "1": 0.34,
+            "10": 0.282,
+            "100": 0.233,
+            "500": 0.206,
+            "1000": 0.183,
+            "3000": 0.167,
+            "6000": 0.157
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSENC2016KKT1R0M?qs=tlsG%2FOw5FFgAlYdgEBI8GQ%3D%3D"
+        },
+        {
+          "model": "LPWI201608S1R0T",
+          "brand": "Littelfuse",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 20% 0806",
+          "stock": 2858,
+          "min_price": 0.51,
+          "min_price_usd": 0.51,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.51,
+            "10": 0.417,
+            "100": 0.344,
+            "250": 0.336,
+            "500": 0.308,
+            "1000": 0.27,
+            "3000": 0.222,
+            "6000": 0.211
+          },
+          "prices_usd": {
+            "1": 0.51,
+            "10": 0.417,
+            "100": 0.344,
+            "250": 0.336,
+            "500": 0.308,
+            "1000": 0.27,
+            "3000": 0.222,
+            "6000": 0.211
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Littelfuse/LPWI201608S1R0T?qs=EU6FO9ffTwdp2HRngO%2F7yw%3D%3D"
+        },
+        {
+          "model": "TFM201608ALC-1R0MTCA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 66mOhms 20%",
+          "stock": 3624,
+          "min_price": 0.39,
+          "min_price_usd": 0.39,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.39,
+            "10": 0.321,
+            "100": 0.264,
+            "500": 0.23,
+            "1000": 0.205,
+            "3000": 0.203,
+            "6000": 0.182
+          },
+          "prices_usd": {
+            "1": 0.39,
+            "10": 0.321,
+            "100": 0.264,
+            "500": 0.23,
+            "1000": 0.205,
+            "3000": 0.203,
+            "6000": 0.182
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/TFM201608ALC-1R0MTCA?qs=%252BEew9%252B0nqrC0GtFK0oMdNg%3D%3D"
+        },
+        {
+          "model": "ADCC002016121R0MC1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1   UH   20%",
+          "stock": 20599,
+          "min_price": 0.16,
+          "min_price_usd": 0.16,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.16,
+            "10": 0.127,
+            "100": 0.105,
+            "1000": 0.085,
+            "3000": 0.076,
+            "6000": 0.069
+          },
+          "prices_usd": {
+            "1": 0.16,
+            "10": 0.127,
+            "100": 0.105,
+            "1000": 0.085,
+            "3000": 0.076,
+            "6000": 0.069
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/ADCC002016121R0MC1?qs=ulEaXIWI0c%2Fnx3pEC%2F96LA%3D%3D"
+        },
+        {
+          "model": "TYA2016101R0M-10",
+          "brand": "Laird",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 3.3A 20% Wire Wound",
+          "stock": 335,
+          "min_price": 0.41,
+          "min_price_usd": 0.41,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.41,
+            "10": 0.346,
+            "25": 0.32,
+            "100": 0.247,
+            "250": 0.235,
+            "1000": 0.182,
+            "2000": 0.162,
+            "4000": 0.148,
+            "10000": 0.14
+          },
+          "prices_usd": {
+            "1": 0.41,
+            "10": 0.346,
+            "25": 0.32,
+            "100": 0.247,
+            "250": 0.235,
+            "1000": 0.182,
+            "2000": 0.162,
+            "4000": 0.148,
+            "10000": 0.14
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Laird/TYA2016101R0M-10?qs=sPbYRqrBIVlPJMS9nkQSeg%3D%3D"
+        },
+        {
+          "model": "MLD2016S1R0MTD25",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH .12ohm 1100mA 2016 AEC-Q200",
+          "stock": 3620,
+          "min_price": 0.26,
+          "min_price_usd": 0.26,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.26,
+            "10": 0.21,
+            "25": 0.184,
+            "100": 0.173,
+            "250": 0.151,
+            "1000": 0.143,
+            "3000": 0.126,
+            "6000": 0.114,
+            "9000": 0.109
+          },
+          "prices_usd": {
+            "1": 0.26,
+            "10": 0.21,
+            "25": 0.184,
+            "100": 0.173,
+            "250": 0.151,
+            "1000": 0.143,
+            "3000": 0.126,
+            "6000": 0.114,
+            "9000": 0.109
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/MLD2016S1R0MTD25?qs=AQlKX63v8RsY4%2FaHxoIE6Q%3D%3D"
+        },
+        {
+          "model": "CBC2016T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSQPA201616T1R5M",
+          "stock": 2000,
+          "min_price": 0.17,
+          "min_price_usd": 0.17,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.17,
+            "10": 0.139,
+            "100": 0.115,
+            "1000": 0.106,
+            "2000": 0.083,
+            "4000": 0.08,
+            "10000": 0.077
+          },
+          "prices_usd": {
+            "1": 0.17,
+            "10": 0.139,
+            "100": 0.115,
+            "1000": 0.106,
+            "2000": 0.083,
+            "4000": 0.08,
+            "10000": 0.077
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/CBC2016T1R0M?qs=I6KAKw0tg2yqaZUfRNw%252Biw%3D%3D"
+        },
+        {
+          "model": "TMS201610ALM-1R0MTAA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1.0uH, 3.1A, 60mOhms, -40-125C",
+          "stock": 3617,
+          "min_price": 0.48,
+          "min_price_usd": 0.48,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.48,
+            "10": 0.398,
+            "25": 0.347,
+            "100": 0.328,
+            "250": 0.286,
+            "1000": 0.27,
+            "3000": 0.246,
+            "6000": 0.23,
+            "9000": 0.219
+          },
+          "prices_usd": {
+            "1": 0.48,
+            "10": 0.398,
+            "25": 0.347,
+            "100": 0.328,
+            "250": 0.286,
+            "1000": 0.27,
+            "3000": 0.246,
+            "6000": 0.23,
+            "9000": 0.219
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/TMS201610ALM-1R0MTAA?qs=258DH3jk4VdYD5ruUfH1Uw%3D%3D"
+        },
+        {
+          "model": "BRC2016T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSQPB201616T1R5M",
+          "stock": 3374,
+          "min_price": 0.21,
+          "min_price_usd": 0.21,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.21,
+            "10": 0.17,
+            "100": 0.14,
+            "1000": 0.109,
+            "2000": 0.102,
+            "4000": 0.098,
+            "10000": 0.094
+          },
+          "prices_usd": {
+            "1": 0.21,
+            "10": 0.17,
+            "100": 0.14,
+            "1000": 0.109,
+            "2000": 0.102,
+            "4000": 0.098,
+            "10000": 0.094
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/BRC2016T1R0M?qs=I6KAKw0tg2xeFc7NQj7FIg%3D%3D"
+        },
+        {
+          "model": "LB2016T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSQBA201616T1R5M",
+          "stock": 3298,
+          "min_price": 0.12,
+          "min_price_usd": 0.12,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.12,
+            "10": 0.096,
+            "100": 0.079,
+            "1000": 0.062,
+            "2000": 0.061,
+            "4000": 0.053,
+            "10000": 0.051
+          },
+          "prices_usd": {
+            "1": 0.12,
+            "10": 0.096,
+            "100": 0.079,
+            "1000": 0.062,
+            "2000": 0.061,
+            "4000": 0.053,
+            "10000": 0.051
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LB2016T1R0M?qs=I6KAKw0tg2yFUZs3eejU9A%3D%3D"
+        },
+        {
+          "model": "LSAPB2016KKT1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD INDUCTOR,METAL WIRE-W CHIP,0806 ,1.0UH20% ,T&R",
+          "stock": 2999,
+          "min_price": 0.18,
+          "min_price_usd": 0.18,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.18,
+            "10": 0.149,
+            "100": 0.123,
+            "1000": 0.101,
+            "3000": 0.095,
+            "6000": 0.083,
+            "9000": 0.077
+          },
+          "prices_usd": {
+            "1": 0.18,
+            "10": 0.149,
+            "100": 0.123,
+            "1000": 0.101,
+            "3000": 0.095,
+            "6000": 0.083,
+            "9000": 0.077
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSAPB2016KKT1R0M?qs=tlsG%2FOw5FFiRBpybSvgCPg%3D%3D"
+        },
+        {
+          "model": "LSANB2016KKT1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD INDUCTOR,METAL WIRE-W CHIP,0806 ,1.0UH20% ,T&R",
+          "stock": 1895,
+          "min_price": 0.15,
+          "min_price_usd": 0.15,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.15,
+            "10": 0.127,
+            "100": 0.105,
+            "1000": 0.086,
+            "3000": 0.079,
+            "6000": 0.071,
+            "9000": 0.068
+          },
+          "prices_usd": {
+            "1": 0.15,
+            "10": 0.127,
+            "100": 0.105,
+            "1000": 0.086,
+            "3000": 0.079,
+            "6000": 0.071,
+            "9000": 0.068
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSANB2016KKT1R0M?qs=tlsG%2FOw5FFhRUkKGMEzYKg%3D%3D"
+        },
+        {
+          "model": "VLS201610CX-1R0M-1",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 2mm x 1.6mm, -40 to +105 degC, 1.76A, 1H, 79m",
+          "stock": 6829,
+          "min_price": 0.28,
+          "min_price_usd": 0.28,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.28,
+            "10": 0.227,
+            "100": 0.187,
+            "1000": 0.143,
+            "2000": 0.134,
+            "4000": 0.129,
+            "10000": 0.124
+          },
+          "prices_usd": {
+            "1": 0.28,
+            "10": 0.227,
+            "100": 0.187,
+            "1000": 0.143,
+            "2000": 0.134,
+            "4000": 0.129,
+            "10000": 0.124
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201610CX-1R0M-1?qs=1mbolxNpo8f5aXhHdP%2FKxA%3D%3D"
+        },
+        {
+          "model": "LPWI201610TB1R0T",
+          "brand": "Littelfuse",
+          "package": "",
+          "description": "Power Inductors - SMD \"PWI 2016 1.0T 1.0uH, cover\"",
+          "stock": 1114,
+          "min_price": 0.44,
+          "min_price_usd": 0.44,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.44,
+            "10": 0.361,
+            "100": 0.297,
+            "1000": 0.274,
+            "3000": 0.222,
+            "6000": 0.211
+          },
+          "prices_usd": {
+            "1": 0.44,
+            "10": 0.361,
+            "100": 0.297,
+            "1000": 0.274,
+            "3000": 0.222,
+            "6000": 0.211
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Littelfuse/LPWI201610TB1R0T?qs=vLWxofP3U2xLEejmXQIaVA%3D%3D"
+        },
+        {
+          "model": "TFM201610GHM-1R0MTAA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1.0uH 50mOhms 3.6A 20%",
+          "stock": 5034,
+          "min_price": 0.43,
+          "min_price_usd": 0.43,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.43,
+            "10": 0.357,
+            "100": 0.294,
+            "500": 0.283,
+            "1000": 0.242,
+            "3000": 0.214,
+            "6000": 0.203
+          },
+          "prices_usd": {
+            "1": 0.43,
+            "10": 0.357,
+            "100": 0.294,
+            "500": 0.283,
+            "1000": 0.242,
+            "3000": 0.214,
+            "6000": 0.203
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/TFM201610GHM-1R0MTAA?qs=x2oBzs92lc005umckFbzsA%3D%3D"
+        },
+        {
+          "model": "SRU2016-1R0Y",
+          "brand": "Bourns",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 30% SMD 2016",
+          "stock": 10,
+          "min_price": 0.99,
+          "min_price_usd": 0.99,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.99,
+            "10": 0.807,
+            "25": 0.672,
+            "100": 0.553,
+            "500": 0.523,
+            "1000": 0.454,
+            "2000": 0.414,
+            "5000": 0.411
+          },
+          "prices_usd": {
+            "1": 0.99,
+            "10": 0.807,
+            "25": 0.672,
+            "100": 0.553,
+            "500": 0.523,
+            "1000": 0.454,
+            "2000": 0.414,
+            "5000": 0.411
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bourns/SRU2016-1R0Y?qs=waMHuMyuWYVDRxPYxvw%2FuQ%3D%3D"
+        },
+        {
+          "model": "VLS201610HBX-1R0M-1",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1.0uH 2.9A 72mOhms Power Circuits",
+          "stock": 2128,
+          "min_price": 0.24,
+          "min_price_usd": 0.24,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.24,
+            "10": 0.199,
+            "100": 0.164,
+            "1000": 0.125,
+            "2000": 0.117,
+            "4000": 0.113,
+            "10000": 0.108
+          },
+          "prices_usd": {
+            "1": 0.24,
+            "10": 0.199,
+            "100": 0.164,
+            "1000": 0.125,
+            "2000": 0.117,
+            "4000": 0.113,
+            "10000": 0.108
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201610HBX-1R0M-1?qs=uwKJARvjadM%252BxmTAEgb0YA%3D%3D"
+        },
+        {
+          "model": "VLS201612ET-1R0N-CA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD RECOMMENDED ALT 810-VLS6045EX-1R0N-H",
+          "stock": 334,
+          "min_price": 0.38,
+          "min_price_usd": 0.38,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.38,
+            "10": 0.303,
+            "100": 0.25,
+            "1000": 0.206,
+            "2000": 0.19,
+            "4000": 0.173
+          },
+          "prices_usd": {
+            "1": 0.38,
+            "10": 0.303,
+            "100": 0.25,
+            "1000": 0.206,
+            "2000": 0.19,
+            "4000": 0.173
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201612ET-1R0N-CA?qs=%2FPzWLGNeQ%252Bj1%2FEu8QZptrw%3D%3D"
+        },
+        {
+          "model": "LBM2016T1R0J",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "RF Inductors - SMD PLEASE SEE SUGGESTED ALTERNATE LSQMB201616T1R2J",
+          "stock": 820,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.107,
+            "100": 0.088,
+            "1000": 0.069,
+            "2000": 0.064,
+            "4000": 0.06,
+            "10000": 0.057
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.107,
+            "100": 0.088,
+            "1000": 0.069,
+            "2000": 0.064,
+            "4000": 0.06,
+            "10000": 0.057
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LBM2016T1R0J?qs=PzICbMaShUdJyfGNMysliw%3D%3D"
+        },
+        {
+          "model": "LPWI201610B1R0T",
+          "brand": "Littelfuse",
+          "package": "",
+          "description": "Power Inductors - SMD PWI 2520 1.0T 1.0UH  4A",
+          "stock": 1303,
+          "min_price": 0.51,
+          "min_price_usd": 0.51,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.51,
+            "10": 0.417,
+            "100": 0.344,
+            "500": 0.322,
+            "1000": 0.277,
+            "3000": 0.222,
+            "6000": 0.212
+          },
+          "prices_usd": {
+            "1": 0.51,
+            "10": 0.417,
+            "100": 0.344,
+            "500": 0.322,
+            "1000": 0.277,
+            "3000": 0.222,
+            "6000": 0.212
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Littelfuse/LPWI201610B1R0T?qs=vLWxofP3U2ztgNMI%252BUvB8Q%3D%3D"
+        },
+        {
+          "model": "VLS201612ET-1R0N",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD RECOMMENDED ALT 810-VLS201610CX1R0M1",
+          "stock": 52,
+          "min_price": 0.31,
+          "min_price_usd": 0.31,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.31,
+            "10": 0.25,
+            "100": 0.202,
+            "1000": 0.166,
+            "2000": 0.154
+          },
+          "prices_usd": {
+            "1": 0.31,
+            "10": 0.25,
+            "100": 0.202,
+            "1000": 0.166,
+            "2000": 0.154
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201612ET-1R0N?qs=uxmvvYJjMIu2UwNb1lUTqw%3D%3D"
+        },
+        {
+          "model": "WLPH201610M1R0PP",
+          "brand": "Walsin",
+          "package": "",
+          "description": "Power Inductors - SMD Power choke,Molded,1.0uH,M,2.9A",
+          "stock": 1150,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.062,
+            "100": 0.051,
+            "1000": 0.042,
+            "3000": 0.038,
+            "6000": 0.033,
+            "9000": 0.031
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.062,
+            "100": 0.051,
+            "1000": 0.042,
+            "3000": 0.038,
+            "6000": 0.033,
+            "9000": 0.031
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Walsin/WLPH201610M1R0PP?qs=B6kkDfuK7%2FANeTiQ%2F1cQpQ%3D%3D"
+        },
+        {
+          "model": "WLPH201610M1R0PP",
+          "brand": "Walsin",
+          "package": "",
+          "description": "Power Inductors - SMD Power choke,Molded,1.0uH,M,2.9A",
+          "stock": 1150,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.062,
+            "100": 0.051,
+            "1000": 0.042,
+            "3000": 0.038,
+            "6000": 0.033,
+            "9000": 0.031
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.062,
+            "100": 0.051,
+            "1000": 0.042,
+            "3000": 0.038,
+            "6000": 0.033,
+            "9000": 0.031
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Walsin/WLPH201610M1R0PP?qs=B6kkDfuK7%2FANeTiQ%2F1cQpQ%3D%3D"
+        },
+        {
+          "model": "WLPH201610M1R0PS",
+          "brand": "Walsin",
+          "package": "",
+          "description": "Power Inductors - SMD Power choke,Molded,1.0uH,M,3.9A",
+          "stock": 1727,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.074,
+            "100": 0.061,
+            "1000": 0.051,
+            "3000": 0.046,
+            "6000": 0.041,
+            "9000": 0.039
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.074,
+            "100": 0.061,
+            "1000": 0.051,
+            "3000": 0.046,
+            "6000": 0.041,
+            "9000": 0.039
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Walsin/WLPH201610M1R0PS?qs=B6kkDfuK7%2FAS4GmpLCY3AA%3D%3D"
+        },
+        {
+          "model": "CIGB201610AG1R0MPE",
+          "brand": "Samsung Electro-Mechanics",
+          "package": "",
+          "description": "Power Inductors - SMD 0806/2016,0.06ohm,3.1A,3.3A,+/-20%,1uH",
+          "stock": 13857,
+          "min_price": 0.35,
+          "min_price_usd": 0.35,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.35,
+            "10": 0.292,
+            "25": 0.27,
+            "100": 0.208,
+            "250": 0.198,
+            "1000": 0.154,
+            "3000": 0.137,
+            "6000": 0.125,
+            "9000": 0.118
+          },
+          "prices_usd": {
+            "1": 0.35,
+            "10": 0.292,
+            "25": 0.27,
+            "100": 0.208,
+            "250": 0.198,
+            "1000": 0.154,
+            "3000": 0.137,
+            "6000": 0.125,
+            "9000": 0.118
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Samsung-Electro-Mechanics/CIGB201610AG1R0MPE?qs=HFfMDpzxxd2zj8hhzKc2Qg%3D%3D"
+        },
+        {
+          "model": "TFM201610ALMA1R0MTAA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 1.0uH 3.7A 50mOhms 1MHz Tol=20%",
+          "stock": 0,
+          "min_price": 0.54,
+          "min_price_usd": 0.54,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.54,
+            "10": 0.441,
+            "25": 0.385,
+            "100": 0.363,
+            "250": 0.336,
+            "500": 0.317,
+            "1000": 0.293,
+            "3000": 0.264,
+            "6000": 0.255
+          },
+          "prices_usd": {
+            "1": 0.54,
+            "10": 0.441,
+            "25": 0.385,
+            "100": 0.363,
+            "250": 0.336,
+            "500": 0.317,
+            "1000": 0.293,
+            "3000": 0.264,
+            "6000": 0.255
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/TFM201610ALMA1R0MTAA?qs=k4kUdCzLgS7iE26WcTan3w%3D%3D"
+        },
+        {
+          "model": "LPWI201608H1R0T",
+          "brand": "Littelfuse",
+          "package": "",
+          "description": "Power Inductors - SMD PWI 2016 0.8T 1.0uH",
+          "stock": 0,
+          "min_price": 0.33,
+          "min_price_usd": 0.33,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.33,
+            "10": 0.271,
+            "100": 0.224,
+            "250": 0.223,
+            "500": 0.204,
+            "1000": 0.175,
+            "3000": 0.144,
+            "6000": 0.136
+          },
+          "prices_usd": {
+            "1": 0.33,
+            "10": 0.271,
+            "100": 0.224,
+            "250": 0.223,
+            "500": 0.204,
+            "1000": 0.175,
+            "3000": 0.144,
+            "6000": 0.136
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Littelfuse/LPWI201608H1R0T?qs=vLWxofP3U2yow9S7Dd%2FhRQ%3D%3D"
+        },
+        {
+          "model": "VLS201612CX-1R0M-1",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 2mm x 1.6mm, -40 to +105 degC, 1.87A, 1H, 68m",
+          "stock": 0,
+          "min_price": 0.28,
+          "min_price_usd": 0.28,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.28,
+            "10": 0.227,
+            "100": 0.187,
+            "1000": 0.143,
+            "2000": 0.134,
+            "4000": 0.129,
+            "10000": 0.124
+          },
+          "prices_usd": {
+            "1": 0.28,
+            "10": 0.227,
+            "100": 0.187,
+            "1000": 0.143,
+            "2000": 0.134,
+            "4000": 0.129,
+            "10000": 0.124
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201612CX-1R0M-1?qs=1mbolxNpo8dlhFIpxapUFA%3D%3D"
+        },
+        {
+          "model": "AOTA-N201610S-1R0MT",
+          "brand": "ABRACON",
+          "package": "",
+          "description": "Power Inductors - SMD Inductor 1.0 uH 2.0 x 1.6 x 1.0 mm",
+          "stock": 0,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.104,
+            "100": 0.086,
+            "1000": 0.071,
+            "3000": 0.064,
+            "6000": 0.058,
+            "9000": 0.055
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.104,
+            "100": 0.086,
+            "1000": 0.071,
+            "3000": 0.064,
+            "6000": 0.058,
+            "9000": 0.055
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/ABRACON/AOTA-N201610S-1R0MT?qs=4dK74SdgGtz%2F%252BksJ8VyZfQ%3D%3D"
+        },
+        {
+          "model": "LSQBA201616T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 20%",
+          "stock": 0,
+          "min_price": 0.12,
+          "min_price_usd": 0.12,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.12,
+            "10": 0.096,
+            "100": 0.079,
+            "1000": 0.062,
+            "2000": 0.055,
+            "4000": 0.053,
+            "10000": 0.051
+          },
+          "prices_usd": {
+            "1": 0.12,
+            "10": 0.096,
+            "100": 0.079,
+            "1000": 0.062,
+            "2000": 0.055,
+            "4000": 0.053,
+            "10000": 0.051
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSQBA201616T1R0M?qs=tlsG%2FOw5FFjcHiXP92Mk8g%3D%3D"
+        },
+        {
+          "model": "LSQPA201616T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 20% HI CURR",
+          "stock": 0,
+          "min_price": 0.17,
+          "min_price_usd": 0.17,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.17,
+            "10": 0.139,
+            "100": 0.115,
+            "1000": 0.089,
+            "2000": 0.082,
+            "4000": 0.079,
+            "10000": 0.077
+          },
+          "prices_usd": {
+            "1": 0.17,
+            "10": 0.139,
+            "100": 0.115,
+            "1000": 0.089,
+            "2000": 0.082,
+            "4000": 0.079,
+            "10000": 0.077
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSQPA201616T1R0M?qs=tlsG%2FOw5FFhtDJuS5r0sQA%3D%3D"
+        },
+        {
+          "model": "LSQPB201616T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 20% HI CURR",
+          "stock": 0,
+          "min_price": 0.28,
+          "min_price_usd": 0.28,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.28,
+            "10": 0.232,
+            "25": 0.215,
+            "100": 0.166,
+            "250": 0.158,
+            "1000": 0.105,
+            "2000": 0.101,
+            "4000": 0.099,
+            "10000": 0.094
+          },
+          "prices_usd": {
+            "1": 0.28,
+            "10": 0.232,
+            "25": 0.215,
+            "100": 0.166,
+            "250": 0.158,
+            "1000": 0.105,
+            "2000": 0.101,
+            "4000": 0.099,
+            "10000": 0.094
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSQPB201616T1R0M?qs=tlsG%2FOw5FFiBzP1bVSclkA%3D%3D"
+        },
+        {
+          "model": "LSQNA201616T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 20% LOW PROFILE",
+          "stock": 0,
+          "min_price": 0.21,
+          "min_price_usd": 0.21,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.21,
+            "10": 0.175,
+            "25": 0.162,
+            "100": 0.128,
+            "250": 0.119,
+            "1000": 0.081,
+            "2000": 0.079,
+            "4000": 0.076,
+            "10000": 0.072
+          },
+          "prices_usd": {
+            "1": 0.21,
+            "10": 0.175,
+            "25": 0.162,
+            "100": 0.128,
+            "250": 0.119,
+            "1000": 0.081,
+            "2000": 0.079,
+            "4000": 0.076,
+            "10000": 0.072
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSQNA201616T1R0M?qs=tlsG%2FOw5FFh1602gxF2pqA%3D%3D"
+        },
+        {
+          "model": "LSQCA201616T1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 0806 20% HI CURR",
+          "stock": 0,
+          "min_price": 0.18,
+          "min_price_usd": 0.18,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.18,
+            "10": 0.149,
+            "25": 0.138,
+            "100": 0.11,
+            "250": 0.101,
+            "1000": 0.07,
+            "2000": 0.068,
+            "4000": 0.065,
+            "10000": 0.062
+          },
+          "prices_usd": {
+            "1": 0.18,
+            "10": 0.149,
+            "25": 0.138,
+            "100": 0.11,
+            "250": 0.101,
+            "1000": 0.07,
+            "2000": 0.068,
+            "4000": 0.065,
+            "10000": 0.062
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LSQCA201616T1R0M?qs=tlsG%2FOw5FFgNmu6VTew1dg%3D%3D"
+        },
+        {
+          "model": "ASPI-U201610-1R0M-T",
+          "brand": "ABRACON",
+          "package": "",
+          "description": "Power Inductors - SMD IND 1.00 uH 2.600 A 60.00 mOhm",
+          "stock": 0,
+          "min_price": 0.53,
+          "min_price_usd": 0.53,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.53,
+            "10": 0.433,
+            "25": 0.43,
+            "100": 0.355,
+            "250": 0.344,
+            "500": 0.32,
+            "1000": 0.277,
+            "2000": 0.276,
+            "4000": 0.255
+          },
+          "prices_usd": {
+            "1": 0.53,
+            "10": 0.433,
+            "25": 0.43,
+            "100": 0.355,
+            "250": 0.344,
+            "500": 0.32,
+            "1000": 0.277,
+            "2000": 0.276,
+            "4000": 0.255
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/ABRACON/ASPI-U201610-1R0M-T?qs=f9yNj16SXrJo5bfUGgVsBQ%3D%3D"
+        },
+        {
+          "model": "HTEH20161T-1R0MSR",
+          "brand": "Cyntec",
+          "package": "",
+          "description": "Power Inductors - SMD IND SMD 1.0UH 2.0mm*1.6mm*1.0mm",
+          "stock": 0,
+          "min_price": 0.27,
+          "min_price_usd": 0.27,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.27,
+            "10": 0.225,
+            "100": 0.186,
+            "1000": 0.153,
+            "3000": 0.131,
+            "6000": 0.129,
+            "9000": 0.126
+          },
+          "prices_usd": {
+            "1": 0.27,
+            "10": 0.225,
+            "100": 0.186,
+            "1000": 0.153,
+            "3000": 0.131,
+            "6000": 0.129,
+            "9000": 0.126
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Cyntec/HTEH20161T-1R0MSR?qs=P%2FxahI%252BVehlQopI06jxkcw%3D%3D"
+        },
+        {
+          "model": "BKPE002016101R0MA2",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit TypeMultilayer Processing Inductor for Power lineLow DC Resistance & Higher Saturation Current",
+          "stock": 0,
+          "min_price": 0.119,
+          "min_price_usd": 0.119,
+          "min_qty": 15000,
+          "prices": {
+            "15000": 0.119
+          },
+          "prices_usd": {
+            "15000": 0.119
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BKPE002016101R0MA2?qs=rSMjJ%252B1ewcSpCrODZ99KFA%3D%3D"
+        },
+        {
+          "model": "BKPB002016101R0MA2",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit TypeMultilayer Processing Inductor for Power lineLow DC Resistance",
+          "stock": 0,
+          "min_price": 0.089,
+          "min_price_usd": 0.089,
+          "min_qty": 21000,
+          "prices": {
+            "21000": 0.089
+          },
+          "prices_usd": {
+            "21000": 0.089
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BKPB002016101R0MA2?qs=rSMjJ%252B1ewcT67%2FMkzEAeNw%3D%3D"
+        },
+        {
+          "model": "BKPB002016101R0TA2",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit TypeMultilayer Processing Inductor for Power lineLow DC Resistance",
+          "stock": 0,
+          "min_price": 0.089,
+          "min_price_usd": 0.089,
+          "min_qty": 21000,
+          "prices": {
+            "21000": 0.089
+          },
+          "prices_usd": {
+            "21000": 0.089
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BKPB002016101R0TA2?qs=rSMjJ%252B1ewcS7dXcdCeK8xQ%3D%3D"
+        },
+        {
+          "model": "BKPB002016101R0TA6",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit TypeMultilayer Processing Inductor for Power lineLow DC Resistance",
+          "stock": 0,
+          "min_price": 0.089,
+          "min_price_usd": 0.089,
+          "min_qty": 21000,
+          "prices": {
+            "21000": 0.089
+          },
+          "prices_usd": {
+            "21000": 0.089
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BKPB002016101R0TA6?qs=rSMjJ%252B1ewcTmIhhcOF9nyA%3D%3D"
+        },
+        {
+          "model": "AWVH002016101R0TH1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type - Automatic Assembly",
+          "stock": 0,
+          "min_price": 0.132,
+          "min_price_usd": 0.132,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.132
+          },
+          "prices_usd": {
+            "12000": 0.132
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AWVH002016101R0TH1?qs=rSMjJ%252B1ewcQhmTud1z%2F0UQ%3D%3D"
+        },
+        {
+          "model": "AKPB002016101R0TA6",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type Multilayer",
+          "stock": 0,
+          "min_price": 0.171,
+          "min_price_usd": 0.171,
+          "min_qty": 9000,
+          "prices": {
+            "9000": 0.171
+          },
+          "prices_usd": {
+            "9000": 0.171
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AKPB002016101R0TA6?qs=rSMjJ%252B1ewcRGAKZCBu632A%3D%3D"
+        },
+        {
+          "model": "AWVC002016101R0M00",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type - Automatic Assembly",
+          "stock": 0,
+          "min_price": 0.129,
+          "min_price_usd": 0.129,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.129
+          },
+          "prices_usd": {
+            "12000": 0.129
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AWVC002016101R0M00?qs=rSMjJ%252B1ewcTUeDFy%2FD8hKg%3D%3D"
+        },
+        {
+          "model": "AWVC002016121R0M00",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type - Automatic Assembly",
+          "stock": 0,
+          "min_price": 0.129,
+          "min_price_usd": 0.129,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.129
+          },
+          "prices_usd": {
+            "12000": 0.129
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AWVC002016121R0M00?qs=rSMjJ%252B1ewcSAlHDeRVFWMA%3D%3D"
+        },
+        {
+          "model": "BKPE002016101R0TA2",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit TypeMultilayer Processing Inductor for Power lineLow DC Resistance & Higher Saturation Current",
+          "stock": 0,
+          "min_price": 0.119,
+          "min_price_usd": 0.119,
+          "min_qty": 15000,
+          "prices": {
+            "15000": 0.119
+          },
+          "prices_usd": {
+            "15000": 0.119
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BKPE002016101R0TA2?qs=rSMjJ%252B1ewcRW3Z5rQQSjvQ%3D%3D"
+        },
+        {
+          "model": "MGV2016101R0M-10",
+          "brand": "Laird",
+          "package": "",
+          "description": "Power Inductors - SMD PwrInd,SMT,Shield,IRated 2.00x1.60x1.00mm",
+          "stock": 0,
+          "min_price": 0.41,
+          "min_price_usd": 0.41,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.41,
+            "10": 0.352,
+            "25": 0.326,
+            "100": 0.251,
+            "250": 0.239,
+            "1000": 0.185,
+            "3000": 0.165,
+            "6000": 0.151,
+            "9000": 0.143
+          },
+          "prices_usd": {
+            "1": 0.41,
+            "10": 0.352,
+            "25": 0.326,
+            "100": 0.251,
+            "250": 0.239,
+            "1000": 0.185,
+            "3000": 0.165,
+            "6000": 0.151,
+            "9000": 0.143
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Laird/MGV2016101R0M-10?qs=byeeYqUIh0PGYKgQI4RKHw%3D%3D"
+        },
+        {
+          "model": "WQPH201610M1R0PS",
+          "brand": "Walsin",
+          "package": "",
+          "description": "Power Inductors - SMD AEC-Q200, 201610, 1.0uH, 20%",
+          "stock": 0,
+          "min_price": 0.29,
+          "min_price_usd": 0.29,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.29,
+            "10": 0.231,
+            "25": 0.213,
+            "100": 0.172,
+            "250": 0.167,
+            "1000": 0.13,
+            "3000": 0.116,
+            "6000": 0.109,
+            "9000": 0.1
+          },
+          "prices_usd": {
+            "1": 0.29,
+            "10": 0.231,
+            "25": 0.213,
+            "100": 0.172,
+            "250": 0.167,
+            "1000": 0.13,
+            "3000": 0.116,
+            "6000": 0.109,
+            "9000": 0.1
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Walsin/WQPH201610M1R0PS?qs=B6kkDfuK7%2FDv1wakwcxrkQ%3D%3D"
+        },
+        {
+          "model": "BKPB002016101R0MA6",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit TypeMultilayer Processing Inductor for Power lineLow DC Resistance",
+          "stock": 0,
+          "min_price": 0.089,
+          "min_price_usd": 0.089,
+          "min_qty": 21000,
+          "prices": {
+            "21000": 0.089
+          },
+          "prices_usd": {
+            "21000": 0.089
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BKPB002016101R0MA6?qs=rSMjJ%252B1ewcTLkHsaM1P8%2FA%3D%3D"
+        },
+        {
+          "model": "MGV201610S1R0M-10",
+          "brand": "Laird",
+          "package": "",
+          "description": "Power Inductors - SMD PwrInd,SMT,Shield,IRated 2.00x1.60x1.00mm",
+          "stock": 0,
+          "min_price": 0.42,
+          "min_price_usd": 0.42,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.42,
+            "10": 0.359,
+            "25": 0.329,
+            "100": 0.266,
+            "250": 0.251,
+            "500": 0.225,
+            "3000": 0.224
+          },
+          "prices_usd": {
+            "1": 0.42,
+            "10": 0.359,
+            "25": 0.329,
+            "100": 0.266,
+            "250": 0.251,
+            "500": 0.225,
+            "3000": 0.224
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Laird/MGV201610S1R0M-10?qs=byeeYqUIh0PGj%2FFsuDJvnw%3D%3D"
+        },
+        {
+          "model": "AWVC002016101R0T00",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type - Automatic Assembly",
+          "stock": 0,
+          "min_price": 0.132,
+          "min_price_usd": 0.132,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.132
+          },
+          "prices_usd": {
+            "12000": 0.132
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AWVC002016101R0T00?qs=rSMjJ%252B1ewcRF2IZCkyYUEQ%3D%3D"
+        },
+        {
+          "model": "AWVH002016101R0MH1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type - Automatic Assembly",
+          "stock": 0,
+          "min_price": 0.129,
+          "min_price_usd": 0.129,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.129
+          },
+          "prices_usd": {
+            "12000": 0.129
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AWVH002016101R0MH1?qs=rSMjJ%252B1ewcQs8y%2FW5DA1rg%3D%3D"
+        },
+        {
+          "model": "AWVC002016121R0T00",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type - Automatic Assembly",
+          "stock": 0,
+          "min_price": 0.132,
+          "min_price_usd": 0.132,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.132
+          },
+          "prices_usd": {
+            "12000": 0.132
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AWVC002016121R0T00?qs=rSMjJ%252B1ewcTGEYuc4cxtjQ%3D%3D"
+        },
+        {
+          "model": "TFM201608ALC-1R0MTAA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD 2mm x 1.6mm, -40 to +125 degC, 2.5A, 1H, 66mO",
+          "stock": 0,
+          "min_price": 0.45,
+          "min_price_usd": 0.45,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.45,
+            "10": 0.383,
+            "25": 0.351,
+            "100": 0.284,
+            "250": 0.268,
+            "500": 0.23,
+            "1000": 0.205,
+            "3000": 0.196
+          },
+          "prices_usd": {
+            "1": 0.45,
+            "10": 0.383,
+            "25": 0.351,
+            "100": 0.284,
+            "250": 0.268,
+            "500": 0.23,
+            "1000": 0.205,
+            "3000": 0.196
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/TFM201608ALC-1R0MTAA?qs=d0WKAl%252BL4KawVywcWECnhw%3D%3D"
+        },
+        {
+          "model": "AKPB002016101R0MA6",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD Chilisin Power - Inductor (IND) Closed Magnetic Circuit Type Multilayer",
+          "stock": 0,
+          "min_price": 0.171,
+          "min_price_usd": 0.171,
+          "min_qty": 9000,
+          "prices": {
+            "9000": 0.171
+          },
+          "prices_usd": {
+            "9000": 0.171
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/AKPB002016101R0MA6?qs=rSMjJ%252B1ewcR7OudEGgEXeg%3D%3D"
+        },
+        {
+          "model": "VLS201610ET-1R0N",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD RECOMMENDED ALT 810-VLS201610CX1R0M1",
+          "stock": 0,
+          "min_price": 0.3,
+          "min_price_usd": 0.3,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.3,
+            "10": 0.245,
+            "100": 0.202,
+            "1000": 0.154,
+            "2000": 0.144,
+            "4000": 0.139,
+            "10000": 0.134
+          },
+          "prices_usd": {
+            "1": 0.3,
+            "10": 0.245,
+            "100": 0.202,
+            "1000": 0.154,
+            "2000": 0.144,
+            "4000": 0.139,
+            "10000": 0.134
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201610ET-1R0N?qs=uxmvvYJjMIvo8RbpfGnJBA%3D%3D"
+        },
+        {
+          "model": "LLENC2016KKT1R0M",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Power Inductors - SMD INDUCTOR,METAL WIRE-W CHIP,1.0UH20% ,T&R",
+          "stock": 0,
+          "min_price": 0.39,
+          "min_price_usd": 0.39,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.39,
+            "10": 0.328,
+            "25": 0.301,
+            "100": 0.243,
+            "250": 0.23,
+            "500": 0.197,
+            "1000": 0.175,
+            "3000": 0.165,
+            "6000": 0.162
+          },
+          "prices_usd": {
+            "1": 0.39,
+            "10": 0.328,
+            "25": 0.301,
+            "100": 0.243,
+            "250": 0.23,
+            "500": 0.197,
+            "1000": 0.175,
+            "3000": 0.165,
+            "6000": 0.162
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/LLENC2016KKT1R0M?qs=tlsG%2FOw5FFixgE%252BuOiKWTQ%3D%3D"
+        },
+        {
+          "model": "VLS201610ET-1R0N-CA",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD RECOMMENDED ALT 810-VLS6045EX-1R0N-H",
+          "stock": 0,
+          "min_price": 0.37,
+          "min_price_usd": 0.37,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.37,
+            "10": 0.303,
+            "100": 0.25,
+            "250": 0.249,
+            "1000": 0.203,
+            "2000": 0.186,
+            "4000": 0.176,
+            "10000": 0.173
+          },
+          "prices_usd": {
+            "1": 0.37,
+            "10": 0.303,
+            "100": 0.25,
+            "250": 0.249,
+            "1000": 0.203,
+            "2000": 0.186,
+            "4000": 0.176,
+            "10000": 0.173
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201610ET-1R0N-CA?qs=%2FPzWLGNeQ%252Bh9Ym8Q2niDvg%3D%3D"
+        },
+        {
+          "model": "BDAA002016101R0MC1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 3Apk 20% 2.2x1.8x1.0mm  DCR=62mOhms Molded",
+          "stock": 0,
+          "min_price": 0.034,
+          "min_price_usd": 0.034,
+          "min_qty": 48000,
+          "prices": {
+            "48000": 0.034
+          },
+          "prices_usd": {
+            "48000": 0.034
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BDAA002016101R0MC1?qs=Z%252BL2brAPG1LRCZFJMBk99Q%3D%3D"
+        },
+        {
+          "model": "SLPPI2016-10-1R0M",
+          "brand": "Bel Signal Transformer",
+          "package": "",
+          "description": "Power Inductors - SMD HI POWER IND 1.00uH 60.0m OHM 2.4A SM",
+          "stock": 0,
+          "min_price": 0.346,
+          "min_price_usd": 0.346,
+          "min_qty": 3000,
+          "prices": {
+            "3000": 0.346
+          },
+          "prices_usd": {
+            "3000": 0.346
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bel-Signal-Transformer/SLPPI2016-10-1R0M?qs=8Wlm6%252BaMh8RwUXOz%2FNBe3g%3D%3D"
+        },
+        {
+          "model": "BDBB002016081R0MC1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 3.8Apk 20% 2.2x1.8x0.8mm  DCR=48mOhms Molded",
+          "stock": 0,
+          "min_price": 0.04,
+          "min_price_usd": 0.04,
+          "min_qty": 39000,
+          "prices": {
+            "39000": 0.04
+          },
+          "prices_usd": {
+            "39000": 0.04
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BDBB002016081R0MC1?qs=Z%252BL2brAPG1KGjeRRdAzTPw%3D%3D"
+        },
+        {
+          "model": "F1C1-201608-1R0M",
+          "brand": "Bel Signal Transformer",
+          "package": "",
+          "description": "Power Inductors - SMD FIXED INDUCTOR 1.0uH 3.3A 60 MOHM",
+          "stock": 0,
+          "min_price": 0.114,
+          "min_price_usd": 0.114,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.114
+          },
+          "prices_usd": {
+            "12000": 0.114
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bel-Signal-Transformer/F1C1-201608-1R0M?qs=ZcfC38r4Pot5wApkUfCTEw%3D%3D"
+        },
+        {
+          "model": "BDAA002016121R0MC1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 3.2Apk 20% 2.2x1.8x1.2mm  DCR=52mOhms Molded",
+          "stock": 0,
+          "min_price": 0.034,
+          "min_price_usd": 0.034,
+          "min_qty": 48000,
+          "prices": {
+            "48000": 0.034
+          },
+          "prices_usd": {
+            "48000": 0.034
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BDAA002016121R0MC1?qs=Z%252BL2brAPG1LnqtZgyZjj5g%3D%3D"
+        },
+        {
+          "model": "F1C1-201612-1R0M",
+          "brand": "Bel Signal Transformer",
+          "package": "",
+          "description": "Power Inductors - SMD FIXED INDUCTOR 1.0uH 4.5A 36 MOHM",
+          "stock": 0,
+          "min_price": 0.22,
+          "min_price_usd": 0.22,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.22,
+            "10": 0.186,
+            "25": 0.172,
+            "100": 0.133,
+            "250": 0.127,
+            "1000": 0.098,
+            "3000": 0.088,
+            "6000": 0.079,
+            "9000": 0.075
+          },
+          "prices_usd": {
+            "1": 0.22,
+            "10": 0.186,
+            "25": 0.172,
+            "100": 0.133,
+            "250": 0.127,
+            "1000": 0.098,
+            "3000": 0.088,
+            "6000": 0.079,
+            "9000": 0.075
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bel-Signal-Transformer/F1C1-201612-1R0M?qs=ZcfC38r4PovqxO%2FskzrpBQ%3D%3D"
+        },
+        {
+          "model": "BDBB002016101R0MC1",
+          "brand": "Pulse Electronics",
+          "package": "",
+          "description": "Power Inductors - SMD 1uH 4.2Apk 20% 2.2x1.8x1.0mm  DCR=43mOhms Molded",
+          "stock": 0,
+          "min_price": 0.036,
+          "min_price_usd": 0.036,
+          "min_qty": 48000,
+          "prices": {
+            "48000": 0.036
+          },
+          "prices_usd": {
+            "48000": 0.036
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Pulse-Electronics/BDBB002016101R0MC1?qs=Z%252BL2brAPG1Ir%2FGFwTWmBgQ%3D%3D"
+        },
+        {
+          "model": "AOTA-N201608S-1R0MT",
+          "brand": "ABRACON",
+          "package": "",
+          "description": "Power Inductors - SMD Inductor 1.0 uH 2.0 x 1.6 x 0.8 mm",
+          "stock": 0,
+          "min_price": 0.061,
+          "min_price_usd": 0.061,
+          "min_qty": 48000,
+          "prices": {
+            "48000": 0.061
+          },
+          "prices_usd": {
+            "48000": 0.061
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/ABRACON/AOTA-N201608S-1R0MT?qs=4dK74SdgGtz%252Bm7xdvMrs1w%3D%3D"
+        },
+        {
+          "model": "WLFM201609M1R0PP",
+          "brand": "Walsin",
+          "package": "",
+          "description": "RF Inductors - SMD Multi-Layer Power 201609(0806) 1.0uH +/-20%",
+          "stock": 0,
+          "min_price": 0.18,
+          "min_price_usd": 0.18,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.18,
+            "10": 0.076,
+            "25": 0.068,
+            "100": 0.059,
+            "250": 0.053,
+            "1000": 0.046,
+            "3000": 0.034,
+            "6000": 0.032,
+            "9000": 0.03
+          },
+          "prices_usd": {
+            "1": 0.18,
+            "10": 0.076,
+            "25": 0.068,
+            "100": 0.059,
+            "250": 0.053,
+            "1000": 0.046,
+            "3000": 0.034,
+            "6000": 0.032,
+            "9000": 0.03
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Walsin/WLFM201609M1R0PP?qs=B6kkDfuK7%2FD9BQEfyfKo2w%3D%3D"
+        },
+        {
+          "model": "F1C1-201610-1R0M",
+          "brand": "Bel Signal Transformer",
+          "package": "",
+          "description": "Power Inductors - SMD FIXED INDUCTOR 1.0uH 4.1A 43 MOHM",
+          "stock": 0,
+          "min_price": 0.114,
+          "min_price_usd": 0.114,
+          "min_qty": 12000,
+          "prices": {
+            "12000": 0.114
+          },
+          "prices_usd": {
+            "12000": 0.114
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Bel-Signal-Transformer/F1C1-201610-1R0M?qs=ZcfC38r4PotKuYQ9Usgn4g%3D%3D"
+        },
+        {
+          "model": "VLS2012ET-1R0N",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD RECOMMENDED ALT 810-VLS201610CX1R0M1",
+          "stock": 0,
+          "min_price": 0.25,
+          "min_price_usd": 0.25,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.25,
+            "10": 0.203,
+            "100": 0.167,
+            "1000": 0.137,
+            "2000": 0.128,
+            "4000": 0.117,
+            "10000": 0.112
+          },
+          "prices_usd": {
+            "1": 0.25,
+            "10": 0.203,
+            "100": 0.167,
+            "1000": 0.137,
+            "2000": 0.128,
+            "4000": 0.117,
+            "10000": 0.112
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS2012ET-1R0N?qs=uxmvvYJjMIteRJ9oPQ7a%252BQ%3D%3D"
+        },
+        {
+          "model": "VLS2010ET-1R0N",
+          "brand": "TDK",
+          "package": "",
+          "description": "Power Inductors - SMD RECOMMENDED ALT 810-VLS201610CX1R0M1",
+          "stock": 0,
+          "min_price": 0.25,
+          "min_price_usd": 0.25,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.25,
+            "10": 0.206,
+            "100": 0.17,
+            "1000": 0.129,
+            "2000": 0.121,
+            "4000": 0.117,
+            "10000": 0.112
+          },
+          "prices_usd": {
+            "1": 0.25,
+            "10": 0.206,
+            "100": 0.17,
+            "1000": 0.129,
+            "2000": 0.121,
+            "4000": 0.117,
+            "10000": 0.112
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS2010ET-1R0N?qs=uxmvvYJjMItSM5HRc1v3KA%3D%3D"
+        }
+      ],
+      "avg_price_usd": 0.22822,
+      "exchange_rate": 0.14682,
+      "product_count": 123,
+      "in_stock_count": 71,
+      "total_stock": 662576,
+      "lcsc_count": 30,
+      "mouser_count": 93,
+      "fetched_at": "2026-06-24T22:53:23.370720"
+    }
   }
 }
