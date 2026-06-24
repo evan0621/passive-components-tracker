@@ -132,14 +132,12 @@ tr:hover td { background: #f8fafc; }
     <div class="header-title">被動元件價格追蹤</div>
     <div class="header-sub">LCSC + Mouser · 自動每日更新</div>
     <div class="ref-links">
-      <span style="font-size:10px;color:#94a3b8;">搜尋：</span>
+      <span style="font-size:10px;color:#94a3b8;">資料來源：</span>
       <a class="ref-link" id="lcsc-link" href="#" target="_blank">LCSC</a>
       <a class="ref-link" id="mouser-link" href="#" target="_blank">Mouser TW</a>
     </div>
   </div>
-  <div class="header-btns">
-    <button class="btn btn-ghost" id="help-btn">如何更新？</button>
-  </div>
+  <div class="header-btns"></div>
 </div>
 
 <div class="status-bar">
@@ -240,18 +238,6 @@ tr:hover td { background: #f8fafc; }
   </div>
 </div>
 
-<div class="modal-bg" id="help-modal" style="display:none">
-  <div class="modal-box">
-    <div class="modal-title">如何更新資料</div>
-    <div class="modal-body">
-      雙擊 <strong>update_prices.bat</strong> 即可立即抓取最新價格並推送到 GitHub Pages。<br><br>
-      排程每晚 21:00 自動執行，無需手動操作。<br><br>
-      網站：<span class="tag">evan0621.github.io/passive-components-tracker</span>
-    </div>
-    <div class="modal-note">資料來源：立創商城 (LCSC) + Mouser</div>
-    <button class="modal-btn" id="modal-close-btn">知道了</button>
-  </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" crossorigin="anonymous"></script>
 <script>
@@ -763,9 +749,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var helpBtn   = document.getElementById('help-btn');
   var helpModal = document.getElementById('help-modal');
   var closeBtn  = document.getElementById('modal-close-btn');
-  if (helpBtn && helpModal) helpBtn.addEventListener('click', function(){ helpModal.style.display='flex'; });
-  if (closeBtn && helpModal) closeBtn.addEventListener('click', function(){ helpModal.style.display='none'; });
-  if (helpModal) helpModal.addEventListener('click', function(e){ if(e.target===helpModal) helpModal.style.display='none'; });
 
   var tabsEl = document.getElementById('spec-tabs');
   if (tabsEl) tabsEl.addEventListener('click', function(e){
