@@ -582,17 +582,15 @@ function renderSummary() {
   const medianUsd = getMedianUsd(todayEntry);
   document.getElementById('avg-price-val').textContent = avgUsd != null ? '$' + avgUsd.toFixed(4) : '—';
   document.getElementById('avg-price-sub').textContent = avgUsd != null ? specDef().label + ' · ' + today + ' · USD' : '尚無資料';
+  const prevMedianUsd = prevEntry ? getMedianUsd(prevEntry) : null;
   document.getElementById('median-price-val').textContent = medianUsd != null ? '$' + medianUsd.toFixed(4) : '—';
-  const gapPct = (avgUsd != null && medianUsd != null && medianUsd > 0)
-    ? ((avgUsd - medianUsd) / medianUsd * 100)
-    : null;
-  document.getElementById('median-price-sub').textContent = gapPct != null
-    ? '中位數 · 均值偏差 ' + (gapPct >= 0 ? '+' : '') + gapPct.toFixed(1) + '%'
+  document.getElementById('median-price-sub').innerHTML = medianUsd != null
+    ? '中位數 &nbsp;' + deltaHtml(medianUsd, prevMedianUsd, false)
     : '中位數 · USD';
 
   // price delta (漲→紅 跌→綠)
   document.getElementById('price-delta').innerHTML = deltaHtml(avgUsd, prevAvgUsd, false);
-  document.getElementById('price-delta-sub').textContent = prevDate ? '較 ' + prevDate : '無前日資料';
+  document.getElementById('price-delta-sub').textContent = prevDate ? '較 ' + prevDate + '（均值）' : '無前日資料';
 
   // stock count
   document.getElementById('instock-count').textContent = (inStock.length || '0') + ' / ' + products.length;
