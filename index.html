@@ -92,6 +92,35 @@ tr:hover td { background: #f8fafc; }
 .modal-note { font-size: 11px; color: #94a3b8; margin-bottom: 16px; }
 .modal-btn { width: 100%; background: #3b82f6; color: #fff; border: none; padding: 9px;
   border-radius: 6px; font-size: 13px; font-weight: 500; cursor: pointer; }
+
+/* ── Mobile ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
+  .header-btns { width: 100%; }
+  .header-btns .btn { font-size: 12px; padding: 5px 10px; }
+  .spec-tabs { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
+    padding: 4px 8px 0; gap: 2px; }
+  .spec-tabs::-webkit-scrollbar { height: 3px; }
+  .spec-tabs::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+  .tab-group { flex-shrink: 0; }
+  .tab-cat { font-size: 9px; padding: 2px 5px; }
+  .spec-tab { font-size: 11px; padding: 6px 8px; white-space: nowrap; }
+  .main { padding: 8px 10px; gap: 8px; }
+  .avg-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 12px; }
+  .avg-value { font-size: 14px !important; }
+  .avg-label { font-size: 9px; }
+  .avg-sub { font-size: 9px; }
+  .card-header { flex-wrap: wrap; gap: 6px; padding: 8px 10px; }
+  .filter-row { flex-wrap: wrap; gap: 4px; }
+  .filter-row select { font-size: 11px; max-width: 90px; }
+  .chart-wrap { padding: 8px 10px 12px; }
+  .chart-container { height: 220px !important; }
+  #table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #table-wrap table { min-width: 560px; }
+  th, td { padding: 6px 8px; font-size: 11px; }
+  .use-info { font-size: 10px; padding: 5px 10px; }
+  .status-bar { font-size: 10px; padding: 4px 12px; }
+}
 .modal-btn:hover { background: #2563eb; }
 .tag { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; padding: 1px 6px; font-size: 11px; font-family: monospace; }
 </style>
