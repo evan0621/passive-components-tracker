@@ -98,11 +98,12 @@ tr:hover td { background: #f8fafc; }
 <div class="header">
   <div class="header-left">
     <div class="header-title">被動元件價格追蹤</div>
-    <div class="header-sub">立創商城 · 自動每日更新</div>
+    <div class="header-sub">LCSC + Mouser · 自動每日更新</div>
     <div class="ref-links">
-      <span style="font-size:10px;color:#94a3b8;">對照：</span>
+      <a class="ref-link" href="https://evan0621.github.io/passive-components-tracker/" target="_blank">🔗 追蹤網站</a>
+      <span style="font-size:10px;color:#cbd5e1;">|</span>
+      <span style="font-size:10px;color:#94a3b8;">搜尋：</span>
       <a class="ref-link" id="mouser-link" href="#" target="_blank">Mouser TW</a>
-      <a class="ref-link" id="digikey-link" href="#" target="_blank">DigiKey TW</a>
     </div>
   </div>
   <div class="header-btns">
@@ -305,9 +306,7 @@ function buildTabs() {
   el.innerHTML = html;
   const def = specDef();
   const ml = document.getElementById('mouser-link');
-  const dl = document.getElementById('digikey-link');
   if (ml) ml.href = def.mouser;
-  if (dl) dl.href = def.digikey;
 }
 
 function buildPkgFilter() {
