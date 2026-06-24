@@ -138,17 +138,6 @@ tr:hover td { background: #f8fafc; }
       </div>
     </div>
     <div class="card-header">
-      <span>今日現貨價格比較</span>
-      <span id="product-count" style="font-size:11px;font-weight:400;color:#94a3b8"></span>
-    </div>
-    <div class="chart-wrap">
-      <div id="bar-wrap"><div class="chart-container"><canvas id="bar-chart"></canvas></div></div>
-      <div id="bar-empty" class="empty-state" style="display:none">尚無資料</div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-header">
       <span>平均最低單價趨勢</span>
       <span style="font-size:11px;font-weight:400;color:#64748b">現貨品項平均</span>
     </div>
@@ -283,7 +272,6 @@ const useBadge = (use) => {
 };
 
 let currentSpec = SPECS[0].key;
-let barChartInst = null;
 let trendChartInst = null;
 
 const specDef      = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
@@ -348,40 +336,6 @@ function renderSummary() {
     ? '¥' + cheapest.min_price.toFixed(4) + ' (' + minQty + '+起) · ' + cheapest.brand : '—';
 }
 
-const BRAND_COLORS = {'muRata':'#3b82f6','村田':'#3b82f6','SAMSUNG':'#22c55e','三星':'#22c55e',
-  'TAIYO':'#f59e0b','TDK':'#8b5cf6','Rubycon':'#ec4899','Nichicon':'#f97316','Panasonic':'#06b6d4',
-  'YAGEO':'#10b981','Walsin':'#06b6d4','NCC':'#8b5cf6','AISHI':'#f59e0b','Lelon':'#22c55e'};
-const brandColor = brand => { for (const [k,v] of Object.entries(BRAND_COLORS)) if (brand.includes(k)) return v; return '#94a3b8'; };
-
-function renderBarChart() {
-  const products = latestProducts().filter(p => p.stock > 0).sort((a,b) => a.min_price - b.min_price).slice(0,14);
-  const el = document.getElementById('product-count');
-  if (el) el.textContent = products.length ? '前 ' + products.length + ' 種（有庫存）' : '';
-  const barWrap = document.getElementById('bar-wrap');
-  const barEmpty = document.getElementById('bar-empty');
-  if (!products.length) { if(barWrap) barWrap.style.display='none'; if(barEmpty) barEmpty.style.display=''; return; }
-  if (barWrap) barWrap.style.display=''; if (barEmpty) barEmpty.style.display='none';
-  if (barChartInst) barChartInst.destroy();
-  const ctx = document.getElementById('bar-chart');
-  if (!ctx) return;
-  barChartInst = new Chart(ctx.getContext('2d'), {
-    type:'bar',
-    data:{
-      labels:products.map(p => p.model.length>18 ? p.model.slice(0,16)+'…' : p.model),
-      datasets:[{label:'最低單價',data:products.map(p=>p.min_price),
-        backgroundColor:products.map(p=>brandColor(p.brand)),borderRadius:4,borderSkipped:false}]
-    },
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>{
-        const p=products[ctx.dataIndex];
-        const mq = p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '?');
-        return ['¥'+p.min_price.toFixed(4)+' ('+mq+'+起)','庫存:'+(p.stock||0).toLocaleString(),'品牌:'+p.brand,'封裝:'+p.package];
-      }}}},
-      scales:{x:{ticks:{font:{size:9},maxRotation:50},grid:{display:false}},
-              y:{ticks:{font:{size:11},callback:v=>'¥'+v.toFixed(2)},grid:{color:'#f1f5f9'}}}}
-  });
-}
-
 function renderTrendChart() {
   const data = specData();
   const dates = Object.keys(data).sort();
@@ -430,7 +384,7 @@ function renderTable() {
   wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
 
-function renderAll() { buildPkgFilter(); renderUseInfo(); renderSummary(); renderBarChart(); renderTrendChart(); renderTable(); }
+function renderAll() { buildPkgFilter(); renderUseInfo(); renderSummary(); renderTrendChart(); renderTable(); }
 
 document.addEventListener('DOMContentLoaded', function() {
   var helpBtn   = document.getElementById('help-btn');
@@ -460,7 +414,6 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     if (statusEl) statusEl.textContent = '尚無資料';
     renderUseInfo();
-    renderBarChart();
   }
 });
 </script>
