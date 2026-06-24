@@ -160,6 +160,8 @@ tr:hover td { background: #f8fafc; }
           <option value="">全部</option>
           <option value="instock">現貨</option>
         </select>
+        <label>品牌</label>
+        <select id="brand-filter"><option value="">全部</option></select>
         <label>來源</label>
         <select id="src-filter">
           <option value="">全部</option>
@@ -279,6 +281,7 @@ const useBadge = (use) => {
 
 let currentSpec = SPECS[0].key;
 let trendChartInst = null;
+let priceSort = 'asc';  // 'asc' | 'desc' | null (default: stock desc)
 
 const specDef      = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
 const specData     = () => HISTORY_DATA[currentSpec] || {};
@@ -318,6 +321,16 @@ function buildPkgFilter() {
   var cur = sel.value;
   sel.innerHTML = '<option value="">全部</option>' + pkgs.map(p => '<option value="'+p+'">'+p+'</option>').join('');
   if (cur && pkgs.includes(cur)) sel.value = cur; else sel.value = '';
+}
+
+function buildBrandFilter() {
+  var sel = document.getElementById('brand-filter');
+  if (!sel) return;
+  var products = latestProducts();
+  var brands = Array.from(new Set(products.map(p => p.brand).filter(Boolean))).sort();
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">全部</option>' + brands.map(b => '<option value="'+b+'">'+b+'</option>').join('');
+  if (cur && brands.includes(cur)) sel.value = cur; else sel.value = '';
 }
 
 function renderUseInfo() {
@@ -398,12 +411,16 @@ const srcBadge = (src) => {
 function renderTable() {
   const pkgF = (document.getElementById('pkg-filter')||{}).value||'';
   const stkF = (document.getElementById('stock-filter')||{}).value||'';
-  const srcF = (document.getElementById('src-filter')||{}).value||'';
+  const srcF   = (document.getElementById('src-filter')||{}).value||'';
+  const brandF = (document.getElementById('brand-filter')||{}).value||'';
   let products = latestProducts();
-  if (pkgF) products = products.filter(p => p.package === pkgF);
+  if (pkgF)   products = products.filter(p => p.package === pkgF);
   if (stkF === 'instock') products = products.filter(p => p.stock > 0);
-  if (srcF) products = products.filter(p => (p.source||'LCSC') === srcF);
-  products = products.sort((a,b) => (b.stock-a.stock)||(getPriceUsd(a)-getPriceUsd(b)));
+  if (srcF)   products = products.filter(p => (p.source||'LCSC') === srcF);
+  if (brandF) products = products.filter(p => p.brand === brandF);
+  if (priceSort === 'asc')  products = products.sort((a,b) => getPriceUsd(a) - getPriceUsd(b));
+  else if (priceSort === 'desc') products = products.sort((a,b) => getPriceUsd(b) - getPriceUsd(a));
+  else products = products.sort((a,b) => (b.stock - a.stock) || (getPriceUsd(a) - getPriceUsd(b)));
   const wrap = document.getElementById('table-wrap');
   if (!wrap) return;
   if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
@@ -425,10 +442,18 @@ function renderTable() {
       +'<td class="price-bulk">'+(t500!=null?'$'+t500.toFixed(4):'-')+'</td>'
       +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
   }).join('');
-  wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價(USD)</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  const arrow = priceSort === 'asc' ? ' ↑' : priceSort === 'desc' ? ' ↓' : ' ↕';
+  wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th style="text-align:center">封裝</th>'
+    +'<th id="price-sort-th" style="cursor:pointer;user-select:none" title="點擊排序">最低單價(USD)'+arrow+'</th>'
+    +'<th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  var th = document.getElementById('price-sort-th');
+  if (th) th.addEventListener('click', function(){
+    priceSort = priceSort === 'asc' ? 'desc' : priceSort === 'desc' ? null : 'asc';
+    renderTable();
+  });
 }
 
-function renderAll() { buildPkgFilter(); renderUseInfo(); renderSummary(); renderTrendChart(); renderTable(); }
+function renderAll() { buildPkgFilter(); buildBrandFilter(); renderUseInfo(); renderSummary(); renderTrendChart(); renderTable(); }
 
 document.addEventListener('DOMContentLoaded', function() {
   var helpBtn   = document.getElementById('help-btn');
@@ -444,12 +469,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (tab) { currentSpec = tab.dataset.key; buildTabs(); renderAll(); }
   });
 
-  var pkgF = document.getElementById('pkg-filter');
-  var stkF = document.getElementById('stock-filter');
-  var srcF = document.getElementById('src-filter');
-  if (pkgF) pkgF.addEventListener('change', renderTable);
-  if (stkF) stkF.addEventListener('change', renderTable);
-  if (srcF) srcF.addEventListener('change', renderTable);
+  var pkgF   = document.getElementById('pkg-filter');
+  var stkF   = document.getElementById('stock-filter');
+  var srcF   = document.getElementById('src-filter');
+  var brandF = document.getElementById('brand-filter');
+  if (pkgF)   pkgF.addEventListener('change', renderTable);
+  if (stkF)   stkF.addEventListener('change', renderTable);
+  if (srcF)   srcF.addEventListener('change', renderTable);
+  if (brandF) brandF.addEventListener('change', renderTable);
 
   buildTabs();
   var latest = latestDate();
