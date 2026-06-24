@@ -99,12 +99,11 @@ tr:hover td { background: #f8fafc; }
   .header { flex-wrap: wrap; gap: 8px; padding: 10px 12px; }
   .header-btns { width: 100%; }
   .header-btns .btn { font-size: 12px; padding: 5px 10px; }
-  .spec-tabs { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch;
-    padding: 4px 8px 0; gap: 2px; }
-  .spec-tabs::-webkit-scrollbar { height: 3px; }
-  .spec-tabs::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
-  .tab-group { flex-wrap: wrap; }
-  .tab-cat { font-size: 9px; padding: 2px 5px; }
+  .spec-tabs { padding: 4px 8px 0; }
+  .tab-group { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
+  .tab-group::-webkit-scrollbar { height: 2px; }
+  .tab-group::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 2px; }
+  .tab-cat { font-size: 9px; padding: 2px 5px; position: sticky; left: 0; background: #fff; z-index: 1; }
   .spec-tab { font-size: 11px; padding: 6px 8px; white-space: nowrap; }
   .main { padding: 8px 10px; gap: 8px; }
   .avg-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 12px; }
