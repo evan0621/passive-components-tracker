@@ -44,8 +44,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
 .spec-tab:hover { color: #334155; background: #f8fafc; }
 .spec-tab.active { color: #2563eb; border-bottom-color: #2563eb; background: #eff6ff; font-weight: 600; }
 .use-tag { font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; letter-spacing: 0.2px; flex-shrink: 0; }
-.use-ai { background: #ede9fe; color: #6d28d9; }
+.use-ai       { background: #ede9fe; color: #6d28d9; }
 .use-consumer { background: #fff7ed; color: #c2410c; }
+.use-auto     { background: #fce7f3; color: #9d174d; }
+.use-ind      { background: #e0f2fe; color: #0369a1; }
 .main { padding: 12px 16px; display: flex; flex-direction: column; gap: 12px; }
 .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 .card-header { padding: 10px 14px; font-size: 12px; font-weight: 600; color: #475569;
@@ -265,6 +267,31 @@ const SPECS = [
     key:"0402_10uF_10V_X5R", label:"10µF 10V X5R 0402",
     mouser:"https://www.mouser.tw/c/?q=10uf+10v+x5r+0402",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"車用",
+    useDesc:"汽車 ECU/ADAS 去耦最大宗，AEC-Q200 認證，全球車用 MLCC 出貨量第一，汽車電子景氣最廣義溫度計",
+    key:"0402_100nF_50V_X7R_AEC", label:"0.1µF 50V X7R 0402 AEC",
+    mouser:"https://www.mouser.tw/c/?q=100nf+50v+x7r+0402+aec-q200",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"車用",
+    useDesc:"ADAS/域控制器/BMS 電源模組主濾波標配，AEC-Q200，汽車電源管理景氣指標",
+    key:"0805_10uF_50V_X7R_AEC", label:"10µF 50V X7R 0805 AEC",
+    mouser:"https://www.mouser.tw/c/?q=10uf+50v+x7r+0805+aec-q200",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"車用",
+    useDesc:"EV/HEV 高壓 DC-DC 轉換器濾波，48V 輕油電/400V 電池系統廣泛使用，AEC-Q200，EV 電源景氣指標",
+    key:"0805_4u7F_100V_X7R_AEC", label:"4.7µF 100V X7R 0805 AEC",
+    mouser:"https://www.mouser.tw/c/?q=4.7uf+100v+x7r+0805+aec-q200",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"工業",
+    useDesc:"工業 PLC/變頻器/馬達驅動去耦標準品，100V 耐壓適合工業 24-48V 電源，工業自動化景氣溫度計",
+    key:"0603_100nF_100V_X7R_IND", label:"0.1µF 100V X7R 0603",
+    mouser:"https://www.mouser.tw/c/?q=100nf+100v+x7r+0603",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
+  { cat:"MLCC", use:"工業",
+    useDesc:"工業電源模組/太陽能逆變器/UPS 濾波，100V 高壓大容量，工業能源設備景氣指標",
+    key:"0805_10uF_100V_X7R_IND", label:"10µF 100V X7R 0805",
+    mouser:"https://www.mouser.tw/c/?q=10uf+100v+x7r+0805",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%99%B6%E7%93%B7%E9%9B%BB%E5%AE%B9/60" },
   // ── 鋁電解（貼片）────────────────────────────────────────
   { cat:"鋁電解（貼片）", use:"AI",
     useDesc:"AI 25KW PSU 輸出級用混合鋁電容，貼片大罐，追蹤 AI 電源建設景氣",
@@ -313,11 +340,37 @@ const SPECS = [
     key:"DIP_25V_470uF", label:"470µF 25V DIP",
     mouser:"https://www.mouser.tw/c/?q=470uf+25v+dip+aluminum",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── 鋁電解（貼片）車用─────────────────────────────────────
+  { cat:"鋁電解（貼片）", use:"車用",
+    useDesc:"汽車 ECU/ADAS 電源板 SMD 鋁電解最大宗，AEC-Q200，高溫 125°C，汽車電子需求景氣指標",
+    key:"AlCap_SMD_100uF_50V_AEC", label:"SMD 100µF 50V AEC",
+    mouser:"https://www.mouser.tw/c/?q=100uf+50v+smd+aluminum+aec-q200",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── 鋁電解（牛角）車用─────────────────────────────────────
+  { cat:"鋁電解（牛角）", use:"車用",
+    useDesc:"EV/HEV DC-DC 轉換器與 OBC 主濾波，AEC-Q200，汽車電驅系統景氣指標",
+    key:"AlCap_SnapIn_1000uF_50V_AEC", label:"牛角 50V 1000µF AEC",
+    mouser:"https://www.mouser.tw/c/?q=1000uf+50v+snap-in+aluminum+aec-q200",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── 鋁電解（牛角）工業─────────────────────────────────────
+  { cat:"鋁電解（牛角）", use:"工業",
+    useDesc:"太陽能逆變器/工業 UPS/三相變頻器 PFC 主電容，400V 系覆蓋工業主流電壓，工業綠能景氣指標",
+    key:"AlCap_SnapIn_400V_2200uF", label:"牛角 400V 2200µF",
+    mouser:"https://www.mouser.tw/c/?q=2200uf+400v+snap-in+aluminum",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
+  // ── 鋁電解（直插）工業─────────────────────────────────────
+  { cat:"鋁電解（直插）", use:"工業",
+    useDesc:"工業控制板/馬達驅動/PLC 電源輸出濾波標準品，2200µF 25V 為工業自動化最廣泛使用規格",
+    key:"AlCap_DIP_2200uF_25V_IND", label:"2200µF 25V DIP",
+    mouser:"https://www.mouser.tw/c/?q=2200uf+25v+radial+aluminum+electrolytic",
+    digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
 ];
 
 const useBadge = (use) => {
-  if (use === 'AI') return '<span class="use-tag use-ai">AI</span>';
+  if (use === 'AI')   return '<span class="use-tag use-ai">AI</span>';
   if (use === '消費性') return '<span class="use-tag use-consumer">消費性</span>';
+  if (use === '車用')   return '<span class="use-tag use-auto">車用</span>';
+  if (use === '工業')   return '<span class="use-tag use-ind">工業</span>';
   return '';
 };
 
