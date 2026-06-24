@@ -284,65 +284,63 @@ let trendChartInst = null;
 let priceSort = 'asc';  // 'asc' | 'desc' | null (default: stock desc)
 
 const BRAND_MAP = {
-  // Murata
+  // ── 日本品牌（英文即可）────────────────────────────
   'muRata(村田)':               'Murata',
   'Murata Electronics':         'Murata',
-  // Samsung
+  'PANASONIC(松下)':            'Panasonic',
+  'Nichicon(尼吉康)':           'Nichicon',
+  'Rubycon(红宝石)':            'Rubycon',
+  // ── 歐美品牌（英文即可）────────────────────────────
   'SAMSUNG(三星)':              'Samsung',
   'Samsung Electro-Mechanics':  'Samsung',
-  // Taiyo Yuden
   'TAIYO YUDEN(太诱)':          'Taiyo Yuden',
-  // Yageo
-  'YAGEO':                      'Yageo',
-  'YAGEO(国巨)':                'Yageo',
-  // Kyocera AVX
-  'KYOCERA AVX':                'Kyocera AVX',
-  // Panasonic
-  'PANASONIC(松下)':            'Panasonic',
-  // Nichicon
-  'Nichicon(尼吉康)':           'Nichicon',
-  // Chemi-Con (Nippon Chemi-Con / NCC)
-  'NCC(日本贝弥功)':            'Chemi-Con',
-  'Chemi-Con':                  'Chemi-Con',
-  // Rubycon
-  'Rubycon(红宝石)':            'Rubycon',
-  // KEMET
   'KEMET(基美)':                'KEMET',
-  // Lelon
-  'Lelon(立隆)':                'Lelon',
-  // Vishay (all sub-brands)
   'VISHAY(威世)':               'Vishay',
   'Vishay / BC Components':     'Vishay',
   'Vishay / Dale':              'Vishay',
   'Vishay / Sprague':           'Vishay',
-  // Knowles (acquired Illinois Capacitor)
   'Knowles / Illinois Capacitor': 'Knowles',
-  // Samyoung (韓國三星電子 — 非 Samsung Electronics)
-  'SAMYOUNG(韩国三星)':         'Samyoung',
-  // Samwha
+  'KYOCERA AVX':                'Kyocera AVX',
   'SAMWHA(三和)':               'Samwha',
-  // AISHI
-  'AISHI(艾华集团)':            'AISHI',
-  // Others with Chinese suffixes
-  'HUAWEI(华威集团)':           'HUAWEI Cap',
-  'Jianghai(南通江海)':         'Jianghai',
-  'MAN YUE(万裕科技)':          'Man Yue',
-  'KNSCHA(科尼盛)':             'KNSCHA',
-  'JIERR(捷而瑞)':              'JIERR',
-  'KFSONI(康富松)':             'KFSONI',
-  'LINKEYCON(联盛控)':          'LINKEYCON',
-  'CH(创嵘电子)':               'CH',
-  'DMBJ(振宝佳)':               'DMBJ',
-  'FOLLON(雷隆电子)':           'FOLLON',
-  'HONOR(荣誉)':                'HONOR',
-  'ROQANG(容强)':               'ROQANG',
-  'SHENGYANG(升阳)':            'SHENGYANG',
-  'APAQ(钰邦)':                 'APAQ',
-  'Ymin(永铭)':                 'Ymin',
-  "Su'scon(冠坤)":              "Su'scon",
-  'NCC(日本奥弥功)':            'Chemi-Con',
+  'SAMYOUNG(韩国三星)':         'Samyoung',
+  // ── 台灣品牌（保留中文）────────────────────────────
+  'YAGEO':                      'Yageo(國巨)',
+  'YAGEO(国巨)':                'Yageo(國巨)',
+  'Lelon(立隆)':                'Lelon(立隆)',
+  'Lelon':                      'Lelon(立隆)',
+  'APAQ(钰邦)':                 'APAQ(鈺邦)',
+  "Su'scon(冠坤)":              "Su'scon(冠坤)",
+  'MAN YUE(万裕科技)':          'Man Yue(萬裕)',
+  // ── 中國品牌（保留中文）────────────────────────────
+  'AISHI(艾华集团)':            'AISHI(艾華)',
+  'Jianghai(南通江海)':         'Jianghai(江海)',
+  'KNSCHA(科尼盛)':             'KNSCHA(科尼盛)',
+  'JIERR(捷而瑞)':              'JIERR(捷而瑞)',
+  'KFSONI(康富松)':             'KFSONI(康富松)',
+  'LINKEYCON(联盛控)':          'LINKEYCON(聯盛控)',
+  'HUAWEI(华威集团)':           'HUAWEI(華威)',
+  'CH(创嵘电子)':               'CH(創嵘)',
+  'DMBJ(振宝佳)':               'DMBJ(振寶佳)',
+  'FOLLON(雷隆电子)':           'FOLLON(雷隆)',
+  'HONOR(荣誉)':                'HONOR(榮譽)',
+  'ROQANG(容强)':               'ROQANG(容強)',
+  'SHENGYANG(升阳)':            'SHENGYANG(升陽)',
+  'Ymin(永铭)':                 'Ymin(永銘)',
 };
-const normBrand = b => BRAND_MAP[b] || b;
+const normBrand = b => {
+  if (!b) return b;
+  if (BRAND_MAP[b]) return BRAND_MAP[b];
+  if (b.startsWith('NCC('))         return 'Chemi-Con';
+  if (b.startsWith('TAIYO YUDEN'))  return 'Taiyo Yuden';
+  if (b.startsWith('YAGEO'))        return 'Yageo';
+  if (b.startsWith('Vishay'))       return 'Vishay';
+  if (b.startsWith('KEMET'))        return 'KEMET';
+  if (b.startsWith('PANASONIC') || b.startsWith('Panasonic')) return 'Panasonic';
+  if (b.startsWith('Nichicon'))     return 'Nichicon';
+  if (b.startsWith('Rubycon'))      return 'Rubycon';
+  if (b.startsWith('Lelon'))        return 'Lelon';
+  return b;
+};
 
 const specDef      = () => SPECS.find(s => s.key === currentSpec) || SPECS[0];
 const specData     = () => HISTORY_DATA[currentSpec] || {};
