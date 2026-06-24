@@ -355,8 +355,8 @@ const SPECS = [
   // ── 電感 AI + 消費性────────────────────────────────────────
   { cat:"電感", use:"車用",
     useDesc:"汽車 ECU/ADAS/BCM 電源管理最大宗電感規格，AEC-Q200 認證，Murata/TDK/Vishay 三強鼎立，汽車電子景氣最廣義電感溫度計",
-    key:"Inductor_AEC_4u7uH", label:"4.7µH AEC-Q200 SMD",
-    mouser:"https://www.mouser.tw/c/?q=4.7uH+aec-q200+smd+power+inductor+automotive",
+    key:"Inductor_AEC_4u7uH", label:"4.7µH AEC-Q200 2520 SMD",
+    mouser:"https://www.mouser.tw/c/?q=4.7uH+aec-q200+2520+smd+power+inductor+automotive",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%9B%BB%E6%84%9F%E5%99%A8%E3%80%81%E6%89%BC%E6%B5%81%E5%9C%88%E8%88%87%E7%B7%9A%E5%9C%88/70" },
   { cat:"電感", use:"消費性",
     useDesc:"手機/IoT PMIC 最高出貨量的 SMD 功率電感，1µH 2016 封裝（Qualcomm/MediaTek 主流 buck converter 規格，Samsung EMI/Murata 核心產品線），AI 搶料排擠消費性電感產能時最快反應",
@@ -398,6 +398,8 @@ let currentSpec = SPECS[0].key;
 let trendChartInst = null;
 let stockChartInst = null;
 let priceSort = null;  // null=庫存優先 | 'asc'=價格升序 | 'desc'=價格降序
+let tablePage = 0;
+const TABLE_PAGE_SIZE = 50;
 
 const BRAND_MAP = {
   // ── 日本品牌（英文即可）────────────────────────────
@@ -714,7 +716,14 @@ function renderTable() {
   const wrap = document.getElementById('table-wrap');
   if (!wrap) return;
   if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
-  const rows = products.map(p => {
+
+  // 翻頁
+  const totalPages = Math.ceil(products.length / TABLE_PAGE_SIZE);
+  if (tablePage >= totalPages) tablePage = totalPages - 1;
+  if (tablePage < 0) tablePage = 0;
+  const pageProducts = products.slice(tablePage * TABLE_PAGE_SIZE, (tablePage + 1) * TABLE_PAGE_SIZE);
+
+  const rows = pageProducts.map(p => {
     const sc = p.stock>5000?'stock-hi':p.stock>1000?'stock-mid':p.stock>0?'stock-lo':'stock-zero';
     const sl = p.stock>0 ? p.stock.toLocaleString() : '需訂貨';
     const mq = p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '-');
@@ -732,13 +741,24 @@ function renderTable() {
       +'<td class="price-bulk">'+(t500!=null?'$'+t500.toFixed(4):'-')+'</td>'
       +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
   }).join('');
+
   const arrow = priceSort === 'asc' ? ' ↑' : priceSort === 'desc' ? ' ↓' : ' ↕';
+  const pagination = totalPages > 1
+    ? '<div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 0;font-size:12px;color:#64748b">'
+      +'<button onclick="tablePage=Math.max(0,tablePage-1);renderTable()" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:4px;background:#fff;cursor:pointer;font-size:12px" '+(tablePage===0?'disabled':'')+'>&lt;</button>'
+      +'<span>'+(tablePage+1)+' / '+totalPages+'　共 '+products.length+' 筆</span>'
+      +'<button onclick="tablePage=Math.min(totalPages-1,tablePage+1);renderTable()" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:4px;background:#fff;cursor:pointer;font-size:12px" '+(tablePage===totalPages-1?'disabled':'')+'>&gt;</button>'
+      +'</div>'
+    : '';
+
   wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th style="text-align:center">封裝</th>'
     +'<th id="price-sort-th" style="cursor:pointer;user-select:none" title="點擊排序">最低單價(USD)'+arrow+'</th>'
-    +'<th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
+    +'<th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>'
+    + pagination;
   var th = document.getElementById('price-sort-th');
   if (th) th.addEventListener('click', function(){
     priceSort = priceSort === 'asc' ? 'desc' : priceSort === 'desc' ? null : 'asc';
+    tablePage = 0;
     renderTable();
   });
 }
@@ -753,17 +773,18 @@ document.addEventListener('DOMContentLoaded', function() {
   var tabsEl = document.getElementById('spec-tabs');
   if (tabsEl) tabsEl.addEventListener('click', function(e){
     var tab = e.target.closest('[data-key]');
-    if (tab) { currentSpec = tab.dataset.key; buildTabs(); renderAll(); }
+    if (tab) { currentSpec = tab.dataset.key; tablePage = 0; buildTabs(); renderAll(); }
   });
 
   var pkgF   = document.getElementById('pkg-filter');
   var stkF   = document.getElementById('stock-filter');
   var srcF   = document.getElementById('src-filter');
   var brandF = document.getElementById('brand-filter');
-  if (pkgF)   pkgF.addEventListener('change', renderTable);
-  if (stkF)   stkF.addEventListener('change', renderTable);
-  if (srcF)   srcF.addEventListener('change', renderTable);
-  if (brandF) brandF.addEventListener('change', renderTable);
+  function resetAndRender() { tablePage = 0; renderTable(); }
+  if (pkgF)   pkgF.addEventListener('change', resetAndRender);
+  if (stkF)   stkF.addEventListener('change', resetAndRender);
+  if (srcF)   srcF.addEventListener('change', resetAndRender);
+  if (brandF) brandF.addEventListener('change', resetAndRender);
 
   buildTabs();
   var latest = latestDate();
