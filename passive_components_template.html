@@ -160,6 +160,12 @@ tr:hover td { background: #f8fafc; }
           <option value="">全部</option>
           <option value="instock">現貨</option>
         </select>
+        <label>來源</label>
+        <select id="src-filter">
+          <option value="">全部</option>
+          <option value="LCSC">LCSC</option>
+          <option value="Mouser">Mouser</option>
+        </select>
       </div>
     </div>
     <div id="table-wrap"><div class="empty-state">尚無資料</div></div>
@@ -321,19 +327,43 @@ function renderUseInfo() {
   bar.innerHTML = useBadge(def.use) + '<span>' + (def.useDesc || '') + '</span>';
 }
 
+// avg_price_usd from entry, fallback: convert CNY avg_price with ~0.138
+const getAvgUsd = (entry) => {
+  if (entry.avg_price_usd != null) return entry.avg_price_usd;
+  if (entry.avg_price != null) return entry.avg_price * (entry.exchange_rate || 0.138);
+  return null;
+};
+// min_price_usd from product, fallback: convert CNY min_price
+const getPriceUsd = (p) => {
+  if (p.min_price_usd != null) return p.min_price_usd;
+  return p.min_price * 0.138;
+};
+// price tier in USD
+const getTierUsd = (p, qty) => {
+  if (p.prices_usd && p.prices_usd[qty]) return p.prices_usd[qty];
+  if (p.prices && p.prices[qty]) {
+    const rate = p.currency === 'USD' ? 1 : (p.exchange_rate || 0.138);
+    return p.prices[qty] * rate;
+  }
+  return null;
+};
+
 function renderSummary() {
   const products = latestProducts();
   const inStock = products.filter(p => p.stock > 0);
-  const avg = calcAvg(products);
-  const cheapest = [...inStock].sort((a,b) => a.min_price - b.min_price)[0];
+  const today = latestDate();
+  const entry = today ? (specData()[today] || {}) : {};
+  const avgUsd = getAvgUsd(entry);
+  const cheapest = [...inStock].sort((a,b) => getPriceUsd(a) - getPriceUsd(b))[0];
   document.getElementById('instock-count').textContent = inStock.length || '—';
-  document.getElementById('avg-price-val').textContent = avg != null ? '¥' + avg.toFixed(4) : '—';
-  document.getElementById('avg-price-sub').textContent = avg != null
-    ? specDef().label + ' · ' + latestDate() : '尚無資料';
+  document.getElementById('avg-price-val').textContent = avgUsd != null ? '$' + avgUsd.toFixed(4) : '—';
+  document.getElementById('avg-price-sub').textContent = avgUsd != null
+    ? specDef().label + ' · ' + today + ' · USD' : '尚無資料';
   document.getElementById('cheapest-model').textContent = cheapest ? cheapest.model : '—';
   const minQty = cheapest ? (cheapest.min_qty || (cheapest.prices ? Math.min(...Object.keys(cheapest.prices).map(Number)) : '?')) : '?';
+  const cheapSrc = cheapest ? (' · ' + (cheapest.source || 'LCSC')) : '';
   document.getElementById('cheapest-sub').textContent = cheapest
-    ? '¥' + cheapest.min_price.toFixed(4) + ' (' + minQty + '+起) · ' + cheapest.brand : '—';
+    ? '$' + getPriceUsd(cheapest).toFixed(4) + ' (' + minQty + '+起) · ' + cheapest.brand + cheapSrc : '—';
 }
 
 function renderTrendChart() {
@@ -344,28 +374,36 @@ function renderTrendChart() {
   if (!ph || !ct) return;
   if (dates.length < 2) { ph.style.display=''; ct.style.display='none'; return; }
   ph.style.display='none'; ct.style.display='';
-  const avgPrices = dates.map(d => data[d].avg_price != null ? data[d].avg_price : calcAvg(data[d].products || []));
+  const avgPrices = dates.map(d => getAvgUsd(data[d]));
   if (trendChartInst) trendChartInst.destroy();
   const ctx = document.getElementById('trend-chart');
   if (!ctx) return;
   trendChartInst = new Chart(ctx.getContext('2d'), {
     type:'line',
-    data:{labels:dates,datasets:[{label:specDef().label+' 平均最低單價',data:avgPrices,
+    data:{labels:dates,datasets:[{label:specDef().label+' 平均最低單價 (USD)',data:avgPrices,
       borderColor:'#3b82f6',backgroundColor:'#3b82f620',tension:0.3,pointRadius:5,pointHoverRadius:7,fill:true,spanGaps:true}]},
     options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:ctx=>ctx.parsed.y!=null?'¥'+ctx.parsed.y.toFixed(4):'—'}}},
+      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y!=null?'$'+c.parsed.y.toFixed(4):'—'}}},
       scales:{x:{ticks:{font:{size:10}},grid:{color:'#f1f5f9'}},
-              y:{ticks:{font:{size:11},callback:v=>'¥'+v.toFixed(3)},grid:{color:'#f1f5f9'}}}}
+              y:{ticks:{font:{size:11},callback:v=>'$'+v.toFixed(4)},grid:{color:'#f1f5f9'}}}}
   });
 }
+
+// source badge
+const srcBadge = (src) => {
+  if (src === 'Mouser') return '<span style="font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:#fef3c7;color:#b45309">Mouser</span>';
+  return '<span style="font-size:9px;font-weight:700;padding:1px 5px;border-radius:3px;background:#dcfce7;color:#15803d">LCSC</span>';
+};
 
 function renderTable() {
   const pkgF = (document.getElementById('pkg-filter')||{}).value||'';
   const stkF = (document.getElementById('stock-filter')||{}).value||'';
+  const srcF = (document.getElementById('src-filter')||{}).value||'';
   let products = latestProducts();
   if (pkgF) products = products.filter(p => p.package === pkgF);
   if (stkF === 'instock') products = products.filter(p => p.stock > 0);
-  products = products.sort((a,b) => (b.stock-a.stock)||(a.min_price-b.min_price));
+  if (srcF) products = products.filter(p => (p.source||'LCSC') === srcF);
+  products = products.sort((a,b) => (b.stock-a.stock)||(getPriceUsd(a)-getPriceUsd(b)));
   const wrap = document.getElementById('table-wrap');
   if (!wrap) return;
   if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
@@ -373,15 +411,21 @@ function renderTable() {
     const sc = p.stock>5000?'stock-hi':p.stock>1000?'stock-mid':p.stock>0?'stock-lo':'stock-zero';
     const sl = p.stock>0 ? p.stock.toLocaleString() : '需訂貨';
     const mq = p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '-');
-    return '<tr><td><a href="https://item.szlcsc.com/'+p.lcsc_id+'.html" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
+    const src = p.source || 'LCSC';
+    const url = src === 'Mouser' ? (p.mouser_url||'#') : 'https://item.szlcsc.com/'+(p.lcsc_id||'')+'.html';
+    const usd = getPriceUsd(p);
+    const t50  = getTierUsd(p, 50);
+    const t500 = getTierUsd(p, 500);
+    return '<tr>'
+      +'<td>'+srcBadge(src)+'<br><a href="'+url+'" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
       +'<td><span class="brand-tag">'+p.brand+'</span></td>'
       +'<td style="text-align:center">'+(p.package||'-')+'</td>'
-      +'<td><span class="price-main">¥'+p.min_price.toFixed(4)+'</span><br><span class="price-bulk">'+mq+'+起</span></td>'
-      +'<td class="price-bulk">'+(p.prices&&p.prices[50]?'¥'+p.prices[50].toFixed(4):'-')+'</td>'
-      +'<td class="price-bulk">'+(p.prices&&p.prices[500]?'¥'+p.prices[500].toFixed(4):'-')+'</td>'
+      +'<td><span class="price-main">$'+usd.toFixed(4)+'</span><br><span class="price-bulk">'+mq+'+起</span></td>'
+      +'<td class="price-bulk">'+(t50!=null?'$'+t50.toFixed(4):'-')+'</td>'
+      +'<td class="price-bulk">'+(t500!=null?'$'+t500.toFixed(4):'-')+'</td>'
       +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
   }).join('');
-  wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
+  wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th>封裝</th><th>最低單價(USD)</th><th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>';
 }
 
 function renderAll() { buildPkgFilter(); renderUseInfo(); renderSummary(); renderTrendChart(); renderTable(); }
@@ -402,8 +446,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var pkgF = document.getElementById('pkg-filter');
   var stkF = document.getElementById('stock-filter');
+  var srcF = document.getElementById('src-filter');
   if (pkgF) pkgF.addEventListener('change', renderTable);
   if (stkF) stkF.addEventListener('change', renderTable);
+  if (srcF) srcF.addEventListener('change', renderTable);
 
   buildTabs();
   var latest = latestDate();
