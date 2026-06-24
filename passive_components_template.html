@@ -32,10 +32,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC
   padding: 4px 12px 0; gap: 2px; flex-wrap: wrap; align-items: flex-end; }
 .tab-group { display: inline-flex; align-items: center; flex-wrap: nowrap; flex-shrink: 0; gap: 2px; }
 .tab-group + .tab-group { margin-left: 6px; }
-.tab-cat { font-size: 11px; color: #0f172a; padding: 2px 8px 2px 6px;
+.tab-cat { font-size: 11px; color: #1e40af; padding: 2px 8px 2px 6px;
   font-weight: 800; letter-spacing: 0.3px; white-space: nowrap; flex-shrink: 0;
-  border-left: 3px solid #94a3b8; margin-right: 2px; }
-.tab-group:first-child .tab-cat { border-left: none; }
+  border-left: 3px solid #93c5fd; margin-right: 2px; }
 .tab-sep { display: none; }
 .spec-tab { padding: 7px 10px; font-size: 12px; font-weight: 500; color: #64748b;
   cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px;
@@ -162,9 +161,14 @@ tr:hover td { background: #f8fafc; }
         <div class="avg-sub" id="avg-price-sub">尚無資料</div>
       </div>
       <div class="avg-item">
+        <div class="avg-label">現貨中位數單價</div>
+        <div class="avg-value" id="median-price-val">—</div>
+        <div class="avg-sub" id="median-price-sub">中位數 · USD</div>
+      </div>
+      <div class="avg-item">
         <div class="avg-label">單日漲跌幅</div>
         <div class="avg-value" id="price-delta" style="font-size:16px">—</div>
-        <div class="avg-sub" id="price-delta-sub">較前日</div>
+        <div class="avg-sub" id="price-delta-sub">較前日（均值）</div>
       </div>
       <div class="avg-item">
         <div class="avg-label">現貨 / 總型號數</div>
@@ -357,9 +361,9 @@ const SPECS = [
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%8B%81%E9%9B%BB%E8%A7%A3%E5%AE%B9/58" },
   // ── 電感 AI + 消費性────────────────────────────────────────
   { cat:"電感", use:"AI",
-    useDesc:"AI 18kW PSU 巨型 TLVR 電感（≥90A），臺慶科/Vishay/Eaton 供應 Nvidia GPU VR 電路，庫存見底代表 AI PSU 瘋狂出貨",
-    key:"TLVR_AI_Inductor", label:"TLVR Inductor ≥90A",
-    mouser:"https://www.mouser.tw/c/?q=tlvr+inductor+100a",
+    useDesc:"AI 18kW PSU 多相 DC-DC 用大尺寸耦合功率電感（1212/1515 封裝），臺慶科/台達電合作料、Vishay/Coilcraft/BOURNS 皆有供貨，庫存與報價反映 AI PSU 功率電感市場景氣",
+    key:"AI_Inductor_1212_20A", label:"1212/1515 Coupled Inductor 20A+",
+    mouser:"https://www.mouser.tw/c/?q=1212+coupled+power+inductor+20a",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%9B%BB%E6%84%9F%E5%99%A8%E3%80%81%E6%89%BC%E6%B5%81%E5%9C%88%E8%88%87%E7%B7%9A%E5%9C%88/70" },
   { cat:"電感", use:"消費性",
     useDesc:"手機/IoT 出貨量最大的 SMD 功率電感，0402 封裝，觀察 AI 搶料是否排擠消費性電感產能",
@@ -464,6 +468,20 @@ const calcAvg = (products) => {
   const s = products.filter(p => p.stock > 0 && p.min_price > 0);
   return s.length ? s.reduce((a,p) => a + p.min_price, 0) / s.length : null;
 };
+const calcMedianUsd = (products) => {
+  const ps = products.filter(p => p.stock > 0).map(p => getPriceUsd(p)).filter(v => v > 0);
+  if (!ps.length) return null;
+  ps.sort((a,b) => a-b);
+  const mid = Math.floor(ps.length / 2);
+  return ps.length % 2 === 0 ? (ps[mid-1] + ps[mid]) / 2 : ps[mid];
+};
+const getMedianUsd = (entry) => {
+  const ps = (entry.products || []).filter(p => p.stock > 0).map(p => getPriceUsd(p)).filter(v => v > 0);
+  if (!ps.length) return null;
+  ps.sort((a,b) => a-b);
+  const mid = Math.floor(ps.length / 2);
+  return ps.length % 2 === 0 ? (ps[mid-1] + ps[mid]) / 2 : ps[mid];
+};
 
 function buildTabs() {
   const el = document.getElementById('spec-tabs');
@@ -560,9 +578,17 @@ function renderSummary() {
     return `<span class="${cls}">${sign}${pct.toFixed(2)}%</span>`;
   };
 
-  // price
+  // price + median
+  const medianUsd = getMedianUsd(todayEntry);
   document.getElementById('avg-price-val').textContent = avgUsd != null ? '$' + avgUsd.toFixed(4) : '—';
   document.getElementById('avg-price-sub').textContent = avgUsd != null ? specDef().label + ' · ' + today + ' · USD' : '尚無資料';
+  document.getElementById('median-price-val').textContent = medianUsd != null ? '$' + medianUsd.toFixed(4) : '—';
+  const gapPct = (avgUsd != null && medianUsd != null && medianUsd > 0)
+    ? ((avgUsd - medianUsd) / medianUsd * 100)
+    : null;
+  document.getElementById('median-price-sub').textContent = gapPct != null
+    ? '中位數 · 均值偏差 ' + (gapPct >= 0 ? '+' : '') + gapPct.toFixed(1) + '%'
+    : '中位數 · USD';
 
   // price delta (漲→紅 跌→綠)
   document.getElementById('price-delta').innerHTML = deltaHtml(avgUsd, prevAvgUsd, false);
@@ -600,18 +626,28 @@ function renderTrendChart() {
   if (!ph || !ct) return;
   if (dates.length < 2) { ph.style.display=''; ct.style.display='none'; return; }
   ph.style.display='none'; ct.style.display='';
-  const avgPrices = dates.map(d => getAvgUsd(data[d]));
+  const avgPrices    = dates.map(d => getAvgUsd(data[d]));
+  const medianPrices = dates.map(d => getMedianUsd(data[d]));
   if (trendChartInst) trendChartInst.destroy();
   const ctx = document.getElementById('trend-chart');
   if (!ctx) return;
   trendChartInst = new Chart(ctx.getContext('2d'), {
     type:'line',
-    data:{labels:dates,datasets:[{label:specDef().label+' 平均最低單價 (USD)',data:avgPrices,
-      borderColor:'#3b82f6',backgroundColor:'#3b82f620',tension:0.3,pointRadius:5,pointHoverRadius:7,fill:true,spanGaps:true}]},
-    options:{responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>c.parsed.y!=null?'$'+c.parsed.y.toFixed(4):'—'}}},
-      scales:{x:{ticks:{font:{size:10}},grid:{color:'#f1f5f9'}},
-              y:{ticks:{font:{size:11},callback:v=>'$'+v.toFixed(4)},grid:{color:'#f1f5f9'}}}}
+    data:{labels:dates, datasets:[
+      {label:'平均 (USD)', data:avgPrices,
+       borderColor:'#3b82f6', backgroundColor:'#3b82f620', tension:0.3,
+       pointRadius:5, pointHoverRadius:7, fill:true, spanGaps:true},
+      {label:'中位數 (USD)', data:medianPrices,
+       borderColor:'#f59e0b', backgroundColor:'transparent', tension:0.3,
+       pointRadius:4, pointHoverRadius:6, fill:false, spanGaps:true, borderDash:[5,3]}
+    ]},
+    options:{responsive:true, maintainAspectRatio:false,
+      plugins:{
+        legend:{display:true, position:'top', labels:{font:{size:11}, boxWidth:16}},
+        tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y!=null?'$'+c.parsed.y.toFixed(4):'—')}}
+      },
+      scales:{x:{ticks:{font:{size:10}}, grid:{color:'#f1f5f9'}},
+              y:{ticks:{font:{size:11}, callback:v=>'$'+v.toFixed(4)}, grid:{color:'#f1f5f9'}}}}
   });
 }
 
