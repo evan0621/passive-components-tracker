@@ -364,16 +364,6 @@ const SPECS = [
     mouser:"https://www.mouser.tw/c/?q=1uh+2016+power+inductor",
     digikey:"https://www.digikey.tw/zh/products/filter/%E9%9B%BB%E6%84%9F%E5%99%A8%E3%80%81%E6%89%BC%E6%B5%81%E5%9C%88%E8%88%87%E7%B7%9A%E5%9C%88/70" },
   // ── 電阻 AI + 消費性────────────────────────────────────────
-  { cat:"電阻", use:"AI",
-    useDesc:"AI 伺服器大電流監測核心元件，2512 封裝 1mΩ 分流電阻，800V HVDC 架構必用，Yageo(國巨)/Walsin(華新科) 漲價主力",
-    key:"2512_1mOhm_CurrentSense", label:"2512 1mΩ Current Sense",
-    mouser:"https://www.mouser.tw/c/?q=2512+current+sense+1mohm",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E7%9B%AE%E5%89%8D%E6%84%9F%E6%B8%AC%E9%9B%BB%E9%98%BB%E5%99%A8/52" },
-  { cat:"電阻", use:"AI",
-    useDesc:"AI 高壓電源板抗突波/高功率電阻，400V 耐壓，1206 大封裝，國巨/華新科啟動漲價的主力規格",
-    key:"1206_AntiSurge_400V", label:"1206 400V Anti-Surge",
-    mouser:"https://www.mouser.tw/c/?q=1206+anti-surge+400v+resistor",
-    digikey:"https://www.digikey.tw/zh/products/filter/%E8%A1%A8%E9%9D%A2%E8%B2%BC%E8%A3%9D%E9%9B%BB%E9%98%BB%E5%99%A8/53" },
   { cat:"電阻", use:"車用",
     useDesc:"與消費性同規格但須 AEC-Q200 車規認證，可直接觀察車用 vs 消費性的溢價幅度與備貨差異，汽車電子景氣最廣義電阻溫度計",
     key:"0402_10kOhm_AEC", label:"0402 10kΩ 1% AEC-Q200",
@@ -399,7 +389,8 @@ let trendChartInst = null;
 let stockChartInst = null;
 let priceSort = null;  // null=庫存優先 | 'asc'=價格升序 | 'desc'=價格降序
 let tablePage = 0;
-const TABLE_PAGE_SIZE = 50;
+let tableTotalPages = 1;
+const TABLE_PAGE_SIZE = 10;
 
 const BRAND_MAP = {
   // ── 日本品牌（英文即可）────────────────────────────
@@ -718,8 +709,8 @@ function renderTable() {
   if (!products.length) { wrap.innerHTML='<div class="empty-state">無資料</div>'; return; }
 
   // 翻頁
-  const totalPages = Math.ceil(products.length / TABLE_PAGE_SIZE);
-  if (tablePage >= totalPages) tablePage = totalPages - 1;
+  tableTotalPages = Math.ceil(products.length / TABLE_PAGE_SIZE);
+  if (tablePage >= tableTotalPages) tablePage = tableTotalPages - 1;
   if (tablePage < 0) tablePage = 0;
   const pageProducts = products.slice(tablePage * TABLE_PAGE_SIZE, (tablePage + 1) * TABLE_PAGE_SIZE);
 
@@ -746,8 +737,8 @@ function renderTable() {
   const pagination = totalPages > 1
     ? '<div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 0;font-size:12px;color:#64748b">'
       +'<button onclick="tablePage=Math.max(0,tablePage-1);renderTable()" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:4px;background:#fff;cursor:pointer;font-size:12px" '+(tablePage===0?'disabled':'')+'>&lt;</button>'
-      +'<span>'+(tablePage+1)+' / '+totalPages+'　共 '+products.length+' 筆</span>'
-      +'<button onclick="tablePage=Math.min(totalPages-1,tablePage+1);renderTable()" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:4px;background:#fff;cursor:pointer;font-size:12px" '+(tablePage===totalPages-1?'disabled':'')+'>&gt;</button>'
+      +'<span>'+(tablePage+1)+' / '+tableTotalPages+'　共 '+products.length+' 筆</span>'
+      +'<button onclick="tablePage=Math.min(tableTotalPages-1,tablePage+1);renderTable()" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:4px;background:#fff;cursor:pointer;font-size:12px" '+(tablePage===tableTotalPages-1?'disabled':'')+'>&gt;</button>'
       +'</div>'
     : '';
 
