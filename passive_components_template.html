@@ -467,6 +467,10 @@ const calcMedianUsd = (products) => {
   return ps.length % 2 === 0 ? (ps[mid-1] + ps[mid]) / 2 : ps[mid];
 };
 const getMedianUsd = (entry) => {
+  // Use precomputed value for historical entries (products stripped to keep HTML small)
+  if ((entry.products || []).length === 0 && entry.median_price_usd != null) {
+    return entry.median_price_usd;
+  }
   const ps = (entry.products || []).filter(p => p.stock > 0).map(p => getPriceUsd(p)).filter(v => v > 0);
   if (!ps.length) return null;
   ps.sort((a,b) => a-b);
@@ -734,7 +738,7 @@ function renderTable() {
   }).join('');
 
   const arrow = priceSort === 'asc' ? ' ↑' : priceSort === 'desc' ? ' ↓' : ' ↕';
-  const pagination = totalPages > 1
+  const pagination = tableTotalPages > 1
     ? '<div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:8px 0;font-size:12px;color:#64748b">'
       +'<button onclick="tablePage=Math.max(0,tablePage-1);renderTable()" style="padding:3px 10px;border:1px solid #e2e8f0;border-radius:4px;background:#fff;cursor:pointer;font-size:12px" '+(tablePage===0?'disabled':'')+'>&lt;</button>'
       +'<span>'+(tablePage+1)+' / '+tableTotalPages+'　共 '+products.length+' 筆</span>'
