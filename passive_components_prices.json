@@ -14,13 +14,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.564684,
+      "total_stock": 176796,
+      "in_stock_count": 19,
+      "product_count": 50,
+      "lcsc_count": 22,
+      "mouser_count": 28,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:20:31.299299",
+      "median_price_usd": 0.47,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.564684,
       "exchange_rate": 0.1471,
       "product_count": 50,
       "in_stock_count": 19,
-      "total_stock": 176796,
+      "total_stock": 176391,
       "lcsc_count": 22,
       "mouser_count": 28,
-      "fetched_at": "2026-06-25T23:20:31.299299",
+      "fetched_at": "2026-06-26T00:00:58.537427",
       "products": [
         {
           "model": "GRM21BC80G476ME15L",
@@ -64,7 +76,7 @@
             "2500": 0.424501,
             "5000": 0.406175
           },
-          "stock": 1045,
+          "stock": 640,
           "min_qty": 5,
           "min_price": 0.887453,
           "min_price_usd": 0.130544,
@@ -1532,13 +1544,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.325089,
+      "total_stock": 538660,
+      "in_stock_count": 24,
+      "product_count": 70,
+      "lcsc_count": 20,
+      "mouser_count": 50,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:20:55.396182",
+      "median_price_usd": 0.28500000000000003,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.325089,
       "exchange_rate": 0.1471,
       "product_count": 70,
       "in_stock_count": 24,
       "total_stock": 538660,
       "lcsc_count": 20,
       "mouser_count": 50,
-      "fetched_at": "2026-06-25T23:20:55.396182",
+      "fetched_at": "2026-06-26T00:01:20.105895",
       "products": [
         {
           "model": "GRM158C80G226ME01D",
@@ -3706,13 +3730,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.122308,
+      "total_stock": 71868641,
+      "in_stock_count": 263,
+      "product_count": 265,
+      "lcsc_count": 15,
+      "mouser_count": 250,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:21:18.108477",
+      "median_price_usd": 0.1,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.122308,
       "exchange_rate": 0.1471,
       "product_count": 265,
       "in_stock_count": 263,
       "total_stock": 71868641,
       "lcsc_count": 15,
       "mouser_count": 250,
-      "fetched_at": "2026-06-25T23:21:18.108477",
+      "fetched_at": "2026-06-26T00:01:35.786229",
       "products": [
         {
           "model": "CC0805KKX7R7BB106",
@@ -12921,13 +12957,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.161751,
+      "total_stock": 85997837,
+      "in_stock_count": 85,
+      "product_count": 125,
+      "lcsc_count": 19,
+      "mouser_count": 106,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:26:02.270164",
+      "median_price_usd": 0.1,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.161751,
       "exchange_rate": 0.1471,
       "product_count": 125,
       "in_stock_count": 85,
-      "total_stock": 85997837,
+      "total_stock": 85996701,
       "lcsc_count": 19,
       "mouser_count": 106,
-      "fetched_at": "2026-06-25T23:26:02.270164",
+      "fetched_at": "2026-06-26T00:05:55.176677",
       "products": [
         {
           "model": "CC0402KRX7R7BB104",
@@ -12992,9 +13040,10 @@
             "100": 0.0317,
             "1000": 0.0269,
             "3000": 0.0243,
-            "10000": 0.0231
+            "10000": 0.0231,
+            "50000": 0.0215
           },
-          "stock": 250,
+          "stock": 114,
           "min_qty": 100,
           "min_price": 0.0317,
           "min_price_usd": 0.004663,
@@ -13005,7 +13054,8 @@
             "100": 0.004663,
             "1000": 0.003957,
             "3000": 0.003575,
-            "10000": 0.003398
+            "10000": 0.003398,
+            "50000": 0.003163
           }
         },
         {
@@ -13964,7 +14014,7 @@
           "brand": "KEMET",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 0.1uF X7R 0402 10% AEC-Q200",
-          "stock": 1966760,
+          "stock": 1966260,
           "min_price": 0.14,
           "min_price_usd": 0.14,
           "min_qty": 1,
@@ -15353,7 +15403,7 @@
           "brand": "Murata Electronics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 0.1 uF 16 VDC 5% 0402 X7R",
-          "stock": 529765,
+          "stock": 529265,
           "min_price": 0.15,
           "min_price_usd": 0.15,
           "min_qty": 1,
@@ -16994,13 +17044,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.475784,
+      "total_stock": 6680,
+      "in_stock_count": 4,
+      "product_count": 15,
+      "lcsc_count": 13,
+      "mouser_count": 2,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:21:41.322450",
+      "median_price_usd": 0.419235,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.475784,
       "exchange_rate": 0.1471,
       "product_count": 15,
       "in_stock_count": 4,
       "total_stock": 6680,
       "lcsc_count": 13,
       "mouser_count": 2,
-      "fetched_at": "2026-06-25T23:21:41.322450",
+      "fetched_at": "2026-06-26T00:01:57.800232",
       "products": [
         {
           "model": "63SEV100M10X10.5",
@@ -17421,13 +17483,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 1.021965,
+      "total_stock": 1017,
+      "in_stock_count": 8,
+      "product_count": 17,
+      "lcsc_count": 16,
+      "mouser_count": 1,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:22:09.784524",
+      "median_price_usd": 1.0289645,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 1.021965,
       "exchange_rate": 0.1471,
       "product_count": 17,
       "in_stock_count": 8,
       "total_stock": 1017,
       "lcsc_count": 16,
       "mouser_count": 1,
-      "fetched_at": "2026-06-25T23:22:09.784524",
+      "fetched_at": "2026-06-26T00:02:19.561576",
       "products": [
         {
           "model": "16SVPF560M",
@@ -17872,13 +17946,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.475784,
+      "total_stock": 6680,
+      "in_stock_count": 4,
+      "product_count": 15,
+      "lcsc_count": 13,
+      "mouser_count": 2,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:22:20.754053",
+      "median_price_usd": 0.419235,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.475784,
       "exchange_rate": 0.1471,
       "product_count": 15,
       "in_stock_count": 4,
       "total_stock": 6680,
       "lcsc_count": 13,
       "mouser_count": 2,
-      "fetched_at": "2026-06-25T23:22:20.754053",
+      "fetched_at": "2026-06-26T00:02:29.315363",
       "products": [
         {
           "model": "63SEV100M10X10.5",
@@ -18299,13 +18385,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 25.23111,
+      "total_stock": 3919,
+      "in_stock_count": 11,
+      "product_count": 34,
+      "lcsc_count": 15,
+      "mouser_count": 19,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:22:54.223968",
+      "median_price_usd": 23.79,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 25.23111,
       "exchange_rate": 0.1471,
       "product_count": 34,
       "in_stock_count": 11,
       "total_stock": 3919,
       "lcsc_count": 15,
       "mouser_count": 19,
-      "fetched_at": "2026-06-25T23:22:54.223968",
+      "fetched_at": "2026-06-26T00:03:19.311698",
       "products": [
         {
           "model": "450MXK1000MEFCSN35X60",
@@ -19173,13 +19271,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 18.441534,
+      "total_stock": 2537,
+      "in_stock_count": 7,
+      "product_count": 32,
+      "lcsc_count": 6,
+      "mouser_count": 26,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:23:13.536290",
+      "median_price_usd": 17.96,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 18.441534,
       "exchange_rate": 0.1471,
       "product_count": 32,
       "in_stock_count": 7,
       "total_stock": 2537,
       "lcsc_count": 6,
       "mouser_count": 26,
-      "fetched_at": "2026-06-25T23:23:13.536290",
+      "fetched_at": "2026-06-26T00:03:39.498633",
       "products": [
         {
           "model": "450MXK820MEFCSN35X50",
@@ -19955,13 +20065,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 1.918272,
+      "total_stock": 697178,
+      "in_stock_count": 182,
+      "product_count": 208,
+      "lcsc_count": 28,
+      "mouser_count": 180,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:23:33.343192",
+      "median_price_usd": 1.3250000000000002,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 1.918272,
       "exchange_rate": 0.1471,
       "product_count": 208,
       "in_stock_count": 182,
-      "total_stock": 697178,
+      "total_stock": 697119,
       "lcsc_count": 28,
       "mouser_count": 180,
-      "fetched_at": "2026-06-25T23:23:33.343192",
+      "fetched_at": "2026-06-26T00:03:56.424404",
       "products": [
         {
           "model": "UHE1C102MHD6",
@@ -25594,7 +25716,7 @@
           "brand": "Panasonic",
           "package": "",
           "description": "Aluminum Organic Polymer Capacitors 470uF 16V 20% 5.4A Halogen Free",
-          "stock": 2716,
+          "stock": 2657,
           "min_price": 1.63,
           "min_price_usd": 1.63,
           "min_qty": 1,
@@ -25897,13 +26019,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 2.188312,
+      "total_stock": 773372,
+      "in_stock_count": 209,
+      "product_count": 216,
+      "lcsc_count": 19,
+      "mouser_count": 197,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:24:06.473303",
+      "median_price_usd": 1.55,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 2.188312,
       "exchange_rate": 0.1471,
       "product_count": 216,
       "in_stock_count": 209,
-      "total_stock": 773372,
+      "total_stock": 773362,
       "lcsc_count": 19,
       "mouser_count": 197,
-      "fetched_at": "2026-06-25T23:24:06.473303",
+      "fetched_at": "2026-06-26T00:04:24.616551",
       "products": [
         {
           "model": "EEUFR1E471B",
@@ -30939,7 +31073,7 @@
           "brand": "Panasonic",
           "package": "",
           "description": "Aluminum Organic Polymer Capacitors 25volts 330uF ESR 14mohm",
-          "stock": 3224,
+          "stock": 3214,
           "min_price": 2.26,
           "min_price_usd": 2.26,
           "min_qty": 1,
@@ -32113,13 +32247,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 1.316024,
+      "total_stock": 29096,
+      "in_stock_count": 39,
+      "product_count": 71,
+      "lcsc_count": 18,
+      "mouser_count": 53,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:24:33.780284",
+      "median_price_usd": 1.331255,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 1.316024,
       "exchange_rate": 0.1471,
       "product_count": 71,
       "in_stock_count": 39,
       "total_stock": 29096,
       "lcsc_count": 18,
       "mouser_count": 53,
-      "fetched_at": "2026-06-25T23:24:33.780284",
+      "fetched_at": "2026-06-26T00:04:49.758631",
       "products": [
         {
           "model": "EEEFKC271XSP",
@@ -34084,13 +34230,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.053583,
+      "total_stock": 9978520,
+      "in_stock_count": 30,
+      "product_count": 31,
+      "lcsc_count": 19,
+      "mouser_count": 12,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:24:44.224133",
+      "median_price_usd": 0.0213785,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.053583,
       "exchange_rate": 0.1471,
       "product_count": 31,
       "in_stock_count": 30,
-      "total_stock": 9978520,
+      "total_stock": 9981284,
       "lcsc_count": 19,
       "mouser_count": 12,
-      "fetched_at": "2026-06-25T23:24:44.224133",
+      "fetched_at": "2026-06-26T00:05:01.726561",
       "products": [
         {
           "model": "AC0402KRX7R9BB104",
@@ -34149,9 +34307,10 @@
             "100": 0.0317,
             "1000": 0.0269,
             "3000": 0.0243,
-            "10000": 0.0231
+            "10000": 0.0231,
+            "50000": 0.0215
           },
-          "stock": 250,
+          "stock": 114,
           "min_qty": 100,
           "min_price": 0.0317,
           "min_price_usd": 0.004663,
@@ -34162,7 +34321,8 @@
             "100": 0.004663,
             "1000": 0.003957,
             "3000": 0.003575,
-            "10000": 0.003398
+            "10000": 0.003398,
+            "50000": 0.003163
           }
         },
         {
@@ -34376,7 +34536,7 @@
             "3000": 0.0294,
             "10000": 0.0279
           },
-          "stock": 3500,
+          "stock": 6400,
           "min_qty": 100,
           "min_price": 0.0373,
           "min_price_usd": 0.005487,
@@ -35039,13 +35199,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.692488,
+      "total_stock": 8998274,
+      "in_stock_count": 243,
+      "product_count": 262,
+      "lcsc_count": 15,
+      "mouser_count": 247,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:25:36.830429",
+      "median_price_usd": 0.388712,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.692488,
       "exchange_rate": 0.1471,
       "product_count": 262,
       "in_stock_count": 243,
-      "total_stock": 8998274,
+      "total_stock": 8997874,
       "lcsc_count": 15,
       "mouser_count": 247,
-      "fetched_at": "2026-06-25T23:25:36.830429",
+      "fetched_at": "2026-06-26T00:05:31.136723",
       "products": [
         {
           "model": "MCJCE31LBB7106KTPA01",
@@ -41648,7 +41820,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT SOFT 0402 50V 0.1uF X7R 10% AEC-Q200",
-          "stock": 2093412,
+          "stock": 2092912,
           "min_price": 0.18,
           "min_price_usd": 0.18,
           "min_qty": 1,
@@ -42343,7 +42515,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT CGA 0603 50V 0.33uF X7R 10% AEC-Q200",
-          "stock": 98281,
+          "stock": 98381,
           "min_price": 0.23,
           "min_price_usd": 0.23,
           "min_qty": 1,
@@ -43665,13 +43837,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.189206,
+      "total_stock": 4022026,
+      "in_stock_count": 22,
+      "product_count": 31,
+      "lcsc_count": 17,
+      "mouser_count": 14,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:26:11.667207",
+      "median_price_usd": 0.14149050000000002,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.189206,
       "exchange_rate": 0.1471,
       "product_count": 31,
       "in_stock_count": 22,
-      "total_stock": 4022026,
+      "total_stock": 4021738,
       "lcsc_count": 17,
       "mouser_count": 14,
-      "fetched_at": "2026-06-25T23:26:11.667207",
+      "fetched_at": "2026-06-26T00:06:05.348197",
       "products": [
         {
           "model": "GRM155R61A106ME44D",
@@ -43706,9 +43890,10 @@
             "200": 0.3896,
             "600": 0.3642,
             "2000": 0.3451,
-            "10000": 0.2811
+            "10000": 0.2811,
+            "20000": 0.276
           },
-          "stock": 145,
+          "stock": 93,
           "min_qty": 20,
           "min_price": 0.4468,
           "min_price_usd": 0.065724,
@@ -43720,7 +43905,8 @@
             "200": 0.05731,
             "600": 0.053574,
             "2000": 0.050764,
-            "10000": 0.04135
+            "10000": 0.04135,
+            "20000": 0.0406
           }
         },
         {
@@ -44254,7 +44440,7 @@
           "brand": "Murata Electronics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 0402 10uF 10VDC 20% X5R AEC-Q200",
-          "stock": 107998,
+          "stock": 107978,
           "min_price": 0.27,
           "min_price_usd": 0.27,
           "min_qty": 1,
@@ -44328,7 +44514,7 @@
           "brand": "Murata Electronics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 10 uF 10 VDC 20% 0402 X5R",
-          "stock": 391615,
+          "stock": 391399,
           "min_price": 0.14,
           "min_price_usd": 0.14,
           "min_qty": 1,
@@ -44662,13 +44848,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 1.248233,
+      "total_stock": 55688,
+      "in_stock_count": 44,
+      "product_count": 57,
+      "lcsc_count": 26,
+      "mouser_count": 31,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:26:33.138302",
+      "median_price_usd": 1.253683,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 1.248233,
       "exchange_rate": 0.1471,
       "product_count": 57,
       "in_stock_count": 44,
       "total_stock": 55688,
       "lcsc_count": 26,
       "mouser_count": 31,
-      "fetched_at": "2026-06-25T23:26:33.138302",
+      "fetched_at": "2026-06-26T00:06:48.388562",
       "products": [
         {
           "model": "EEHZA1H101P",
@@ -46299,13 +46497,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.576226,
+      "total_stock": 62966,
+      "in_stock_count": 25,
+      "product_count": 28,
+      "lcsc_count": 25,
+      "mouser_count": 3,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:27:12.341658",
+      "median_price_usd": 0.511908,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.576226,
       "exchange_rate": 0.1471,
       "product_count": 28,
       "in_stock_count": 25,
       "total_stock": 62966,
       "lcsc_count": 25,
       "mouser_count": 3,
-      "fetched_at": "2026-06-25T23:27:12.341658",
+      "fetched_at": "2026-06-26T00:06:58.094021",
       "products": [
         {
           "model": "VZH471M1ETR-1010",
@@ -47093,13 +47303,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.444102,
+      "total_stock": 22309,
+      "in_stock_count": 10,
+      "product_count": 32,
+      "lcsc_count": 25,
+      "mouser_count": 7,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:27:33.432466",
+      "median_price_usd": 0.20421899999999998,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.444102,
       "exchange_rate": 0.1471,
       "product_count": 32,
       "in_stock_count": 10,
       "total_stock": 22309,
       "lcsc_count": 25,
       "mouser_count": 7,
-      "fetched_at": "2026-06-25T23:27:33.432466",
+      "fetched_at": "2026-06-26T00:07:20.698476",
       "products": [
         {
           "model": "CC1206JKNPOZBN103",
@@ -48113,13 +48335,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.936939,
+      "total_stock": 7958,
+      "in_stock_count": 11,
+      "product_count": 34,
+      "lcsc_count": 27,
+      "mouser_count": 7,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:27:57.103851",
+      "median_price_usd": 0.710493,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.936939,
       "exchange_rate": 0.1471,
       "product_count": 34,
       "in_stock_count": 11,
       "total_stock": 7958,
       "lcsc_count": 27,
       "mouser_count": 7,
-      "fetched_at": "2026-06-25T23:27:57.103851",
+      "fetched_at": "2026-06-26T00:07:45.151599",
       "products": [
         {
           "model": "GCM32E5C2J333JX0AL",
@@ -49033,13 +49267,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.774408,
+      "total_stock": 8245,
+      "in_stock_count": 5,
+      "product_count": 24,
+      "lcsc_count": 24,
+      "mouser_count": 0,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:28:05.855252",
+      "median_price_usd": 0.845825,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.774408,
       "exchange_rate": 0.1471,
       "product_count": 24,
       "in_stock_count": 5,
       "total_stock": 8245,
       "lcsc_count": 24,
       "mouser_count": 0,
-      "fetched_at": "2026-06-25T23:28:05.855252",
+      "fetched_at": "2026-06-26T00:07:52.995769",
       "products": [
         {
           "model": "GRM55DR72E105KW01L",
@@ -49794,13 +50040,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 1.576896,
+      "total_stock": 45654,
+      "in_stock_count": 17,
+      "product_count": 21,
+      "lcsc_count": 15,
+      "mouser_count": 6,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:28:57.063746",
+      "median_price_usd": 0.5884,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 1.576896,
       "exchange_rate": 0.1471,
       "product_count": 21,
       "in_stock_count": 17,
       "total_stock": 45654,
       "lcsc_count": 15,
       "mouser_count": 6,
-      "fetched_at": "2026-06-25T23:28:57.063746",
+      "fetched_at": "2026-06-26T00:09:01.164959",
       "products": [
         {
           "model": "TFM252012ALMA4R7MTAA",
@@ -51762,13 +52020,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.165094,
+      "total_stock": 16319998,
+      "in_stock_count": 42,
+      "product_count": 75,
+      "lcsc_count": 17,
+      "mouser_count": 58,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:29:12.748490",
+      "median_price_usd": 0.10500000000000001,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.165094,
       "exchange_rate": 0.1471,
       "product_count": 75,
       "in_stock_count": 42,
       "total_stock": 16319998,
       "lcsc_count": 17,
       "mouser_count": 58,
-      "fetched_at": "2026-06-25T23:29:12.748490",
+      "fetched_at": "2026-06-26T00:09:15.698059",
       "products": [
         {
           "model": "RC0402FR-0710KL",
@@ -54201,13 +54471,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.121591,
+      "total_stock": 13014480,
+      "in_stock_count": 22,
+      "product_count": 43,
+      "lcsc_count": 23,
+      "mouser_count": 20,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:29:40.515330",
+      "median_price_usd": 0.1,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.121591,
       "exchange_rate": 0.1471,
       "product_count": 43,
       "in_stock_count": 22,
       "total_stock": 13014480,
       "lcsc_count": 23,
       "mouser_count": 20,
-      "fetched_at": "2026-06-25T23:29:40.515330",
+      "fetched_at": "2026-06-26T00:09:42.153603",
       "products": [
         {
           "model": "NTCG103JX103DTDS",
@@ -55506,13 +55788,25 @@
     },
     "2026-06-25": {
       "avg_price_usd": 0.259584,
+      "total_stock": 547323,
+      "in_stock_count": 40,
+      "product_count": 56,
+      "lcsc_count": 2,
+      "mouser_count": 54,
+      "exchange_rate": 0.1471,
+      "fetched_at": "2026-06-25T23:28:34.590294",
+      "median_price_usd": 0.255,
+      "products": []
+    },
+    "2026-06-26": {
+      "avg_price_usd": 0.259584,
       "exchange_rate": 0.1471,
       "product_count": 56,
       "in_stock_count": 40,
       "total_stock": 547323,
       "lcsc_count": 2,
       "mouser_count": 54,
-      "fetched_at": "2026-06-25T23:28:34.590294",
+      "fetched_at": "2026-06-26T00:08:31.569810",
       "products": [
         {
           "model": "LSENC2016KKT1R0M",
@@ -57397,6 +57691,1504 @@
           "lcsc_id": null,
           "mouser_url": "https://www.mouser.tw/ProductDetail/TDK/VLS201610CX-1R0M?qs=1fAGQmkvYJZkKmBVFAyGVg%3D%3D",
           "mouser_pn": "810-VLS201610CX-1R0M"
+        }
+      ]
+    }
+  },
+  "0201_1uF_6V3_X5R": {
+    "2026-06-26": {
+      "avg_price_usd": 0.098303,
+      "exchange_rate": 0.1471,
+      "product_count": 46,
+      "in_stock_count": 22,
+      "total_stock": 3076710,
+      "lcsc_count": 16,
+      "mouser_count": 30,
+      "fetched_at": "2026-06-26T00:06:25.817876",
+      "products": [
+        {
+          "model": "GRM033R60J105MEA2D",
+          "lcsc_id": "78057",
+          "brand": "muRata(村田)",
+          "package": "0201",
+          "prices": {
+            "50": 0.0831,
+            "500": 0.0671,
+            "1500": 0.0581,
+            "15000": 0.052,
+            "30000": 0.0474,
+            "45000": 0.0449
+          },
+          "stock": 105,
+          "min_qty": 50,
+          "min_price": 0.0831,
+          "min_price_usd": 0.012224,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "50": 0.012224,
+            "500": 0.00987,
+            "1500": 0.008547,
+            "15000": 0.007649,
+            "30000": 0.006973,
+            "45000": 0.006605
+          }
+        },
+        {
+          "model": "JMK063ABJ105MP-F",
+          "lcsc_id": "88321",
+          "brand": "TAIYO YUDEN(太诱)",
+          "package": "0201",
+          "prices": {
+            "100": 0.073,
+            "1000": 0.063,
+            "3000": 0.0575,
+            "15000": 0.0404
+          },
+          "stock": 1100,
+          "min_qty": 100,
+          "min_price": 0.073,
+          "min_price_usd": 0.010738,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.010738,
+            "1000": 0.009267,
+            "3000": 0.008458,
+            "15000": 0.005943
+          }
+        },
+        {
+          "model": "GRM032R60J105ME05D",
+          "lcsc_id": "236902",
+          "brand": "muRata(村田)",
+          "package": "0201",
+          "prices": {
+            "10": 0.4086,
+            "100": 0.3364,
+            "300": 0.3003,
+            "1000": 0.2732,
+            "5000": 0.2516
+          },
+          "stock": 100,
+          "min_qty": 10,
+          "min_price": 0.4086,
+          "min_price_usd": 0.060105,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "10": 0.060105,
+            "100": 0.049484,
+            "300": 0.044174,
+            "1000": 0.040188,
+            "5000": 0.03701
+          }
+        },
+        {
+          "model": "GRT033R60J105ME13D",
+          "lcsc_id": "137900",
+          "brand": "muRata(村田)",
+          "package": "0201",
+          "prices": {
+            "50": 0.0944,
+            "500": 0.0727,
+            "1500": 0.0606
+          },
+          "stock": 0,
+          "min_qty": 50,
+          "min_price": 0.0944,
+          "min_price_usd": 0.013886,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "50": 0.013886,
+            "500": 0.010694,
+            "1500": 0.008914
+          }
+        },
+        {
+          "model": "0201X105M6R3CT",
+          "lcsc_id": "280318",
+          "brand": "Walsin(华新科)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0542,
+            "1000": 0.0434,
+            "3000": 0.0374,
+            "15000": 0.0318,
+            "45000": 0.0287,
+            "105000": 0.027
+          },
+          "stock": 14,
+          "min_qty": 100,
+          "min_price": 0.0542,
+          "min_price_usd": 0.007973,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.007973,
+            "1000": 0.006384,
+            "3000": 0.005502,
+            "15000": 0.004678,
+            "45000": 0.004222,
+            "105000": 0.003972
+          }
+        },
+        {
+          "model": "JMK063ABJ105KP-F",
+          "lcsc_id": "359951",
+          "brand": "TAIYO YUDEN(太诱)",
+          "package": "0201",
+          "prices": {
+            "100": 0.019,
+            "1000": 0.0154,
+            "3000": 0.0134,
+            "15000": 0.0126,
+            "45000": 0.0114
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.019,
+          "min_price_usd": 0.002795,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.002795,
+            "1000": 0.002265,
+            "3000": 0.001971,
+            "15000": 0.001853,
+            "45000": 0.001677
+          }
+        },
+        {
+          "model": "02016D105MAT2A",
+          "lcsc_id": "625614",
+          "brand": "Kyocera AVX",
+          "package": "0201",
+          "prices": {
+            "100": 0.0617,
+            "1000": 0.0512,
+            "3000": 0.0453
+          },
+          "stock": 450,
+          "min_qty": 100,
+          "min_price": 0.0617,
+          "min_price_usd": 0.009076,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.009076,
+            "1000": 0.007532,
+            "3000": 0.006664
+          }
+        },
+        {
+          "model": "MSASJ063AB5105MFNA01",
+          "lcsc_id": "3599949",
+          "brand": "TAIYO YUDEN(太诱)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0161,
+            "1000": 0.0129,
+            "3000": 0.0112,
+            "15000": 0.0101,
+            "45000": 0.0091
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0161,
+          "min_price_usd": 0.002368,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.002368,
+            "1000": 0.001898,
+            "3000": 0.001648,
+            "15000": 0.001486,
+            "45000": 0.001339
+          }
+        },
+        {
+          "model": "GRM033R60J105KEA2D",
+          "lcsc_id": "78056",
+          "brand": "muRata(村田)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0362,
+            "1000": 0.0308,
+            "3000": 0.028,
+            "15000": 0.0267,
+            "45000": 0.0249
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0362,
+          "min_price_usd": 0.005325,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.005325,
+            "1000": 0.004531,
+            "3000": 0.004119,
+            "15000": 0.003928,
+            "45000": 0.003663
+          }
+        },
+        {
+          "model": "02016D105KAT2A",
+          "lcsc_id": "6786429",
+          "brand": "Kyocera AVX",
+          "package": "0201",
+          "prices": {
+            "50": 0.057,
+            "500": 0.0453,
+            "1500": 0.0388
+          },
+          "stock": 11,
+          "min_qty": 50,
+          "min_price": 0.057,
+          "min_price_usd": 0.008385,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "50": 0.008385,
+            "500": 0.006664,
+            "1500": 0.005707
+          }
+        },
+        {
+          "model": "CC0201KRX5R5BB105",
+          "lcsc_id": "561826",
+          "brand": "YAGEO(国巨)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0418,
+            "1000": 0.0362,
+            "3000": 0.0331,
+            "15000": 0.0311,
+            "45000": 0.0295,
+            "105000": 0.0286
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0418,
+          "min_price_usd": 0.006149,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.006149,
+            "1000": 0.005325,
+            "3000": 0.004869,
+            "15000": 0.004575,
+            "45000": 0.004339,
+            "105000": 0.004207
+          }
+        },
+        {
+          "model": "CM03X5R105M06AH",
+          "lcsc_id": "1940611",
+          "brand": "Kyocera AVX",
+          "package": "0201",
+          "prices": {
+            "100": 0.0128,
+            "1000": 0.0095,
+            "3000": 0.0077,
+            "15000": 0.0066,
+            "45000": 0.0056
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0128,
+          "min_price_usd": 0.001883,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.001883,
+            "1000": 0.001397,
+            "3000": 0.001133,
+            "15000": 0.000971,
+            "45000": 0.000824
+          }
+        },
+        {
+          "model": "CC0201MRX5R5BB105",
+          "lcsc_id": "261269",
+          "brand": "YAGEO(国巨)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0417,
+            "1000": 0.0352,
+            "3000": 0.0318,
+            "15000": 0.0296,
+            "45000": 0.0275
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0417,
+          "min_price_usd": 0.006134,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.006134,
+            "1000": 0.005178,
+            "3000": 0.004678,
+            "15000": 0.004354,
+            "45000": 0.004045
+          }
+        },
+        {
+          "model": "FN03B105M6R3PLG",
+          "lcsc_id": "3005144",
+          "brand": "PSA(信昌电陶)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0283,
+            "1000": 0.0221,
+            "3000": 0.0188
+          },
+          "stock": 1400,
+          "min_qty": 100,
+          "min_price": 0.0283,
+          "min_price_usd": 0.004163,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.004163,
+            "1000": 0.003251,
+            "3000": 0.002765
+          }
+        },
+        {
+          "model": "FS03B105M6R3PLG",
+          "lcsc_id": "543449",
+          "brand": "PSA(信昌电陶)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0161,
+            "1000": 0.0124,
+            "3000": 0.0104,
+            "15000": 0.008,
+            "45000": 0.0068
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0161,
+          "min_price_usd": 0.002368,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.002368,
+            "1000": 0.001824,
+            "3000": 0.00153,
+            "15000": 0.001177,
+            "45000": 0.001
+          }
+        },
+        {
+          "model": "GRM033R60J105ME11D",
+          "lcsc_id": "172842",
+          "brand": "muRata(村田)",
+          "package": "0201",
+          "prices": {
+            "100": 0.0156,
+            "1000": 0.0117,
+            "3000": 0.0096,
+            "15000": 0.0082,
+            "45000": 0.007
+          },
+          "stock": 0,
+          "min_qty": 100,
+          "min_price": 0.0156,
+          "min_price_usd": 0.002295,
+          "currency": "CNY",
+          "source": "LCSC",
+          "mouser_url": null,
+          "prices_usd": {
+            "100": 0.002295,
+            "1000": 0.001721,
+            "3000": 0.001412,
+            "15000": 0.001206,
+            "45000": 0.00103
+          }
+        },
+        {
+          "model": "CC0201MPX5R5BB105",
+          "brand": "YAGEO",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 20% HI CV",
+          "stock": 52109,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.02,
+            "100": 0.017,
+            "500": 0.012,
+            "1000": 0.011,
+            "2500": 0.008,
+            "5000": 0.007,
+            "25000": 0.006,
+            "50000": 0.006
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.02,
+            "100": 0.017,
+            "500": 0.012,
+            "1000": 0.011,
+            "2500": 0.008,
+            "5000": 0.007,
+            "25000": 0.006,
+            "50000": 0.006
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/YAGEO/CC0201MPX5R5BB105?qs=MLItCLRbWswjMm28548awg%3D%3D",
+          "mouser_pn": "603-CC201MPX5R5BB105"
+        },
+        {
+          "model": "CC0201KPX5R5BB105",
+          "brand": "YAGEO",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 10% HI CV",
+          "stock": 117878,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.025,
+            "100": 0.022,
+            "500": 0.016,
+            "1000": 0.014,
+            "2500": 0.012,
+            "5000": 0.011,
+            "10000": 0.01,
+            "25000": 0.008,
+            "50000": 0.008
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.025,
+            "100": 0.022,
+            "500": 0.016,
+            "1000": 0.014,
+            "2500": 0.012,
+            "5000": 0.011,
+            "10000": 0.01,
+            "25000": 0.008,
+            "50000": 0.008
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/YAGEO/CC0201KPX5R5BB105?qs=W0yvOO0ixfHWVdZLBtXjXw%3D%3D",
+          "mouser_pn": "603-CC0201KPX55BB105"
+        },
+        {
+          "model": "CC0201KRX5R5BB105",
+          "brand": "YAGEO",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 10% HI CV",
+          "stock": 59825,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.026,
+            "100": 0.023,
+            "500": 0.016,
+            "1000": 0.014,
+            "2500": 0.012,
+            "5000": 0.011,
+            "10000": 0.008,
+            "15000": 0.007
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.026,
+            "100": 0.023,
+            "500": 0.016,
+            "1000": 0.014,
+            "2500": 0.012,
+            "5000": 0.011,
+            "10000": 0.008,
+            "15000": 0.007
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/YAGEO/CC0201KRX5R5BB105?qs=UgE%2F0m3bTsYJLL6waqL0lA%3D%3D",
+          "mouser_pn": "603-CC0201KRX55BB105"
+        },
+        {
+          "model": "CC0201MRX5R5BB105",
+          "brand": "YAGEO",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 20% HI CV",
+          "stock": 0,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.02,
+            "100": 0.017,
+            "500": 0.012,
+            "1000": 0.011,
+            "2500": 0.008,
+            "10000": 0.005,
+            "15000": 0.004
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.02,
+            "100": 0.017,
+            "500": 0.012,
+            "1000": 0.011,
+            "2500": 0.008,
+            "10000": 0.005,
+            "15000": 0.004
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/YAGEO/CC0201MRX5R5BB105?qs=57cj7OiSijlopaT54WRgLw%3D%3D",
+          "mouser_pn": "603-CC201MRX5R5BB105"
+        },
+        {
+          "model": "CM03X5R105M06AH",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT KGM03BR50J105MH NEW GLOBAL PN 1uF 20% 6. A 581-KGM03BR50J105MH",
+          "stock": 38937,
+          "min_price": 0.11,
+          "min_price_usd": 0.11,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.11,
+            "10": 0.03,
+            "100": 0.018,
+            "500": 0.014,
+            "15000": 0.013
+          },
+          "prices_usd": {
+            "1": 0.11,
+            "10": 0.03,
+            "100": 0.018,
+            "500": 0.014,
+            "15000": 0.013
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/CM03X5R105M06AH?qs=rkhjVJ6%2F3ELzWF91DLscGA%3D%3D",
+          "mouser_pn": "346-CM03X5R105M06AH"
+        },
+        {
+          "model": "02016D105MAT4A",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT KGM03BR50J105MN NEW GLOBAL PN 6.3V 1uF X A 581-KGM03BR50J105MN",
+          "stock": 117562,
+          "min_price": 0.15,
+          "min_price_usd": 0.15,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.15,
+            "10": 0.053,
+            "100": 0.029,
+            "500": 0.019,
+            "1000": 0.014,
+            "2500": 0.009,
+            "5000": 0.008,
+            "70000": 0.008
+          },
+          "prices_usd": {
+            "1": 0.15,
+            "10": 0.053,
+            "100": 0.029,
+            "500": 0.019,
+            "1000": 0.014,
+            "2500": 0.009,
+            "5000": 0.008,
+            "70000": 0.008
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/02016D105MAT4A?qs=%252BdQmOuGyFcEECTOKsIgQiQ%3D%3D",
+          "mouser_pn": "581-02016D105MAT4A"
+        },
+        {
+          "model": "02016D105MAT2A",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT KGM03BR50J105MH NEW GLOBAL PN 6.3V 1uF X A 581-KGM03BR50J105MH",
+          "stock": 3262,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.02,
+            "100": 0.017,
+            "500": 0.013,
+            "1000": 0.011,
+            "2500": 0.009,
+            "5000": 0.008,
+            "10000": 0.007,
+            "15000": 0.007
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.02,
+            "100": 0.017,
+            "500": 0.013,
+            "1000": 0.011,
+            "2500": 0.009,
+            "5000": 0.008,
+            "10000": 0.007,
+            "15000": 0.007
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/02016D105MAT2A?qs=RC%2FTMc7rOJYRv3ejaJ2Ykg%3D%3D",
+          "mouser_pn": "581-02016D105MAT2A"
+        },
+        {
+          "model": "0201X105M6R3CT",
+          "brand": "Walsin",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 0201 MLCC X5R 1 uF, +/ -20% 6.3 V T&R GP",
+          "stock": 6540,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.013,
+            "50": 0.009,
+            "100": 0.007,
+            "500": 0.005,
+            "2000": 0.003,
+            "10000": 0.002,
+            "15000": 0.002
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.013,
+            "50": 0.009,
+            "100": 0.007,
+            "500": 0.005,
+            "2000": 0.003,
+            "10000": 0.002,
+            "15000": 0.002
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Walsin/0201X105M6R3CT?qs=ZrPdAQfJ6DMD8Nd3OQODXQ%3D%3D",
+          "mouser_pn": "791-0201X105M6R3CT"
+        },
+        {
+          "model": "KGM03BR50J105MH",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 20 %",
+          "stock": 104096,
+          "min_price": 0.15,
+          "min_price_usd": 0.15,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.15,
+            "10": 0.053,
+            "100": 0.029,
+            "500": 0.019,
+            "1000": 0.014,
+            "2500": 0.009,
+            "5000": 0.008,
+            "10000": 0.007,
+            "15000": 0.006
+          },
+          "prices_usd": {
+            "1": 0.15,
+            "10": 0.053,
+            "100": 0.029,
+            "500": 0.019,
+            "1000": 0.014,
+            "2500": 0.009,
+            "5000": 0.008,
+            "10000": 0.007,
+            "15000": 0.006
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/KGM03BR50J105MH?qs=9vOqFld9vZV4IwckM9orHw%3D%3D",
+          "mouser_pn": "581-KGM03BR50J105MH"
+        },
+        {
+          "model": "02016D105KAT2A",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT KGM03BR50J105KH NEW GLOBAL PN 6.3V 1uF X A 581-KGM03BR50J105KH",
+          "stock": 0,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.052,
+            "100": 0.045,
+            "500": 0.034,
+            "1000": 0.03,
+            "2500": 0.026,
+            "5000": 0.024,
+            "10000": 0.021,
+            "15000": 0.019
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.052,
+            "100": 0.045,
+            "500": 0.034,
+            "1000": 0.03,
+            "2500": 0.026,
+            "5000": 0.024,
+            "10000": 0.021,
+            "15000": 0.019
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/02016D105KAT2A?qs=a6Vv43ErYnwuOY5k1RhxiQ%3D%3D",
+          "mouser_pn": "581-02016D105KAT2A"
+        },
+        {
+          "model": "02016D105KAT4A",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT KGM03BR50J105KN NEW GLOBAL PN 6.3V 1uF X A 581-KGM03BR50J105KN",
+          "stock": 0,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.078,
+            "100": 0.047,
+            "500": 0.037,
+            "1000": 0.034,
+            "2500": 0.03,
+            "5000": 0.028,
+            "10000": 0.024,
+            "25000": 0.023,
+            "70000": 0.023
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.078,
+            "100": 0.047,
+            "500": 0.037,
+            "1000": 0.034,
+            "2500": 0.03,
+            "5000": 0.028,
+            "10000": 0.024,
+            "25000": 0.023,
+            "70000": 0.023
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/02016D105KAT4A?qs=T3oQrply3y8%2FZ%2Fz47d2kJg%3D%3D",
+          "mouser_pn": "581-02016D105KAT4A"
+        },
+        {
+          "model": "VJ0201G105MXYCW1BC",
+          "brand": "Vishay",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT VJ0201G105MXYCW1BC",
+          "stock": 0,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.043,
+            "100": 0.025,
+            "500": 0.019,
+            "1000": 0.016,
+            "2500": 0.014,
+            "5000": 0.013,
+            "10000": 0.011,
+            "15000": 0.011
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.043,
+            "100": 0.025,
+            "500": 0.019,
+            "1000": 0.016,
+            "2500": 0.014,
+            "5000": 0.013,
+            "10000": 0.011,
+            "15000": 0.011
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Vishay/VJ0201G105MXYCW1BC?qs=iLKYxzqNS76oXOvmiNA0KA%3D%3D",
+          "mouser_pn": "77-VJ0201G105MXYCWBC"
+        },
+        {
+          "model": "GRM033R60J105MEA2D",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R",
+          "stock": 1596029,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.015,
+            "100": 0.013,
+            "500": 0.009,
+            "1000": 0.008,
+            "2500": 0.007,
+            "5000": 0.006,
+            "15000": 0.005
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.015,
+            "100": 0.013,
+            "500": 0.009,
+            "1000": 0.008,
+            "2500": 0.007,
+            "5000": 0.006,
+            "15000": 0.005
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRM033R60J105MEA2D?qs=07yfQVYDK7uCNboOI%2Fj8pQ%3D%3D",
+          "mouser_pn": "81-GRM033R60J105ME2D"
+        },
+        {
+          "model": "GRT033R60J105ME13D",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R AEC-Q200",
+          "stock": 279767,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.056,
+            "100": 0.032,
+            "500": 0.025,
+            "1000": 0.02,
+            "2500": 0.018,
+            "5000": 0.016,
+            "10000": 0.014,
+            "15000": 0.014
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.056,
+            "100": 0.032,
+            "500": 0.025,
+            "1000": 0.02,
+            "2500": 0.018,
+            "5000": 0.016,
+            "10000": 0.014,
+            "15000": 0.014
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRT033R60J105ME13D?qs=qkDYIeTQ%252BElHaHcO8pbKIA%3D%3D",
+          "mouser_pn": "81-GRT033R60J105ME3D"
+        },
+        {
+          "model": "GRM032R60J105ME05D",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R",
+          "stock": 29800,
+          "min_price": 0.24,
+          "min_price_usd": 0.24,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.24,
+            "10": 0.144,
+            "100": 0.087,
+            "500": 0.07,
+            "1000": 0.059,
+            "2500": 0.058,
+            "5000": 0.051,
+            "10000": 0.048,
+            "15000": 0.046
+          },
+          "prices_usd": {
+            "1": 0.24,
+            "10": 0.144,
+            "100": 0.087,
+            "500": 0.07,
+            "1000": 0.059,
+            "2500": 0.058,
+            "5000": 0.051,
+            "10000": 0.048,
+            "15000": 0.046
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRM032R60J105ME05D?qs=5aG0NVq1C4xAYhyf1JvATw%3D%3D",
+          "mouser_pn": "81-GRM032R60J105ME5D"
+        },
+        {
+          "model": "JWK105BJ105MP-F",
+          "brand": "TAIYO YUDEN",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 963-MSRLJ103SB5105MF RPLCMT PN 6.3V 1uF X5R 0402 20%",
+          "stock": 25635,
+          "min_price": 0.33,
+          "min_price_usd": 0.33,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.33,
+            "10": 0.142,
+            "100": 0.126,
+            "500": 0.099,
+            "1000": 0.091,
+            "2500": 0.082,
+            "5000": 0.077,
+            "10000": 0.068
+          },
+          "prices_usd": {
+            "1": 0.33,
+            "10": 0.142,
+            "100": 0.126,
+            "500": 0.099,
+            "1000": 0.091,
+            "2500": 0.082,
+            "5000": 0.077,
+            "10000": 0.068
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/TAIYO-YUDEN/JWK105BJ105MP-F?qs=I6KAKw0tg2zVF1m%2FHHWQdA%3D%3D",
+          "mouser_pn": "963-JWK105BJ105MP-F"
+        },
+        {
+          "model": "CL03A105KQ3CSNC",
+          "brand": "Samsung Electro-Mechanics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1uF+/-10% 6.3V X5R 0 0201",
+          "stock": 67159,
+          "min_price": 0.14,
+          "min_price_usd": 0.14,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.14,
+            "10": 0.054,
+            "100": 0.047,
+            "500": 0.035,
+            "1000": 0.032,
+            "2500": 0.028,
+            "5000": 0.025,
+            "10000": 0.021,
+            "20000": 0.02
+          },
+          "prices_usd": {
+            "1": 0.14,
+            "10": 0.054,
+            "100": 0.047,
+            "500": 0.035,
+            "1000": 0.032,
+            "2500": 0.028,
+            "5000": 0.025,
+            "10000": 0.021,
+            "20000": 0.02
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Samsung-Electro-Mechanics/CL03A105KQ3CSNC?qs=QGLfk%2F%252BcBrtMiNuOa2NAuw%3D%3D",
+          "mouser_pn": "187-CL03A105KQ3CSNC"
+        },
+        {
+          "model": "CL03A105MQ3CSNH",
+          "brand": "Samsung Electro-Mechanics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1uF+/-20% 6.3V X5R 0 0201",
+          "stock": 272485,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.021,
+            "100": 0.017,
+            "500": 0.013,
+            "1000": 0.01,
+            "2500": 0.009,
+            "5000": 0.008,
+            "10000": 0.007,
+            "15000": 0.005
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.021,
+            "100": 0.017,
+            "500": 0.013,
+            "1000": 0.01,
+            "2500": 0.009,
+            "5000": 0.008,
+            "10000": 0.007,
+            "15000": 0.005
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Samsung-Electro-Mechanics/CL03A105MQ3CSNH?qs=X6jEic%2FHinBYQpuhNIfduQ%3D%3D",
+          "mouser_pn": "187-CL03A105MQ3CSNH"
+        },
+        {
+          "model": "CL03A105MQ3CSNC",
+          "brand": "Samsung Electro-Mechanics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1uF+/-20% 6.3V X5R 0 0201",
+          "stock": 302446,
+          "min_price": 0.1,
+          "min_price_usd": 0.1,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.1,
+            "10": 0.017,
+            "100": 0.015,
+            "500": 0.01,
+            "1000": 0.009,
+            "2500": 0.008,
+            "5000": 0.007,
+            "10000": 0.005,
+            "20000": 0.004
+          },
+          "prices_usd": {
+            "1": 0.1,
+            "10": 0.017,
+            "100": 0.015,
+            "500": 0.01,
+            "1000": 0.009,
+            "2500": 0.008,
+            "5000": 0.007,
+            "10000": 0.005,
+            "20000": 0.004
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Samsung-Electro-Mechanics/CL03A105MQ3CSNC?qs=QGLfk%2F%252BcBrvVfLXPRVCciw%3D%3D",
+          "mouser_pn": "187-CL03A105MQ3CSNC"
+        },
+        {
+          "model": "GRM033R60J105MEA2J",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R",
+          "stock": 0,
+          "min_price": 0.18,
+          "min_price_usd": 0.18,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.18,
+            "10": 0.026,
+            "100": 0.015,
+            "500": 0.011,
+            "1000": 0.009,
+            "2500": 0.008,
+            "5000": 0.007,
+            "10000": 0.006,
+            "25000": 0.004,
+            "50000": 0.004
+          },
+          "prices_usd": {
+            "1": 0.18,
+            "10": 0.026,
+            "100": 0.015,
+            "500": 0.011,
+            "1000": 0.009,
+            "2500": 0.008,
+            "5000": 0.007,
+            "10000": 0.006,
+            "25000": 0.004,
+            "50000": 0.004
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRM033R60J105MEA2J?qs=QzBtWTOodeU3wJRRwPTKdA%3D%3D",
+          "mouser_pn": "81-GRM033R60J105ME2J"
+        },
+        {
+          "model": "VJ0201G105KXYCW1BC",
+          "brand": "Vishay",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT VJ0201G105KXYCW1BC",
+          "stock": 0,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.057,
+            "100": 0.033,
+            "500": 0.025,
+            "1000": 0.021,
+            "2500": 0.018,
+            "5000": 0.017,
+            "10000": 0.015,
+            "15000": 0.014
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.057,
+            "100": 0.033,
+            "500": 0.025,
+            "1000": 0.021,
+            "2500": 0.018,
+            "5000": 0.017,
+            "10000": 0.015,
+            "15000": 0.014
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Vishay/VJ0201G105KXYCW1BC?qs=iLKYxzqNS77Wu1NZVmLVRg%3D%3D",
+          "mouser_pn": "77-VJ0201G105KXYCWBC"
+        },
+        {
+          "model": "KGM03BR50J105KH",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 10 %",
+          "stock": 0,
+          "min_price": 0.19,
+          "min_price_usd": 0.19,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.19,
+            "10": 0.067,
+            "100": 0.037,
+            "500": 0.032,
+            "15000": 0.032
+          },
+          "prices_usd": {
+            "1": 0.19,
+            "10": 0.067,
+            "100": 0.037,
+            "500": 0.032,
+            "15000": 0.032
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/KGM03BR50J105KH?qs=Jm2GQyTW%2Fbh0UgOJL%252BYuKA%3D%3D",
+          "mouser_pn": "581-KGM03BR50J105KH"
+        },
+        {
+          "model": "GRT033R60J105ME13J",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R AEC-Q200",
+          "stock": 0,
+          "min_price": 0.14,
+          "min_price_usd": 0.14,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.14,
+            "10": 0.057,
+            "100": 0.033,
+            "500": 0.026,
+            "1000": 0.021,
+            "2500": 0.019,
+            "5000": 0.017,
+            "10000": 0.015,
+            "25000": 0.012,
+            "50000": 0.012
+          },
+          "prices_usd": {
+            "1": 0.14,
+            "10": 0.057,
+            "100": 0.033,
+            "500": 0.026,
+            "1000": 0.021,
+            "2500": 0.019,
+            "5000": 0.017,
+            "10000": 0.015,
+            "25000": 0.012,
+            "50000": 0.012
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRT033R60J105ME13J?qs=d0WKAl%252BL4KablvjsRSke5A%3D%3D",
+          "mouser_pn": "81-GRT033R60J105ME3J"
+        },
+        {
+          "model": "CL03A105KQ3CSNH",
+          "brand": "Samsung Electro-Mechanics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1uF+/-10% 6.3V X5R 0 0201",
+          "stock": 0,
+          "min_price": 0.15,
+          "min_price_usd": 0.15,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.15,
+            "10": 0.081,
+            "100": 0.048,
+            "500": 0.038,
+            "1000": 0.034,
+            "2500": 0.031,
+            "5000": 0.028,
+            "10000": 0.025,
+            "15000": 0.024
+          },
+          "prices_usd": {
+            "1": 0.15,
+            "10": 0.081,
+            "100": 0.048,
+            "500": 0.038,
+            "1000": 0.034,
+            "2500": 0.031,
+            "5000": 0.028,
+            "10000": 0.025,
+            "15000": 0.024
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Samsung-Electro-Mechanics/CL03A105KQ3CSNH?qs=xZ%2FP%252Ba9zWqYPzY%2FNI93kzQ%3D%3D",
+          "mouser_pn": "187-CL03A105KQ3CSNH"
+        },
+        {
+          "model": "KGM03BR50J105KN",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 10 %",
+          "stock": 0,
+          "min_price": 0.12,
+          "min_price_usd": 0.12,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.12,
+            "10": 0.077,
+            "50": 0.058,
+            "100": 0.046,
+            "500": 0.036,
+            "1000": 0.033,
+            "2000": 0.029,
+            "5000": 0.027,
+            "10000": 0.023,
+            "70000": 0.023
+          },
+          "prices_usd": {
+            "1": 0.12,
+            "10": 0.077,
+            "50": 0.058,
+            "100": 0.046,
+            "500": 0.036,
+            "1000": 0.033,
+            "2000": 0.029,
+            "5000": 0.027,
+            "10000": 0.023,
+            "70000": 0.023
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/KGM03BR50J105KN?qs=Jm2GQyTW%2Fbiy61GkUnlB5Q%3D%3D",
+          "mouser_pn": "581-KGM03BR50J105KN"
+        },
+        {
+          "model": "CL03A105MQ3CSWC",
+          "brand": "Samsung Electro-Mechanics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1uF+/-20% 6.3V X5R 0 0201",
+          "stock": 0,
+          "min_price": 0.18,
+          "min_price_usd": 0.18,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.18,
+            "10": 0.075,
+            "50": 0.055,
+            "100": 0.043,
+            "500": 0.034,
+            "1000": 0.027,
+            "2000": 0.024,
+            "5000": 0.022,
+            "10000": 0.019
+          },
+          "prices_usd": {
+            "1": 0.18,
+            "10": 0.075,
+            "50": 0.055,
+            "100": 0.043,
+            "500": 0.034,
+            "1000": 0.027,
+            "2000": 0.024,
+            "5000": 0.022,
+            "10000": 0.019
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Samsung-Electro-Mechanics/CL03A105MQ3CSWC?qs=xZ%2FP%252Ba9zWqbtAeKgSYF%252BnA%3D%3D",
+          "mouser_pn": "187-CL03A105MQ3CSWC"
+        },
+        {
+          "model": "GRJ033R60J105ME11D",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R",
+          "stock": 0,
+          "min_price": 0.13,
+          "min_price_usd": 0.13,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.13,
+            "10": 0.074,
+            "100": 0.045,
+            "500": 0.035,
+            "1000": 0.032,
+            "2500": 0.029,
+            "5000": 0.026,
+            "10000": 0.022,
+            "15000": 0.021
+          },
+          "prices_usd": {
+            "1": 0.13,
+            "10": 0.074,
+            "100": 0.045,
+            "500": 0.035,
+            "1000": 0.032,
+            "2500": 0.029,
+            "5000": 0.026,
+            "10000": 0.022,
+            "15000": 0.021
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRJ033R60J105ME11D?qs=5aG0NVq1C4w5dR66ZkZHhg%3D%3D",
+          "mouser_pn": "81-GRJ033R60J105ME1D"
+        },
+        {
+          "model": "KGM03BR50J105MN",
+          "brand": "KYOCERA AVX",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 20 %",
+          "stock": 0,
+          "min_price": 0.14,
+          "min_price_usd": 0.14,
+          "min_qty": 1,
+          "prices": {
+            "1": 0.14,
+            "10": 0.052,
+            "50": 0.036,
+            "100": 0.028,
+            "500": 0.018,
+            "1000": 0.013,
+            "2000": 0.008,
+            "5000": 0.007,
+            "10000": 0.006,
+            "70000": 0.006
+          },
+          "prices_usd": {
+            "1": 0.14,
+            "10": 0.052,
+            "50": 0.036,
+            "100": 0.028,
+            "500": 0.018,
+            "1000": 0.013,
+            "2000": 0.008,
+            "5000": 0.007,
+            "10000": 0.006,
+            "70000": 0.006
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/KYOCERA-AVX/KGM03BR50J105MN?qs=M%2FWrVUahkW9wt7IcmvszBw%3D%3D",
+          "mouser_pn": "581-KGM03BR50J105MN"
+        },
+        {
+          "model": "GRM032R60J105ME05J",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R",
+          "stock": 0,
+          "min_price": 0.04,
+          "min_price_usd": 0.04,
+          "min_qty": 50000,
+          "prices": {
+            "50000": 0.04
+          },
+          "prices_usd": {
+            "50000": 0.04
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRM032R60J105ME05J?qs=5aG0NVq1C4w9tzb1hGzkjQ%3D%3D",
+          "mouser_pn": "81-GRM032R60J105ME5J"
+        },
+        {
+          "model": "GRJ033R60J105ME11J",
+          "brand": "Murata Electronics",
+          "package": "",
+          "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1 uF 6.3 VDC 20% 0201 X5R",
+          "stock": 0,
+          "min_price": 0.019,
+          "min_price_usd": 0.019,
+          "min_qty": 50000,
+          "prices": {
+            "50000": 0.019
+          },
+          "prices_usd": {
+            "50000": 0.019
+          },
+          "currency": "USD",
+          "source": "Mouser",
+          "lcsc_id": null,
+          "mouser_url": "https://www.mouser.tw/ProductDetail/Murata-Electronics/GRJ033R60J105ME11J?qs=5aG0NVq1C4zoPy7y3MiYTw%3D%3D",
+          "mouser_pn": "81-GRJ033R60J105ME1J"
         }
       ]
     }
