@@ -9,6 +9,7 @@
       "mouser_count": 28,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:29:10.557379",
+      "median_price_usd": 0.485,
       "products": []
     },
     "2026-06-25": {
@@ -1543,6 +1544,7 @@
       "mouser_count": 50,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:29:30.659433",
+      "median_price_usd": 0.2947565,
       "products": []
     },
     "2026-06-25": {
@@ -3756,6 +3758,7 @@
       "mouser_count": 4387,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:32:47.568254",
+      "median_price_usd": 0.1,
       "products": []
     },
     "2026-06-25": {
@@ -13000,6 +13003,7 @@
       "mouser_count": 106,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:44:11.649859",
+      "median_price_usd": 0.1,
       "products": []
     },
     "2026-06-25": {
@@ -17110,6 +17114,7 @@
       "mouser_count": 2,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:33:11.738594",
+      "median_price_usd": 0.549107,
       "products": []
     },
     "2026-06-25": {
@@ -17562,6 +17567,7 @@
       "mouser_count": 1,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:33:33.256602",
+      "median_price_usd": 1.027006,
       "products": []
     },
     "2026-06-25": {
@@ -18044,6 +18050,7 @@
       "mouser_count": 2,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:33:44.094828",
+      "median_price_usd": 0.549107,
       "products": []
     },
     "2026-06-25": {
@@ -18496,6 +18503,7 @@
       "mouser_count": 19,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:34:05.035630",
+      "median_price_usd": 23.79,
       "products": []
     },
     "2026-06-25": {
@@ -19399,6 +19407,7 @@
       "mouser_count": 26,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:34:26.132758",
+      "median_price_usd": 17.96,
       "products": []
     },
     "2026-06-25": {
@@ -20192,6 +20201,7 @@
       "mouser_count": 2850,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:36:49.478114",
+      "median_price_usd": 1.33,
       "products": []
     },
     "2026-06-25": {
@@ -26189,6 +26199,7 @@
       "mouser_count": 3206,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:39:45.761464",
+      "median_price_usd": 1.3,
       "products": []
     },
     "2026-06-25": {
@@ -32388,6 +32399,7 @@
       "mouser_count": 53,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:40:11.297000",
+      "median_price_usd": 1.328721,
       "products": []
     },
     "2026-06-25": {
@@ -34392,6 +34404,7 @@
       "mouser_count": 12,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:40:21.461729",
+      "median_price_usd": 0.017951,
       "products": []
     },
     "2026-06-25": {
@@ -35392,6 +35405,7 @@
       "mouser_count": 4211,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:43:45.938820",
+      "median_price_usd": 0.29,
       "products": []
     },
     "2026-06-25": {
@@ -44055,6 +44069,7 @@
       "mouser_count": 14,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:44:19.596730",
+      "median_price_usd": 0.14,
       "products": []
     },
     "2026-06-25": {
@@ -45058,6 +45073,7 @@
       "mouser_count": 31,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:44:42.875017",
+      "median_price_usd": 0.998376,
       "products": []
     },
     "2026-06-25": {
@@ -46746,6 +46762,7 @@
       "mouser_count": 3,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:45:05.386477",
+      "median_price_usd": 0.510934,
       "products": []
     },
     "2026-06-25": {
@@ -47589,6 +47606,7 @@
       "mouser_count": 7,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:45:14.995182",
+      "median_price_usd": 0.57,
       "products": []
     },
     "2026-06-25": {
@@ -48396,6 +48414,7 @@
       "mouser_count": 1,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:47:05.303283",
+      "median_price_usd": 0.2837,
       "products": []
     },
     "2026-06-25": {
@@ -48551,6 +48570,7 @@
       "mouser_count": 7,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:45:36.588178",
+      "median_price_usd": 0.709141,
       "products": []
     },
     "2026-06-25": {
@@ -49470,6 +49490,7 @@
       "mouser_count": 0,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:45:57.056926",
+      "median_price_usd": 0.93818,
       "products": []
     },
     "2026-06-25": {
@@ -50278,6 +50299,7 @@
       "mouser_count": 149,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:46:43.422958",
+      "median_price_usd": 1.239161,
       "products": []
     },
     "2026-06-25": {
@@ -50952,6 +50974,7 @@
       "mouser_count": 13,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:48:57.000861",
+      "median_price_usd": 0.113389,
       "products": []
     },
     "2026-06-25": {
@@ -52274,6 +52297,7 @@
       "mouser_count": 58,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:49:11.575587",
+      "median_price_usd": 0.10500000000000001,
       "products": []
     },
     "2026-06-25": {
@@ -54746,6 +54770,7 @@
       "mouser_count": 20,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:49:35.637734",
+      "median_price_usd": 0.1,
       "products": []
     },
     "2026-06-25": {
@@ -56096,6 +56121,7 @@
       "mouser_count": 54,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T23:46:09.875949",
+      "median_price_usd": 0.25,
       "products": []
     },
     "2026-06-25": {
