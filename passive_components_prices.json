@@ -32,7 +32,7 @@
       "total_stock": 89951,
       "lcsc_count": 22,
       "mouser_count": 28,
-      "fetched_at": "2026-06-26T09:17:35.435457",
+      "fetched_at": "2026-06-26T09:46:40.299744",
       "products": [
         {
           "model": "GRM21BC80G476ME15L",
@@ -1564,7 +1564,7 @@
       "total_stock": 555231,
       "lcsc_count": 20,
       "mouser_count": 50,
-      "fetched_at": "2026-06-26T09:17:57.684935",
+      "fetched_at": "2026-06-26T09:47:06.043594",
       "products": [
         {
           "model": "GRM158C80G226ME01D",
@@ -3753,10 +3753,10 @@
       "exchange_rate": 0.1471,
       "product_count": 265,
       "in_stock_count": 264,
-      "total_stock": 71691035,
+      "total_stock": 71690760,
       "lcsc_count": 15,
       "mouser_count": 250,
-      "fetched_at": "2026-06-26T09:18:13.864547",
+      "fetched_at": "2026-06-26T09:47:21.424319",
       "products": [
         {
           "model": "CC0805KKX7R7BB106",
@@ -6070,7 +6070,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 0.022uF X7R 0402 10%",
-          "stock": 27327,
+          "stock": 27252,
           "min_price": 0.1,
           "min_price_usd": 0.1,
           "min_qty": 1,
@@ -6628,7 +6628,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 25 V 0.1uF X7R 0402 10%",
-          "stock": 1416825,
+          "stock": 1416625,
           "min_price": 0.12,
           "min_price_usd": 0.12,
           "min_qty": 1,
@@ -12958,10 +12958,10 @@
       "exchange_rate": 0.1471,
       "product_count": 126,
       "in_stock_count": 86,
-      "total_stock": 85485389,
+      "total_stock": 85485569,
       "lcsc_count": 20,
       "mouser_count": 106,
-      "fetched_at": "2026-06-26T09:21:51.548725",
+      "fetched_at": "2026-06-26T09:50:58.638826",
       "products": [
         {
           "model": "CC0402KRX7R7BB104",
@@ -12976,7 +12976,7 @@
             "50000": 0.039,
             "100000": 0.0385
           },
-          "stock": 739,
+          "stock": 589,
           "min_qty": 100,
           "min_price": 0.0518,
           "min_price_usd": 0.00762,
@@ -13053,7 +13053,7 @@
             "50000": 0.0388,
             "100000": 0.0377
           },
-          "stock": 675,
+          "stock": 674,
           "min_qty": 100,
           "min_price": 0.0559,
           "min_price_usd": 0.008223,
@@ -13506,7 +13506,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16 V 0.1uF X7R 0402 10%",
-          "stock": 54153897,
+          "stock": 54153787,
           "min_price": 0.1,
           "min_price_usd": 0.1,
           "min_qty": 1,
@@ -14035,7 +14035,7 @@
           "brand": "KEMET",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 0.1uF X7R 0402 10% AEC-Q200",
-          "stock": 1965807,
+          "stock": 1966248,
           "min_price": 0.14,
           "min_price_usd": 0.14,
           "min_qty": 1,
@@ -17078,14 +17078,14 @@
       "products": []
     },
     "2026-06-26": {
-      "avg_price_usd": 0.475784,
+      "avg_price_usd": 0.504983,
       "exchange_rate": 0.1471,
       "product_count": 15,
       "in_stock_count": 4,
-      "total_stock": 6492,
+      "total_stock": 6352,
       "lcsc_count": 13,
       "mouser_count": 2,
-      "fetched_at": "2026-06-26T09:18:36.369052",
+      "fetched_at": "2026-06-26T09:47:42.497349",
       "products": [
         {
           "model": "63SEV100M10X10.5",
@@ -17093,27 +17093,27 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "5": 2.34,
-            "50": 1.83,
-            "150": 1.62,
-            "500": 1.323,
-            "2500": 1.2054,
-            "5000": 1.1368
+            "5": 2.69,
+            "50": 2.18,
+            "150": 1.97,
+            "500": 1.666,
+            "2500": 1.5484,
+            "5000": 1.4798
           },
           "stock": 1095,
           "min_qty": 5,
-          "min_price": 2.34,
-          "min_price_usd": 0.344214,
+          "min_price": 2.69,
+          "min_price_usd": 0.395699,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "5": 0.344214,
-            "50": 0.269193,
-            "150": 0.238302,
-            "500": 0.194613,
-            "2500": 0.177314,
-            "5000": 0.167223
+            "5": 0.395699,
+            "50": 0.320678,
+            "150": 0.289787,
+            "500": 0.245069,
+            "2500": 0.22777,
+            "5000": 0.217679
           }
         },
         {
@@ -17172,27 +17172,27 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "5": 1.8677,
-            "50": 1.4796,
-            "150": 1.3133,
-            "500": 1.050415,
-            "2500": 0.962635,
-            "5000": 0.910005
+            "5": 2.0217,
+            "50": 1.6336,
+            "150": 1.4673,
+            "500": 1.196715,
+            "2500": 1.108935,
+            "5000": 1.056305
           },
           "stock": 4800,
           "min_qty": 5,
-          "min_price": 1.8677,
-          "min_price_usd": 0.274739,
+          "min_price": 2.0217,
+          "min_price_usd": 0.297392,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "5": 0.274739,
-            "50": 0.217649,
-            "150": 0.193186,
-            "500": 0.154516,
-            "2500": 0.141604,
-            "5000": 0.133862
+            "5": 0.297392,
+            "50": 0.240303,
+            "150": 0.21584,
+            "500": 0.176037,
+            "2500": 0.163124,
+            "5000": 0.155382
           }
         },
         {
@@ -17201,25 +17201,23 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "1": 3.36,
-            "10": 2.64,
-            "30": 2.33,
-            "100": 1.95,
-            "500": 1.77
+            "1": 3.65,
+            "10": 2.93,
+            "30": 2.62,
+            "100": 2.23
           },
-          "stock": 596,
+          "stock": 456,
           "min_qty": 1,
-          "min_price": 3.36,
-          "min_price_usd": 0.494256,
+          "min_price": 3.65,
+          "min_price_usd": 0.536915,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "1": 0.494256,
-            "10": 0.388344,
-            "30": 0.342743,
-            "100": 0.286845,
-            "500": 0.260367
+            "1": 0.536915,
+            "10": 0.431003,
+            "30": 0.385402,
+            "100": 0.328033
           }
         },
         {
@@ -17524,7 +17522,7 @@
       "total_stock": 843,
       "lcsc_count": 16,
       "mouser_count": 1,
-      "fetched_at": "2026-06-26T09:18:58.305035",
+      "fetched_at": "2026-06-26T09:48:05.117074",
       "products": [
         {
           "model": "16SVPF560M",
@@ -17984,14 +17982,14 @@
       "products": []
     },
     "2026-06-26": {
-      "avg_price_usd": 0.475784,
+      "avg_price_usd": 0.504983,
       "exchange_rate": 0.1471,
       "product_count": 15,
       "in_stock_count": 4,
-      "total_stock": 6492,
+      "total_stock": 6352,
       "lcsc_count": 13,
       "mouser_count": 2,
-      "fetched_at": "2026-06-26T09:19:08.486605",
+      "fetched_at": "2026-06-26T09:48:13.457957",
       "products": [
         {
           "model": "63SEV100M10X10.5",
@@ -17999,27 +17997,27 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "5": 2.34,
-            "50": 1.83,
-            "150": 1.62,
-            "500": 1.323,
-            "2500": 1.2054,
-            "5000": 1.1368
+            "5": 2.69,
+            "50": 2.18,
+            "150": 1.97,
+            "500": 1.666,
+            "2500": 1.5484,
+            "5000": 1.4798
           },
           "stock": 1095,
           "min_qty": 5,
-          "min_price": 2.34,
-          "min_price_usd": 0.344214,
+          "min_price": 2.69,
+          "min_price_usd": 0.395699,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "5": 0.344214,
-            "50": 0.269193,
-            "150": 0.238302,
-            "500": 0.194613,
-            "2500": 0.177314,
-            "5000": 0.167223
+            "5": 0.395699,
+            "50": 0.320678,
+            "150": 0.289787,
+            "500": 0.245069,
+            "2500": 0.22777,
+            "5000": 0.217679
           }
         },
         {
@@ -18078,27 +18076,27 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "5": 1.8677,
-            "50": 1.4796,
-            "150": 1.3133,
-            "500": 1.050415,
-            "2500": 0.962635,
-            "5000": 0.910005
+            "5": 2.0217,
+            "50": 1.6336,
+            "150": 1.4673,
+            "500": 1.196715,
+            "2500": 1.108935,
+            "5000": 1.056305
           },
           "stock": 4800,
           "min_qty": 5,
-          "min_price": 1.8677,
-          "min_price_usd": 0.274739,
+          "min_price": 2.0217,
+          "min_price_usd": 0.297392,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "5": 0.274739,
-            "50": 0.217649,
-            "150": 0.193186,
-            "500": 0.154516,
-            "2500": 0.141604,
-            "5000": 0.133862
+            "5": 0.297392,
+            "50": 0.240303,
+            "150": 0.21584,
+            "500": 0.176037,
+            "2500": 0.163124,
+            "5000": 0.155382
           }
         },
         {
@@ -18107,25 +18105,23 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "1": 3.36,
-            "10": 2.64,
-            "30": 2.33,
-            "100": 1.95,
-            "500": 1.77
+            "1": 3.65,
+            "10": 2.93,
+            "30": 2.62,
+            "100": 2.23
           },
-          "stock": 596,
+          "stock": 456,
           "min_qty": 1,
-          "min_price": 3.36,
-          "min_price_usd": 0.494256,
+          "min_price": 3.65,
+          "min_price_usd": 0.536915,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "1": 0.494256,
-            "10": 0.388344,
-            "30": 0.342743,
-            "100": 0.286845,
-            "500": 0.260367
+            "1": 0.536915,
+            "10": 0.431003,
+            "30": 0.385402,
+            "100": 0.328033
           }
         },
         {
@@ -18430,7 +18426,7 @@
       "total_stock": 3919,
       "lcsc_count": 15,
       "mouser_count": 19,
-      "fetched_at": "2026-06-26T09:19:28.723516",
+      "fetched_at": "2026-06-26T09:48:32.946993",
       "products": [
         {
           "model": "450MXK1000MEFCSN35X60",
@@ -19310,7 +19306,7 @@
       "total_stock": 2537,
       "lcsc_count": 6,
       "mouser_count": 26,
-      "fetched_at": "2026-06-26T09:19:48.318286",
+      "fetched_at": "2026-06-26T09:48:52.730298",
       "products": [
         {
           "model": "450MXK820MEFCSN35X50",
@@ -20104,7 +20100,7 @@
       "total_stock": 696439,
       "lcsc_count": 28,
       "mouser_count": 181,
-      "fetched_at": "2026-06-26T09:20:02.939238",
+      "fetched_at": "2026-06-26T09:49:06.988951",
       "products": [
         {
           "model": "UHE1C102MHD6",
@@ -26088,10 +26084,10 @@
       "exchange_rate": 0.1471,
       "product_count": 215,
       "in_stock_count": 209,
-      "total_stock": 768893,
+      "total_stock": 768888,
       "lcsc_count": 19,
       "mouser_count": 196,
-      "fetched_at": "2026-06-26T09:20:29.719498",
+      "fetched_at": "2026-06-26T09:49:34.360270",
       "products": [
         {
           "model": "EEUFR1E471B",
@@ -27016,7 +27012,7 @@
           "brand": "Vishay / BC Components",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 220uF 25V 20% 10 x 12",
-          "stock": 1512,
+          "stock": 1507,
           "min_price": 1.72,
           "min_price_usd": 1.72,
           "min_qty": 1,
@@ -32278,7 +32274,7 @@
       "total_stock": 28675,
       "lcsc_count": 18,
       "mouser_count": 53,
-      "fetched_at": "2026-06-26T09:20:51.200878",
+      "fetched_at": "2026-06-26T09:49:56.487366",
       "products": [
         {
           "model": "EEEFKC271XSP",
@@ -34256,10 +34252,10 @@
       "exchange_rate": 0.1471,
       "product_count": 31,
       "in_stock_count": 29,
-      "total_stock": 9650602,
+      "total_stock": 9650376,
       "lcsc_count": 19,
       "mouser_count": 12,
-      "fetched_at": "2026-06-26T09:21:00.446516",
+      "fetched_at": "2026-06-26T09:50:07.504088",
       "products": [
         {
           "model": "AC0402KRX7R9BB104",
@@ -34440,7 +34436,7 @@
             "10000": 0.0682,
             "20000": 0.0664
           },
-          "stock": 5850,
+          "stock": 5650,
           "min_qty": 50,
           "min_price": 0.0924,
           "min_price_usd": 0.013592,
@@ -34522,7 +34518,7 @@
             "50000": 0.0422,
             "100000": 0.041
           },
-          "stock": 630,
+          "stock": 604,
           "min_qty": 100,
           "min_price": 0.0594,
           "min_price_usd": 0.008738,
@@ -35221,10 +35217,10 @@
       "exchange_rate": 0.1471,
       "product_count": 262,
       "in_stock_count": 243,
-      "total_stock": 14248501,
+      "total_stock": 14232391,
       "lcsc_count": 15,
       "mouser_count": 247,
-      "fetched_at": "2026-06-26T09:21:29.355405",
+      "fetched_at": "2026-06-26T09:50:34.022177",
       "products": [
         {
           "model": "MCJCE31LBB7106KTPA01",
@@ -36360,7 +36356,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 50 V 0.1uF X7R 1206 5%",
-          "stock": 37462,
+          "stock": 21462,
           "min_price": 0.21,
           "min_price_usd": 0.21,
           "min_qty": 1,
@@ -40282,7 +40278,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 50V 10uF 10% AEC-Q200",
-          "stock": 8104,
+          "stock": 8034,
           "min_price": 0.97,
           "min_price_usd": 0.97,
           "min_qty": 1,
@@ -41730,7 +41726,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 25VDC 10uF 10% X7R AEC-Q200",
-          "stock": 16845,
+          "stock": 16805,
           "min_price": 1.15,
           "min_price_usd": 1.15,
           "min_qty": 1,
@@ -43847,14 +43843,14 @@
       "products": []
     },
     "2026-06-26": {
-      "avg_price_usd": 0.191591,
+      "avg_price_usd": 0.199742,
       "exchange_rate": 0.1471,
       "product_count": 32,
-      "in_stock_count": 22,
-      "total_stock": 2947527,
+      "in_stock_count": 21,
+      "total_stock": 2947245,
       "lcsc_count": 18,
       "mouser_count": 14,
-      "fetched_at": "2026-06-26T09:22:00.764750",
+      "fetched_at": "2026-06-26T09:51:06.260208",
       "products": [
         {
           "model": "GRM155R61A106ME11D",
@@ -43951,9 +43947,12 @@
           "prices": {
             "50": 0.1388,
             "500": 0.1204,
-            "1500": 0.1123
+            "1500": 0.1123,
+            "10000": 0.1061,
+            "20000": 0.1037,
+            "50000": 0.102
           },
-          "stock": 100,
+          "stock": 0,
           "min_qty": 50,
           "min_price": 0.1388,
           "min_price_usd": 0.020417,
@@ -43963,7 +43962,10 @@
           "prices_usd": {
             "50": 0.020417,
             "500": 0.017711,
-            "1500": 0.016519
+            "1500": 0.016519,
+            "10000": 0.015607,
+            "20000": 0.015254,
+            "50000": 0.015004
           }
         },
         {
@@ -44472,7 +44474,7 @@
           "brand": "Murata Electronics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 0402 10uF 10VDC 20% X5R AEC-Q200",
-          "stock": 107913,
+          "stock": 107883,
           "min_price": 0.27,
           "min_price_usd": 0.27,
           "min_qty": 1,
@@ -44546,7 +44548,7 @@
           "brand": "Murata Electronics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 10 uF 10 VDC 20% 0402 X5R",
-          "stock": 384108,
+          "stock": 383986,
           "min_price": 0.14,
           "min_price_usd": 0.14,
           "min_qty": 1,
@@ -44581,7 +44583,7 @@
           "brand": "Murata Electronics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 0402 10uF 10VDC 20% X5R AEC-Q200",
-          "stock": 60179,
+          "stock": 60149,
           "min_price": 0.27,
           "min_price_usd": 0.27,
           "min_qty": 1,
@@ -44891,14 +44893,14 @@
       "products": []
     },
     "2026-06-26": {
-      "avg_price_usd": 1.236638,
+      "avg_price_usd": 1.237153,
       "exchange_rate": 0.1471,
       "product_count": 57,
       "in_stock_count": 44,
       "total_stock": 63759,
       "lcsc_count": 26,
       "mouser_count": 31,
-      "fetched_at": "2026-06-26T09:22:44.426835",
+      "fetched_at": "2026-06-26T09:51:49.158547",
       "products": [
         {
           "model": "EEHZA1H101P",
@@ -44960,27 +44962,27 @@
           "brand": "Rubycon(红宝石)",
           "package": "SMD,D10xL10.5mm",
           "prices": {
-            "5": 1.8677,
-            "50": 1.4796,
-            "150": 1.3133,
-            "500": 1.050415,
-            "2500": 0.962635,
-            "5000": 0.910005
+            "5": 2.0217,
+            "50": 1.6336,
+            "150": 1.4673,
+            "500": 1.196715,
+            "2500": 1.108935,
+            "5000": 1.056305
           },
           "stock": 4800,
           "min_qty": 5,
-          "min_price": 1.8677,
-          "min_price_usd": 0.274739,
+          "min_price": 2.0217,
+          "min_price_usd": 0.297392,
           "currency": "CNY",
           "source": "LCSC",
           "mouser_url": null,
           "prices_usd": {
-            "5": 0.274739,
-            "50": 0.217649,
-            "150": 0.193186,
-            "500": 0.154516,
-            "2500": 0.141604,
-            "5000": 0.133862
+            "5": 0.297392,
+            "50": 0.240303,
+            "150": 0.21584,
+            "500": 0.176037,
+            "2500": 0.163124,
+            "5000": 0.155382
           }
         },
         {
@@ -46548,10 +46550,10 @@
       "exchange_rate": 0.1471,
       "product_count": 28,
       "in_stock_count": 25,
-      "total_stock": 59263,
+      "total_stock": 59243,
       "lcsc_count": 25,
       "mouser_count": 3,
-      "fetched_at": "2026-06-26T09:22:50.876973",
+      "fetched_at": "2026-06-26T09:51:57.875195",
       "products": [
         {
           "model": "VZH471M1ETR-1010",
@@ -46968,7 +46970,7 @@
             "2500": 1.242052,
             "5000": 1.177274
           },
-          "stock": 2930,
+          "stock": 2910,
           "min_qty": 5,
           "min_price": 2.2848,
           "min_price_usd": 0.336094,
@@ -47350,10 +47352,10 @@
       "exchange_rate": 0.1471,
       "product_count": 32,
       "in_stock_count": 10,
-      "total_stock": 21655,
+      "total_stock": 21635,
       "lcsc_count": 25,
       "mouser_count": 7,
-      "fetched_at": "2026-06-26T09:23:11.366024",
+      "fetched_at": "2026-06-26T09:52:19.697543",
       "products": [
         {
           "model": "CC1206JKNPOZBN103",
@@ -47496,7 +47498,7 @@
             "500": 0.7831,
             "2000": 0.6553
           },
-          "stock": 315,
+          "stock": 295,
           "min_qty": 5,
           "min_price": 1.0981,
           "min_price_usd": 0.161531,
@@ -48218,6 +48220,7 @@
       "mouser_count": 1,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-25T19:52:40.488498",
+      "median_price_usd": null,
       "products": [
         {
           "model": "PA2512FKE7W0R001E",
@@ -48385,7 +48388,7 @@
       "total_stock": 8008,
       "lcsc_count": 27,
       "mouser_count": 7,
-      "fetched_at": "2026-06-26T09:23:30.914285",
+      "fetched_at": "2026-06-26T09:52:41.147588",
       "products": [
         {
           "model": "GCM32E5C2J333JX0AL",
@@ -49317,7 +49320,7 @@
       "total_stock": 8245,
       "lcsc_count": 24,
       "mouser_count": 0,
-      "fetched_at": "2026-06-26T09:23:41.062658",
+      "fetched_at": "2026-06-26T09:52:48.799490",
       "products": [
         {
           "model": "GRM55DR72E105KW01L",
@@ -49960,6 +49963,7 @@
       "mouser_count": 0,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-24T22:38:25.692449",
+      "median_price_usd": null,
       "products": [
         {
           "model": "TMPA0402SP-4R7MN",
@@ -50090,7 +50094,7 @@
       "total_stock": 44951,
       "lcsc_count": 15,
       "mouser_count": 6,
-      "fetched_at": "2026-06-26T09:24:28.124763",
+      "fetched_at": "2026-06-26T09:53:38.929318",
       "products": [
         {
           "model": "TFM252012ALMA4R7MTAA",
@@ -50734,6 +50738,7 @@
       "mouser_count": 13,
       "exchange_rate": 0.14682,
       "fetched_at": "2026-06-25T19:53:09.136119",
+      "median_price_usd": null,
       "products": [
         {
           "model": "ERJ8GEYJ105V",
@@ -52065,10 +52070,10 @@
       "exchange_rate": 0.1471,
       "product_count": 75,
       "in_stock_count": 42,
-      "total_stock": 16412441,
+      "total_stock": 16412341,
       "lcsc_count": 18,
       "mouser_count": 57,
-      "fetched_at": "2026-06-26T09:24:40.265546",
+      "fetched_at": "2026-06-26T09:53:52.865861",
       "products": [
         {
           "model": "RC0402FR-0710KL",
@@ -52132,7 +52137,7 @@
             "10000": 0.0131,
             "50000": 0.0114
           },
-          "stock": 200,
+          "stock": 100,
           "min_qty": 100,
           "min_price": 0.0226,
           "min_price_usd": 0.003324,
@@ -54498,10 +54503,10 @@
       "exchange_rate": 0.1471,
       "product_count": 43,
       "in_stock_count": 21,
-      "total_stock": 12998671,
+      "total_stock": 12998571,
       "lcsc_count": 23,
       "mouser_count": 20,
-      "fetched_at": "2026-06-26T09:25:03.022180",
+      "fetched_at": "2026-06-26T09:54:15.831166",
       "products": [
         {
           "model": "NTCG103JX103DTDS",
@@ -54565,7 +54570,7 @@
             "10000": 0.0131,
             "50000": 0.0114
           },
-          "stock": 200,
+          "stock": 100,
           "min_qty": 100,
           "min_price": 0.0226,
           "min_price_usd": 0.003324,
@@ -55817,10 +55822,10 @@
       "exchange_rate": 0.1471,
       "product_count": 56,
       "in_stock_count": 40,
-      "total_stock": 553313,
+      "total_stock": 553013,
       "lcsc_count": 2,
       "mouser_count": 54,
-      "fetched_at": "2026-06-26T09:24:05.200481",
+      "fetched_at": "2026-06-26T09:53:12.469098",
       "products": [
         {
           "model": "LSENC2016KKT1R0M",
@@ -56949,7 +56954,7 @@
           "brand": "Walsin",
           "package": "",
           "description": "Power Inductors - SMD Power choke,Molded,1.0uH,M,2.9A",
-          "stock": 1150,
+          "stock": 850,
           "min_price": 0.1,
           "min_price_usd": 0.1,
           "min_qty": 1,
@@ -57715,10 +57720,10 @@
       "exchange_rate": 0.1471,
       "product_count": 46,
       "in_stock_count": 23,
-      "total_stock": 3023378,
+      "total_stock": 3017363,
       "lcsc_count": 16,
       "mouser_count": 30,
-      "fetched_at": "2026-06-26T09:22:20.840974",
+      "fetched_at": "2026-06-26T09:51:26.898951",
       "products": [
         {
           "model": "GRM033R60J105MEA2D",
@@ -57733,7 +57738,7 @@
             "30000": 0.0474,
             "45000": 0.0449
           },
-          "stock": 56,
+          "stock": 41,
           "min_qty": 50,
           "min_price": 0.0831,
           "min_price_usd": 0.012224,
@@ -58725,7 +58730,7 @@
           "brand": "Samsung Electro-Mechanics",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1uF+/-10% 6.3V X5R 0 0201",
-          "stock": 67159,
+          "stock": 61159,
           "min_price": 0.14,
           "min_price_usd": 0.14,
           "min_qty": 1,
