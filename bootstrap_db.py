@@ -31,7 +31,7 @@ def bootstrap():
             spec_key TEXT NOT NULL, date TEXT NOT NULL,
             avg_price_usd REAL, total_stock INTEGER, in_stock_count INTEGER,
             product_count INTEGER, lcsc_count INTEGER, mouser_count INTEGER,
-            exchange_rate REAL, fetched_at TEXT,
+            exchange_rate REAL, fetched_at TEXT, median_price_usd REAL,
             PRIMARY KEY (spec_key, date)
         );
         CREATE TABLE IF NOT EXISTS products (
@@ -54,12 +54,13 @@ def bootstrap():
     for spec_key, dates in history.items():
         for date, entry in dates.items():
             conn.execute(
-                "INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?)",
+                "INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                 (spec_key, date,
                  entry.get('avg_price_usd'), entry.get('total_stock'),
                  entry.get('in_stock_count'), entry.get('product_count'),
                  entry.get('lcsc_count', 0), entry.get('mouser_count', 0),
-                 entry.get('exchange_rate'), entry.get('fetched_at'))
+                 entry.get('exchange_rate'), entry.get('fetched_at'),
+                 entry.get('median_price_usd'))
             )
             stats_count += 1
             for p in entry.get('products', []):
