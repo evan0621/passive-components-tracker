@@ -1,26 +1,15 @@
 """
-bootstrap_db.py — If local DB is empty, import historical data from GitHub JSON.
-Run before update_prices.py on first GitHub Actions execution.
+bootstrap_db.py — Sync historical data from GitHub JSON into local DB.
+Safe to run every time: uses INSERT OR IGNORE for rows, UPDATE for null medians only.
 """
-import json, sqlite3, os, sys
+import json, sqlite3, os
 
 DB = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passive_components.db')
 JSON_URL = 'https://raw.githubusercontent.com/evan0621/passive-components-tracker/main/passive_components_prices.json'
 
-def needs_bootstrap():
-    if not os.path.exists(DB): return True
-    conn = sqlite3.connect(DB)
-    try:
-        count = conn.execute("SELECT COUNT(*) FROM sqlite_master WHERE type='table' AND name='daily_stats'").fetchone()[0]
-        if count == 0: return True
-        rows = conn.execute("SELECT COUNT(*) FROM daily_stats").fetchone()[0]
-        return rows == 0
-    except: return True
-    finally: conn.close()
-
 def bootstrap():
     import requests
-    print(f"DB empty — bootstrapping from GitHub JSON...")
+    print("Syncing from GitHub JSON (filling gaps only)...")
     r = requests.get(JSON_URL, timeout=60)
     r.raise_for_status()
     history = r.json()
@@ -48,13 +37,20 @@ def bootstrap():
         CREATE INDEX IF NOT EXISTS idx_prod_spec_date ON products(spec_key, date);
         CREATE INDEX IF NOT EXISTS idx_prod_mouser_pn  ON products(mouser_pn);
     """)
+    try:
+        conn.execute("ALTER TABLE daily_stats ADD COLUMN median_price_usd REAL")
+    except Exception:
+        pass  # column already exists
 
-    stats_count = 0
+    inserted = 0
+    repaired = 0
     prod_count = 0
+
     for spec_key, dates in history.items():
         for date, entry in dates.items():
-            conn.execute(
-                "INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+            # Insert row if not exists (preserve today's freshly-fetched data)
+            cur = conn.execute(
+                "INSERT OR IGNORE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                 (spec_key, date,
                  entry.get('avg_price_usd'), entry.get('total_stock'),
                  entry.get('in_stock_count'), entry.get('product_count'),
@@ -62,27 +58,42 @@ def bootstrap():
                  entry.get('exchange_rate'), entry.get('fetched_at'),
                  entry.get('median_price_usd'))
             )
-            stats_count += 1
-            for p in entry.get('products', []):
-                prices = p.get('prices') or p.get('prices_usd') or {}
-                conn.execute(
-                    "INSERT INTO products (spec_key,date,source,model,brand,package,description,"
-                    "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json) "
-                    "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
-                    (spec_key, date, p.get('source','LCSC'), p.get('model',''),
-                     p.get('brand',''), p.get('package',''), p.get('description',''),
-                     p.get('stock',0), p.get('min_price_usd'), p.get('min_qty'),
-                     p.get('mouser_pn'), p.get('lcsc_id'), p.get('mouser_url'),
-                     json.dumps(prices))
+            inserted += cur.rowcount
+
+            # Repair null median_price_usd for existing rows
+            median = entry.get('median_price_usd')
+            if median is not None:
+                cur = conn.execute(
+                    "UPDATE daily_stats SET median_price_usd=? WHERE spec_key=? AND date=? AND median_price_usd IS NULL",
+                    (median, spec_key, date)
                 )
-                prod_count += 1
+                repaired += cur.rowcount
+
+            # Insert products only if none exist for this spec+date
+            products = entry.get('products', [])
+            if products:
+                existing = conn.execute(
+                    "SELECT COUNT(*) FROM products WHERE spec_key=? AND date=?",
+                    (spec_key, date)
+                ).fetchone()[0]
+                if existing == 0:
+                    for p in products:
+                        prices = p.get('prices') or p.get('prices_usd') or {}
+                        conn.execute(
+                            "INSERT INTO products (spec_key,date,source,model,brand,package,description,"
+                            "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json) "
+                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                            (spec_key, date, p.get('source','LCSC'), p.get('model',''),
+                             p.get('brand',''), p.get('package',''), p.get('description',''),
+                             p.get('stock',0), p.get('min_price_usd'), p.get('min_qty'),
+                             p.get('mouser_pn'), p.get('lcsc_id'), p.get('mouser_url'),
+                             json.dumps(prices))
+                        )
+                        prod_count += 1
+
     conn.commit()
     conn.close()
-    print(f"Bootstrap done: {stats_count} daily_stats, {prod_count} products")
+    print(f"Done: {inserted} rows inserted, {repaired} medians repaired, {prod_count} products added")
 
 if __name__ == '__main__':
-    if needs_bootstrap():
-        bootstrap()
-    else:
-        count = sqlite3.connect(DB).execute("SELECT COUNT(*) FROM daily_stats").fetchone()[0]
-        print(f"DB already has {count} rows — skipping bootstrap")
+    bootstrap()
