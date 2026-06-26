@@ -17,20 +17,25 @@ jobs:
       - name: Check if already updated today
         id: check
         run: |
-          TODAY=$(TZ="Asia/Taipei" date +"%Y-%m-%d")
-          LATEST=$(curl -sf "https://raw.githubusercontent.com/evan0621/passive-components-tracker/main/passive_components_prices.json" | python3 -c "
-          import json,sys
-          data=json.load(sys.stdin)
-          dates=[d for spec in data.values() for d in spec.keys()]
-          print(max(dates) if dates else '')
-          " 2>/dev/null || echo "")
-          echo "Today: $TODAY  |  Latest in JSON: $LATEST"
-          if [ "$LATEST" = "$TODAY" ]; then
-            echo "skip=true" >> $GITHUB_OUTPUT
-            echo "Local machine already ran today — skipping."
-          else
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual trigger — skipping date check, always run."
             echo "skip=false" >> $GITHUB_OUTPUT
-            echo "Local machine did not run today — will update now."
+          else
+            TODAY=$(TZ="Asia/Taipei" date +"%Y-%m-%d")
+            LATEST=$(curl -sf "https://raw.githubusercontent.com/evan0621/passive-components-tracker/main/passive_components_prices.json" | python3 -c "
+            import json,sys
+            data=json.load(sys.stdin)
+            dates=[d for spec in data.values() for d in spec.keys()]
+            print(max(dates) if dates else '')
+            " 2>/dev/null || echo "")
+            echo "Today: $TODAY  |  Latest in JSON: $LATEST"
+            if [ "$LATEST" = "$TODAY" ]; then
+              echo "skip=true" >> $GITHUB_OUTPUT
+              echo "Local machine already ran today — skipping."
+            else
+              echo "skip=false" >> $GITHUB_OUTPUT
+              echo "Local machine did not run today — will update now."
+            fi
           fi
 
       - name: Set up Python
