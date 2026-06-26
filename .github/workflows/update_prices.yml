@@ -1,0 +1,73 @@
+name: Daily Price Update (Fallback)
+
+on:
+  schedule:
+    - cron: '0 14 * * *'  # 22:00 Taiwan time (UTC+8), 1hr after local Task Scheduler
+  workflow_dispatch:       # allow manual trigger
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check if already updated today
+        id: check
+        run: |
+          TODAY=$(TZ="Asia/Taipei" date +"%Y-%m-%d")
+          LATEST=$(curl -sf "https://raw.githubusercontent.com/evan0621/passive-components-tracker/main/passive_components_prices.json" | python3 -c "
+          import json,sys
+          data=json.load(sys.stdin)
+          dates=[d for spec in data.values() for d in spec.keys()]
+          print(max(dates) if dates else '')
+          " 2>/dev/null || echo "")
+          echo "Today: $TODAY  |  Latest in JSON: $LATEST"
+          if [ "$LATEST" = "$TODAY" ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+            echo "Local machine already ran today — skipping."
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+            echo "Local machine did not run today — will update now."
+          fi
+
+      - name: Set up Python
+        if: steps.check.outputs.skip == 'false'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        if: steps.check.outputs.skip == 'false'
+        run: pip install requests beautifulsoup4
+
+      - name: Restore database cache
+        if: steps.check.outputs.skip == 'false'
+        uses: actions/cache@v4
+        with:
+          path: passive_components.db
+          key: passive-db-${{ github.run_id }}
+          restore-keys: passive-db-
+
+      - name: Bootstrap DB from GitHub JSON (first run only)
+        if: steps.check.outputs.skip == 'false'
+        run: python bootstrap_db.py
+
+      - name: Create config
+        if: steps.check.outputs.skip == 'false'
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+          MOUSER_API_KEY: ${{ secrets.MOUSER_API_KEY }}
+        run: |
+          python3 -c "
+          import json, os
+          cfg = {'token': os.environ['GH_PAT'], 'mouser_key': os.environ['MOUSER_API_KEY']}
+          open('github_config.json','w').write(json.dumps(cfg))
+          print('Config created')
+          "
+
+      - name: Run update
+        if: steps.check.outputs.skip == 'false'
+        run: python update_prices.py
