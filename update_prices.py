@@ -220,6 +220,7 @@ def init_db():
             mouser_count    INTEGER,
             exchange_rate   REAL,
             fetched_at      TEXT,
+            median_price_usd REAL,
             PRIMARY KEY (spec_key, date)
         );
         CREATE TABLE IF NOT EXISTS products (
@@ -248,6 +249,12 @@ def init_db():
         );
     """)
     conn.commit()
+    # Migration: add median_price_usd column to existing DBs
+    try:
+        conn.execute("ALTER TABLE daily_stats ADD COLUMN median_price_usd REAL")
+        conn.commit()
+    except Exception:
+        pass  # column already exists
     return conn
 
 def db_load_history(conn):
@@ -255,13 +262,13 @@ def db_load_history(conn):
     history = {}
     for row in conn.execute(
         "SELECT spec_key,date,avg_price_usd,total_stock,in_stock_count,"
-        "product_count,lcsc_count,mouser_count,exchange_rate,fetched_at FROM daily_stats"
+        "product_count,lcsc_count,mouser_count,exchange_rate,fetched_at,median_price_usd FROM daily_stats"
     ):
-        sk, dt, avg, ts, isc, pc, lc, mc, er, fa = row
+        sk, dt, avg, ts, isc, pc, lc, mc, er, fa, med = row
         history.setdefault(sk, {})[dt] = {
             'avg_price_usd': avg, 'total_stock': ts, 'in_stock_count': isc,
             'product_count': pc, 'lcsc_count': lc or 0, 'mouser_count': mc or 0,
-            'exchange_rate': er, 'fetched_at': fa, 'products': []
+            'exchange_rate': er, 'fetched_at': fa, 'median_price_usd': med, 'products': []
         }
     for row in conn.execute(
         "SELECT spec_key,date,source,model,brand,package,description,"
@@ -281,14 +288,25 @@ def db_load_history(conn):
             })
     return history
 
+def _compute_median(products):
+    prices = sorted(
+        p.get('min_price_usd') or 0 for p in products
+        if (p.get('stock') or 0) > 0 and (p.get('min_price_usd') or 0) > 0
+    )
+    if not prices: return None
+    n, mid = len(prices), len(prices) // 2
+    return (prices[mid-1] + prices[mid]) / 2 if n % 2 == 0 else prices[mid]
+
 def db_save_day(conn, spec_key, date, day_data):
     """Upsert one day's data for a spec (replaces old entry if exists)."""
-    conn.execute("INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?)", (
+    median = _compute_median(day_data.get('products', []))
+    conn.execute("INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)", (
         spec_key, date,
         day_data.get('avg_price_usd'), day_data.get('total_stock'),
         day_data.get('in_stock_count'), day_data.get('product_count'),
         day_data.get('lcsc_count'),    day_data.get('mouser_count'),
         day_data.get('exchange_rate'), day_data.get('fetched_at'),
+        median,
     ))
     conn.execute("DELETE FROM products WHERE spec_key=? AND date=?", (spec_key, date))
     for p in day_data.get('products', []):
@@ -729,7 +747,10 @@ def slim_history(history):
             if dt == latest:
                 entry['products'] = v.get('products', [])
             else:
-                entry['median_price_usd'] = _median(v.get('products', []))
+                prods = v.get('products', [])
+                if prods:
+                    entry['median_price_usd'] = _median(prods)
+                # else: keep entry['median_price_usd'] already loaded from DB column
                 entry['products'] = []
             slim[sk][dt] = entry
     return slim
