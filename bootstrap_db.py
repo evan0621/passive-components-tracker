@@ -91,9 +91,25 @@ def bootstrap():
                         )
                         prod_count += 1
 
+    # Sync DB to GitHub JSON: delete any date that was cleaned from JSON
+    # (e.g., bad Mouser data removed manually), but keep today's fresh data
+    from datetime import datetime as _dt
+    today = _dt.now().strftime("%Y-%m-%d")
+    valid_dates = set(d for dates in history.values() for d in dates.keys())
+    all_db_dates = set(
+        row[0] for row in conn.execute("SELECT DISTINCT date FROM daily_stats")
+    )
+    stale_dates = all_db_dates - valid_dates - {today}
+    deleted = 0
+    for d in stale_dates:
+        r = conn.execute("DELETE FROM daily_stats WHERE date=?", (d,))
+        conn.execute("DELETE FROM products WHERE date=?", (d,))
+        deleted += r.rowcount
+        print(f"  Removed stale date {d} from DB (not in GitHub JSON)")
+
     conn.commit()
     conn.close()
-    print(f"Done: {inserted} rows inserted, {repaired} medians repaired, {prod_count} products added")
+    print(f"Done: {inserted} rows inserted, {repaired} medians repaired, {prod_count} products added, {deleted} stale rows removed")
 
 if __name__ == '__main__':
     bootstrap()
