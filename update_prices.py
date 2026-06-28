@@ -808,29 +808,35 @@ def main():
     if discover:
         force = True   # discover 同時強制重抓
 
-    # ── Backup check: 排程模式下先確認 GH Actions 今早是否已執行 ────
+    # ── 排程模式：先 pull GitHub JSON 同步本地 DB ──────────────────
     # GH Actions = primary (06:00 Taiwan); local PC = backup (21:00 Taiwan)
-    # 若 GitHub JSON 已有今日資料 → local PC 跳過，避免重複呼叫 Mouser API
+    # 每次排程都先 bootstrap（sync from GitHub），確保本地 DB 跟 GitHub 一致
+    # （含清除 GitHub 上已刪除的壞資料日期）
     if not force and not discover and not interactive:
-        print("  [backup check] 確認 GH Actions 今早是否已執行...")
+        print("  [sync] 從 GitHub 同步本地 DB...")
         try:
-            _r = requests.get(
-                f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/main/passive_components_prices.json",
-                timeout=15
-            )
-            if _r.status_code == 200:
-                _gh = _r.json()
-                _today_specs = sum(1 for k in _gh if today in _gh[k] and (_gh[k][today].get('product_count') or 0) > 0)
-                _mouser_ok   = sum(1 for k in _gh if today in _gh[k] and (_gh[k][today].get('mouser_count') or 0) > 0)
-                if _today_specs >= len(SPECS) * 0.8 and _mouser_ok >= len(SPECS) * 0.5:
-                    print(f"  GitHub 已有今日資料（{_today_specs}/{len(SPECS)} specs，{_mouser_ok} 有 Mouser 結果）")
-                    print(f"  GH Actions 今早已執行 — local PC 跳過，不重複抓取。")
-                    print(f"\n✅ Done!  https://evan0621.github.io/passive-components-tracker/\n")
-                    return
-                else:
-                    print(f"  GitHub 無今日資料（{_today_specs}/{len(SPECS)} specs）— local PC 接管抓取")
+            import bootstrap_db as _bdb
+            _bdb.bootstrap()
         except Exception as _e:
-            print(f"  無法檢查 GitHub JSON ({_e}) — 繼續執行本地抓取")
+            print(f"  Bootstrap 失敗 ({_e}) — 繼續使用本地 DB")
+
+        # 同步完後再確認今天有沒有資料（GH Actions 是否已跑）
+        print("  [backup check] 確認 GH Actions 今早是否已執行...")
+        import sqlite3 as _sq3b
+        with _sq3b.connect(DB_FILE) as _cb:
+            _today_rows = _cb.execute(
+                "SELECT COUNT(*) FROM daily_stats WHERE date=? AND product_count > 0", (today,)
+            ).fetchone()[0]
+            _mouser_ok = _cb.execute(
+                "SELECT COUNT(*) FROM daily_stats WHERE date=? AND mouser_count > 0", (today,)
+            ).fetchone()[0]
+        if _today_rows >= len(SPECS) * 0.8 and _mouser_ok >= len(SPECS) * 0.5:
+            print(f"  GitHub 已有今日資料（{_today_rows}/{len(SPECS)} specs，{_mouser_ok} 有 Mouser 結果）")
+            print(f"  GH Actions 今早已執行 — local PC 跳過，不重複抓取。")
+            print(f"\n✅ Done!  https://evan0621.github.io/passive-components-tracker/\n")
+            return
+        else:
+            print(f"  GitHub 無今日資料（{_today_rows}/{len(SPECS)} specs）— local PC 接管抓取")
 
     # Check if today's data already exists (from DB, not JSON)
     _conn = init_db(); _conn.close()   # ensure DB is initialised
