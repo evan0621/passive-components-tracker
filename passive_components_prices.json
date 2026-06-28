@@ -36,18 +36,6 @@
       "median_price_usd": 0.45,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.556263,
-      "total_stock": 89351,
-      "in_stock_count": 19,
-      "product_count": 49,
-      "lcsc_count": 22,
-      "mouser_count": 27,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:38:55.853230",
-      "median_price_usd": 0.4,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.556263,
       "exchange_rate": 0.1471,
@@ -1552,18 +1540,6 @@
       "mouser_count": 50,
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:01:43.019643",
-      "median_price_usd": 0.300084,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.350557,
-      "total_stock": 564053,
-      "in_stock_count": 23,
-      "product_count": 70,
-      "lcsc_count": 20,
-      "mouser_count": 50,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:39:17.073069",
       "median_price_usd": 0.300084,
       "products": []
     },
@@ -3774,18 +3750,6 @@
       "mouser_count": 250,
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:01:59.814344",
-      "median_price_usd": 0.1,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.118889,
-      "total_stock": 72041264,
-      "in_stock_count": 261,
-      "product_count": 265,
-      "lcsc_count": 15,
-      "mouser_count": 250,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:39:47.959613",
       "median_price_usd": 0.1,
       "products": []
     },
@@ -13008,18 +12972,6 @@
       "median_price_usd": 0.1,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.012,
-      "total_stock": 26958,
-      "in_stock_count": 13,
-      "product_count": 19,
-      "lcsc_count": 19,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:46:12.172494",
-      "median_price_usd": 0.008855,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.163789,
       "exchange_rate": 0.1471,
@@ -17129,18 +17081,6 @@
       "median_price_usd": 0.466307,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.504983,
-      "total_stock": 6352,
-      "in_stock_count": 4,
-      "product_count": 15,
-      "lcsc_count": 13,
-      "mouser_count": 2,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:40:09.579820",
-      "median_price_usd": 0.466307,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.504983,
       "exchange_rate": 0.1471,
@@ -17587,18 +17527,6 @@
       "mouser_count": 1,
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:02:45.901170",
-      "median_price_usd": 0.7355,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.919361,
-      "total_stock": 843,
-      "in_stock_count": 7,
-      "product_count": 17,
-      "lcsc_count": 16,
-      "mouser_count": 1,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:40:30.248579",
       "median_price_usd": 0.7355,
       "products": []
     },
@@ -18081,18 +18009,6 @@
       "median_price_usd": 0.466307,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.504983,
-      "total_stock": 6352,
-      "in_stock_count": 4,
-      "product_count": 15,
-      "lcsc_count": 13,
-      "mouser_count": 2,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:40:38.774039",
-      "median_price_usd": 0.466307,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.504983,
       "exchange_rate": 0.1471,
@@ -18539,18 +18455,6 @@
       "mouser_count": 19,
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:03:24.089132",
-      "median_price_usd": 23.79,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 25.23111,
-      "total_stock": 3919,
-      "in_stock_count": 11,
-      "product_count": 34,
-      "lcsc_count": 15,
-      "mouser_count": 19,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:41:00.550091",
       "median_price_usd": 23.79,
       "products": []
     },
@@ -19446,18 +19350,6 @@
       "median_price_usd": 17.96,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 18.441534,
-      "total_stock": 2537,
-      "in_stock_count": 7,
-      "product_count": 32,
-      "lcsc_count": 6,
-      "mouser_count": 26,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:41:21.536695",
-      "median_price_usd": 17.96,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 18.441534,
       "exchange_rate": 0.1471,
@@ -20261,18 +20153,6 @@
       "mouser_count": 181,
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:04:02.422314",
-      "median_price_usd": 1.31,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 1.893363,
-      "total_stock": 694323,
-      "in_stock_count": 183,
-      "product_count": 209,
-      "lcsc_count": 28,
-      "mouser_count": 181,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:41:45.937943",
       "median_price_usd": 1.31,
       "products": []
     },
@@ -26232,18 +26112,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:04:33.614911",
       "median_price_usd": 1.55,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.210553,
-      "total_stock": 6224,
-      "in_stock_count": 13,
-      "product_count": 19,
-      "lcsc_count": 19,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:42:54.364717",
-      "median_price_usd": 0.207087,
       "products": []
     },
     "2026-06-28": {
@@ -32449,18 +32317,6 @@
       "median_price_usd": 1.331255,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.630329,
-      "total_stock": 7675,
-      "in_stock_count": 15,
-      "product_count": 18,
-      "lcsc_count": 18,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:43:53.772768",
-      "median_price_usd": 0.376576,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 1.317819,
       "exchange_rate": 0.1471,
@@ -34454,18 +34310,6 @@
       "median_price_usd": 0.024772,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.01523,
-      "total_stock": 8431,
-      "in_stock_count": 13,
-      "product_count": 20,
-      "lcsc_count": 20,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:44:10.826020",
-      "median_price_usd": 0.009664,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.062349,
       "exchange_rate": 0.1471,
@@ -35414,18 +35258,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:05:47.777030",
       "median_price_usd": 0.4,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.221712,
-      "total_stock": 1285,
-      "in_stock_count": 5,
-      "product_count": 15,
-      "lcsc_count": 15,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:45:18.736824",
-      "median_price_usd": 0.159398,
       "products": []
     },
     "2026-06-28": {
@@ -44078,18 +43910,6 @@
       "median_price_usd": 0.142981,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.090025,
-      "total_stock": 11387,
-      "in_stock_count": 8,
-      "product_count": 18,
-      "lcsc_count": 18,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:46:35.634051",
-      "median_price_usd": 0.0769625,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.20701,
       "exchange_rate": 0.1471,
@@ -45150,18 +44970,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:07:18.670543",
       "median_price_usd": 1.253683,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.49778,
-      "total_stock": 37618,
-      "in_stock_count": 24,
-      "product_count": 26,
-      "lcsc_count": 26,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:48:12.135836",
-      "median_price_usd": 0.303541,
       "products": []
     },
     "2026-06-28": {
@@ -46821,18 +46629,6 @@
       "median_price_usd": 0.511908,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.58116,
-      "total_stock": 58849,
-      "in_stock_count": 25,
-      "product_count": 25,
-      "lcsc_count": 25,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:48:37.234656",
-      "median_price_usd": 0.511908,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.58116,
       "exchange_rate": 0.1471,
@@ -47645,18 +47441,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:07:46.846642",
       "median_price_usd": 0.20421899999999998,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.153003,
-      "total_stock": 10975,
-      "in_stock_count": 7,
-      "product_count": 25,
-      "lcsc_count": 25,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:49:17.406215",
-      "median_price_usd": 0.161531,
       "products": []
     },
     "2026-06-28": {
@@ -48704,18 +48488,6 @@
       "median_price_usd": 0.710493,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.666258,
-      "total_stock": 6717,
-      "in_stock_count": 9,
-      "product_count": 27,
-      "lcsc_count": 27,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:49:46.460737",
-      "median_price_usd": 0.616349,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.936939,
       "exchange_rate": 0.1471,
@@ -49660,18 +49432,6 @@
       "median_price_usd": 0.845825,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.774408,
-      "total_stock": 5800,
-      "in_stock_count": 5,
-      "product_count": 24,
-      "lcsc_count": 24,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:50:07.268857",
-      "median_price_usd": 0.845825,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.774408,
       "exchange_rate": 0.1471,
@@ -50454,18 +50214,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:09:06.647283",
       "median_price_usd": 0.5842,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 1.305058,
-      "total_stock": 34143,
-      "in_stock_count": 14,
-      "product_count": 14,
-      "lcsc_count": 14,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:51:33.604066",
-      "median_price_usd": 0.7803655,
       "products": []
     },
     "2026-06-28": {
@@ -52429,18 +52177,6 @@
       "mouser_count": 57,
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:09:20.248959",
-      "median_price_usd": 0.1,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.163422,
-      "total_stock": 17188937,
-      "in_stock_count": 42,
-      "product_count": 74,
-      "lcsc_count": 16,
-      "mouser_count": 58,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:51:46.224572",
       "median_price_usd": 0.1,
       "products": []
     },
@@ -54876,18 +54612,6 @@
       "median_price_usd": 0.1,
       "products": []
     },
-    "2026-06-27": {
-      "avg_price_usd": 0.120632,
-      "total_stock": 12954224,
-      "in_stock_count": 20,
-      "product_count": 43,
-      "lcsc_count": 23,
-      "mouser_count": 20,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:52:11.397882",
-      "median_price_usd": 0.1,
-      "products": []
-    },
     "2026-06-28": {
       "avg_price_usd": 0.122302,
       "exchange_rate": 0.1471,
@@ -56225,18 +55949,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:08:44.030773",
       "median_price_usd": 0.255,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.09335,
-      "total_stock": 710,
-      "in_stock_count": 1,
-      "product_count": 2,
-      "lcsc_count": 2,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:51:01.896685",
-      "median_price_usd": 0.09335,
       "products": []
     },
     "2026-06-28": {
@@ -58151,18 +57863,6 @@
       "exchange_rate": 0.1471,
       "fetched_at": "2026-06-26T15:06:50.178712",
       "median_price_usd": 0.1,
-      "products": []
-    },
-    "2026-06-27": {
-      "avg_price_usd": 0.015891,
-      "total_stock": 9616,
-      "in_stock_count": 8,
-      "product_count": 16,
-      "lcsc_count": 16,
-      "mouser_count": 0,
-      "exchange_rate": 0.1471,
-      "fetched_at": "2026-06-27T14:47:21.790011",
-      "median_price_usd": 0.010179500000000001,
       "products": []
     },
     "2026-06-28": {
