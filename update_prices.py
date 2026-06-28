@@ -803,8 +803,9 @@ def main():
 
     today = datetime.now().strftime("%Y-%m-%d")
     interactive = sys.stdin.isatty()
-    force    = '--force'    in sys.argv   # 命令列強制重抓
-    discover = '--discover' in sys.argv   # 全量掃描以更新 catalog
+    force     = '--force'     in sys.argv   # 命令列強制重抓
+    discover  = '--discover'  in sys.argv   # 全量掃描以更新 catalog
+    scheduled = '--scheduled' in sys.argv   # 明確標記為排程執行（Task Scheduler）
     if discover:
         force = True   # discover 同時強制重抓
 
@@ -812,7 +813,7 @@ def main():
     # GH Actions = primary (06:00 Taiwan); local PC = backup (21:00 Taiwan)
     # 每次排程都先 bootstrap（sync from GitHub），確保本地 DB 跟 GitHub 一致
     # （含清除 GitHub 上已刪除的壞資料日期）
-    if not force and not discover and not interactive:
+    if not force and not discover and (scheduled or not interactive):
         print("  [sync] 從 GitHub 同步本地 DB...")
         try:
             import bootstrap_db as _bdb
