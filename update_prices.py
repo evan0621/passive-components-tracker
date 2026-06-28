@@ -802,22 +802,47 @@ def main():
         print("  No Mouser key — LCSC only")
 
     today = datetime.now().strftime("%Y-%m-%d")
+    interactive = sys.stdin.isatty()
+    force    = '--force'    in sys.argv   # 命令列強制重抓
+    discover = '--discover' in sys.argv   # 全量掃描以更新 catalog
+    if discover:
+        force = True   # discover 同時強制重抓
+
+    # ── Backup check: 排程模式下先確認 GH Actions 今早是否已執行 ────
+    # GH Actions = primary (06:00 Taiwan); local PC = backup (21:00 Taiwan)
+    # 若 GitHub JSON 已有今日資料 → local PC 跳過，避免重複呼叫 Mouser API
+    if not force and not discover and not interactive:
+        print("  [backup check] 確認 GH Actions 今早是否已執行...")
+        try:
+            _r = requests.get(
+                f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/main/passive_components_prices.json",
+                timeout=15
+            )
+            if _r.status_code == 200:
+                _gh = _r.json()
+                _today_specs = sum(1 for k in _gh if today in _gh[k] and (_gh[k][today].get('product_count') or 0) > 0)
+                _mouser_ok   = sum(1 for k in _gh if today in _gh[k] and (_gh[k][today].get('mouser_count') or 0) > 0)
+                if _today_specs >= len(SPECS) * 0.8 and _mouser_ok >= len(SPECS) * 0.5:
+                    print(f"  GitHub 已有今日資料（{_today_specs}/{len(SPECS)} specs，{_mouser_ok} 有 Mouser 結果）")
+                    print(f"  GH Actions 今早已執行 — local PC 跳過，不重複抓取。")
+                    print(f"\n✅ Done!  https://evan0621.github.io/passive-components-tracker/\n")
+                    return
+                else:
+                    print(f"  GitHub 無今日資料（{_today_specs}/{len(SPECS)} specs）— local PC 接管抓取")
+        except Exception as _e:
+            print(f"  無法檢查 GitHub JSON ({_e}) — 繼續執行本地抓取")
+
     # Check if today's data already exists (from DB, not JSON)
     _conn = init_db(); _conn.close()   # ensure DB is initialised
     import sqlite3 as _sq3
     with _sq3.connect(DB_FILE) as _c:
         _rows = _c.execute("SELECT COUNT(*) FROM daily_stats WHERE date=?", (today,)).fetchone()
     has_today = (_rows[0] > 0)
-    interactive = sys.stdin.isatty()
-    force    = '--force'    in sys.argv   # 命令列強制重抓
-    discover = '--discover' in sys.argv   # 全量掃描以更新 catalog
-    if discover:
-        force = True   # discover 同時強制重抓
     if not force and has_today:
         if interactive:
             force = False  # 手動執行：跳過已抓的，只補新規格
         else:
-            force = True   # 排程執行：每天 21:00 全部重抓最新資料
+            force = True   # 排程執行：全部重抓最新資料
             print("\nAuto mode: re-fetching today's data...")
 
     print("[1/3] Scraping LCSC + Mouser...")
@@ -829,13 +854,16 @@ def main():
 
     print("\n[3/3] Pushing to GitHub...")
 
-    # 推送前驗證：今天有資料的規格數 < 50% → 疑似大規模抓取失敗，跳過推送
-    specs_with_today = sum(1 for k in history if today in history[k] and history[k][today].get('product_count', 0) > 0)
+    # 推送前驗證：Mouser 結果異常（rate limit）→ 跳過推送
     total_specs = len(SPECS)
+    specs_with_today = sum(1 for k in history if today in history[k] and history[k][today].get('product_count', 0) > 0)
+    mouser_zero = sum(1 for k in history if today in history[k] and history[k][today].get('mouser_count', 0) == 0)
     if specs_with_today < total_specs * 0.5:
         print(f"  ⚠️  只有 {specs_with_today}/{total_specs} 個規格有今日資料，疑似抓取異常，跳過推送。")
-        print(f"  本地資料已保留於 {DB_FILE}")
         print(f"\n⚠️  未推送，請確認網路或 LCSC/Mouser 狀況後重試。\n")
+    elif mouser_zero > total_specs * 0.5:
+        print(f"  ⚠️  {mouser_zero}/{total_specs} 個規格 Mouser 返回 0 筆（可能達到 API 配額上限），跳過推送。")
+        print(f"  本地 DB 已保留今日 LCSC 資料，明天重跑即可。\n")
     else:
         msg = f"price update {today}"
         gh_push("passive_components_prices.json", json_mod.dumps(slim_history(history), ensure_ascii=False, indent=2), msg)
