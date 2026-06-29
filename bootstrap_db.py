@@ -48,9 +48,11 @@ def bootstrap():
 
     for spec_key, dates in history.items():
         for date, entry in dates.items():
-            # Insert row if not exists (preserve today's freshly-fetched data)
+            # INSERT OR REPLACE: GitHub JSON is the source of truth.
+            # This overwrites stale/bad DB rows (e.g., Mouser=0 bad data)
+            # with whatever is currently in GitHub JSON.
             cur = conn.execute(
-                "INSERT OR IGNORE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                "INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                 (spec_key, date,
                  entry.get('avg_price_usd'), entry.get('total_stock'),
                  entry.get('in_stock_count'), entry.get('product_count'),
@@ -59,15 +61,6 @@ def bootstrap():
                  entry.get('median_price_usd'))
             )
             inserted += cur.rowcount
-
-            # Repair null median_price_usd for existing rows
-            median = entry.get('median_price_usd')
-            if median is not None:
-                cur = conn.execute(
-                    "UPDATE daily_stats SET median_price_usd=? WHERE spec_key=? AND date=? AND median_price_usd IS NULL",
-                    (median, spec_key, date)
-                )
-                repaired += cur.rowcount
 
             # Insert products only if none exist for this spec+date
             products = entry.get('products', [])
