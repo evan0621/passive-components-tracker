@@ -4,7 +4,12 @@ Passive component price updater — double-click update_prices.bat to run.
 """
 
 import re, json as json_mod, sys, os, base64, time
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
+
+# 統一用台灣時間（UTC+8）計算日期，GH Actions 和 local PC 才會一致
+_TAIWAN = timezone(timedelta(hours=8))
+def _today_tw():
+    return datetime.now(_TAIWAN).strftime("%Y-%m-%d")
 
 def ensure(pkg, import_as=None):
     try:
@@ -578,7 +583,7 @@ def clean_bad(history):
 # ── scrape all specs ─────────────────────────────────────────────
 def scrape_all(force=False, mouser_key='', discover=False):
     import random
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = _today_tw()
     sc = cloudscraper.create_scraper()
     conn = init_db()
     history = db_load_history(conn)
@@ -801,7 +806,7 @@ def main():
     else:
         print("  No Mouser key — LCSC only")
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = _today_tw()
     interactive = sys.stdin.isatty()
     force     = '--force'     in sys.argv   # 命令列強制重抓
     discover  = '--discover'  in sys.argv   # 全量掃描以更新 catalog
