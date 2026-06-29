@@ -93,8 +93,8 @@ def bootstrap():
 
     # Sync DB to GitHub JSON: delete any date that was cleaned from JSON
     # (e.g., bad Mouser data removed manually), but keep today's fresh data
-    from datetime import datetime as _dt
-    today = _dt.now().strftime("%Y-%m-%d")
+    from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+    today = _dt.now(_tz(_td(hours=8))).strftime("%Y-%m-%d")  # 台灣時間
     valid_dates = set(d for dates in history.values() for d in dates.keys())
     all_db_dates = set(
         row[0] for row in conn.execute("SELECT DISTINCT date FROM daily_stats")
