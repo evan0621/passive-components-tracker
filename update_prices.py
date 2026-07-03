@@ -76,12 +76,18 @@ SPECS = [
     {"key": "22uF_4V_X6S",               "url": "https://so.szlcsc.com/global.html?k=22uf+4v+x6s+mlcc",                    "mouser_kw": "22uF 4V X6S MLCC"},
     {"key": "10uF_16V_X7R",              "url": "https://so.szlcsc.com/global.html?k=10uf+16v+x7r+0402+mlcc",              "mouser_kw": "10uF 16V X7R 0402 MLCC"},
     # ── 鋁電解（貼片）AI
-    {"key": "AlCap_PDB_100U_63V_M10x10", "url": "https://so.szlcsc.com/global.html?k=100uf+63v+hybrid+aluminum+smd+10x10", "mouser_kw": "100uF 63V hybrid aluminum SMD 10x10.2"},
-    {"key": "Hybrid_560uF_16V_M8x10",    "url": "https://so.szlcsc.com/global.html?k=560uf+16v+hybrid+aluminum+smd+8x10",  "mouser_kw": "560uF 16V hybrid aluminum SMD 8x10"},
-    {"key": "Polymer_100uF_63V_M10x10",  "url": "https://so.szlcsc.com/global.html?k=polymer+100uf+63v+smd+aluminum+10x10","mouser_kw": "100uF 63V polymer aluminum SMD 10x10.2"},
+    # LCSC 用中文關鍵字才能區分固液混合 vs 固態（英文 hybrid/polymer 會被忽略，兩者結果相同）
+    {"key": "AlCap_PDB_100U_63V_M10x10", "url": "https://so.szlcsc.com/global.html?k=100uf+63v+%E5%9B%BA%E6%B6%B2%E6%B7%B7%E5%90%88", "mouser_kw": "100uF 63V hybrid aluminum SMD 10x10.2",
+     "pin_lcsc": ["245958", "245590"]},  # 固液混合；pin 立隆 VZH101M1JTR-1010 / VE-101M1JTR-1010
+    {"key": "Hybrid_560uF_16V_M8x10",    "url": "https://so.szlcsc.com/global.html?k=560uf+16v+%E5%9B%BA%E6%B6%B2%E6%B7%B7%E5%90%88",  "mouser_kw": "560uF 16V hybrid aluminum SMD 8x10"},      # 固液混合
+    {"key": "Polymer_100uF_63V_M10x10",  "url": "https://so.szlcsc.com/global.html?k=100uf+63v+%E5%9B%BA%E6%80%81%E9%93%9D%E7%94%B5%E8%A7%A3","mouser_kw": "100uF 63V polymer aluminum SMD 10x10.2"},  # 固态铝电解
     # ── 鋁電解（牛角）AI
-    {"key": "SnapIn_450V_1000uF",        "url": "https://so.szlcsc.com/global.html?k=450v+1000uf+snap-in+aluminum+electrolytic", "mouser_kw": "1000uF 450V snap-in aluminum electrolytic"},
-    {"key": "SnapIn_450V_820uF",         "url": "https://so.szlcsc.com/global.html?k=450v+820uf+snap-in+aluminum+electrolytic",  "mouser_kw": "820uF 450V snap-in aluminum electrolytic"},
+    # LCSC 牛角料要用中文「牛角」搜，英文 snap-in 搜不到金山電/立隆等品牌
+    # pin_lcsc: 指定料號（永久追蹤，不受搜尋排序影響，每天直抓商品頁）
+    {"key": "SnapIn_450V_1000uF",        "url": "https://so.szlcsc.com/global.html?k=1000uf+450v+%E7%89%9B%E8%A7%92", "mouser_kw": "1000uF 450V snap-in aluminum electrolytic", "min_v": 450,
+     "pin_lcsc": ["6567239"]},           # 金山電 GM2W102MND3565 (1000uF 450V)
+    {"key": "SnapIn_450V_820uF",         "url": "https://so.szlcsc.com/global.html?k=820uf+450v+%E7%89%9B%E8%A7%92",  "mouser_kw": "820uF 450V snap-in aluminum electrolytic",  "min_v": 450,
+     "pin_lcsc": ["146216"]},            # 立隆 LSG821M2W--A3560 (820uF 450V)
     # ── 鋁電解（直插）消費性
     {"key": "DIP_16V_1000uF",            "url": "https://so.szlcsc.com/global.html?k=1000uf+16v+aluminum+electrolytic+radial+dip","mouser_kw": "1000uF 16V radial aluminum electrolytic through-hole"},
     {"key": "DIP_25V_470uF",             "url": "https://so.szlcsc.com/global.html?k=470uf+25v+aluminum+electrolytic+radial+dip", "mouser_kw": "470uF 25V radial aluminum electrolytic through-hole"},
@@ -96,7 +102,7 @@ SPECS = [
     {"key": "0201_1uF_6V3_X5R",         "url": "https://so.szlcsc.com/global.html?k=0201+1uf+6.3v+x5r+mlcc",               "mouser_kw": "1uF 6.3V X5R 0201 MLCC"},
     # ── 鋁電解 車用（AEC-Q200）
     {"key": "AlCap_SMD_Hybrid_100uF_50V_AEC", "url": "https://so.szlcsc.com/global.html?k=100uf+50v+hybrid+polymer+smd+aluminum+aec-q200", "mouser_kw": "100uF 50V hybrid polymer aluminum SMD AEC-Q200"},
-    {"key": "AlCap_SnapIn_470uF_450V_AEC",    "url": "https://so.szlcsc.com/global.html?k=470uf+450v+snap-in+aluminum+aec-q200",            "mouser_kw": "470uF 450V snap-in aluminum electrolytic AEC-Q200"},
+    {"key": "AlCap_SnapIn_470uF_450V_AEC",    "url": "https://so.szlcsc.com/global.html?k=470uf+450v+%E7%89%9B%E8%A7%92",                   "mouser_kw": "470uF 450V snap-in aluminum electrolytic AEC-Q200", "min_v": 450},   # 牛角；LCSC 混入大量低壓料 → min_v 過濾
     # ── NP0/C0G MLCC（AI LLC 諧振電路）
     {"key": "1206_10nF_630V_C0G",   "url": "https://so.szlcsc.com/global.html?k=10nf+630v+c0g+np0+1206+mlcc",  "mouser_kw": "10nF 630VDC C0G NP0 1206 SMD MLCC"},
     {"key": "1210_33nF_630V_C0G",   "url": "https://so.szlcsc.com/global.html?k=33nf+630v+c0g+np0+1210+mlcc",  "mouser_kw": "33nF 630VDC C0G NP0 1210 SMD MLCC"},
@@ -150,8 +156,13 @@ def _parse_mouser_part(p):
     stock_m = re.search(r'([\d,]+)\s+In Stock', avail)
     stock = int(stock_m.group(1).replace(',','')) if stock_m else 0
 
+    # 交期（領先指標）："77 Days" → 77
+    lt_m = re.search(r'(\d+)', str(p.get('LeadTime') or ''))
+    lead_time_days = int(lt_m.group(1)) if lt_m else None
+
     min_qty = min(prices.keys())
-    min_price_usd = prices[min_qty]
+    # 地板價：取階梯中「最低單價」（觀察地板價有沒有上調），非最小起訂量那一階
+    min_price_usd, floor_qty = _floor_price(prices)
     mfr = p.get('Manufacturer', '')
     brand = mfr if isinstance(mfr, str) else (mfr or {}).get('ManufacturerName', '')
 
@@ -164,6 +175,8 @@ def _parse_mouser_part(p):
         'min_price':     min_price_usd,
         'min_price_usd': min_price_usd,
         'min_qty':       min_qty,
+        'floor_qty':     floor_qty,
+        'lead_time_days': lead_time_days,
         'prices':        prices,
         'prices_usd':    dict(prices),
         'currency':      'USD',
@@ -299,12 +312,23 @@ def init_db():
         );
     """)
     conn.commit()
-    # Migration: add median_price_usd column to existing DBs
-    try:
-        conn.execute("ALTER TABLE daily_stats ADD COLUMN median_price_usd REAL")
-        conn.commit()
-    except Exception:
-        pass  # column already exists
+    # Migrations: add columns to existing DBs (each fails silently if exists)
+    for ddl in (
+        "ALTER TABLE daily_stats ADD COLUMN median_price_usd REAL",
+        "ALTER TABLE daily_stats ADD COLUMN lcsc_avg_cny REAL",
+        "ALTER TABLE daily_stats ADD COLUMN lcsc_median_cny REAL",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_avg_usd REAL",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_median_usd REAL",
+        "ALTER TABLE daily_stats ADD COLUMN lcsc_stock INTEGER",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_stock INTEGER",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_leadtime_days REAL",
+        "ALTER TABLE products ADD COLUMN min_price_cny REAL",
+    ):
+        try:
+            conn.execute(ddl)
+            conn.commit()
+        except Exception:
+            pass
     return conn
 
 def db_load_history(conn):
@@ -312,26 +336,33 @@ def db_load_history(conn):
     history = {}
     for row in conn.execute(
         "SELECT spec_key,date,avg_price_usd,total_stock,in_stock_count,"
-        "product_count,lcsc_count,mouser_count,exchange_rate,fetched_at,median_price_usd FROM daily_stats"
+        "product_count,lcsc_count,mouser_count,exchange_rate,fetched_at,median_price_usd,"
+        "lcsc_avg_cny,lcsc_median_cny,mouser_avg_usd,mouser_median_usd,"
+        "lcsc_stock,mouser_stock,mouser_leadtime_days FROM daily_stats"
     ):
-        sk, dt, avg, ts, isc, pc, lc, mc, er, fa, med = row
+        (sk, dt, avg, ts, isc, pc, lc, mc, er, fa, med,
+         lac, lmc, mau, mmu, lst, mst, mlt) = row
         history.setdefault(sk, {})[dt] = {
             'avg_price_usd': avg, 'total_stock': ts, 'in_stock_count': isc,
             'product_count': pc, 'lcsc_count': lc or 0, 'mouser_count': mc or 0,
-            'exchange_rate': er, 'fetched_at': fa, 'median_price_usd': med, 'products': []
+            'exchange_rate': er, 'fetched_at': fa, 'median_price_usd': med,
+            'lcsc_avg_cny': lac, 'lcsc_median_cny': lmc,
+            'mouser_avg_usd': mau, 'mouser_median_usd': mmu,
+            'lcsc_stock': lst, 'mouser_stock': mst, 'mouser_leadtime_days': mlt,
+            'products': []
         }
     for row in conn.execute(
         "SELECT spec_key,date,source,model,brand,package,description,"
-        "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json FROM products"
+        "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json,min_price_cny FROM products"
     ):
-        sk, dt, src, model, brand, pkg, desc, stk, mpu, mq, mpn, lid, murl, pj = row
+        sk, dt, src, model, brand, pkg, desc, stk, mpu, mq, mpn, lid, murl, pj, mpc = row
         if sk in history and dt in history[sk]:
             prices = json_mod.loads(pj) if pj else {}
             history[sk][dt]['products'].append({
                 'model': model or '', 'brand': brand or '',
                 'package': pkg or '', 'description': desc or '',
                 'stock': stk or 0, 'min_price_usd': mpu,
-                'min_price': mpu, 'min_qty': mq,
+                'min_price': mpu, 'min_qty': mq, 'min_price_cny': mpc,
                 'mouser_pn': mpn, 'lcsc_id': lid, 'mouser_url': murl,
                 'source': src, 'prices': prices, 'prices_usd': prices,
                 'currency': 'USD' if src == 'Mouser' else 'CNY',
@@ -353,27 +384,38 @@ def db_save_day(conn, spec_key, date, day_data):
     median = day_data.get('median_price_usd')
     if median is None:
         median = _compute_median(day_data.get('products', []))
-    conn.execute("INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)", (
+    conn.execute(
+        "INSERT OR REPLACE INTO daily_stats "
+        "(spec_key,date,avg_price_usd,total_stock,in_stock_count,product_count,"
+        " lcsc_count,mouser_count,exchange_rate,fetched_at,median_price_usd,"
+        " lcsc_avg_cny,lcsc_median_cny,mouser_avg_usd,mouser_median_usd,"
+        " lcsc_stock,mouser_stock,mouser_leadtime_days) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", (
         spec_key, date,
         day_data.get('avg_price_usd'), day_data.get('total_stock'),
         day_data.get('in_stock_count'), day_data.get('product_count'),
         day_data.get('lcsc_count'),    day_data.get('mouser_count'),
         day_data.get('exchange_rate'), day_data.get('fetched_at'),
         median,
+        day_data.get('lcsc_avg_cny'),  day_data.get('lcsc_median_cny'),
+        day_data.get('mouser_avg_usd'), day_data.get('mouser_median_usd'),
+        day_data.get('lcsc_stock'),    day_data.get('mouser_stock'),
+        day_data.get('mouser_leadtime_days'),
     ))
     conn.execute("DELETE FROM products WHERE spec_key=? AND date=?", (spec_key, date))
     for p in day_data.get('products', []):
         prices_usd = p.get('prices_usd') or p.get('prices') or {}
         conn.execute(
             "INSERT INTO products (spec_key,date,source,model,brand,package,description,"
-            "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json) "
-            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json,min_price_cny) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (spec_key, date, p.get('source','LCSC'), p.get('model',''),
              p.get('brand',''), p.get('package',''), p.get('description',''),
              p.get('stock',0), p.get('min_price_usd'), p.get('min_qty'),
              p.get('mouser_pn'), str(p.get('lcsc_id','')) if p.get('lcsc_id') else None,
              p.get('mouser_url'),
-             json_mod.dumps({str(k): v for k, v in prices_usd.items()}))
+             json_mod.dumps({str(k): v for k, v in prices_usd.items()}),
+             p.get('min_price_cny'))
         )
     conn.commit()
 
@@ -496,6 +538,92 @@ def parse_jsonld(html):
             })
     return products
 
+# ── Method 0: __NEXT_DATA__ JSON（LCSC 2026-07 改版後的主要來源）──
+_NEXT_DATA_RE = re.compile(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
+_TAG_RE = re.compile(r'<[^>]+>')
+
+def parse_next_data(html):
+    """LCSC 新版（Next.js）搜尋頁：完整資料都在 __NEXT_DATA__ JSON 裡。"""
+    m = _NEXT_DATA_RE.search(html or '')
+    if not m:
+        return []
+    try:
+        data = json_mod.loads(m.group(1))
+        recs = data['props']['pageProps']['soData']['searchResult']['productRecordList'] or []
+    except Exception:
+        return []
+    out = []
+    for rec in recs:
+        pv = rec.get('productVO') or {}
+        model = pv.get('productModel') or ''
+        pid = str(pv.get('productId') or '')
+        prices = {}
+        for t in pv.get('productPriceList') or []:
+            try:
+                q = int(t.get('startPurchasedNumber') or t.get('spNumber') or 0)
+                v = float(t.get('productPrice') or t.get('thePrice') or 0)
+                if q > 0 and v > 0:
+                    prices[q] = v
+            except Exception:
+                pass
+        if not model or not pid or not prices:
+            continue
+        stock = max(int(rec.get('totalStockNumber') or 0),
+                    int(pv.get('stockNumber') or 0),
+                    int(pv.get('validStockNumber') or 0))
+        out.append({
+            'model': model,
+            'lcsc_id': pid,
+            'brand': _TAG_RE.sub('', rec.get('lightBrandName') or ''),
+            'package': pv.get('encapsulationModel') or '',
+            'description': _TAG_RE.sub('', rec.get('remarkPrefixTitle')
+                                       or rec.get('lightProductIntro') or ''),
+            'prices': prices,
+            'stock': stock,
+            'min_qty': min(prices),
+            'min_price': prices[min(prices)],
+        })
+    return out
+
+def parse_item_page(html):
+    """LCSC 商品頁（item.szlcsc.com/<id>.html）→ 單一產品。
+    SSR 只有現貨單價 + 整盤價，沒有完整階梯，但足夠算地板價。"""
+    m = _NEXT_DATA_RE.search(html or '')
+    if not m:
+        return None
+    try:
+        pp = json_mod.loads(m.group(1))['props']['pageProps']
+    except Exception:
+        return None
+    pr = (pp.get('webData') or {}).get('productRecord') or {}
+    prices = {}
+    try:
+        price = float(pp.get('price') or 0)
+        if price > 0:
+            prices[int(pr.get('minBuyNumber') or 1)] = price
+    except Exception:
+        pass
+    try:
+        en, ep = pr.get('productMinEncapsulationNumber'), pr.get('encaptionPrice')
+        if en and ep and float(en) > 0 and float(ep) > 0:
+            prices[int(en)] = round(float(ep) / float(en), 6)
+    except Exception:
+        pass
+    if not prices:
+        return None
+    stock = max(int(pr.get('stockNumber') or 0), int(pr.get('validStockNumber') or 0))
+    return {
+        'model': pr.get('productModel') or '',
+        'lcsc_id': str(pr.get('productId') or ''),
+        'brand': pr.get('productGradePlateName') or '',
+        'package': pr.get('encapsulationModel') or '',
+        'description': pr.get('remark') or '',
+        'prices': prices,
+        'stock': stock,
+        'min_qty': min(prices),
+        'min_price': prices[min(prices)],
+    }
+
 # ── Mouser product cleaner ───────────────────────────────────────
 
 # 1. Kit / assortment + Engineering Model (-EM 後綴 = 工程樣品，價格虛高非量產料)
@@ -564,6 +692,11 @@ _ALLOWED_BRAND_RE = re.compile(
     r'|PSA|信昌'
     r'|Nichicon|Nippon.?Chemi|Panasonic|Rubycon|Lelon'
     r'|APAQ|Chinsan|Jianghai'
+    r'|\bElite\b|金山'          # 金山電 8042 (Taiwan Chinsan)，品牌名 Elite / 金山电子
+    # 中國國產鋁電解/電容大廠（LCSC 地板價主力）
+    r'|Ymin|永铭|AISHI|艾华|KNSCHA|科尼盛|JIERR|捷而瑞'
+    r'|CapXon|丰宾|Man.?Yue|万裕|SamYoung|三莹'
+    r'|BERYL|绿宝石|TOPAZ|托普|KFSON|康富松|HONOR|荣誉'
     r'|Sumida|Coilcraft|TAI.?TECH|台慶|台庆'
     r'|Rohm|KOA',
     re.I
@@ -607,14 +740,50 @@ def clean_products(products):
 
 # ── combined parse with fallback ─────────────────────────────────
 def parse_products(html):
-    result = parse_html_cards(html)
+    result = parse_next_data(html)      # 主要：Next.js JSON
     if result:
         return result
-    # fallback to JSON-LD
-    result = parse_jsonld(html)
+    result = parse_html_cards(html)     # 舊版 HTML 卡片
+    if result:
+        print("[fallback:html-cards]", end=' ')
+        return result
+    result = parse_jsonld(html)         # 最後手段（樣本極小，僅 3 筆/頁）
     if result:
         print(f"[fallback:json-ld {len(result)} items]", end=' ')
     return result
+
+# ── 額定電壓 sanity check（防止低壓料混入高壓規格）────────────────
+# EIA 電壓代碼（鋁電解料號常見，如 471M1E=25V、821M2W=450V）
+_EIA_V_CODE = {
+    '0E': 2.5, '0G': 4, '0J': 6.3, '1A': 10, '1C': 16, '1D': 20, '1E': 25,
+    '1V': 35, '1H': 50, '1J': 63, '1K': 80, '2A': 100, '2B': 125, '2C': 160,
+    '2D': 200, '2E': 250, '2F': 315, '2V': 350, '2G': 400, '2W': 450,
+    '2H': 500, '2J': 630,
+}
+_EIA_V_RE = re.compile(r'\d{3}[MK]([0-2][A-Z])')          # 容量碼+公差+電壓碼
+_EXPL_V_RE = re.compile(r'(\d{1,4}(?:\.\d)?)V(?=[^A-Za-z]|$)')  # 明碼電壓，V 後不能接字母
+
+def _rated_voltage(p):
+    """從型號/描述推測額定電壓（V）；推測不出回傳 None（保守保留）。"""
+    text = f"{p.get('model', '')} {p.get('description', '')}"
+    vs = [float(m.group(1)) for m in _EXPL_V_RE.finditer(text)]
+    vs += [_EIA_V_CODE[m.group(1)] for m in _EIA_V_RE.finditer(text.upper())
+           if m.group(1) in _EIA_V_CODE]
+    return max(vs) if vs else None
+
+def filter_min_voltage(products, min_v):
+    """剔除額定電壓明確低於 min_v 的料；電壓不明的保留。"""
+    kept, removed = [], []
+    for p in products:
+        v = _rated_voltage(p)
+        if v is not None and v < min_v * 0.99:
+            removed.append(f"{p.get('model','')}({v:g}V)")
+        else:
+            kept.append(p)
+    if removed:
+        tags = ', '.join(removed[:3]) + ('…' if len(removed) > 3 else '')
+        print(f"[V<{min_v} 剔除 {len(removed)}: {tags}]", end=' ')
+    return kept
 
 # ── LCSC 樣本量守門 ──────────────────────────────────────────────
 def _lcsc_guard(key, lcsc_products, history, today):
@@ -636,7 +805,12 @@ def _lcsc_guard(key, lcsc_products, history, today):
             carried = []
             for p in prev:
                 q = dict(p)
+                q['carried'] = True
                 q['carried_from'] = d
+                _fp, _fq = _floor_price(q.get('prices_usd') or q.get('prices'))
+                if _fp is not None:   # 統一地板價口徑
+                    q['min_price_usd'] = round(_fp, 6)
+                    q['floor_qty'] = _fq
                 carried.append(q)
             print(f"[⚠️ LCSC degraded: {len(lcsc_products)} < 60% of median {med} — carrying {len(carried)} from {d}]", end=' ')
             return carried, True, d
@@ -689,7 +863,7 @@ def compute_stats(products, spec_hist, today, lookback=7, min_frac=0.6):
 #   - 名單成員當天沒抓到 → 沿用最近一次價格（最多 PANEL_CARRY_MAX 天）
 #   - 新料號連續出現 PANEL_ADD_STREAK 天才轉正進名單（避免搜尋雜訊）
 #   - 成員連續缺席 PANEL_DROP_DAYS 天才除名（避免名單震盪）
-PANEL_ADD_STREAK = 5    # 新料連續出現 N 天 → 轉正
+PANEL_ADD_STREAK = 1    # 新料出現 N 天即轉正（=1 立即納入；若日後雜訊多可調回 5）
 PANEL_DROP_DAYS  = 14   # 缺席 N 天 → 除名
 PANEL_CARRY_MAX  = 7    # 缺席期間沿用舊價最多 N 天
 
@@ -701,7 +875,7 @@ def _find_last_record(spec_hist, pid, today, max_back=PANEL_CARRY_MAX):
                 return p, d
     return None, None
 
-def _seed_panel(conn, key, spec_hist, today, today_pids):
+def _seed_panel(conn, key, spec_hist, today, today_pids, min_v=None):
     """初次建名單：近 7 天出現在 >=60% 天數的料號；歷史不足則用今天全部。"""
     dates = sorted(d for d in spec_hist
                    if d < today and spec_hist[d].get('products'))[-7:]
@@ -709,7 +883,8 @@ def _seed_panel(conn, key, spec_hist, today, today_pids):
         from collections import Counter
         seen = Counter()
         for d in dates:
-            seen.update({_pid(p) for p in spec_hist[d]['products']})
+            seen.update({_pid(p) for p in spec_hist[d]['products']
+                         if not min_v or (_rated_voltage(p) or min_v) >= min_v * 0.99})
         need = max(2, int(round(len(dates) * 0.6)))
         pids = {i for i, c in seen.items() if c >= need}
     else:
@@ -722,7 +897,7 @@ def _seed_panel(conn, key, spec_hist, today, today_pids):
     print(f"[panel seeded: {len(pids)}]", end=' ')
     return pids
 
-def panel_sample(conn, key, all_products, spec_hist, today):
+def panel_sample(conn, key, all_products, spec_hist, today, min_v=None):
     """維護名單並回傳 (統計樣本, 沿用的產品們, 摘要字串)。"""
     cur = {}
     for p in all_products:
@@ -735,12 +910,26 @@ def panel_sample(conn, key, all_products, spec_hist, today):
                       'miss': r[3] or 0, 'seen': r[4] or 0, 'added': r[5]}
                for r in rows}
 
-    actives = [pid for pid, m in members.items() if m['status'] == 'active']
+    actives = [pid for pid, m in members.items() if m['status'] in ('active', 'pinned')]
     if not actives:
-        seeded = _seed_panel(conn, key, spec_hist, today, cur.keys())
+        seeded = _seed_panel(conn, key, spec_hist, today, cur.keys(), min_v)
         actives = list(seeded)
         members.update({pid: {'status': 'active', 'last_seen': today,
                               'miss': 0, 'seen': 0, 'added': today} for pid in seeded})
+
+    # 名單裡已存在的低壓料 → 立即除名（規格加了 min_v 後的一次性清理）
+    if min_v:
+        purged = 0
+        for pid in list(actives):
+            src = cur.get(pid) or _find_last_record(spec_hist, pid, today)[0]
+            v = _rated_voltage(src) if src else None
+            if v is not None and v < min_v * 0.99:
+                conn.execute("UPDATE panel SET status='retired' WHERE spec_key=? AND pid=?",
+                             (key, pid))
+                actives.remove(pid)
+                purged += 1
+        if purged:
+            print(f"[panel V<{min_v} 除名 {purged}]", end=' ')
 
     prev_date = max((d for d in spec_hist if d < today), default=None)
 
@@ -754,7 +943,7 @@ def panel_sample(conn, key, all_products, spec_hist, today):
                          (today, key, pid))
         else:
             miss = m['miss'] + 1
-            if miss >= PANEL_DROP_DAYS:
+            if miss >= PANEL_DROP_DAYS and m['status'] != 'pinned':   # pinned 永不除名
                 conn.execute("UPDATE panel SET status='retired', miss_streak=?, seen_streak=0 "
                              "WHERE spec_key=? AND pid=?", (miss, key, pid))
                 dropped += 1
@@ -767,13 +956,17 @@ def panel_sample(conn, key, all_products, spec_hist, today):
                     q = dict(lastp)
                     q['carried'] = True
                     q['carried_from'] = lastd
+                    _fp, _fq = _floor_price(q.get('prices_usd') or q.get('prices'))
+                    if _fp is not None:   # 沿用的舊資料也統一成地板價口徑
+                        q['min_price_usd'] = round(_fp, 6)
+                        q['floor_qty'] = _fq
                     sample.append(q); carried_items.append(q); carry += 1
 
     # 名單外的料號 = 候選：連續出現 PANEL_ADD_STREAK 天才轉正
     added = 0
     for pid, p in cur.items():
         m = members.get(pid)
-        if m and m['status'] == 'active':
+        if m and m['status'] in ('active', 'pinned'):
             continue
         streak = (m['seen'] + 1) if (m and m['last_seen'] == prev_date) else 1
         if streak >= PANEL_ADD_STREAK:
@@ -796,6 +989,18 @@ def panel_sample(conn, key, all_products, spec_hist, today):
     if dropped: note += f" -{dropped}除名"
     note += ")"
     return sample, carried_items, note
+
+def _floor_price(prices):
+    """從價格階梯取最低單價（地板價）與對應數量。鍵可能是 int 或 str。"""
+    try:
+        items = [(int(k), float(v)) for k, v in (prices or {}).items() if v and float(v) > 0]
+    except Exception:
+        return None, None
+    if not items:
+        return None, None
+    mn = min(v for _, v in items)
+    qty = max(q for q, v in items if v == mn)
+    return mn, qty
 
 def _basket_stats(products):
     """對固定名單樣本算 avg/median（僅 in-stock 且有價）。"""
@@ -875,23 +1080,23 @@ def scrape_all(force=False, mouser_key='', discover=False):
 
         base_url = spec['url']
         for page in range(1, 11):  # up to 10 pages (~300 products)
-            page_url = base_url if page == 1 else f"{base_url}&currentPage={page}"
+            page_url = base_url if page == 1 else f"{base_url}&page={page}"   # 新版分頁參數
             html = fetch_lcsc_page(page_url)
             if not html or len(html) < 5000:
                 if page == 1:
                     print("LCSC FAILED", end=' ')
                 break
-            # 第 1 頁若 HTML 產品卡解析為空（LCSC 改版/反爬給了不同頁面），
+            # 第 1 頁若主解析（__NEXT_DATA__/HTML 卡片）為空（LCSC 改版/反爬），
             # 換 session 重試，避免直接退回只有 3 筆的 JSON-LD 爛樣本
-            raw = parse_html_cards(html)
+            raw = parse_next_data(html) or parse_html_cards(html)
             if not raw and page == 1:
                 for retry in range(2):
-                    print(f"[cards-empty, retry {retry+1}]", end=' ', flush=True)
+                    print(f"[parse-empty, retry {retry+1}]", end=' ', flush=True)
                     time.sleep(8 + retry * 7)
                     sc = cloudscraper.create_scraper()
                     html2 = fetch_lcsc_page(page_url)
                     if html2 and len(html2) > 5000:
-                        raw = parse_html_cards(html2)
+                        raw = parse_next_data(html2) or parse_html_cards(html2)
                         if raw:
                             html = html2
                             break
@@ -904,7 +1109,12 @@ def scrape_all(force=False, mouser_key='', discover=False):
                 break   # no new items → last page reached
             for p in new_items:
                 seen_lcsc.add(p['lcsc_id'])
-                p['min_price_usd'] = round(p['min_price'] * rate, 6)
+                # 地板價：取階梯最低單價；CNY 原幣另存（LCSC 指數用，排除匯率干擾）
+                _fp, _fq = _floor_price(p.get('prices'))
+                _fp_cny = _fp if _fp is not None else p['min_price']
+                p['min_price_cny'] = round(_fp_cny, 6)
+                p['min_price_usd'] = round(_fp_cny * rate, 6)
+                p['floor_qty'] = _fq
                 p['currency'] = 'CNY'
                 p['source'] = 'LCSC'
                 p.setdefault('mouser_url', None)
@@ -915,6 +1125,55 @@ def scrape_all(force=False, mouser_key='', discover=False):
 
         lcsc_products = clean_products(lcsc_products)   # apply brand whitelist to LCSC too
         lcsc_products, lcsc_degraded, lcsc_carried_from = _lcsc_guard(key, lcsc_products, history, today)
+        min_v = spec.get('min_v')
+        if min_v:   # 額定電壓過濾（守門沿用的舊資料也要過）
+            lcsc_products = filter_min_voltage(lcsc_products, min_v)
+
+        # ── 指定料號（pin）註冊進名單：永久追蹤、不受搜尋排序影響 ──
+        for lid in spec.get('pin_lcsc', []):
+            conn.execute(
+                "INSERT OR REPLACE INTO panel (spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak) "
+                "SELECT ?,?,COALESCE((SELECT model FROM panel WHERE spec_key=? AND pid=?),''),'pinned',"
+                "COALESCE((SELECT added FROM panel WHERE spec_key=? AND pid=?),?),?,0,0",
+                (key, 'L:' + str(lid), key, 'L:' + str(lid), key, 'L:' + str(lid), today, today))
+        conn.commit()
+
+        # ── LCSC 名單成員直抓：名單內的料就算搜尋排序掉出頁面，也直接抓商品頁 ──
+        try:
+            panel_lids = [r[0][2:] for r in conn.execute(
+                "SELECT pid FROM panel WHERE spec_key=? AND status IN ('active','pinned') AND pid LIKE 'L:%'",
+                (key,))]
+        except Exception:
+            panel_lids = []
+        have_lids = {str(p.get('lcsc_id')) for p in lcsc_products}
+        missing_lids = [l for l in panel_lids if l and l not in have_lids][:10]  # 上限 10 筆/規格
+        topup_n = 0
+        for lid in missing_lids:
+            ih = fetch_lcsc_page(f"https://item.szlcsc.com/{lid}.html")
+            prod = parse_item_page(ih) if ih else None
+            if prod and prod.get('prices'):
+                lastp, _ = _find_last_record(history.get(key, {}), 'L:' + lid, today)
+                if lastp:   # 品牌/描述從歷史紀錄補（商品頁 SSR 沒品牌欄位）
+                    prod['brand'] = prod.get('brand') or lastp.get('brand', '')
+                    prod['description'] = prod.get('description') or lastp.get('description', '')
+                if min_v:
+                    v = _rated_voltage(prod)
+                    if v is not None and v < min_v * 0.99:
+                        continue
+                _fp, _fq = _floor_price(prod['prices'])
+                prod['min_price_cny'] = round(_fp, 6)
+                prod['min_price_usd'] = round(_fp * rate, 6)
+                prod['floor_qty'] = _fq
+                prod['prices_usd'] = {q: round(vv * rate, 6) for q, vv in prod['prices'].items()}
+                prod['currency'] = 'CNY'
+                prod['source'] = 'LCSC'
+                prod['topup'] = True
+                prod.setdefault('mouser_url', None)
+                lcsc_products.append(prod)
+                topup_n += 1
+            time.sleep(1 + random.uniform(0, 1))
+        if topup_n:
+            print(f"[+{topup_n} LCSC panel top-up]", end=' ')
 
         # ── Mouser ────────────────────────────────────────────────
         mouser_products = []
@@ -944,6 +1203,8 @@ def scrape_all(force=False, mouser_key='', discover=False):
 
             # Step 3: merge + update catalog in DB
             mouser_products = kw_products + extra_products
+            if min_v:
+                mouser_products = filter_min_voltage(mouser_products, min_v)
             new_pns = {p['mouser_pn'] for p in mouser_products if p.get('mouser_pn')}
             db_upsert_catalog(conn, key, new_pns)
             catalog.setdefault(key, set()).update(new_pns)
@@ -962,11 +1223,46 @@ def scrape_all(force=False, mouser_key='', discover=False):
 
         # ── 固定追蹤名單：統計樣本 = 名單成員（當日缺席者沿用最近價）──
         sample, carried_items, panel_note = panel_sample(
-            conn, key, all_products, history.get(key, {}), today)
+            conn, key, all_products, history.get(key, {}), today, min_v=min_v)
         stats = _basket_stats(sample)
         raw_stats = _basket_stats(all_products)
         if stats['avg'] is None:            # 名單全缺（理論上不會）→ 退回全樣本
             stats = raw_stats
+
+        # ── 分源指數：LCSC 用人民幣原幣（排除匯率干擾）、Mouser 用美元 ──
+        lcsc_sample   = [p for p in sample if p.get('source') != 'Mouser']
+        mouser_sample = [p for p in sample if p.get('source') == 'Mouser']
+
+        def _avg_med(xs):
+            xs = sorted(xs)
+            if not xs:
+                return None, None
+            n, m2 = len(xs), len(xs) // 2
+            med = (xs[m2-1] + xs[m2]) / 2 if n % 2 == 0 else xs[m2]
+            return round(sum(xs) / n, 6), round(med, 6)
+
+        lc_cny = []
+        for p in lcsc_sample:
+            if (p.get('stock') or 0) <= 0:
+                continue
+            c = p.get('min_price_cny')
+            if not c and rate and (p.get('min_price_usd') or 0) > 0:
+                c = p['min_price_usd'] / rate   # 舊資料沒存 CNY 時的備援換算
+            if c and c > 0:
+                lc_cny.append(c)
+        lcsc_avg_cny, lcsc_median_cny = _avg_med(lc_cny)
+        mo_stats = _basket_stats(mouser_sample)
+
+        # 交期（Mouser LeadTime 中位數，天）— 只算當日新鮮資料
+        _lts = sorted(p['lead_time_days'] for p in mouser_sample
+                      if p.get('lead_time_days') and not p.get('carried'))
+        mouser_lt = None
+        if _lts:
+            _n = len(_lts)
+            mouser_lt = _lts[_n//2] if _n % 2 else (_lts[_n//2-1] + _lts[_n//2]) / 2
+
+        lcsc_stock   = sum(p.get('stock') or 0 for p in lcsc_sample)
+        mouser_stock = sum(p.get('stock') or 0 for p in mouser_sample)
 
         day_products = all_products + carried_items
         instock = [p for p in day_products if p.get('stock', 0) > 0]
@@ -979,6 +1275,13 @@ def scrape_all(force=False, mouser_key='', discover=False):
             'raw_avg_price_usd': raw_stats['avg'],
             'panel_size':     stats['n'],
             'panel_carried':  len(carried_items),
+            'lcsc_avg_cny':   lcsc_avg_cny,
+            'lcsc_median_cny': lcsc_median_cny,
+            'mouser_avg_usd': mo_stats['avg'],
+            'mouser_median_usd': mo_stats['med'],
+            'lcsc_stock':     lcsc_stock,
+            'mouser_stock':   mouser_stock,
+            'mouser_leadtime_days': mouser_lt,
             'exchange_rate':  rate,
             'product_count':  len(day_products),
             'in_stock_count': len(instock),
@@ -990,7 +1293,9 @@ def scrape_all(force=False, mouser_key='', discover=False):
         }
         db_save_day(conn, key, today, day_data)      # persist immediately (crash-safe)
         history.setdefault(key, {})[today] = day_data
-        print(f"LCSC:{len(lcsc_products)} Mouser:{len(mouser_products)}  {panel_note}  avg ${stats['avg']}")
+        _lc_note = f"¥{lcsc_avg_cny}" if lcsc_avg_cny else "—"
+        _mo_note = f"${mo_stats['avg']}" if mo_stats['avg'] else "—"
+        print(f"LCSC:{len(lcsc_products)} Mouser:{len(mouser_products)}  {panel_note}  LCSC均{_lc_note} Mouser均{_mo_note}")
         time.sleep(3 + random.uniform(0, 3))
 
     total_catalog = sum(len(v) for v in catalog.values())
