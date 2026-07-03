@@ -7,9 +7,43 @@ import re, json as json_mod, sys, os, base64, time
 from datetime import datetime, timezone, timedelta
 
 # 統一用台灣時間（UTC+8）計算日期，GH Actions 和 local PC 才會一致
+# 重要：不信任本機時鐘/時區設定 — 先問網路（GitHub API 的 Date header），
+# 拿不到才退回本機時間。曾發生本機時區設錯導致晚上抓的資料被標成「明天」。
 _TAIWAN = timezone(timedelta(hours=8))
+_TW_CLOCK_OFFSET = None   # network_TW - local_naive，第一次呼叫時量測
+
+def _measure_clock_offset():
+    """回傳 timedelta = 真實台灣時間 - 本機 naive 時間；量不到回傳 None。"""
+    from email.utils import parsedate_to_datetime
+    for url in ("https://api.github.com", "https://www.google.com"):
+        try:
+            import requests as _rq
+            r = _rq.get(url, timeout=10, stream=True)
+            hdr = r.headers.get('Date')
+            if not hdr:
+                continue
+            net_tw = parsedate_to_datetime(hdr).astimezone(_TAIWAN)
+            return net_tw.replace(tzinfo=None) - datetime.now()
+        except Exception:
+            continue
+    return None
+
+def _now_tw():
+    """可信的台灣時間（tz-aware）。優先網路時間，退回本機換算。"""
+    global _TW_CLOCK_OFFSET
+    if _TW_CLOCK_OFFSET is None:
+        off = _measure_clock_offset()
+        if off is not None:
+            _TW_CLOCK_OFFSET = off
+            if abs(off) > timedelta(minutes=30):
+                print(f"  ⚠️  本機時鐘/時區與台灣時間偏差 {off}（請檢查 Windows 時區設定，應為 UTC+8 台北）")
+        else:
+            _TW_CLOCK_OFFSET = datetime.now(_TAIWAN).replace(tzinfo=None) - datetime.now()
+            print("  ⚠️  無法取得網路時間，退回本機時區換算（若時區設錯日期會不準）")
+    return (datetime.now() + _TW_CLOCK_OFFSET).replace(tzinfo=_TAIWAN)
+
 def _today_tw():
-    return datetime.now(_TAIWAN).strftime("%Y-%m-%d")
+    return _now_tw().strftime("%Y-%m-%d")
 
 def ensure(pkg, import_as=None):
     try:
@@ -252,6 +286,17 @@ def init_db():
             mouser_pn   TEXT NOT NULL,
             PRIMARY KEY (spec_key, mouser_pn)
         );
+        CREATE TABLE IF NOT EXISTS panel (
+            spec_key    TEXT NOT NULL,
+            pid         TEXT NOT NULL,   -- 'L:<lcsc_id>' 或 'M:<mouser_pn>'
+            model       TEXT,
+            status      TEXT NOT NULL DEFAULT 'active',  -- active/candidate/retired
+            added       TEXT,
+            last_seen   TEXT,
+            miss_streak INTEGER DEFAULT 0,
+            seen_streak INTEGER DEFAULT 0,
+            PRIMARY KEY (spec_key, pid)
+        );
     """)
     conn.commit()
     # Migration: add median_price_usd column to existing DBs
@@ -304,7 +349,10 @@ def _compute_median(products):
 
 def db_save_day(conn, spec_key, date, day_data):
     """Upsert one day's data for a spec (replaces old entry if exists)."""
-    median = _compute_median(day_data.get('products', []))
+    # 優先使用呼叫端算好的（固定樣本池）median，沒有才用原始樣本重算
+    median = day_data.get('median_price_usd')
+    if median is None:
+        median = _compute_median(day_data.get('products', []))
     conn.execute("INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)", (
         spec_key, date,
         day_data.get('avg_price_usd'), day_data.get('total_stock'),
@@ -568,6 +616,197 @@ def parse_products(html):
         print(f"[fallback:json-ld {len(result)} items]", end=' ')
     return result
 
+# ── LCSC 樣本量守門 ──────────────────────────────────────────────
+def _lcsc_guard(key, lcsc_products, history, today):
+    """LCSC 筆數若比近 7 天中位數低太多（<60%），視為當日抓取降級，
+    沿用最近一天的 LCSC 產品，避免爛樣本污染統計。
+    回傳 (products, degraded, carried_from)。"""
+    spec_hist = history.get(key, {})
+    dates = sorted(d for d in spec_hist if d < today)[-7:]
+    counts = sorted((spec_hist[d].get('lcsc_count') or 0) for d in dates)
+    if not counts:
+        return lcsc_products, False, None
+    med = counts[len(counts) // 2]
+    if med < 5 or len(lcsc_products) >= med * 0.6:
+        return lcsc_products, False, None
+    # 降級 — 從最近的日期往回找可沿用的 LCSC 樣本
+    for d in reversed(dates):
+        prev = [p for p in spec_hist[d].get('products', []) if p.get('source') == 'LCSC']
+        if len(prev) >= med * 0.6:
+            carried = []
+            for p in prev:
+                q = dict(p)
+                q['carried_from'] = d
+                carried.append(q)
+            print(f"[⚠️ LCSC degraded: {len(lcsc_products)} < 60% of median {med} — carrying {len(carried)} from {d}]", end=' ')
+            return carried, True, d
+    print(f"[⚠️ LCSC degraded: {len(lcsc_products)} vs median {med}, no carry source]", end=' ')
+    return lcsc_products, True, None
+
+# ── 固定樣本池統計（樣本組成穩定，跨日才可比較）───────────────────
+def _pid(p):
+    """產品的跨日穩定識別碼。"""
+    if p.get('source') == 'Mouser' or p.get('mouser_pn'):
+        return 'M:' + str(p.get('mouser_pn') or p.get('model'))
+    return 'L:' + str(p.get('lcsc_id') or p.get('model'))
+
+def compute_stats(products, spec_hist, today, lookback=7, min_frac=0.6):
+    """回傳 dict(avg, median, raw_avg, raw_median, panel_size)。
+    樣本池 = 近 lookback 天內出現在 >=60% 天數的料號；
+    池內今日有價的料 >=5 筆才用池統計，否則退回全樣本。"""
+    def _avg(xs): return round(sum(xs) / len(xs), 6) if xs else None
+    def _med(xs):
+        if not xs: return None
+        n, m = len(xs), len(xs) // 2
+        return round((xs[m-1] + xs[m]) / 2, 6) if n % 2 == 0 else round(xs[m], 6)
+
+    instock = [p for p in products
+               if (p.get('stock') or 0) > 0 and (p.get('min_price_usd') or 0) > 0]
+    raw = sorted(p['min_price_usd'] for p in instock)
+    out = {'avg': _avg(raw), 'median': _med(raw),
+           'raw_avg': _avg(raw), 'raw_median': _med(raw), 'panel_size': None}
+
+    # 只取有 products 明細的歷史日期（slim 同步回來的日期沒有明細）
+    dates = sorted(d for d in (spec_hist or {})
+                   if d < today and spec_hist[d].get('products'))[-lookback:]
+    if len(dates) < 3:
+        return out
+    from collections import Counter
+    seen = Counter()
+    for d in dates:
+        seen.update({_pid(p) for p in spec_hist[d]['products']})
+    need = max(2, int(round(len(dates) * min_frac)))
+    panel = {i for i, c in seen.items() if c >= need}
+    panel_prices = sorted(p['min_price_usd'] for p in instock if _pid(p) in panel)
+    if len(panel_prices) >= 5:
+        out['avg'] = _avg(panel_prices)
+        out['median'] = _med(panel_prices)
+        out['panel_size'] = len(panel_prices)
+    return out
+
+# ── 固定追蹤名單（basket）：每天統計「同一批」料號 ────────────────
+# 核心保證：統計樣本 = DB 裡的正式名單，跟當天搜尋結果好壞無關。
+#   - 名單成員當天沒抓到 → 沿用最近一次價格（最多 PANEL_CARRY_MAX 天）
+#   - 新料號連續出現 PANEL_ADD_STREAK 天才轉正進名單（避免搜尋雜訊）
+#   - 成員連續缺席 PANEL_DROP_DAYS 天才除名（避免名單震盪）
+PANEL_ADD_STREAK = 5    # 新料連續出現 N 天 → 轉正
+PANEL_DROP_DAYS  = 14   # 缺席 N 天 → 除名
+PANEL_CARRY_MAX  = 7    # 缺席期間沿用舊價最多 N 天
+
+def _find_last_record(spec_hist, pid, today, max_back=PANEL_CARRY_MAX):
+    """往回找該料號最近一筆真實抓取紀錄。回傳 (product, date) 或 (None, None)。"""
+    for d in sorted((d for d in spec_hist if d < today), reverse=True)[:max_back]:
+        for p in spec_hist[d].get('products', []):
+            if not p.get('carried') and _pid(p) == pid:
+                return p, d
+    return None, None
+
+def _seed_panel(conn, key, spec_hist, today, today_pids):
+    """初次建名單：近 7 天出現在 >=60% 天數的料號；歷史不足則用今天全部。"""
+    dates = sorted(d for d in spec_hist
+                   if d < today and spec_hist[d].get('products'))[-7:]
+    if len(dates) >= 3:
+        from collections import Counter
+        seen = Counter()
+        for d in dates:
+            seen.update({_pid(p) for p in spec_hist[d]['products']})
+        need = max(2, int(round(len(dates) * 0.6)))
+        pids = {i for i, c in seen.items() if c >= need}
+    else:
+        pids = set(today_pids)
+    conn.executemany(
+        "INSERT OR REPLACE INTO panel (spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak) "
+        "VALUES (?,?,?,?,?,?,0,0)",
+        [(key, pid, '', 'active', today, today) for pid in pids])
+    conn.commit()
+    print(f"[panel seeded: {len(pids)}]", end=' ')
+    return pids
+
+def panel_sample(conn, key, all_products, spec_hist, today):
+    """維護名單並回傳 (統計樣本, 沿用的產品們, 摘要字串)。"""
+    cur = {}
+    for p in all_products:
+        cur.setdefault(_pid(p), p)
+
+    rows = conn.execute(
+        "SELECT pid,status,last_seen,miss_streak,seen_streak,added "
+        "FROM panel WHERE spec_key=?", (key,)).fetchall()
+    members = {r[0]: {'status': r[1], 'last_seen': r[2],
+                      'miss': r[3] or 0, 'seen': r[4] or 0, 'added': r[5]}
+               for r in rows}
+
+    actives = [pid for pid, m in members.items() if m['status'] == 'active']
+    if not actives:
+        seeded = _seed_panel(conn, key, spec_hist, today, cur.keys())
+        actives = list(seeded)
+        members.update({pid: {'status': 'active', 'last_seen': today,
+                              'miss': 0, 'seen': 0, 'added': today} for pid in seeded})
+
+    prev_date = max((d for d in spec_hist if d < today), default=None)
+
+    sample, carried_items = [], []
+    fresh = carry = dropped = 0
+    for pid in actives:
+        m = members[pid]
+        if pid in cur:
+            sample.append(cur[pid]); fresh += 1
+            conn.execute("UPDATE panel SET last_seen=?, miss_streak=0 WHERE spec_key=? AND pid=?",
+                         (today, key, pid))
+        else:
+            miss = m['miss'] + 1
+            if miss >= PANEL_DROP_DAYS:
+                conn.execute("UPDATE panel SET status='retired', miss_streak=?, seen_streak=0 "
+                             "WHERE spec_key=? AND pid=?", (miss, key, pid))
+                dropped += 1
+                continue
+            conn.execute("UPDATE panel SET miss_streak=? WHERE spec_key=? AND pid=?",
+                         (miss, key, pid))
+            if miss <= PANEL_CARRY_MAX:
+                lastp, lastd = _find_last_record(spec_hist, pid, today)
+                if lastp:
+                    q = dict(lastp)
+                    q['carried'] = True
+                    q['carried_from'] = lastd
+                    sample.append(q); carried_items.append(q); carry += 1
+
+    # 名單外的料號 = 候選：連續出現 PANEL_ADD_STREAK 天才轉正
+    added = 0
+    for pid, p in cur.items():
+        m = members.get(pid)
+        if m and m['status'] == 'active':
+            continue
+        streak = (m['seen'] + 1) if (m and m['last_seen'] == prev_date) else 1
+        if streak >= PANEL_ADD_STREAK:
+            conn.execute(
+                "INSERT OR REPLACE INTO panel (spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak) "
+                "VALUES (?,?,?,?,?,?,0,?)",
+                (key, pid, p.get('model', ''), 'active',
+                 (m or {}).get('added') or today, today, streak))
+            added += 1
+        else:
+            conn.execute(
+                "INSERT OR REPLACE INTO panel (spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak) "
+                "VALUES (?,?,?,?,?,?,0,?)",
+                (key, pid, p.get('model', ''), 'candidate',
+                 (m or {}).get('added') or today, today, streak))
+    conn.commit()
+
+    note = f"panel:{fresh + carry}/{len(actives)} (fresh:{fresh} carry:{carry}"
+    if added:   note += f" +{added}轉正"
+    if dropped: note += f" -{dropped}除名"
+    note += ")"
+    return sample, carried_items, note
+
+def _basket_stats(products):
+    """對固定名單樣本算 avg/median（僅 in-stock 且有價）。"""
+    xs = sorted(p['min_price_usd'] for p in products
+                if (p.get('stock') or 0) > 0 and (p.get('min_price_usd') or 0) > 0)
+    if not xs:
+        return {'avg': None, 'med': None, 'n': 0}
+    n, m = len(xs), len(xs) // 2
+    med = (xs[m-1] + xs[m]) / 2 if n % 2 == 0 else xs[m]
+    return {'avg': round(sum(xs) / n, 6), 'med': round(med, 6), 'n': n}
+
 # ── clean bad history entries ────────────────────────────────────
 def clean_bad(history):
     cleaned = 0
@@ -642,7 +881,24 @@ def scrape_all(force=False, mouser_key='', discover=False):
                 if page == 1:
                     print("LCSC FAILED", end=' ')
                 break
-            raw = parse_products(html)
+            # 第 1 頁若 HTML 產品卡解析為空（LCSC 改版/反爬給了不同頁面），
+            # 換 session 重試，避免直接退回只有 3 筆的 JSON-LD 爛樣本
+            raw = parse_html_cards(html)
+            if not raw and page == 1:
+                for retry in range(2):
+                    print(f"[cards-empty, retry {retry+1}]", end=' ', flush=True)
+                    time.sleep(8 + retry * 7)
+                    sc = cloudscraper.create_scraper()
+                    html2 = fetch_lcsc_page(page_url)
+                    if html2 and len(html2) > 5000:
+                        raw = parse_html_cards(html2)
+                        if raw:
+                            html = html2
+                            break
+            if not raw:
+                raw = parse_jsonld(html)
+                if raw:
+                    print(f"[fallback:json-ld {len(raw)} items]", end=' ')
             new_items = [p for p in raw if p.get('lcsc_id') and p['lcsc_id'] not in seen_lcsc]
             if not new_items:
                 break   # no new items → last page reached
@@ -658,6 +914,7 @@ def scrape_all(force=False, mouser_key='', discover=False):
                 time.sleep(2 + random.uniform(0, 2))   # polite delay between LCSC pages
 
         lcsc_products = clean_products(lcsc_products)   # apply brand whitelist to LCSC too
+        lcsc_products, lcsc_degraded, lcsc_carried_from = _lcsc_guard(key, lcsc_products, history, today)
 
         # ── Mouser ────────────────────────────────────────────────
         mouser_products = []
@@ -703,25 +960,37 @@ def scrape_all(force=False, mouser_key='', discover=False):
             print(f"0 products")
             continue
 
-        instock = [p for p in all_products if p.get('stock', 0) > 0]
-        usd_prices = [p['min_price_usd'] for p in instock if p.get('min_price_usd', 0) > 0]
-        avg_usd = round(sum(usd_prices) / len(usd_prices), 6) if usd_prices else None
-        total_stock = sum(p.get('stock', 0) for p in all_products)
+        # ── 固定追蹤名單：統計樣本 = 名單成員（當日缺席者沿用最近價）──
+        sample, carried_items, panel_note = panel_sample(
+            conn, key, all_products, history.get(key, {}), today)
+        stats = _basket_stats(sample)
+        raw_stats = _basket_stats(all_products)
+        if stats['avg'] is None:            # 名單全缺（理論上不會）→ 退回全樣本
+            stats = raw_stats
+
+        day_products = all_products + carried_items
+        instock = [p for p in day_products if p.get('stock', 0) > 0]
+        total_stock = sum(p.get('stock', 0) for p in day_products)
 
         day_data = {
-            'products':       all_products,
-            'avg_price_usd':  avg_usd,
+            'products':       day_products,
+            'avg_price_usd':  stats['avg'],
+            'median_price_usd': stats['med'],
+            'raw_avg_price_usd': raw_stats['avg'],
+            'panel_size':     stats['n'],
+            'panel_carried':  len(carried_items),
             'exchange_rate':  rate,
-            'product_count':  len(all_products),
+            'product_count':  len(day_products),
             'in_stock_count': len(instock),
             'total_stock':    total_stock,
             'lcsc_count':     len(lcsc_products),
             'mouser_count':   len(mouser_products),
-            'fetched_at':     datetime.now().isoformat()
+            'lcsc_carried_from': lcsc_carried_from,
+            'fetched_at':     _now_tw().isoformat()
         }
         db_save_day(conn, key, today, day_data)      # persist immediately (crash-safe)
         history.setdefault(key, {})[today] = day_data
-        print(f"LCSC:{len(lcsc_products)} Mouser:{len(mouser_products)}  avg ${avg_usd}")
+        print(f"LCSC:{len(lcsc_products)} Mouser:{len(mouser_products)}  {panel_note}  avg ${stats['avg']}")
         time.sleep(3 + random.uniform(0, 3))
 
     total_catalog = sum(len(v) for v in catalog.values())
@@ -753,9 +1022,9 @@ def slim_history(history):
                 entry['products'] = v.get('products', [])
             else:
                 prods = v.get('products', [])
-                if prods:
+                if entry.get('median_price_usd') is None and prods:
+                    # 只有在沒有算好的（固定樣本池）median 時才用原始樣本補算
                     entry['median_price_usd'] = _median(prods)
-                # else: keep entry['median_price_usd'] already loaded from DB column
                 entry['products'] = []
             slim[sk][dt] = entry
     return slim
@@ -822,7 +1091,7 @@ def main():
         print("  [sync] 從 GitHub 同步本地 DB...")
         try:
             import bootstrap_db as _bdb
-            _bdb.bootstrap()
+            _bdb.bootstrap(today=today)
         except Exception as _e:
             print(f"  Bootstrap 失敗 ({_e}) — 繼續使用本地 DB")
 
@@ -882,6 +1151,16 @@ def main():
         gh_push("index.html", html, msg)
         with open(LOCAL_TMPL, encoding='utf-8') as _f:
             gh_push("passive_components_template.html", _f.read(), msg)
+        # 固定追蹤名單也推上去，讓 GH Actions / local PC 用同一份名單
+        import sqlite3 as _sq3p
+        with _sq3p.connect(DB_FILE) as _cp:
+            try:
+                _panel_rows = _cp.execute(
+                    "SELECT spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak "
+                    "FROM panel").fetchall()
+                gh_push("panel.json", json_mod.dumps(_panel_rows, ensure_ascii=False), msg)
+            except Exception as _pe:
+                print(f"  panel.json 推送失敗（{_pe}）— 不影響價格資料")
         print(f"\n✅ Done!  https://evan0621.github.io/passive-components-tracker/\n")
 
 if __name__ == "__main__":
