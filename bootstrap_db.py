@@ -39,10 +39,21 @@ def bootstrap(today=None):
         CREATE INDEX IF NOT EXISTS idx_prod_spec_date ON products(spec_key, date);
         CREATE INDEX IF NOT EXISTS idx_prod_mouser_pn  ON products(mouser_pn);
     """)
-    try:
-        conn.execute("ALTER TABLE daily_stats ADD COLUMN median_price_usd REAL")
-    except Exception:
-        pass  # column already exists
+    for ddl in (
+        "ALTER TABLE daily_stats ADD COLUMN median_price_usd REAL",
+        "ALTER TABLE daily_stats ADD COLUMN lcsc_avg_cny REAL",
+        "ALTER TABLE daily_stats ADD COLUMN lcsc_median_cny REAL",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_avg_usd REAL",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_median_usd REAL",
+        "ALTER TABLE daily_stats ADD COLUMN lcsc_stock INTEGER",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_stock INTEGER",
+        "ALTER TABLE daily_stats ADD COLUMN mouser_leadtime_days REAL",
+        "ALTER TABLE products ADD COLUMN min_price_cny REAL",
+    ):
+        try:
+            conn.execute(ddl)
+        except Exception:
+            pass  # column already exists
 
     inserted = 0
     repaired = 0
@@ -54,13 +65,22 @@ def bootstrap(today=None):
             # This overwrites stale/bad DB rows (e.g., Mouser=0 bad data)
             # with whatever is currently in GitHub JSON.
             cur = conn.execute(
-                "INSERT OR REPLACE INTO daily_stats VALUES (?,?,?,?,?,?,?,?,?,?,?)",
+                "INSERT OR REPLACE INTO daily_stats "
+                "(spec_key,date,avg_price_usd,total_stock,in_stock_count,product_count,"
+                " lcsc_count,mouser_count,exchange_rate,fetched_at,median_price_usd,"
+                " lcsc_avg_cny,lcsc_median_cny,mouser_avg_usd,mouser_median_usd,"
+                " lcsc_stock,mouser_stock,mouser_leadtime_days) "
+                "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                 (spec_key, date,
                  entry.get('avg_price_usd'), entry.get('total_stock'),
                  entry.get('in_stock_count'), entry.get('product_count'),
                  entry.get('lcsc_count', 0), entry.get('mouser_count', 0),
                  entry.get('exchange_rate'), entry.get('fetched_at'),
-                 entry.get('median_price_usd'))
+                 entry.get('median_price_usd'),
+                 entry.get('lcsc_avg_cny'), entry.get('lcsc_median_cny'),
+                 entry.get('mouser_avg_usd'), entry.get('mouser_median_usd'),
+                 entry.get('lcsc_stock'), entry.get('mouser_stock'),
+                 entry.get('mouser_leadtime_days'))
             )
             inserted += cur.rowcount
 
@@ -76,13 +96,13 @@ def bootstrap(today=None):
                         prices = p.get('prices') or p.get('prices_usd') or {}
                         conn.execute(
                             "INSERT INTO products (spec_key,date,source,model,brand,package,description,"
-                            "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json) "
-                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+                            "stock,min_price_usd,min_qty,mouser_pn,lcsc_id,mouser_url,prices_json,min_price_cny) "
+                            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
                             (spec_key, date, p.get('source','LCSC'), p.get('model',''),
                              p.get('brand',''), p.get('package',''), p.get('description',''),
                              p.get('stock',0), p.get('min_price_usd'), p.get('min_qty'),
                              p.get('mouser_pn'), p.get('lcsc_id'), p.get('mouser_url'),
-                             json.dumps(prices))
+                             json.dumps(prices), p.get('min_price_cny'))
                         )
                         prod_count += 1
 
