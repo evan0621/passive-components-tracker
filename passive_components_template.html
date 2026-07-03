@@ -609,7 +609,7 @@ function renderSummary() {
   // cheapest
   const cheapest = [...inStock].sort((a,b) => getPriceUsd(a) - getPriceUsd(b))[0];
   document.getElementById('cheapest-model').textContent = cheapest ? cheapest.model : '—';
-  const minQty = cheapest ? (cheapest.min_qty || (cheapest.prices ? Math.min(...Object.keys(cheapest.prices).map(Number)) : '?')) : '?';
+  const minQty = cheapest ? (cheapest.floor_qty || cheapest.min_qty || (cheapest.prices ? Math.min(...Object.keys(cheapest.prices).map(Number)) : '?')) : '?';
   const cheapSrc = cheapest ? (' · ' + (cheapest.source || 'LCSC')) : '';
   document.getElementById('cheapest-sub').textContent = cheapest
     ? '$' + getPriceUsd(cheapest).toFixed(4) + ' (' + minQty + '+起) · ' + normBrand(cheapest.brand) + cheapSrc : '—';
@@ -771,20 +771,33 @@ function renderTable() {
   if (tablePage < 0) tablePage = 0;
   const pageProducts = products.slice(tablePage * TABLE_PAGE_SIZE, (tablePage + 1) * TABLE_PAGE_SIZE);
 
+  // 最新一天的匯率（CNY 備援換算用）
+  const _sd = specData(); const _dates = Object.keys(_sd).sort();
+  const curRate = _dates.length ? (_sd[_dates[_dates.length-1]].exchange_rate || 0.147) : 0.147;
+
   const rows = pageProducts.map(p => {
     const sc = p.stock>5000?'stock-hi':p.stock>1000?'stock-mid':p.stock>0?'stock-lo':'stock-zero';
     const sl = p.stock>0 ? p.stock.toLocaleString() : '需訂貨';
-    const mq = p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '-');
+    // 地板價對應的階梯量（floor_qty），沒有才退回最小起訂量
+    const mq = p.floor_qty || p.min_qty || (p.prices ? Math.min(...Object.keys(p.prices).map(Number)) : '-');
     const src = p.source || 'LCSC';
     const url = src === 'Mouser' ? (p.mouser_url||'#') : 'https://item.szlcsc.com/'+(p.lcsc_id||'')+'.html';
     const usd = getPriceUsd(p);
+    // 原幣顯示：LCSC 用人民幣（排除匯率干擾），Mouser 用美元；排序仍用 USD 換算
+    let priceHtml;
+    if (src !== 'Mouser') {
+      const cny = p.min_price_cny != null ? p.min_price_cny : (curRate ? usd / curRate : null);
+      priceHtml = cny != null ? '¥' + (+cny).toFixed(4) : '$' + usd.toFixed(4);
+    } else {
+      priceHtml = '$' + usd.toFixed(4);
+    }
     const t50  = getTierUsd(p, 50);
     const t500 = getTierUsd(p, 500);
     return '<tr>'
       +'<td>'+srcBadge(src)+'<br><a href="'+url+'" target="_blank" style="font-family:monospace;font-size:11px;font-weight:600;color:#2563eb;text-decoration:none">'+p.model+'</a></td>'
       +'<td><span class="brand-tag">'+normBrand(p.brand)+'</span></td>'
       +'<td style="text-align:center">'+(p.package||'-')+'</td>'
-      +'<td><span class="price-main">$'+usd.toFixed(4)+'</span><br><span class="price-bulk">'+mq+'+起</span></td>'
+      +'<td><span class="price-main">'+priceHtml+'</span><br><span class="price-bulk">'+mq+'+起</span></td>'
       +'<td class="price-bulk">'+(t50!=null?'$'+t50.toFixed(4):'-')+'</td>'
       +'<td class="price-bulk">'+(t500!=null?'$'+t500.toFixed(4):'-')+'</td>'
       +'<td style="text-align:center"><span class="stock-badge '+sc+'">'+sl+'</span></td></tr>';
@@ -800,7 +813,7 @@ function renderTable() {
     : '';
 
   wrap.innerHTML='<table><thead><tr><th>型號</th><th>品牌</th><th style="text-align:center">封裝</th>'
-    +'<th id="price-sort-th" style="cursor:pointer;user-select:none" title="點擊排序">最低單價(USD)'+arrow+'</th>'
+    +'<th id="price-sort-th" style="cursor:pointer;user-select:none" title="點擊排序（依 USD 換算值）">最低單價 (¥/$ 原幣)'+arrow+'</th>'
     +'<th>50+</th><th>500+</th><th>庫存</th></tr></thead><tbody>'+rows+'</tbody></table>'
     + pagination;
   var th = document.getElementById('price-sort-th');
