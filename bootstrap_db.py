@@ -6,8 +6,10 @@ import json, sqlite3, os
 
 DB = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'passive_components.db')
 JSON_URL = 'https://raw.githubusercontent.com/evan0621/passive-components-tracker/main/passive_components_prices.json'
+PANEL_URL = 'https://raw.githubusercontent.com/evan0621/passive-components-tracker/main/panel.json'
 
-def bootstrap():
+def bootstrap(today=None):
+    """today: 可信的台灣日期字串（由呼叫端傳入）；不傳才退回本機時鐘換算。"""
     import requests
     print("Syncing from GitHub JSON (filling gaps only)...")
     r = requests.get(JSON_URL, timeout=60)
@@ -86,8 +88,9 @@ def bootstrap():
 
     # Sync DB to GitHub JSON: delete any date that was cleaned from JSON
     # (e.g., bad Mouser data removed manually), but keep today's fresh data
-    from datetime import datetime as _dt, timezone as _tz, timedelta as _td
-    today = _dt.now(_tz(_td(hours=8))).strftime("%Y-%m-%d")  # 台灣時間
+    if not today:
+        from datetime import datetime as _dt, timezone as _tz, timedelta as _td
+        today = _dt.now(_tz(_td(hours=8))).strftime("%Y-%m-%d")  # 台灣時間（本機換算，備援）
     valid_dates = set(d for dates in history.values() for d in dates.keys())
     all_db_dates = set(
         row[0] for row in conn.execute("SELECT DISTINCT date FROM daily_stats")
@@ -99,6 +102,30 @@ def bootstrap():
         conn.execute("DELETE FROM products WHERE date=?", (d,))
         deleted += r.rowcount
         print(f"  Removed stale date {d} from DB (not in GitHub JSON)")
+
+    # 同步固定追蹤名單（panel）— GH Actions 和 local PC 必須用同一份名單
+    try:
+        pr = requests.get(PANEL_URL, timeout=30)
+        if pr.status_code == 200:
+            rows = pr.json()
+            conn.execute("""
+                CREATE TABLE IF NOT EXISTS panel (
+                    spec_key    TEXT NOT NULL,
+                    pid         TEXT NOT NULL,
+                    model       TEXT,
+                    status      TEXT NOT NULL DEFAULT 'active',
+                    added       TEXT,
+                    last_seen   TEXT,
+                    miss_streak INTEGER DEFAULT 0,
+                    seen_streak INTEGER DEFAULT 0,
+                    PRIMARY KEY (spec_key, pid)
+                )""")
+            conn.executemany(
+                "INSERT OR REPLACE INTO panel VALUES (?,?,?,?,?,?,?,?)",
+                [tuple(r) for r in rows])
+            print(f"  Panel synced: {len(rows)} entries")
+    except Exception as _pe:
+        print(f"  Panel sync skipped ({_pe})")
 
     conn.commit()
     conn.close()
