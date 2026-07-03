@@ -623,28 +623,60 @@ function renderTrendChart() {
   if (!ph || !ct) return;
   if (dates.length < 2) { ph.style.display=''; ct.style.display='none'; return; }
   ph.style.display='none'; ct.style.display='';
+  // 分源指數：LCSC 用人民幣原幣（排除匯率干擾）、Mouser 用美元，雙 Y 軸
+  const lcscAvg = dates.map(d => data[d].lcsc_avg_cny ?? null);
+  const lcscMed = dates.map(d => data[d].lcsc_median_cny ?? null);
+  const mouAvg  = dates.map(d => data[d].mouser_avg_usd ?? null);
+  const mouMed  = dates.map(d => data[d].mouser_median_usd ?? null);
+  const hasSplit = lcscAvg.some(v => v != null) || mouAvg.some(v => v != null);
   const avgPrices    = dates.map(d => getAvgUsd(data[d]));
   const medianPrices = dates.map(d => getMedianUsd(data[d]));
   if (trendChartInst) trendChartInst.destroy();
   const ctx = document.getElementById('trend-chart');
   if (!ctx) return;
+  const dsSplit = [
+    {label:'LCSC 平均 (¥)', data:lcscAvg, yAxisID:'y',
+     borderColor:'#16a34a', backgroundColor:'#16a34a18', tension:0.3,
+     pointRadius:4, pointHoverRadius:6, fill:true, spanGaps:true},
+    {label:'LCSC 中位數 (¥)', data:lcscMed, yAxisID:'y',
+     borderColor:'#16a34a', backgroundColor:'transparent', tension:0.3,
+     pointRadius:3, pointHoverRadius:5, fill:false, spanGaps:true, borderDash:[5,3]},
+    {label:'Mouser 平均 ($)', data:mouAvg, yAxisID:'y1',
+     borderColor:'#3b82f6', backgroundColor:'transparent', tension:0.3,
+     pointRadius:4, pointHoverRadius:6, fill:false, spanGaps:true},
+    {label:'Mouser 中位數 ($)', data:mouMed, yAxisID:'y1',
+     borderColor:'#3b82f6', backgroundColor:'transparent', tension:0.3,
+     pointRadius:3, pointHoverRadius:5, fill:false, spanGaps:true, borderDash:[5,3]}
+  ];
+  const dsLegacy = [
+    {label:'平均 (USD)', data:avgPrices,
+     borderColor:'#3b82f6', backgroundColor:'#3b82f620', tension:0.3,
+     pointRadius:5, pointHoverRadius:7, fill:true, spanGaps:true},
+    {label:'中位數 (USD)', data:medianPrices,
+     borderColor:'#f59e0b', backgroundColor:'transparent', tension:0.3,
+     pointRadius:4, pointHoverRadius:6, fill:false, spanGaps:true, borderDash:[5,3]}
+  ];
+  const scalesSplit = {
+    x:{ticks:{font:{size:10}}, grid:{color:'#f1f5f9'}},
+    y:{position:'left', ticks:{font:{size:11}, color:'#16a34a', callback:v=>'¥'+(+v).toFixed(3)}, grid:{color:'#f1f5f9'}},
+    y1:{position:'right', ticks:{font:{size:11}, color:'#3b82f6', callback:v=>'$'+(+v).toFixed(3)}, grid:{display:false}}
+  };
+  const scalesLegacy = {
+    x:{ticks:{font:{size:10}}, grid:{color:'#f1f5f9'}},
+    y:{ticks:{font:{size:11}, callback:v=>'$'+(+v).toFixed(4)}, grid:{color:'#f1f5f9'}}
+  };
   trendChartInst = new Chart(ctx.getContext('2d'), {
     type:'line',
-    data:{labels:dates, datasets:[
-      {label:'平均 (USD)', data:avgPrices,
-       borderColor:'#3b82f6', backgroundColor:'#3b82f620', tension:0.3,
-       pointRadius:5, pointHoverRadius:7, fill:true, spanGaps:true},
-      {label:'中位數 (USD)', data:medianPrices,
-       borderColor:'#f59e0b', backgroundColor:'transparent', tension:0.3,
-       pointRadius:4, pointHoverRadius:6, fill:false, spanGaps:true, borderDash:[5,3]}
-    ]},
+    data:{labels:dates, datasets: hasSplit ? dsSplit : dsLegacy},
     options:{responsive:true, maintainAspectRatio:false,
       plugins:{
         legend:{display:true, position:'top', labels:{font:{size:11}, boxWidth:16}},
-        tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.parsed.y!=null?'$'+c.parsed.y.toFixed(4):'—')}}
+        tooltip:{callbacks:{label:c=>{
+          const sym = (hasSplit && c.dataset.yAxisID === 'y') ? '¥' : '$';
+          return c.dataset.label+': '+(c.parsed.y!=null? sym + c.parsed.y.toFixed(4):'—');
+        }}}
       },
-      scales:{x:{ticks:{font:{size:10}}, grid:{color:'#f1f5f9'}},
-              y:{ticks:{font:{size:11}, callback:v=>'$'+v.toFixed(4)}, grid:{color:'#f1f5f9'}}}}
+      scales: hasSplit ? scalesSplit : scalesLegacy}
   });
 }
 
@@ -668,18 +700,34 @@ function renderStockChart() {
 
   const totalStocks = dates.map(d => getTotalStock(data[d]));
   const inStockCounts = dates.map(d => getInStockCount(data[d]));
+  // 分源庫存 + Mouser 交期（領先指標）
+  const lcscStocks = dates.map(d => data[d].lcsc_stock ?? null);
+  const mouStocks  = dates.map(d => data[d].mouser_stock ?? null);
+  const leadTimes  = dates.map(d => data[d].mouser_leadtime_days ?? null);
+  const hasSplitStock = lcscStocks.some(v => v != null) || mouStocks.some(v => v != null);
 
   if (stockChartInst) stockChartInst.destroy();
   const ctx = document.getElementById('stock-chart');
   if (!ctx) return;
+  const dsStockSplit = [
+    {label:'LCSC 庫存',data:lcscStocks,
+     borderColor:'#16a34a',backgroundColor:'#16a34a18',tension:0.3,pointRadius:4,pointHoverRadius:6,fill:true,spanGaps:true,yAxisID:'y'},
+    {label:'Mouser 庫存',data:mouStocks,
+     borderColor:'#3b82f6',backgroundColor:'transparent',tension:0.3,pointRadius:4,pointHoverRadius:6,fill:false,spanGaps:true,yAxisID:'y'},
+    {label:'Mouser 交期 (天)',data:leadTimes,
+     borderColor:'#ef4444',backgroundColor:'transparent',tension:0.3,pointRadius:3,pointHoverRadius:5,fill:false,spanGaps:true,yAxisID:'y1',borderDash:[4,3]},
+    {label:'有庫存型號數',data:inStockCounts,
+     borderColor:'#f59e0b',backgroundColor:'transparent',tension:0.3,pointRadius:3,pointHoverRadius:5,fill:false,spanGaps:true,yAxisID:'y1',borderDash:[2,2],hidden:true}
+  ];
+  const dsStockLegacy = [
+    {label:'現貨庫存總量',data:totalStocks,
+     borderColor:'#10b981',backgroundColor:'#10b98120',tension:0.3,pointRadius:5,pointHoverRadius:7,fill:true,spanGaps:true,yAxisID:'y'},
+    {label:'有庫存型號數',data:inStockCounts,
+     borderColor:'#f59e0b',backgroundColor:'transparent',tension:0.3,pointRadius:4,pointHoverRadius:6,fill:false,spanGaps:true,yAxisID:'y1',borderDash:[4,3]}
+  ];
   stockChartInst = new Chart(ctx.getContext('2d'), {
     type:'line',
-    data:{labels:dates, datasets:[
-      {label:'現貨庫存總量',data:totalStocks,
-       borderColor:'#10b981',backgroundColor:'#10b98120',tension:0.3,pointRadius:5,pointHoverRadius:7,fill:true,spanGaps:true,yAxisID:'y'},
-      {label:'有庫存型號數',data:inStockCounts,
-       borderColor:'#f59e0b',backgroundColor:'transparent',tension:0.3,pointRadius:4,pointHoverRadius:6,fill:false,spanGaps:true,yAxisID:'y1',borderDash:[4,3]}
-    ]},
+    data:{labels:dates, datasets: hasSplitStock ? dsStockSplit : dsStockLegacy},
     options:{responsive:true,maintainAspectRatio:false,
       plugins:{
         legend:{display:true,position:'top',labels:{font:{size:11},boxWidth:16}},
