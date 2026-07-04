@@ -890,9 +890,9 @@ def _seed_panel(conn, key, spec_hist, today, today_pids, min_v=None):
     else:
         pids = set(today_pids)
     conn.executemany(
-        "INSERT OR REPLACE INTO panel (spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak) "
+        "INSERT OR IGNORE INTO panel (spec_key,pid,model,status,added,last_seen,miss_streak,seen_streak) "
         "VALUES (?,?,?,?,?,?,0,0)",
-        [(key, pid, '', 'active', today, today) for pid in pids])
+        [(key, pid, '', 'active', today, today) for pid in pids])   # OR IGNORE: 不覆蓋 pinned
     conn.commit()
     print(f"[panel seeded: {len(pids)}]", end=' ')
     return pids
@@ -911,11 +911,14 @@ def panel_sample(conn, key, all_products, spec_hist, today, min_v=None):
                for r in rows}
 
     actives = [pid for pid, m in members.items() if m['status'] in ('active', 'pinned')]
-    if not actives:
+    # 播種判斷只看一般成員：pin 先註冊不代表名單已播種（否則樣本只剩 pin，統計會失真）
+    if not any(m['status'] == 'active' for m in members.values()):
         seeded = _seed_panel(conn, key, spec_hist, today, cur.keys(), min_v)
-        actives = list(seeded)
-        members.update({pid: {'status': 'active', 'last_seen': today,
-                              'miss': 0, 'seen': 0, 'added': today} for pid in seeded})
+        for pid in seeded:
+            if pid not in members:   # 不覆蓋既有 pinned
+                members[pid] = {'status': 'active', 'last_seen': today,
+                                'miss': 0, 'seen': 0, 'added': today}
+                actives.append(pid)
 
     # 名單裡已存在的低壓料 → 立即除名（規格加了 min_v 後的一次性清理）
     if min_v:
@@ -1042,6 +1045,9 @@ def scrape_all(force=False, mouser_key='', discover=False):
     total_specs = len(SPECS)
     for idx, spec in enumerate(SPECS, 1):
         key = spec['key']
+        if spec.get('paused'):   # 規格加 "paused": True 即暫停追蹤（保留歷史）
+            print(f"  [{idx}/{total_specs}] ⏸ {key}  (paused)")
+            continue
         if not force and key in history and today in history[key]:
             print(f"  [{idx}/{total_specs}] ✓ {key}  (skip)")
             continue
