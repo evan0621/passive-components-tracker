@@ -1353,20 +1353,35 @@ def gh_headers():
     return {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
 
 def gh_push(path, content_str, msg):
-    r = requests.get(f"{API}/{path}", headers=gh_headers())
-    sha = r.json().get('sha') if r.status_code == 200 else None
-    body = {"message": msg, "content": base64.b64encode(content_str.encode('utf-8')).decode()}
-    if sha: body['sha'] = sha
     print(f"  Pushing {path} ({len(content_str):,} bytes)...")
-    r = requests.put(f"{API}/{path}", headers=gh_headers(), json=body)
-    if r.status_code in (200, 201):
-        print(f"  ✅ {path}")
-    else:
-        print(f"  ❌ {path}  HTTP {r.status_code}")
+    for attempt in range(3):   # 網路瞬斷自動重試
         try:
-            print(f"     {r.json().get('message','')}")
-        except Exception:
-            print(f"     {r.text[:200]}")
+            r = requests.get(f"{API}/{path}", headers=gh_headers(), timeout=60)
+            sha = r.json().get('sha') if r.status_code == 200 else None
+            body = {"message": msg, "content": base64.b64encode(content_str.encode('utf-8')).decode()}
+            if sha:
+                body['sha'] = sha
+            r = requests.put(f"{API}/{path}", headers=gh_headers(), json=body, timeout=120)
+            if r.status_code in (200, 201):
+                print(f"  ✅ {path}")
+                return True
+            if r.status_code == 409 and attempt < 2:   # sha 衝突 → 重新取 sha 再試
+                print(f"  [409 conflict, retry {attempt+1}]")
+                time.sleep(3)
+                continue
+            print(f"  ❌ {path}  HTTP {r.status_code}")
+            try:
+                print(f"     {r.json().get('message','')}")
+            except Exception:
+                print(f"     {r.text[:200]}")
+            return False
+        except Exception as e:
+            if attempt < 2:
+                print(f"  [網路異常 {type(e).__name__}, retry {attempt+1}]")
+                time.sleep(5 + attempt * 10)
+            else:
+                print(f"  ❌ {path} 推送失敗: {type(e).__name__}")
+                return False
 
 # ── main ─────────────────────────────────────────────────────────
 def main():
