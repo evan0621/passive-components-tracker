@@ -306,6 +306,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.210443,
+      "total_stock": 43116,
+      "in_stock_count": 19,
+      "product_count": 50,
+      "lcsc_count": 23,
+      "mouser_count": 27,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:00:01.149432+08:00",
+      "median_price_usd": 0.167,
+      "lcsc_avg_cny": 1.20943,
+      "lcsc_median_cny": 0.75365,
+      "mouser_avg_usd": 0.246111,
+      "mouser_median_usd": 0.208,
+      "lcsc_stock": 22036,
+      "mouser_stock": 21080,
+      "mouser_leadtime_days": 98.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.210443,
       "median_price_usd": 0.167,
       "raw_avg_price_usd": 0.210443,
       "panel_size": 19,
@@ -323,8 +342,8 @@
       "total_stock": 43116,
       "lcsc_count": 23,
       "mouser_count": 27,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:00:01.149432+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:56:45.954126+08:00",
       "products": [
         {
           "model": "MSASA21GBC6476MTNA01",
@@ -358,7 +377,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -393,7 +412,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -422,7 +441,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -457,7 +476,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -492,7 +511,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -521,7 +540,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -556,7 +575,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -591,7 +610,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -622,7 +641,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -653,7 +672,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -684,7 +703,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -715,7 +734,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -746,7 +765,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -777,7 +796,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -808,7 +827,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -839,7 +858,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -870,7 +889,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -901,7 +920,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -932,7 +951,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -965,7 +984,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -998,7 +1017,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -1027,7 +1046,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -1054,7 +1073,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -2296,6 +2315,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.103864,
+      "total_stock": 504074,
+      "in_stock_count": 22,
+      "product_count": 70,
+      "lcsc_count": 20,
+      "mouser_count": 50,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:00:09.107419+08:00",
+      "median_price_usd": 0.07,
+      "lcsc_avg_cny": 0.95078,
+      "lcsc_median_cny": 0.3303,
+      "mouser_avg_usd": 0.093176,
+      "mouser_median_usd": 0.077,
+      "lcsc_stock": 14784,
+      "mouser_stock": 489290,
+      "mouser_leadtime_days": 91.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.103864,
       "median_price_usd": 0.07,
       "raw_avg_price_usd": 0.103864,
       "panel_size": 22,
@@ -2313,8 +2351,8 @@
       "total_stock": 504074,
       "lcsc_count": 20,
       "mouser_count": 50,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:00:09.107419+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:56:52.506966+08:00",
       "products": [
         {
           "model": "GRM158C80G226ME01D",
@@ -2348,7 +2386,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2383,7 +2421,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -2412,7 +2450,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -2441,7 +2479,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -2472,7 +2510,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -2507,7 +2545,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -2538,7 +2576,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2573,7 +2611,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2604,7 +2642,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2635,7 +2673,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2666,7 +2704,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2697,7 +2735,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2728,7 +2766,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2759,7 +2797,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2790,7 +2828,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2821,7 +2859,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2852,7 +2890,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2883,7 +2921,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2914,7 +2952,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -2945,7 +2983,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -5018,6 +5056,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.020103,
+      "total_stock": 68958606,
+      "in_stock_count": 276,
+      "product_count": 282,
+      "lcsc_count": 17,
+      "mouser_count": 250,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:00:41.665148+08:00",
+      "median_price_usd": 0.007,
+      "lcsc_avg_cny": 0.917265,
+      "lcsc_median_cny": 0.7949,
+      "mouser_avg_usd": 0.012516,
+      "mouser_median_usd": 0.006,
+      "lcsc_stock": 157674,
+      "mouser_stock": 68740526,
+      "mouser_leadtime_days": 56.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.020103,
       "median_price_usd": 0.007,
       "raw_avg_price_usd": 0.0189,
       "panel_size": 275,
@@ -5027,16 +5084,16 @@
       "mouser_avg_usd": 0.012516,
       "mouser_median_usd": 0.006,
       "lcsc_stock": 157674,
-      "mouser_stock": 68740526,
+      "mouser_stock": 68736876,
       "mouser_leadtime_days": 56,
       "exchange_rate": 0.14755,
       "product_count": 282,
       "in_stock_count": 276,
-      "total_stock": 68958606,
+      "total_stock": 68954956,
       "lcsc_count": 17,
       "mouser_count": 250,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:00:41.665148+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:57:17.678522+08:00",
       "products": [
         {
           "model": "CC0805KKX7R7BB106",
@@ -5070,7 +5127,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -5105,7 +5162,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -5140,7 +5197,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -5175,7 +5232,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -5206,7 +5263,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -5241,7 +5298,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -5272,7 +5329,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -5301,7 +5358,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5330,7 +5387,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5363,7 +5420,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 400
         },
         {
@@ -5392,7 +5449,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5421,7 +5478,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5450,7 +5507,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5479,7 +5536,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5508,7 +5565,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -5535,7 +5592,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -5562,7 +5619,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -6250,7 +6307,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 16V 0.22uF X7R 0402 10%",
-          "stock": 30333,
+          "stock": 30133,
           "min_price": 0.015,
           "min_price_usd": 0.015,
           "min_qty": 1,
@@ -8297,7 +8354,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 50 V 0.1uF X7R 0402  10%",
-          "stock": 359675,
+          "stock": 356675,
           "min_price": 0.012,
           "min_price_usd": 0.012,
           "min_qty": 1,
@@ -8897,7 +8954,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 50V 1000pF X7R 0402 10%",
-          "stock": 87646,
+          "stock": 87546,
           "min_price": 0.004,
           "min_price_usd": 0.004,
           "min_qty": 1,
@@ -13166,7 +13223,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 50V 0.01uF X7R 0402 5%",
-          "stock": 152448,
+          "stock": 152198,
           "min_price": 0.005,
           "min_price_usd": 0.005,
           "min_qty": 1,
@@ -14245,7 +14302,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 50V 0.022uF X7R 0402 10%",
-          "stock": 128946,
+          "stock": 128846,
           "min_price": 0.005,
           "min_price_usd": 0.005,
           "min_qty": 1,
@@ -14909,7 +14966,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -14950,7 +15007,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 20000
         },
         {
@@ -14993,7 +15050,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50000
         },
         {
@@ -15036,7 +15093,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50000
         },
         {
@@ -15075,7 +15132,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15114,7 +15171,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15151,7 +15208,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -15188,7 +15245,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -15227,7 +15284,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15268,7 +15325,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 20000
         },
         {
@@ -15307,7 +15364,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15346,7 +15403,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15385,7 +15442,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15422,7 +15479,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -15457,7 +15514,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         }
       ]
@@ -15770,6 +15827,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.95299,
+      "total_stock": 17190,
+      "in_stock_count": 13,
+      "product_count": 30,
+      "lcsc_count": 28,
+      "mouser_count": 2,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:00:54.288092+08:00",
+      "median_price_usd": 0.486618,
+      "lcsc_avg_cny": 6.311808,
+      "lcsc_median_cny": 3.11,
+      "mouser_avg_usd": 1.22,
+      "mouser_median_usd": 1.22,
+      "lcsc_stock": 13921,
+      "mouser_stock": 3269,
+      "mouser_leadtime_days": 178.5,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.95299,
       "median_price_usd": 0.486618,
       "raw_avg_price_usd": 0.95299,
       "panel_size": 13,
@@ -15787,8 +15863,8 @@
       "total_stock": 17190,
       "lcsc_count": 28,
       "mouser_count": 2,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:00:54.288092+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:57:23.642383+08:00",
       "products": [
         {
           "model": "118EC243",
@@ -15822,7 +15898,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -15857,7 +15933,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -15892,7 +15968,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -15923,7 +15999,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -15954,7 +16030,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -15983,7 +16059,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -16014,7 +16090,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -16043,7 +16119,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -16072,7 +16148,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -16101,7 +16177,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -16136,7 +16212,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16171,7 +16247,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -16206,7 +16282,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16237,7 +16313,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -16268,7 +16344,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -16299,7 +16375,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16330,7 +16406,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16361,7 +16437,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -16392,7 +16468,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16423,7 +16499,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -16454,7 +16530,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -16485,7 +16561,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16516,7 +16592,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16547,7 +16623,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16578,7 +16654,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16609,7 +16685,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -16636,7 +16712,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -16663,7 +16739,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -17040,6 +17116,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.193773,
+      "total_stock": 26036,
+      "in_stock_count": 15,
+      "product_count": 15,
+      "lcsc_count": 14,
+      "mouser_count": 1,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:01:01.628944+08:00",
+      "median_price_usd": 0.0888,
+      "lcsc_avg_cny": 1.162829,
+      "lcsc_median_cny": 0.5947,
+      "mouser_avg_usd": 0.506,
+      "mouser_median_usd": 0.506,
+      "lcsc_stock": 25819,
+      "mouser_stock": 217,
+      "mouser_leadtime_days": 217.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.193773,
       "median_price_usd": 0.0888,
       "raw_avg_price_usd": 0.193773,
       "panel_size": 15,
@@ -17057,8 +17152,8 @@
       "total_stock": 26036,
       "lcsc_count": 14,
       "mouser_count": 1,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:01:01.628944+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:57:30.802204+08:00",
       "products": [
         {
           "model": "PA16V560M6X12",
@@ -17092,7 +17187,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17127,7 +17222,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17162,7 +17257,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17197,7 +17292,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17232,7 +17327,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17267,7 +17362,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17302,7 +17397,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17333,7 +17428,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -17368,7 +17463,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17403,7 +17498,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17438,7 +17533,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17469,7 +17564,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -17500,7 +17595,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -17529,7 +17624,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -17871,6 +17966,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.243048,
+      "total_stock": 79779,
+      "in_stock_count": 21,
+      "product_count": 22,
+      "lcsc_count": 20,
+      "mouser_count": 2,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:01:06.703061+08:00",
+      "median_price_usd": 0.072123,
+      "lcsc_avg_cny": 1.31697,
+      "lcsc_median_cny": 0.48785,
+      "mouser_avg_usd": 1.22,
+      "mouser_median_usd": 1.22,
+      "lcsc_stock": 76510,
+      "mouser_stock": 3269,
+      "mouser_leadtime_days": 178.5,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.243048,
       "median_price_usd": 0.072123,
       "raw_avg_price_usd": 0.243048,
       "panel_size": 21,
@@ -17888,8 +18002,8 @@
       "total_stock": 79779,
       "lcsc_count": 20,
       "mouser_count": 2,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:01:06.703061+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:57:35.484412+08:00",
       "products": [
         {
           "model": "RVT63V100M10X10",
@@ -17923,7 +18037,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17958,7 +18072,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -17993,7 +18107,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18028,7 +18142,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18063,7 +18177,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18096,7 +18210,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 550
         },
         {
@@ -18131,7 +18245,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18164,7 +18278,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -18197,7 +18311,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -18232,7 +18346,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18267,7 +18381,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18302,7 +18416,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18337,7 +18451,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18366,7 +18480,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -18399,7 +18513,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -18430,7 +18544,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -18465,7 +18579,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18500,7 +18614,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18535,7 +18649,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -18566,7 +18680,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -18943,6 +19057,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 11.477873,
+      "total_stock": 4040,
+      "in_stock_count": 21,
+      "product_count": 46,
+      "lcsc_count": 28,
+      "mouser_count": 18,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:01:13.125712+08:00",
+      "median_price_usd": 7.442306,
+      "lcsc_avg_cny": 53.421429,
+      "lcsc_median_cny": 32.77,
+      "mouser_avg_usd": 18.678571,
+      "mouser_median_usd": 17.27,
+      "lcsc_stock": 908,
+      "mouser_stock": 3132,
+      "mouser_leadtime_days": 140.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 11.477873,
       "median_price_usd": 7.442306,
       "raw_avg_price_usd": 11.477873,
       "panel_size": 21,
@@ -18960,8 +19093,8 @@
       "total_stock": 4040,
       "lcsc_count": 28,
       "mouser_count": 18,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:01:13.125712+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:57:42.960157+08:00",
       "products": [
         {
           "model": "RXA450V1000M35X65",
@@ -18991,7 +19124,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -19022,7 +19155,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -19053,7 +19186,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -19084,7 +19217,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -19115,7 +19248,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 90
         },
         {
@@ -19144,7 +19277,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50
         },
         {
@@ -19175,7 +19308,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -19206,7 +19339,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 90
         },
         {
@@ -19237,7 +19370,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 130
         },
         {
@@ -19268,7 +19401,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -19299,7 +19432,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 70
         },
         {
@@ -19330,7 +19463,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -19357,7 +19490,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -19384,7 +19517,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10
         },
         {
@@ -19415,7 +19548,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -19446,7 +19579,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -19477,7 +19610,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19508,7 +19641,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19539,7 +19672,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19570,7 +19703,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19601,7 +19734,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19632,7 +19765,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1008
         },
         {
@@ -19663,7 +19796,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19694,7 +19827,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19725,7 +19858,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19756,7 +19889,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19787,7 +19920,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -19814,7 +19947,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50
         },
         {
@@ -20615,6 +20748,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 5.541432,
+      "total_stock": 3352,
+      "in_stock_count": 23,
+      "product_count": 51,
+      "lcsc_count": 25,
+      "mouser_count": 26,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:01:22.744701+08:00",
+      "median_price_usd": 4.049252,
+      "lcsc_avg_cny": 28.151,
+      "lcsc_median_cny": 26.33,
+      "mouser_avg_usd": 14.81,
+      "mouser_median_usd": 12.08,
+      "lcsc_stock": 3010,
+      "mouser_stock": 342,
+      "mouser_leadtime_days": 112.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 5.541432,
       "median_price_usd": 4.049252,
       "raw_avg_price_usd": 5.541432,
       "panel_size": 23,
@@ -20632,8 +20784,8 @@
       "total_stock": 3352,
       "lcsc_count": 25,
       "mouser_count": 26,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:01:22.744701+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:57:50.492769+08:00",
       "products": [
         {
           "model": "RXA450V820M35X60",
@@ -20663,7 +20815,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -20694,7 +20846,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 98
         },
         {
@@ -20725,7 +20877,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -20756,7 +20908,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 80
         },
         {
@@ -20787,7 +20939,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -20822,7 +20974,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -20853,7 +21005,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 120
         },
         {
@@ -20882,7 +21034,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50
         },
         {
@@ -20917,7 +21069,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1008
         },
         {
@@ -20952,7 +21104,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 980
         },
         {
@@ -20987,7 +21139,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1080
         },
         {
@@ -21016,7 +21168,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 60
         },
         {
@@ -21045,7 +21197,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 36
         },
         {
@@ -21076,7 +21228,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 90
         },
         {
@@ -21105,7 +21257,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -21140,7 +21292,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1008
         },
         {
@@ -21171,7 +21323,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 90
         },
         {
@@ -21200,7 +21352,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -21229,7 +21381,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -21258,7 +21410,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -21293,7 +21445,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 980
         },
         {
@@ -21324,7 +21476,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -21355,7 +21507,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -21390,7 +21542,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1008
         },
         {
@@ -21421,7 +21573,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -22396,6 +22548,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.924933,
+      "total_stock": 794464,
+      "in_stock_count": 207,
+      "product_count": 233,
+      "lcsc_count": 29,
+      "mouser_count": 183,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:02:03.642017+08:00",
+      "median_price_usd": 0.4775,
+      "lcsc_avg_cny": 1.307,
+      "lcsc_median_cny": 1.47,
+      "mouser_avg_usd": 0.935754,
+      "mouser_median_usd": 0.49,
+      "lcsc_stock": 1534,
+      "mouser_stock": 785628,
+      "mouser_leadtime_days": 182.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.924933,
       "median_price_usd": 0.4775,
       "raw_avg_price_usd": 0.943146,
       "panel_size": 206,
@@ -22405,16 +22576,16 @@
       "mouser_avg_usd": 0.935754,
       "mouser_median_usd": 0.49,
       "lcsc_stock": 1534,
-      "mouser_stock": 785628,
+      "mouser_stock": 785582,
       "mouser_leadtime_days": 182,
       "exchange_rate": 0.14755,
       "product_count": 233,
       "in_stock_count": 207,
-      "total_stock": 794464,
+      "total_stock": 794418,
       "lcsc_count": 29,
       "mouser_count": 183,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:02:03.642017+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:58:25.397814+08:00",
       "products": [
         {
           "model": "LKME1251C102MF",
@@ -22444,7 +22615,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -22477,7 +22648,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -22506,7 +22677,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -22541,7 +22712,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22572,7 +22743,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22603,7 +22774,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22634,7 +22805,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22665,7 +22836,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22696,7 +22867,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22727,7 +22898,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22758,7 +22929,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22789,7 +22960,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22820,7 +22991,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22851,7 +23022,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22882,7 +23053,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22913,7 +23084,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22944,7 +23115,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -22975,7 +23146,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23006,7 +23177,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23037,7 +23208,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23068,7 +23239,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23099,7 +23270,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23130,7 +23301,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23161,7 +23332,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23192,7 +23363,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23223,7 +23394,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23254,7 +23425,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23285,7 +23456,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -23316,7 +23487,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -25711,7 +25882,7 @@
           "brand": "KEMET",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 16V 33uF 105C 1k Hour Radial",
-          "stock": 14622,
+          "stock": 14602,
           "min_price": 0.047,
           "min_price_usd": 0.047,
           "min_qty": 1,
@@ -25923,7 +26094,7 @@
           "brand": "KEMET",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 16V 47uF 105C 2k Hour Radial",
-          "stock": 38405,
+          "stock": 38381,
           "min_price": 0.05,
           "min_price_usd": 0.05,
           "min_qty": 1,
@@ -26902,7 +27073,7 @@
           "brand": "Nichicon",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 2200uF 16 Volts 20%",
-          "stock": 6742,
+          "stock": 6740,
           "min_price": 0.494,
           "min_price_usd": 0.494,
           "min_qty": 1,
@@ -29232,7 +29403,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 600
         },
         {
@@ -29267,7 +29438,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -29298,7 +29469,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -29333,7 +29504,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -29370,7 +29541,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 25200
         },
         {
@@ -29409,7 +29580,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -29444,7 +29615,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2800
         },
         {
@@ -29479,7 +29650,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2800
         },
         {
@@ -29514,7 +29685,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -29547,7 +29718,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 600
         },
         {
@@ -29582,7 +29753,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -29613,7 +29784,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -29648,7 +29819,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -29677,7 +29848,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -29712,7 +29883,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -29743,7 +29914,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -29778,7 +29949,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -29811,7 +29982,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 250
         },
         {
@@ -29844,7 +30015,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -29881,7 +30052,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 5000
         },
         {
@@ -29916,7 +30087,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 3000
         }
       ]
@@ -30229,10 +30400,14 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.978825,
+      "total_stock": 866889,
+      "in_stock_count": 234,
+      "product_count": 239,
+      "lcsc_count": 26,
+      "mouser_count": 194,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:02:51.847392+08:00",
       "median_price_usd": 0.5455,
-      "raw_avg_price_usd": 1.011899,
-      "panel_size": 232,
-      "panel_carried": 19,
       "lcsc_avg_cny": 0.918533,
       "lcsc_median_cny": 0.7697,
       "mouser_avg_usd": 1.062763,
@@ -30240,14 +30415,29 @@
       "lcsc_stock": 10043,
       "mouser_stock": 836555,
       "mouser_leadtime_days": 182.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.976766,
+      "median_price_usd": 0.543,
+      "raw_avg_price_usd": 1.011899,
+      "panel_size": 233,
+      "panel_carried": 19,
+      "lcsc_avg_cny": 0.918533,
+      "lcsc_median_cny": 0.7697,
+      "mouser_avg_usd": 1.060104,
+      "mouser_median_usd": 0.5875,
+      "lcsc_stock": 10043,
+      "mouser_stock": 853420,
+      "mouser_leadtime_days": 182,
       "exchange_rate": 0.14755,
       "product_count": 239,
       "in_stock_count": 234,
-      "total_stock": 866889,
+      "total_stock": 866775,
       "lcsc_count": 26,
       "mouser_count": 194,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:02:51.847392+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:59:03.498001+08:00",
       "products": [
         {
           "model": "EEUFR1E471B",
@@ -30281,7 +30471,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -30312,7 +30502,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30347,7 +30537,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -30382,7 +30572,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -30411,7 +30601,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30446,7 +30636,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -30475,7 +30665,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30510,7 +30700,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -30539,7 +30729,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30568,7 +30758,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30599,7 +30789,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30630,7 +30820,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30661,7 +30851,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30692,7 +30882,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30721,7 +30911,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30752,7 +30942,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30783,7 +30973,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30818,7 +31008,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -30849,7 +31039,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30878,7 +31068,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30907,7 +31097,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -30938,7 +31128,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -30973,7 +31163,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -31004,7 +31194,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -31039,7 +31229,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 960
         },
         {
@@ -31074,7 +31264,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -31305,7 +31495,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 50VDC 470uF 20% STD Leads",
-          "stock": 5995,
+          "stock": 5925,
           "min_price": 0.517,
           "min_price_usd": 0.517,
           "min_qty": 1,
@@ -32853,7 +33043,7 @@
           "brand": "Panasonic",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 820UF    25V",
-          "stock": 2785,
+          "stock": 2762,
           "min_price": 1.18,
           "min_price_usd": 1.18,
           "min_qty": 1,
@@ -32913,7 +33103,7 @@
           "brand": "Panasonic",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 25VDC 2200uF 20% AEC-Q200",
-          "stock": 1411,
+          "stock": 1404,
           "min_price": 1.55,
           "min_price_usd": 1.55,
           "min_qty": 1,
@@ -33513,7 +33703,7 @@
           "brand": "Panasonic",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded Al Lytic Cap Radial NHG Series 105C",
-          "stock": 543,
+          "stock": 533,
           "min_price": 0.509,
           "min_price_usd": 0.509,
           "min_qty": 1,
@@ -33738,7 +33928,7 @@
           "brand": "KYOCERA AVX",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 25V 220uF Life6000Hrs 20% +105C LS=2.5mm",
-          "stock": 317,
+          "stock": 307,
           "min_price": 0.097,
           "min_price_usd": 0.097,
           "min_qty": 1,
@@ -35088,7 +35278,7 @@
           "brand": "Panasonic",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 25VDC 100uF SU",
-          "stock": 7580,
+          "stock": 7560,
           "min_price": 0.156,
           "min_price_usd": 0.156,
           "min_qty": 1,
@@ -35268,7 +35458,7 @@
           "brand": "Nichicon",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 50volts 470uF AEC-Q200",
-          "stock": 7282,
+          "stock": 7279,
           "min_price": 0.73,
           "min_price_usd": 0.73,
           "min_qty": 1,
@@ -35654,7 +35844,7 @@
           "brand": "Nichicon",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 35volts 470uF 20%",
-          "stock": 4694,
+          "stock": 4671,
           "min_price": 0.213,
           "min_price_usd": 0.213,
           "min_qty": 1,
@@ -36145,7 +36335,7 @@
           "brand": "Nichicon",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 25volts 4700uF AEC-Q200",
-          "stock": 2681,
+          "stock": 2743,
           "min_price": 1.61,
           "min_price_usd": 1.61,
           "min_qty": 1,
@@ -36831,7 +37021,7 @@
           "brand": "Nichicon",
           "package": "",
           "description": "Aluminum Electrolytic Capacitors - Radial Leaded 330uF 25 Volts 20%",
-          "stock": 1918,
+          "stock": 1908,
           "min_price": 0.218,
           "min_price_usd": 0.218,
           "min_qty": 1,
@@ -37355,7 +37545,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -37386,7 +37576,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 600
         },
         {
@@ -37421,7 +37611,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -37460,7 +37650,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 5000
         },
         {
@@ -37499,7 +37689,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -37534,7 +37724,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -37569,7 +37759,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -37604,7 +37794,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -37641,7 +37831,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -37682,7 +37872,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 25200
         },
         {
@@ -37719,7 +37909,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 5000
         },
         {
@@ -37752,7 +37942,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -37787,7 +37977,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -37820,7 +38010,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -37853,7 +38043,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -37884,7 +38074,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -37921,7 +38111,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 5000
         },
         {
@@ -37952,7 +38142,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 400
         },
         {
@@ -37985,7 +38175,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         }
       ]
@@ -38298,6 +38488,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.500477,
+      "total_stock": 35006,
+      "in_stock_count": 43,
+      "product_count": 75,
+      "lcsc_count": 22,
+      "mouser_count": 53,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:03:04.320262+08:00",
+      "median_price_usd": 0.459,
+      "lcsc_avg_cny": 2.215355,
+      "lcsc_median_cny": 1.4428,
+      "mouser_avg_usd": 0.651609,
+      "mouser_median_usd": 0.61,
+      "lcsc_stock": 13329,
+      "mouser_stock": 21677,
+      "mouser_leadtime_days": 217.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.500477,
       "median_price_usd": 0.459,
       "raw_avg_price_usd": 0.500477,
       "panel_size": 43,
@@ -38315,8 +38524,8 @@
       "total_stock": 35006,
       "lcsc_count": 22,
       "mouser_count": 53,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:03:04.320262+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:59:11.101473+08:00",
       "products": [
         {
           "model": "16SVPG270MX",
@@ -38350,7 +38559,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -38385,7 +38594,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -38416,7 +38625,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 180
         },
         {
@@ -38451,7 +38660,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -38482,7 +38691,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -38513,7 +38722,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -38542,7 +38751,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38573,7 +38782,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -38608,7 +38817,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -38637,7 +38846,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38666,7 +38875,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38697,7 +38906,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 200
         },
         {
@@ -38728,7 +38937,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -38757,7 +38966,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38786,7 +38995,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38815,7 +39024,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38846,7 +39055,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -38881,7 +39090,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 960
         },
         {
@@ -38910,7 +39119,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38939,7 +39148,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -38974,7 +39183,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1080
         },
         {
@@ -39009,7 +39218,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1500
         },
         {
@@ -41003,6 +41212,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.012984,
+      "total_stock": 13263077,
+      "in_stock_count": 26,
+      "product_count": 33,
+      "lcsc_count": 21,
+      "mouser_count": 12,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:03:09.903428+08:00",
+      "median_price_usd": 0.00853,
+      "lcsc_avg_cny": 0.092807,
+      "lcsc_median_cny": 0.06045,
+      "mouser_avg_usd": 0.012167,
+      "mouser_median_usd": 0.0075,
+      "lcsc_stock": 1902736,
+      "mouser_stock": 11360341,
+      "mouser_leadtime_days": 98.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.012984,
       "median_price_usd": 0.00853,
       "raw_avg_price_usd": 0.012984,
       "panel_size": 26,
@@ -41020,8 +41248,8 @@
       "total_stock": 13263077,
       "lcsc_count": 21,
       "mouser_count": 12,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:03:09.903428+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:59:18.335175+08:00",
       "products": [
         {
           "model": "AC0402KRX7R9BB104",
@@ -41055,7 +41283,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41088,7 +41316,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -41119,7 +41347,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -41152,7 +41380,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -41181,7 +41409,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -41210,7 +41438,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -41243,7 +41471,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -41278,7 +41506,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41313,7 +41541,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41344,7 +41572,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -41379,7 +41607,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41414,7 +41642,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41449,7 +41677,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41484,7 +41712,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -41517,7 +41745,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -41546,7 +41774,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -41579,7 +41807,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -41612,7 +41840,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 400
         },
         {
@@ -41641,7 +41869,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -41668,7 +41896,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -41695,7 +41923,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -42464,10 +42692,14 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.211751,
+      "total_stock": 16808962,
+      "in_stock_count": 300,
+      "product_count": 315,
+      "lcsc_count": 15,
+      "mouser_count": 247,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:08.782455+08:00",
       "median_price_usd": 0.075,
-      "raw_avg_price_usd": 0.207462,
-      "panel_size": 289,
-      "panel_carried": 53,
       "lcsc_avg_cny": 1.239316,
       "lcsc_median_cny": 1.40425,
       "mouser_avg_usd": 0.212577,
@@ -42475,14 +42707,29 @@
       "lcsc_stock": 6457,
       "mouser_stock": 16130392,
       "mouser_leadtime_days": 84.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.20588,
+      "median_price_usd": 0.074,
+      "raw_avg_price_usd": 0.207462,
+      "panel_size": 299,
+      "panel_carried": 53,
+      "lcsc_avg_cny": 1.239316,
+      "lcsc_median_cny": 1.40425,
+      "mouser_avg_usd": 0.206515,
+      "mouser_median_usd": 0.072,
+      "lcsc_stock": 6457,
+      "mouser_stock": 16800825,
+      "mouser_leadtime_days": 84.0,
       "exchange_rate": 0.14755,
       "product_count": 315,
       "in_stock_count": 300,
-      "total_stock": 16808962,
+      "total_stock": 16808879,
       "lcsc_count": 15,
       "mouser_count": 247,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:08.782455+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T06:59:59.108914+08:00",
       "products": [
         {
           "model": "MCAST31LAB7106KTNA01",
@@ -42512,7 +42759,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -42543,7 +42790,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -42574,7 +42821,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -42609,7 +42856,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -42638,7 +42885,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -42673,7 +42920,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42706,7 +42953,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -42741,7 +42988,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42776,7 +43023,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42811,7 +43058,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42846,7 +43093,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42877,7 +43124,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42906,7 +43153,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -42941,7 +43188,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -42976,7 +43223,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -43470,7 +43717,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 25V 10uF X7R 1206 10% HI CV",
-          "stock": 28582,
+          "stock": 28572,
           "min_price": 0.119,
           "min_price_usd": 0.119,
           "min_qty": 1,
@@ -48154,7 +48401,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 1206 50VDC 10uF 10% X7R SOFT TERM",
-          "stock": 78296,
+          "stock": 78293,
           "min_price": 0.386,
           "min_price_usd": 0.386,
           "min_qty": 1,
@@ -48895,7 +49142,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT CGA 0805 50V 2.2uF X7R 10% AEC-Q200",
-          "stock": 261986,
+          "stock": 261976,
           "min_price": 0.121,
           "min_price_usd": 0.121,
           "min_qty": 1,
@@ -49661,7 +49908,7 @@
           "brand": "TDK",
           "package": "",
           "description": "Specialty Ceramic Capacitors 2220 50VDC 47uF 20% X7R STACKED AEC-Q200",
-          "stock": 9246,
+          "stock": 9186,
           "min_price": 5.45,
           "min_price_usd": 5.45,
           "min_qty": 1,
@@ -51854,7 +52101,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 15000
         },
         {
@@ -51895,7 +52142,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 15000
         },
         {
@@ -51930,7 +52177,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -51969,7 +52216,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52008,7 +52255,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52045,7 +52292,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -52082,7 +52329,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -52123,7 +52370,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52158,7 +52405,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -52197,7 +52444,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -52236,7 +52483,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -52277,7 +52524,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 20000
         },
         {
@@ -52316,7 +52563,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -52355,7 +52602,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -52394,7 +52641,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -52433,7 +52680,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -52472,7 +52719,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -52513,7 +52760,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 20000
         },
         {
@@ -52550,7 +52797,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -52591,7 +52838,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52630,7 +52877,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52667,7 +52914,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -52704,7 +52951,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -52741,7 +52988,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -52780,7 +53027,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52821,7 +53068,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52858,7 +53105,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -52895,7 +53142,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52936,7 +53183,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -52975,7 +53222,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -53010,7 +53257,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -53051,7 +53298,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -53088,7 +53335,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -53119,7 +53366,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2500
         },
         {
@@ -53154,7 +53401,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -53191,7 +53438,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -53228,7 +53475,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -53265,7 +53512,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -53304,7 +53551,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 9000
         },
         {
@@ -53343,7 +53590,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -53380,7 +53627,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 6000
         },
         {
@@ -53417,7 +53664,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -53454,7 +53701,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         },
         {
@@ -53491,7 +53738,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -53530,7 +53777,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 8000
         },
         {
@@ -53567,7 +53814,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -53602,7 +53849,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -53641,7 +53888,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -53678,7 +53925,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4000
         },
         {
@@ -53717,7 +53964,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -53754,7 +54001,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 2000
         },
         {
@@ -53793,7 +54040,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 25000
         },
         {
@@ -53834,7 +54081,7 @@
           },
           "currency": "USD",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 24000
         }
       ]
@@ -54147,6 +54394,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.028951,
+      "total_stock": 82152781,
+      "in_stock_count": 91,
+      "product_count": 127,
+      "lcsc_count": 21,
+      "mouser_count": 106,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:19.391221+08:00",
+      "median_price_usd": 0.008,
+      "lcsc_avg_cny": 0.053747,
+      "lcsc_median_cny": 0.0485,
+      "mouser_avg_usd": 0.0345,
+      "mouser_median_usd": 0.008,
+      "lcsc_stock": 2786089,
+      "mouser_stock": 79366692,
+      "mouser_leadtime_days": 140.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.028951,
       "median_price_usd": 0.008,
       "raw_avg_price_usd": 0.028951,
       "panel_size": 91,
@@ -54164,8 +54430,8 @@
       "total_stock": 82152781,
       "lcsc_count": 21,
       "mouser_count": 106,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:19.391221+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:08.765350+08:00",
       "products": [
         {
           "model": "CC0402KRX7R7BB104",
@@ -54199,7 +54465,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54234,7 +54500,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54269,7 +54535,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54302,7 +54568,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 400
         },
         {
@@ -54337,7 +54603,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54372,7 +54638,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54407,7 +54673,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54438,7 +54704,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -54473,7 +54739,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54502,7 +54768,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -54531,7 +54797,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -54564,7 +54830,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -54599,7 +54865,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -54628,7 +54894,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -54657,7 +54923,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -54686,7 +54952,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -54715,7 +54981,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -54748,7 +55014,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -54775,7 +55041,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -54802,7 +55068,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -54829,7 +55095,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50000
         },
         {
@@ -58908,6 +59174,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.066836,
+      "total_stock": 1859806,
+      "in_stock_count": 18,
+      "product_count": 32,
+      "lcsc_count": 18,
+      "mouser_count": 14,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:27.998623+08:00",
+      "median_price_usd": 0.051,
+      "lcsc_avg_cny": 0.404388,
+      "lcsc_median_cny": 0.32915,
+      "mouser_avg_usd": 0.0726,
+      "mouser_median_usd": 0.052,
+      "lcsc_stock": 303506,
+      "mouser_stock": 1556300,
+      "mouser_leadtime_days": 119.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.066836,
       "median_price_usd": 0.051,
       "raw_avg_price_usd": 0.066836,
       "panel_size": 18,
@@ -58925,8 +59210,8 @@
       "total_stock": 1859806,
       "lcsc_count": 18,
       "mouser_count": 14,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:27.998623+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:14.867130+08:00",
       "products": [
         {
           "model": "ZRB15XR61A106ME01D",
@@ -58960,7 +59245,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -58995,7 +59280,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59030,7 +59315,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59065,7 +59350,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59100,7 +59385,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59135,7 +59420,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59170,7 +59455,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59205,7 +59490,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59240,7 +59525,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59275,7 +59560,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59306,7 +59591,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59337,7 +59622,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59366,7 +59651,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -59401,7 +59686,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59432,7 +59717,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -59467,7 +59752,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59502,7 +59787,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -59537,7 +59822,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -60386,6 +60671,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.015941,
+      "total_stock": 1130482,
+      "in_stock_count": 23,
+      "product_count": 46,
+      "lcsc_count": 16,
+      "mouser_count": 30,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:40.064617+08:00",
+      "median_price_usd": 0.007447,
+      "lcsc_avg_cny": 0.090156,
+      "lcsc_median_cny": 0.0453,
+      "mouser_avg_usd": 0.017643,
+      "mouser_median_usd": 0.0105,
+      "lcsc_stock": 454042,
+      "mouser_stock": 676440,
+      "mouser_leadtime_days": 112.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.015941,
       "median_price_usd": 0.007447,
       "raw_avg_price_usd": 0.015941,
       "panel_size": 23,
@@ -60395,16 +60699,16 @@
       "mouser_avg_usd": 0.017643,
       "mouser_median_usd": 0.0105,
       "lcsc_stock": 454042,
-      "mouser_stock": 676440,
+      "mouser_stock": 669410,
       "mouser_leadtime_days": 112.0,
       "exchange_rate": 0.14755,
       "product_count": 46,
       "in_stock_count": 23,
-      "total_stock": 1130482,
+      "total_stock": 1123452,
       "lcsc_count": 16,
       "mouser_count": 30,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:40.064617+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:21.821032+08:00",
       "products": [
         {
           "model": "GRM033R60J105MEA2D",
@@ -60438,7 +60742,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -60471,7 +60775,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60502,7 +60806,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 300
         },
         {
@@ -60531,7 +60835,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -60566,7 +60870,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1050
         },
         {
@@ -60595,7 +60899,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -60624,7 +60928,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -60653,7 +60957,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -60688,7 +60992,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1050
         },
         {
@@ -60721,7 +61025,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60754,7 +61058,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60787,7 +61091,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60820,7 +61124,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60853,7 +61157,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60886,7 +61190,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 450
         },
         {
@@ -60921,7 +61225,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1500
         },
         {
@@ -60929,7 +61233,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Multilayer Ceramic Capacitors MLCC - SMD/SMT 6.3V 1uF X5R 0201 20% HI CV",
-          "stock": 42009,
+          "stock": 34979,
           "min_price": 0.006,
           "min_price_usd": 0.006,
           "min_qty": 1,
@@ -62358,6 +62662,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.548818,
+      "total_stock": 54470,
+      "in_stock_count": 49,
+      "product_count": 59,
+      "lcsc_count": 28,
+      "mouser_count": 31,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:47.939101+08:00",
+      "median_price_usd": 0.479245,
+      "lcsc_avg_cny": 2.027437,
+      "lcsc_median_cny": 1.55,
+      "mouser_avg_usd": 0.855455,
+      "mouser_median_usd": 0.8545,
+      "lcsc_stock": 30166,
+      "mouser_stock": 24304,
+      "mouser_leadtime_days": 245.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.548818,
       "median_price_usd": 0.479245,
       "raw_avg_price_usd": 0.548818,
       "panel_size": 49,
@@ -62375,8 +62698,8 @@
       "total_stock": 54470,
       "lcsc_count": 28,
       "mouser_count": 31,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:47.939101+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:27.056799+08:00",
       "products": [
         {
           "model": "EEHZA1H101V",
@@ -62410,7 +62733,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -62443,7 +62766,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -62476,7 +62799,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -62511,7 +62834,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -62544,7 +62867,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -62577,7 +62900,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 540
         },
         {
@@ -62608,7 +62931,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -62643,7 +62966,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -62676,7 +62999,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -62711,7 +63034,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -62742,7 +63065,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -62777,7 +63100,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -62810,7 +63133,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -62843,7 +63166,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -62874,7 +63197,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -62903,7 +63226,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -62932,7 +63255,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -62961,7 +63284,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -62992,7 +63315,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -63021,7 +63344,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -63054,7 +63377,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -63085,7 +63408,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -63114,7 +63437,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -63143,7 +63466,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -63172,7 +63495,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -63201,7 +63524,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -63230,7 +63553,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -63265,7 +63588,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -64565,6 +64888,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 2.547346,
+      "total_stock": 9296,
+      "in_stock_count": 29,
+      "product_count": 33,
+      "lcsc_count": 30,
+      "mouser_count": 3,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:53.680518+08:00",
+      "median_price_usd": 2.405073,
+      "lcsc_avg_cny": 17.274828,
+      "lcsc_median_cny": 16.31,
+      "mouser_avg_usd": null,
+      "mouser_median_usd": null,
+      "lcsc_stock": 9296,
+      "mouser_stock": 0,
+      "mouser_leadtime_days": 112.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 2.547346,
       "median_price_usd": 2.405073,
       "raw_avg_price_usd": 2.547346,
       "panel_size": 29,
@@ -64582,8 +64924,8 @@
       "total_stock": 9296,
       "lcsc_count": 30,
       "mouser_count": 3,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:53.680518+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:34.653134+08:00",
       "products": [
         {
           "model": "BFT450V470M30X45",
@@ -64617,7 +64959,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1080
         },
         {
@@ -64648,7 +64990,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -64679,7 +65021,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 108
         },
         {
@@ -64714,7 +65056,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 980
         },
         {
@@ -64749,7 +65091,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 990
         },
         {
@@ -64784,7 +65126,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1080
         },
         {
@@ -64819,7 +65161,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -64854,7 +65196,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -64889,7 +65231,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 980
         },
         {
@@ -64924,7 +65266,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 990
         },
         {
@@ -64959,7 +65301,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1015
         },
         {
@@ -64992,7 +65334,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 432
         },
         {
@@ -65027,7 +65369,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 990
         },
         {
@@ -65058,7 +65400,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -65093,7 +65435,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 980
         },
         {
@@ -65124,7 +65466,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -65155,7 +65497,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -65190,7 +65532,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 980
         },
         {
@@ -65225,7 +65567,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1015
         },
         {
@@ -65260,7 +65602,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 990
         },
         {
@@ -65295,7 +65637,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1050
         },
         {
@@ -65330,7 +65672,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1015
         },
         {
@@ -65365,7 +65707,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 960
         },
         {
@@ -65394,7 +65736,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 35
         },
         {
@@ -65429,7 +65771,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1008
         },
         {
@@ -65456,7 +65798,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -65483,7 +65825,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -65510,7 +65852,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 49
         },
         {
@@ -65537,7 +65879,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -65564,7 +65906,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 35
         },
         {
@@ -65950,6 +66292,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.169334,
+      "total_stock": 24521,
+      "in_stock_count": 11,
+      "product_count": 32,
+      "lcsc_count": 25,
+      "mouser_count": 7,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:04:59.213334+08:00",
+      "median_price_usd": 0.124899,
+      "lcsc_avg_cny": 0.749075,
+      "lcsc_median_cny": 0.82265,
+      "mouser_avg_usd": 0.326333,
+      "mouser_median_usd": 0.408,
+      "lcsc_stock": 14498,
+      "mouser_stock": 10023,
+      "mouser_leadtime_days": 112.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.169334,
       "median_price_usd": 0.124899,
       "raw_avg_price_usd": 0.169334,
       "panel_size": 11,
@@ -65967,8 +66328,8 @@
       "total_stock": 24521,
       "lcsc_count": 25,
       "mouser_count": 7,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:04:59.213334+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:41.239875+08:00",
       "products": [
         {
           "model": "CC1206JKNPOZBN103",
@@ -65998,7 +66359,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -66029,7 +66390,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66060,7 +66421,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66095,7 +66456,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66126,7 +66487,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -66157,7 +66518,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -66192,7 +66553,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -66221,7 +66582,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -66250,7 +66611,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -66285,7 +66646,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 800
         },
         {
@@ -66316,7 +66677,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -66347,7 +66708,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -66378,7 +66739,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66409,7 +66770,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66440,7 +66801,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66471,7 +66832,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66502,7 +66863,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66533,7 +66894,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66564,7 +66925,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66595,7 +66956,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66626,7 +66987,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66657,7 +67018,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66686,7 +67047,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -66721,7 +67082,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -66756,7 +67117,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67288,6 +67649,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.474701,
+      "total_stock": 9119,
+      "in_stock_count": 11,
+      "product_count": 34,
+      "lcsc_count": 27,
+      "mouser_count": 7,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:05:06.696016+08:00",
+      "median_price_usd": 0.428,
+      "lcsc_avg_cny": 2.924867,
+      "lcsc_median_cny": 2.59,
+      "mouser_avg_usd": 0.67,
+      "mouser_median_usd": 0.67,
+      "lcsc_stock": 6837,
+      "mouser_stock": 2282,
+      "mouser_leadtime_days": 112.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.474701,
       "median_price_usd": 0.428,
       "raw_avg_price_usd": 0.474701,
       "panel_size": 11,
@@ -67305,8 +67685,8 @@
       "total_stock": 9119,
       "lcsc_count": 27,
       "mouser_count": 7,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:05:06.696016+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:46.117851+08:00",
       "products": [
         {
           "model": "GCM32E5C2J333JX0AL",
@@ -67334,7 +67714,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -67365,7 +67745,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67400,7 +67780,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67435,7 +67815,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67468,7 +67848,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -67503,7 +67883,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67532,7 +67912,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -67563,7 +67943,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -67598,7 +67978,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67629,7 +68009,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67664,7 +68044,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67699,7 +68079,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67730,7 +68110,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67761,7 +68141,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67792,7 +68172,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67823,7 +68203,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67854,7 +68234,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67885,7 +68265,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67916,7 +68296,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67947,7 +68327,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -67978,7 +68358,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1400
         },
         {
@@ -68007,7 +68387,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -68036,7 +68416,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -68067,7 +68447,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -68098,7 +68478,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -68129,7 +68509,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1500
         },
         {
@@ -68160,7 +68540,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -68682,6 +69062,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.596612,
+      "total_stock": 29874,
+      "in_stock_count": 6,
+      "product_count": 24,
+      "lcsc_count": 24,
+      "mouser_count": 0,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:05:12.495758+08:00",
+      "median_price_usd": 0.505734,
+      "lcsc_avg_cny": 4.045928,
+      "lcsc_median_cny": 3.429634,
+      "mouser_avg_usd": null,
+      "mouser_median_usd": null,
+      "lcsc_stock": 29874,
+      "mouser_stock": 0,
+      "mouser_leadtime_days": null,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.596612,
       "median_price_usd": 0.505734,
       "raw_avg_price_usd": 0.596612,
       "panel_size": 6,
@@ -68699,8 +69098,8 @@
       "total_stock": 29874,
       "lcsc_count": 24,
       "mouser_count": 0,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:05:12.495758+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:00:51.714004+08:00",
       "products": [
         {
           "model": "GRM55DR72E105KW01L",
@@ -68734,7 +69133,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -68769,7 +69168,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -68802,7 +69201,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -68835,7 +69234,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -68864,7 +69263,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -68899,7 +69298,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -68934,7 +69333,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -68965,7 +69364,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 5
         },
         {
@@ -68996,7 +69395,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69031,7 +69430,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69066,7 +69465,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69097,7 +69496,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69128,7 +69527,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69159,7 +69558,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69190,7 +69589,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69221,7 +69620,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69252,7 +69651,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69283,7 +69682,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69314,7 +69713,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69345,7 +69744,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69376,7 +69775,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69407,7 +69806,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69438,7 +69837,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -69469,7 +69868,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         }
       ]
@@ -69782,6 +70181,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.112491,
+      "total_stock": 501681,
+      "in_stock_count": 40,
+      "product_count": 56,
+      "lcsc_count": 2,
+      "mouser_count": 54,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:05:29.145066+08:00",
+      "median_price_usd": 0.11,
+      "lcsc_avg_cny": 0.3466,
+      "lcsc_median_cny": 0.3466,
+      "mouser_avg_usd": 0.114105,
+      "mouser_median_usd": 0.11,
+      "lcsc_stock": 465,
+      "mouser_stock": 501164,
+      "mouser_leadtime_days": 70.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.112491,
       "median_price_usd": 0.11,
       "raw_avg_price_usd": 0.113529,
       "panel_size": 39,
@@ -69800,7 +70218,7 @@
       "lcsc_count": 2,
       "mouser_count": 54,
       "lcsc_carried_from": null,
-      "fetched_at": "2026-07-19T21:05:29.145066+08:00",
+      "fetched_at": "2026-07-20T07:01:07.005412+08:00",
       "products": [
         {
           "model": "AHP201610HF-1R0M",
@@ -72098,6 +72516,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 1.280543,
+      "total_stock": 50547,
+      "in_stock_count": 16,
+      "product_count": 20,
+      "lcsc_count": 14,
+      "mouser_count": 6,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:05:34.994909+08:00",
+      "median_price_usd": 0.40699,
+      "lcsc_avg_cny": 9.693521,
+      "lcsc_median_cny": 4.295,
+      "mouser_avg_usd": 0.2385,
+      "mouser_median_usd": 0.2385,
+      "lcsc_stock": 40562,
+      "mouser_stock": 9985,
+      "mouser_leadtime_days": 84.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 1.280543,
       "median_price_usd": 0.40699,
       "raw_avg_price_usd": 1.280543,
       "panel_size": 16,
@@ -72115,8 +72552,8 @@
       "total_stock": 50547,
       "lcsc_count": 14,
       "mouser_count": 6,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:05:34.994909+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:01:13.984306+08:00",
       "products": [
         {
           "model": "TFM252012ALMA4R7MTAA",
@@ -72150,7 +72587,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1200
         },
         {
@@ -72179,7 +72616,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -72214,7 +72651,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -72247,7 +72684,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -72278,7 +72715,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -72313,7 +72750,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 900
         },
         {
@@ -72348,7 +72785,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -72383,7 +72820,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -72414,7 +72851,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -72447,7 +72884,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -72480,7 +72917,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -72515,7 +72952,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -72550,7 +72987,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -72583,7 +73020,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -73108,6 +73545,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.043084,
+      "total_stock": 29967988,
+      "in_stock_count": 57,
+      "product_count": 83,
+      "lcsc_count": 25,
+      "mouser_count": 58,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:05:44.251347+08:00",
+      "median_price_usd": 0.015,
+      "lcsc_avg_cny": 0.552201,
+      "lcsc_median_cny": 0.13615,
+      "mouser_avg_usd": 0.024921,
+      "mouser_median_usd": 0.0115,
+      "lcsc_stock": 5783818,
+      "mouser_stock": 23704685,
+      "mouser_leadtime_days": 84.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.043084,
       "median_price_usd": 0.015,
       "raw_avg_price_usd": 0.042363,
       "panel_size": 56,
@@ -73117,16 +73573,16 @@
       "mouser_avg_usd": 0.024921,
       "mouser_median_usd": 0.0115,
       "lcsc_stock": 5783818,
-      "mouser_stock": 23704685,
+      "mouser_stock": 23703737,
       "mouser_leadtime_days": 84,
       "exchange_rate": 0.14755,
       "product_count": 83,
       "in_stock_count": 57,
-      "total_stock": 29967988,
+      "total_stock": 29967040,
       "lcsc_count": 25,
       "mouser_count": 58,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:05:44.251347+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:01:20.828452+08:00",
       "products": [
         {
           "model": "RC0402FR-0710KL",
@@ -73156,7 +73612,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -73191,7 +73647,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73224,7 +73680,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -73255,7 +73711,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -73286,7 +73742,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -73319,7 +73775,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 500
         },
         {
@@ -73350,7 +73806,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -73385,7 +73841,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73416,7 +73872,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -73441,7 +73897,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100000
         },
         {
@@ -73476,7 +73932,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73511,7 +73967,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73546,7 +74002,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73575,7 +74031,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -73606,7 +74062,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 16
         },
         {
@@ -73641,7 +74097,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73676,7 +74132,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -73703,7 +74159,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -73730,7 +74186,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -73757,7 +74213,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -73784,7 +74240,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -73809,7 +74265,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -73836,7 +74292,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 370000
         },
         {
@@ -73863,7 +74319,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 50000
         },
         {
@@ -73890,7 +74346,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 10000
         },
         {
@@ -74589,7 +75045,7 @@
           "brand": "Vishay",
           "package": "",
           "description": "Thick Film Resistors - SMD 1/10 Watt 10Kohms 1%",
-          "stock": 6659767,
+          "stock": 6659747,
           "min_price": 0.004,
           "min_price_usd": 0.004,
           "min_qty": 1,
@@ -74626,7 +75082,7 @@
           "brand": "YAGEO",
           "package": "",
           "description": "Thick Film Resistors - SMD General Purpose Chip Resistor 0402, 10kOhms, 1%, 1/16W",
-          "stock": 7071686,
+          "stock": 7071258,
           "min_price": 0.002,
           "min_price_usd": 0.002,
           "min_qty": 1,
@@ -75019,7 +75475,7 @@
           "brand": "Vishay",
           "package": "",
           "description": "Thick Film Resistors - SMD 0.33W 10Kohms 1% High Power AEC-Q200",
-          "stock": 1030458,
+          "stock": 1029958,
           "min_price": 0.012,
           "min_price_usd": 0.012,
           "min_qty": 1,
@@ -76289,6 +76745,25 @@
     },
     "2026-07-19": {
       "avg_price_usd": 0.018421,
+      "total_stock": 18504289,
+      "in_stock_count": 29,
+      "product_count": 43,
+      "lcsc_count": 23,
+      "mouser_count": 20,
+      "exchange_rate": 0.14755,
+      "fetched_at": "2026-07-19T21:05:53.100993+08:00",
+      "median_price_usd": 0.015,
+      "lcsc_avg_cny": 0.136215,
+      "lcsc_median_cny": 0.1263,
+      "mouser_avg_usd": 0.016867,
+      "mouser_median_usd": 0.012,
+      "lcsc_stock": 5507706,
+      "mouser_stock": 12996583,
+      "mouser_leadtime_days": 84.0,
+      "products": []
+    },
+    "2026-07-20": {
+      "avg_price_usd": 0.018421,
       "median_price_usd": 0.015,
       "raw_avg_price_usd": 0.018421,
       "panel_size": 29,
@@ -76298,16 +76773,16 @@
       "mouser_avg_usd": 0.016867,
       "mouser_median_usd": 0.012,
       "lcsc_stock": 5507706,
-      "mouser_stock": 12996583,
+      "mouser_stock": 12996063,
       "mouser_leadtime_days": 84,
       "exchange_rate": 0.14755,
       "product_count": 43,
       "in_stock_count": 29,
-      "total_stock": 18504289,
+      "total_stock": 18503769,
       "lcsc_count": 23,
       "mouser_count": 20,
-      "lcsc_carried_from": "2026-07-18",
-      "fetched_at": "2026-07-19T21:05:53.100993+08:00",
+      "lcsc_carried_from": "2026-07-19",
+      "fetched_at": "2026-07-20T07:01:27.941924+08:00",
       "products": [
         {
           "model": "NTCG103JX103DTDS",
@@ -76337,7 +76812,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -76366,7 +76841,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -76397,7 +76872,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -76428,7 +76903,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100
         },
         {
@@ -76463,7 +76938,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76488,7 +76963,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100000
         },
         {
@@ -76523,7 +76998,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76558,7 +77033,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76587,7 +77062,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 30
         },
         {
@@ -76622,7 +77097,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76657,7 +77132,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76688,7 +77163,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 80000
         },
         {
@@ -76713,7 +77188,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 70000
         },
         {
@@ -76748,7 +77223,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76783,7 +77258,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76808,7 +77283,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 100000
         },
         {
@@ -76839,7 +77314,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 4440000
         },
         {
@@ -76874,7 +77349,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76909,7 +77384,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76944,7 +77419,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -76979,7 +77454,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -77014,7 +77489,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -77049,7 +77524,7 @@
           },
           "currency": "CNY",
           "carried": true,
-          "carried_from": "2026-07-18",
+          "carried_from": "2026-07-19",
           "floor_qty": 1000
         },
         {
@@ -77320,7 +77795,7 @@
           "brand": "Vishay",
           "package": "",
           "description": "Thick Film Resistors - SMD 1/10 Watt 10Kohms 1%",
-          "stock": 6659767,
+          "stock": 6659747,
           "min_price": 0.004,
           "min_price_usd": 0.004,
           "min_qty": 1,
@@ -77495,7 +77970,7 @@
           "brand": "Vishay",
           "package": "",
           "description": "Thick Film Resistors - SMD 0.33W 10Kohms 1% High Power AEC-Q200",
-          "stock": 1030458,
+          "stock": 1029958,
           "min_price": 0.012,
           "min_price_usd": 0.012,
           "min_qty": 1,
